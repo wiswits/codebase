@@ -1,0 +1,7 @@
+Snapshot of prod commit `31210d4e` (2026-08-06). LIVE code: wiswits-code `apps/`.
+
+Paths captured:
+- `apps/backend/src/modules/lms`
+- `apps/backend/src/modules/quiz-portal`
+- `apps/quiz-portal`
+- `apps/web/src/app/(dashboard)/assessment/quizzes`

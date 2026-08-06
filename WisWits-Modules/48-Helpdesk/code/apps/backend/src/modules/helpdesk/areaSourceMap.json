@@ -1,0 +1,41 @@
+{
+  "fees": "apps/web/src/modules/finance/pages/FeesPage.tsx",
+  "fees.collection": "apps/web/src/components/fees/CollectionPanel.tsx",
+  "fees.structures": "apps/web/src/components/fees/StructuresPanel.tsx",
+  "fees.assigned": "apps/web/src/components/fees/AssignmentsPanel.tsx",
+  "fees.reports": "apps/web/src/components/fees/ReportsPanel.tsx",
+  "fees.payments": "apps/web/src/modules/finance/pages/FeesPage.tsx",
+
+  "attendance": "apps/web/src/modules/attendance/pages/AttendancePage.tsx",
+
+  "people": "apps/web/src/modules/people/",
+  "people.students": "apps/web/src/modules/people/pages/StudentsPage.tsx",
+  "people.teachers": "apps/web/src/modules/people/pages/TeachersPage.tsx",
+  "people.groups": "apps/web/src/modules/groups/pages/GroupsPage.tsx",
+
+  "academics": "apps/web/src/modules/academics/",
+  "academics.classes": "apps/web/src/modules/academics/pages/ClassesPage.tsx",
+  "academics.subjects": "apps/web/src/modules/academics/pages/SubjectsPage.tsx",
+  "academics.timetable": "apps/web/src/modules/academics/pages/TimetablePage.tsx",
+
+  "assessment": "apps/web/src/modules/assessment/",
+  "assessment.exams": "apps/web/src/modules/assessment/pages/ExamsPage.tsx",
+  "assessment.report_cards": "apps/web/src/modules/assessment/pages/ReportCardsPage.tsx",
+  "assessment.quizzes": "apps/web/src/modules/assessment/pages/QuizzesPage.tsx",
+  "assessment.assignments": "apps/web/src/modules/assessment/pages/AssignmentsPage.tsx",
+  "assessment.question_bank": "apps/web/src/modules/assessment/pages/QuestionBankPage.tsx",
+
+  "communication": "apps/web/src/modules/communication/",
+  "communication.announcements": "apps/web/src/modules/communication/pages/AnnouncementsPage.tsx",
+  "communication.messages": "apps/web/src/modules/communication/pages/MessagesPage.tsx",
+
+  "events": "apps/web/src/modules/events/pages/EventsPage.tsx",
+  "calendar": "apps/web/src/modules/calendar/pages/CalendarPage.tsx",
+  "library": "apps/web/src/modules/library/pages/LibraryPage.tsx",
+  "transport": "apps/web/src/modules/transport/pages/TransportPage.tsx",
+  "hr": "apps/web/src/modules/hr/pages/HRPage.tsx",
+  "reports": "apps/web/src/modules/reports/pages/ReportsPage.tsx",
+  "analytics": "apps/web/src/modules/analytics/pages/AnalyticsPage.tsx",
+  "settings": "apps/web/src/modules/settings/pages/SettingsPage.tsx",
+  "support": "apps/web/src/modules/support/"
+}

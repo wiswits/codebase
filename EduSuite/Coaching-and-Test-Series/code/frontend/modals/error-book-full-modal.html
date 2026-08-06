@@ -1,0 +1,64 @@
+<div style="margin-bottom: 16px; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-muted, rgba(255,255,255,0.5));">📕 Error Book - Full View</div>
+
+<!-- Stats -->
+<div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 16px;">
+    <div style="text-align: center; padding: 12px; background: var(--bg-card, rgba(17,17,26,0.7)); border: 1px solid var(--border-color, rgba(255,255,255,0.06)); border-radius: 12px;">
+        <span style="display: block; font-size: 1.4rem; font-weight: 800; color: #EF4444;">12</span>
+        <span style="font-size: 0.65rem; color: var(--text-muted, rgba(255,255,255,0.5)); font-weight: 500; text-transform: uppercase; letter-spacing: 0.04em;">Total Errors</span>
+    </div>
+    <div style="text-align: center; padding: 12px; background: var(--bg-card, rgba(17,17,26,0.7)); border: 1px solid var(--border-color, rgba(255,255,255,0.06)); border-radius: 12px;">
+        <span style="display: block; font-size: 1.4rem; font-weight: 800; color: #34D399;">4</span>
+        <span style="font-size: 0.65rem; color: var(--text-muted, rgba(255,255,255,0.5)); font-weight: 500; text-transform: uppercase; letter-spacing: 0.04em;">Mastered</span>
+    </div>
+    <div style="text-align: center; padding: 12px; background: var(--bg-card, rgba(17,17,26,0.7)); border: 1px solid var(--border-color, rgba(255,255,255,0.06)); border-radius: 12px;">
+        <span style="display: block; font-size: 1.4rem; font-weight: 800; color: #F59E0B;">8</span>
+        <span style="font-size: 0.65rem; color: var(--text-muted, rgba(255,255,255,0.5)); font-weight: 500; text-transform: uppercase; letter-spacing: 0.04em;">In Progress</span>
+    </div>
+    <div style="text-align: center; padding: 12px; background: var(--bg-card, rgba(17,17,26,0.7)); border: 1px solid var(--border-color, rgba(255,255,255,0.06)); border-radius: 12px;">
+        <span style="display: block; font-size: 1.4rem; font-weight: 800; color: #60A5FA;">92%</span>
+        <span style="font-size: 0.65rem; color: var(--text-muted, rgba(255,255,255,0.5)); font-weight: 500; text-transform: uppercase; letter-spacing: 0.04em;">Accuracy</span>
+    </div>
+</div>
+
+<!-- Filters -->
+<div style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 16px;">
+    <button style="padding: 4px 14px; border-radius: 9999px; background: rgba(79,70,229,0.15); border: 1px solid rgba(79,70,229,0.2); color: #818CF8; font-size: 0.7rem; font-weight: 500; cursor: pointer;">All</button>
+    <button style="padding: 4px 14px; border-radius: 9999px; background: transparent; border: 1px solid var(--border-color, rgba(255,255,255,0.06)); color: var(--text-muted, rgba(255,255,255,0.5)); font-size: 0.7rem; font-weight: 500; cursor: pointer;">Physics</button>
+    <button style="padding: 4px 14px; border-radius: 9999px; background: transparent; border: 1px solid var(--border-color, rgba(255,255,255,0.06)); color: var(--text-muted, rgba(255,255,255,0.5)); font-size: 0.7rem; font-weight: 500; cursor: pointer;">Chemistry</button>
+    <button style="padding: 4px 14px; border-radius: 9999px; background: transparent; border: 1px solid var(--border-color, rgba(255,255,255,0.06)); color: var(--text-muted, rgba(255,255,255,0.5)); font-size: 0.7rem; font-weight: 500; cursor: pointer;">Maths</button>
+    <button style="padding: 4px 14px; border-radius: 9999px; background: transparent; border: 1px solid var(--border-color, rgba(255,255,255,0.06)); color: var(--text-muted, rgba(255,255,255,0.5)); font-size: 0.7rem; font-weight: 500; cursor: pointer;">Biology</button>
+</div>
+
+<!-- Error List -->
+<div style="margin-bottom: 12px; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-muted, rgba(255,255,255,0.5));">📋 Error List</div>
+
+<div class="list-item">
+    <div class="left"><span class="icon">🔬</span><span class="name">Newton's Laws - Application</span></div>
+    <div class="right"><span class="badge-status in-progress">In Progress</span></div>
+</div>
+<div class="list-item">
+    <div class="left"><span class="icon">🧪</span><span class="name">Thermodynamics - First Law</span></div>
+    <div class="right"><span class="badge-status mastered">Mastered ✅</span></div>
+</div>
+<div class="list-item">
+    <div class="left"><span class="icon">🧬</span><span class="name">Organic Chemistry - Reactions</span></div>
+    <div class="right"><span class="badge-status in-progress">In Progress</span></div>
+</div>
+<div class="list-item">
+    <div class="left"><span class="icon">📐</span><span class="name">Calculus - Integration</span></div>
+    <div class="right"><span class="badge-status review">Review</span></div>
+</div>
+<div class="list-item">
+    <div class="left"><span class="icon">🔬</span><span class="name">Optics - Lens Formula</span></div>
+    <div class="right"><span class="badge-status mastered">Mastered ✅</span></div>
+</div>
+<div class="list-item">
+    <div class="left"><span class="icon">🧪</span><span class="name">Chemical Bonding</span></div>
+    <div class="right"><span class="badge-status in-progress">In Progress</span></div>
+</div>
+
+<div style="display: flex; gap: 12px; flex-wrap: wrap; margin-top: 16px;">
+    <button class="action-btn" onclick="window.modalSystem.close(); window.showToast('📚 Starting revision deck...')" style="padding: 8px 24px; border-radius: 9999px; background: linear-gradient(135deg, #4F46E5, #8B5CF6); color: #FFFFFF; font-weight: 600; font-size: 0.8rem; border: none; cursor: pointer;">📚 Start Revision Deck</button>
+    <button class="action-btn secondary" onclick="window.modalSystem.close(); window.showToast('🧩 Generating DPP...')" style="padding: 8px 24px; border-radius: 9999px; background: var(--bg-card, rgba(17,17,26,0.7)); border: 1px solid var(--border-color, rgba(255,255,255,0.06)); color: var(--text-secondary, rgba(255,255,255,0.85)); font-weight: 600; font-size: 0.8rem; cursor: pointer;">🧩 Generate DPP</button>
+    <button class="action-btn secondary" onclick="window.modalSystem.close()" style="padding: 8px 24px; border-radius: 9999px; background: var(--bg-card, rgba(17,17,26,0.7)); border: 1px solid var(--border-color, rgba(255,255,255,0.06)); color: var(--text-secondary, rgba(255,255,255,0.85)); font-weight: 600; font-size: 0.8rem; cursor: pointer;">Close</button>
+</div>

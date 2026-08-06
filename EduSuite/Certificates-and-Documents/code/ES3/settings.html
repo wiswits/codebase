@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EduSuite - Settings</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+    <style>
+        .settings-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+        }
+
+        .settings-card {
+            background: var(--bg-secondary);
+            border-radius: var(--radius-lg);
+            padding: 24px 28px;
+            border: var(--border-light);
+            transition: all var(--transition-smooth);
+        }
+
+        .settings-card:hover {
+            border-color: var(--border-gold);
+        }
+
+        .settings-card .sc-title {
+            font-family: var(--font-display);
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .settings-card .sc-desc {
+            font-size: 13px;
+            color: var(--text-secondary);
+            margin-bottom: 16px;
+        }
+
+        .settings-card .sc-field {
+            margin-bottom: 14px;
+        }
+
+        .settings-card .sc-field label {
+            display: block;
+            font-size: 13px;
+            font-weight: 500;
+            margin-bottom: 4px;
+        }
+
+        .settings-card .sc-field input,
+        .settings-card .sc-field select {
+            width: 100%;
+            padding: 8px 14px;
+            border-radius: var(--radius-sm);
+            border: var(--border-light);
+            background: var(--bg-tertiary);
+            color: var(--text-primary);
+            font-family: var(--font-primary);
+            font-size: 13px;
+            outline: none;
+            transition: all var(--transition-smooth);
+        }
+
+        .settings-card .sc-field input:focus,
+        .settings-card .sc-field select:focus {
+            border-color: var(--gold);
+        }
+
+        .settings-card .sc-field .toggle-wrap {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .settings-card .sc-field .toggle {
+            width: 44px;
+            height: 24px;
+            background: var(--text-muted);
+            border-radius: var(--radius-full);
+            position: relative;
+            cursor: pointer;
+            transition: all var(--transition-smooth);
+        }
+
+        .settings-card .sc-field .toggle.on {
+            background: var(--gold);
+        }
+
+        .settings-card .sc-field .toggle .toggle-knob {
+            width: 18px;
+            height: 18px;
+            background: white;
+            border-radius: 50%;
+            position: absolute;
+            top: 3px;
+            left: 3px;
+            transition: all var(--transition-smooth);
+        }
+
+        .settings-card .sc-field .toggle.on .toggle-knob {
+            left: 23px;
+        }
+
+        .settings-card .sc-field .toggle-label {
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+
+        .settings-card .btn-save {
+            padding: 8px 24px;
+            background: var(--gold-gradient);
+            color: var(--navy);
+            border: none;
+            border-radius: var(--radius-full);
+            font-weight: 600;
+            font-size: 13px;
+            cursor: pointer;
+            transition: all var(--transition-smooth);
+            margin-top: 4px;
+        }
+
+        .settings-card .btn-save:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-glow);
+        }
+
+        @media (max-width: 992px) {
+            .settings-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .settings-card {
+                padding: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ═══ SIDEBAR ═══ -->
+    <aside class="sidebar">
+        <div class="logo">
+            <div class="logo-mark">E</div>
+            <div class="logo-text">Edu<span>Suite</span></div>
+        </div>
+
+        <nav class="nav">
+            <div class="nav-section">Main</div>
+            <a href="index.html" class="nav-item">
+                <span class="nav-icon">✦</span>
+                <span class="nav-label">Dashboard</span>
+            </a>
+            <a href="templates.html" class="nav-item">
+                <span class="nav-icon">◈</span>
+                <span class="nav-label">Templates</span>
+                <span class="nav-badge">12</span>
+            </a>
+            <a href="generate.html" class="nav-item">
+                <span class="nav-icon">◆</span>
+                <span class="nav-label">Generate</span>
+            </a>
+            <a href="register.html" class="nav-item">
+                <span class="nav-icon">▣</span>
+                <span class="nav-label">Issuance</span>
+                <span class="nav-badge">1.2k</span>
+            </a>
+
+            <div class="nav-divider"></div>
+            <div class="nav-section">Management</div>
+            <a href="settings.html" class="nav-item active">
+                <span class="nav-icon">⚙</span>
+                <span class="nav-label">Settings</span>
+            </a>
+            <a href="#" class="nav-item">
+                <span class="nav-icon">◉</span>
+                <span class="nav-label">Profile</span>
+            </a>
+        </nav>
+
+        <div class="user-section">
+            <div class="user-row">
+                <div class="user-avatar">P</div>
+                <div class="user-info">
+                    <div class="name">Principal</div>
+                    <div class="role">Sunrise Public School</div>
+                    <div class="user-status">● Online</div>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <!-- ═══ MAIN ═══ -->
+    <main class="main">
+        <header class="topbar">
+            <div class="greeting">
+                <h1>Settings</h1>
+                <p>Manage your certificate module preferences</p>
+            </div>
+            <div class="actions">
+                <button class="btn-theme" id="themeToggle">◐</button>
+            </div>
+        </header>
+
+        <div class="settings-grid">
+            <!-- General Settings -->
+            <div class="settings-card">
+                <div class="sc-title">General Settings</div>
+                <div class="sc-desc">Configure basic module settings</div>
+
+                <div class="sc-field">
+                    <label>Serial Number Prefix (Certificates)</label>
+                    <input type="text" value="CERT" />
+                </div>
+
+                <div class="sc-field">
+                    <label>Serial Number Prefix (ID Cards)</label>
+                    <input type="text" value="ID" />
+                </div>
+
+                <div class="sc-field">
+                    <label>Default Issue Date</label>
+                    <input type="date" value="2026-07-15" />
+                </div>
+
+                <button class="btn-save">Save Changes</button>
+            </div>
+
+            <!-- Permissions -->
+            <div class="settings-card">
+                <div class="sc-title">Permissions</div>
+                <div class="sc-desc">Control who can generate certificates</div>
+
+                <div class="sc-field">
+                    <div class="toggle-wrap">
+                        <div class="toggle on" onclick="this.classList.toggle('on')">
+                            <span class="toggle-knob"></span>
+                        </div>
+                        <span class="toggle-label">Allow Teachers to Generate</span>
+                    </div>
+                </div>
+
+                <div class="sc-field">
+                    <div class="toggle-wrap">
+                        <div class="toggle" onclick="this.classList.toggle('on')">
+                            <span class="toggle-knob"></span>
+                        </div>
+                        <span class="toggle-label">Require Principal Approval</span>
+                    </div>
+                </div>
+
+                <div class="sc-field">
+                    <div class="toggle-wrap">
+                        <div class="toggle on" onclick="this.classList.toggle('on')">
+                            <span class="toggle-knob"></span>
+                        </div>
+                        <span class="toggle-label">Notify Parents on Issuance</span>
+                    </div>
+                </div>
+
+                <button class="btn-save">Save Changes</button>
+            </div>
+
+            <!-- Serial Numbers -->
+            <div class="settings-card">
+                <div class="sc-title">Serial Number Settings</div>
+                <div class="sc-desc">Configure serial number generation</div>
+
+                <div class="sc-field">
+                    <label>Serial Number Format</label>
+                    <select>
+                        <option>PREFIX-YEAR-XXXX (CERT-2026-0001)</option>
+                        <option>PREFIX-XXXX (CERT-0001)</option>
+                        <option>YEAR-PREFIX-XXXX (2026-CERT-0001)</option>
+                    </select>
+                </div>
+
+                <div class="sc-field">
+                    <label>Starting Number</label>
+                    <input type="number" value="1" />
+                </div>
+
+                <div class="sc-field">
+                    <label>Reset Serial Numbers</label>
+                    <select>
+                        <option>Never</option>
+                        <option>Yearly</option>
+                        <option>Monthly</option>
+                    </select>
+                </div>
+
+                <button class="btn-save">Save Changes</button>
+            </div>
+
+            <!-- Generation Limits -->
+            <div class="settings-card">
+                <div class="sc-title">Generation Limits</div>
+                <div class="sc-desc">Set limits for bulk generation</div>
+
+                <div class="sc-field">
+                    <label>Maximum Certificates per Batch</label>
+                    <input type="number" value="50" />
+                </div>
+
+                <div class="sc-field">
+                    <label>Maximum Students per Selection</label>
+                    <input type="number" value="100" />
+                </div>
+
+                <div class="sc-field">
+                    <label>Auto-Archive After (Days)</label>
+                    <input type="number" value="365" />
+                </div>
+
+                <button class="btn-save">Save Changes</button>
+            </div>
+        </div>
+
+    </main>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

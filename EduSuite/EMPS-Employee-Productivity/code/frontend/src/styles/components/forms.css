@@ -1,0 +1,113 @@
+/* Form base */
+.form-group {
+  @apply mb-4;
+}
+
+.form-label {
+  @apply block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1;
+}
+
+.form-label-required::after {
+  content: ' *';
+  @apply text-red-500;
+}
+
+/* Form inputs */
+.form-input {
+  @apply w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white transition-colors;
+}
+
+.form-input-error {
+  @apply border-red-500 focus:ring-red-500;
+}
+
+.form-input-success {
+  @apply border-green-500 focus:ring-green-500;
+}
+
+.form-input:disabled {
+  @apply bg-gray-100 dark:bg-gray-600 cursor-not-allowed opacity-60;
+}
+
+.form-input::placeholder {
+  @apply text-gray-400 dark:text-gray-500;
+}
+
+/* Textarea */
+.form-textarea {
+  @apply w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white transition-colors resize-y;
+}
+
+.form-textarea:disabled {
+  @apply bg-gray-100 dark:bg-gray-600 cursor-not-allowed opacity-60;
+}
+
+/* Select */
+.form-select {
+  @apply w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white transition-colors appearance-none;
+}
+
+.form-select:disabled {
+  @apply bg-gray-100 dark:bg-gray-600 cursor-not-allowed opacity-60;
+}
+
+/* Checkbox */
+.form-checkbox {
+  @apply h-4 w-4 text-indigo-600 rounded border-gray-300 dark:border-gray-600 focus:ring-indigo-500 transition-colors;
+}
+
+.form-checkbox:disabled {
+  @apply opacity-60 cursor-not-allowed;
+}
+
+/* Radio */
+.form-radio {
+  @apply h-4 w-4 text-indigo-600 border-gray-300 dark:border-gray-600 focus:ring-indigo-500 transition-colors;
+}
+
+.form-radio:disabled {
+  @apply opacity-60 cursor-not-allowed;
+}
+
+/* Error messages */
+.form-error {
+  @apply text-sm text-red-600 dark:text-red-400 mt-1;
+}
+
+.form-help {
+  @apply text-sm text-gray-500 dark:text-gray-400 mt-1;
+}
+
+/* Form layout */
+.form-row {
+  @apply grid grid-cols-1 md:grid-cols-2 gap-4;
+}
+
+.form-row-3 {
+  @apply grid grid-cols-1 md:grid-cols-3 gap-4;
+}
+
+/* Dark mode adjustments */
+.dark .form-input {
+  @apply bg-gray-700 border-gray-600 text-white;
+}
+
+.dark .form-input:disabled {
+  @apply bg-gray-600;
+}
+
+.dark .form-select {
+  @apply bg-gray-700 border-gray-600 text-white;
+}
+
+.dark .form-select option {
+  @apply bg-gray-700 text-white;
+}
+
+.dark .form-textarea {
+  @apply bg-gray-700 border-gray-600 text-white;
+}
+
+.dark .form-textarea:disabled {
+  @apply bg-gray-600;
+}

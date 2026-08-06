@@ -1,0 +1,138 @@
+@import "tailwindcss";
+
+/* =========================================================
+   EduSuite Platform Tokens
+   ========================================================= */
+
+@theme {
+  --color-navy: #0f2147;
+  --color-gold: #c8a04e;
+  --color-ivory: #f7f4ec;
+
+  --font-display: var(--font-playfair);
+  --font-sans: var(--font-source-sans);
+}
+
+:root {
+  --navy: #0f2147;
+  --navy-soft: #1c3568;
+
+  --gold: #c8a04e;
+  --gold-soft: #e6d3a4;
+
+  --ivory: #f7f4ec;
+  --white: #ffffff;
+
+  --text-primary: #0f2147;
+  --text-secondary: #64748b;
+  --text-muted: #94a3b8;
+
+  --border: #e5e7eb;
+  --border-soft: #eef0f3;
+
+  --surface: #ffffff;
+  --surface-soft: #fafafa;
+
+  --success: #15803d;
+  --success-background: #f0fdf4;
+
+  --danger: #b91c1c;
+  --danger-background: #fef2f2;
+
+  --warning: #a16207;
+  --warning-background: #fffbeb;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+}
+
+body {
+  min-height: 100vh;
+  background: var(--ivory);
+  color: var(--text-primary);
+  font-family: var(--font-source-sans), Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: not-allowed;
+}
+
+::selection {
+  background: rgba(200, 160, 78, 0.3);
+  color: var(--navy);
+}
+
+/* =========================================================
+   Shared page utilities
+   ========================================================= */
+
+.page-container {
+  width: 100%;
+  max-width: 1500px;
+  margin-inline: auto;
+  padding: 32px;
+}
+
+.page-header {
+  margin-bottom: 28px;
+}
+
+.page-title {
+  margin: 0;
+  color: var(--navy);
+  font-family: var(--font-playfair), Georgia, serif;
+  font-size: clamp(1.9rem, 3vw, 2.6rem);
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+.page-description {
+  max-width: 760px;
+  margin: 8px 0 0;
+  color: var(--text-secondary);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.surface-card {
+  border: 1px solid var(--border-soft);
+  border-radius: 18px;
+  background: var(--surface);
+  box-shadow: 0 8px 30px rgba(15, 33, 71, 0.06);
+}
+
+@media (max-width: 768px) {
+  .page-container {
+    padding: 20px;
+  }
+}

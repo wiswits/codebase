@@ -1,0 +1,28 @@
+{
+  "name": "recruitment-management-backend",
+  "version": "1.0.0",
+  "description": "Recruitment Management Module for EduSuite",
+  "main": "src/server.js",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon src/server.js",
+    "start": "node src/server.js"
+  },
+  "keywords": ["Recruitment", "EduSuite"],
+  "author": "WisWits Edutech",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^17.0.0",
+    "express": "^5.0.0",
+    "express-validator": "^7.0.0",
+    "helmet": "^8.0.0",
+    "joi": "^18.0.0",
+    "morgan": "^1.10.0",
+    "mysql2": "^3.0.0",
+    "uuid": "^11.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.0"
+  }
+}

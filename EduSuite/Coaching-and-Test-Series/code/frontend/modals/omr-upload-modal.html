@@ -1,0 +1,119 @@
+<div style="margin-bottom: 16px; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-muted, rgba(255,255,255,0.5));">📄 Upload OMR Sheet</div>
+
+<form id="omrUploadForm" enctype="multipart/form-data">
+    <div style="margin-bottom: 16px;">
+        <label style="display: block; font-size: 0.8rem; font-weight: 500; color: var(--text-secondary, rgba(255,255,255,0.85)); margin-bottom: 4px;">Select Test</label>
+        <select id="omrTestSelect" style="width: 100%; padding: 10px 14px; background: var(--bg-card, rgba(17,17,26,0.7)); border: 1px solid var(--border-color, rgba(255,255,255,0.06)); border-radius: 8px; color: var(--text-primary, #FFFFFF); font-size: 0.85rem; font-family: 'Inter', sans-serif;">
+            <option value="">Select a test...</option>
+        </select>
+    </div>
+
+    <div style="margin-bottom: 16px;">
+        <label style="display: block; font-size: 0.8rem; font-weight: 500; color: var(--text-secondary, rgba(255,255,255,0.85)); margin-bottom: 4px;">Student Code</label>
+        <input type="text" id="omrStudentCode" placeholder="e.g., STU-001" style="width: 100%; padding: 10px 14px; background: var(--bg-card, rgba(17,17,26,0.7)); border: 1px solid var(--border-color, rgba(255,255,255,0.06)); border-radius: 8px; color: var(--text-primary, #FFFFFF); font-size: 0.9rem; font-family: 'Inter', sans-serif;">
+    </div>
+
+    <div style="margin-bottom: 16px; border: 2px dashed var(--border-color, rgba(255,255,255,0.06)); border-radius: 12px; padding: 24px; text-align: center; cursor: pointer; transition: all 0.3s;" id="dropZone">
+        <span style="font-size: 2.4rem; display: block; margin-bottom: 8px;">📄</span>
+        <p style="font-size: 0.9rem; color: var(--text-secondary, rgba(255,255,255,0.85)); margin: 0;">Drop OMR sheet here or click to browse</p>
+        <p style="font-size: 0.7rem; color: var(--text-muted, rgba(255,255,255,0.5)); margin-top: 4px;">Supported: JPEG, PNG, PDF</p>
+        <input type="file" id="omrFileInput" accept=".jpg,.jpeg,.png,.pdf" style="display: none;">
+    </div>
+
+    <div id="fileInfo" style="display: none; padding: 12px; background: rgba(52,211,153,0.06); border-radius: 8px; border: 1px solid rgba(52,211,153,0.15); margin-bottom: 16px;">
+        <span style="font-size: 0.85rem; color: #34D399;">✅ File selected: <span id="fileName"></span></span>
+    </div>
+
+    <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+        <button type="submit" class="action-btn" style="padding: 10px 32px; border-radius: 9999px; background: linear-gradient(135deg, #4F46E5, #8B5CF6); color: #FFFFFF; font-weight: 600; font-size: 0.85rem; border: none; cursor: pointer; box-shadow: 0 2px 16px rgba(79,70,229,0.25);">🚀 Process OMR</button>
+        <button type="button" class="action-btn secondary" onclick="window.modalSystem.close()" style="padding: 10px 32px; border-radius: 9999px; background: var(--bg-card, rgba(17,17,26,0.7)); border: 1px solid var(--border-color, rgba(255,255,255,0.06)); color: var(--text-secondary, rgba(255,255,255,0.85)); font-weight: 600; font-size: 0.85rem; cursor: pointer;">Cancel</button>
+    </div>
+</form>
+
+<script>
+    // ============================================
+    // OMR UPLOAD HANDLER
+    // ============================================
+    const dropZone = document.getElementById('dropZone');
+    const fileInput = document.getElementById('omrFileInput');
+    const fileInfo = document.getElementById('fileInfo');
+    const fileName = document.getElementById('fileName');
+
+    // Click to browse
+    dropZone.addEventListener('click', () => fileInput.click());
+
+    // File selected
+    fileInput.addEventListener('change', function() {
+        if (this.files.length > 0) {
+            fileName.textContent = this.files[0].name;
+            fileInfo.style.display = 'block';
+        }
+    });
+
+    // Drag and drop
+    dropZone.addEventListener('dragover', (e) => {
+        e.preventDefault();
+        dropZone.style.borderColor = '#4F46E5';
+        dropZone.style.background = 'rgba(79,70,229,0.04)';
+    });
+
+    dropZone.addEventListener('dragleave', () => {
+        dropZone.style.borderColor = 'var(--border-color, rgba(255,255,255,0.06))';
+        dropZone.style.background = 'transparent';
+    });
+
+    dropZone.addEventListener('drop', (e) => {
+        e.preventDefault();
+        dropZone.style.borderColor = 'var(--border-color, rgba(255,255,255,0.06))';
+        dropZone.style.background = 'transparent';
+        if (e.dataTransfer.files.length > 0) {
+            fileInput.files = e.dataTransfer.files;
+            fileName.textContent = fileInput.files[0].name;
+            fileInfo.style.display = 'block';
+        }
+    });
+
+    // Form submit
+    document.getElementById('omrUploadForm').addEventListener('submit', async function(e) {
+        e.preventDefault();
+
+        const testId = document.getElementById('omrTestSelect').value;
+        const studentCode = document.getElementById('omrStudentCode').value;
+        const file = fileInput.files[0];
+
+        if (!testId || !studentCode || !file) {
+            window.showToast('⚠️ Please fill all fields and select a file');
+            return;
+        }
+
+        const formData = new FormData();
+        formData.append('test_id', testId);
+        formData.append('student_code', studentCode);
+        formData.append('omr_file', file);
+
+        try {
+            window.showToast('⏳ Processing OMR...');
+
+            const response = await fetch('http://localhost:5000/api/omr/upload', {
+                method: 'POST',
+                headers: {
+                    'Authorization': `Bearer ${localStorage.getItem('edutech_token')}`
+                },
+                body: formData
+            });
+
+            const data = await response.json();
+
+            if (data.success) {
+                window.showToast('✅ OMR processed successfully!');
+                window.modalSystem.close();
+            } else {
+                window.showToast('❌ ' + data.message);
+            }
+
+        } catch (error) {
+            console.error('OMR upload error:', error);
+            window.showToast('❌ Failed to process OMR');
+        }
+    });
+</script>

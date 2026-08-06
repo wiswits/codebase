@@ -1,0 +1,531 @@
+﻿
+==================== app\layout.tsx ====================
+import type { Metadata } from "next";
+import "./globals.css";
+
+export const metadata: Metadata = {
+  title: "EduSuite Visitor Management",
+  description: "Enterprise Visitor Management Module",
+};
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+    <html lang="en">
+      <body>
+        {children}
+      </body>
+    </html>
+  );
+}
+
+==================== app\page.tsx ====================
+export default function HomePage() {
+  return (
+    <main className="page-container fade-in">
+      <section className="card">
+        <h1
+          style={{
+            color: "var(--color-primary)",
+            fontSize: "2.25rem",
+            fontWeight: 700,
+            marginBottom: "0.75rem",
+          }}
+        >
+          EduSuite Visitor Management
+        </h1>
+
+        <p
+          style={{
+            color: "var(--color-muted)",
+            marginBottom: "2rem",
+            maxWidth: "700px",
+          }}
+        >
+          Welcome to the enterprise Visitor Management frontend. This
+          foundation is ready for Dashboard, Visitor Log, Check-In,
+          Check-Out, Pass Generation, Notifications, and backend API
+          integration.
+        </p>
+
+        <div
+          style={{
+            display: "flex",
+            gap: "1rem",
+            flexWrap: "wrap",
+          }}
+        >
+          <button className="primary-btn">
+            Open Dashboard
+          </button>
+
+          <button className="secondary-btn">
+            Documentation
+          </button>
+        </div>
+      </section>
+
+      <section
+        style={{
+          marginTop: "2rem",
+          display: "grid",
+          gridTemplateColumns: "repeat(auto-fit,minmax(240px,1fr))",
+          gap: "1rem",
+        }}
+      >
+        {[
+          "Visitor Dashboard",
+          "Visitor Log",
+          "Check-In",
+          "Pass Generation",
+        ].map((item) => (
+          <div key={item} className="card">
+            <h3 style={{ marginBottom: ".5rem" }}>{item}</h3>
+            <p style={{ color: "var(--color-muted)" }}>
+              Module foundation ready.
+            </p>
+          </div>
+        ))}
+      </section>
+    </main>
+  );
+}
+
+==================== components\charts\VisitorChart.tsx ====================
+export default function VisitorChart(){return <div className='card'>Visitor Analytics Chart</div>}
+
+==================== components\common\Avatar.tsx ====================
+
+==================== components\common\Logo.tsx ====================
+
+==================== components\common\PageTitle.tsx ====================
+
+==================== components\dashboard\DashboardHeader.tsx ====================
+export default function DashboardHeader(){return <div style={{display:"flex",justifyContent:"space-between",marginBottom:"1rem"}}><h1>Dashboard</h1><button className="primary-btn">New Visitor</button></div>}
+
+==================== components\dashboard\DashboardShell.tsx ====================
+import DashboardHeader from "./DashboardHeader";
+import DashboardStats from "./DashboardStats";
+import Table from "./Table";
+export default function DashboardShell(){return <><DashboardHeader/><DashboardStats/><div className="card" style={{marginTop:"1rem"}}><Table/></div></>}
+
+==================== components\dashboard\DashboardStats.tsx ====================
+import StatCard from "./StatCard";
+export default function DashboardStats(){return <div style={{display:"grid",gridTemplateColumns:"repeat(auto-fit,minmax(220px,1fr))",gap:"1rem"}}><StatCard title="Visitors Today" value={42}/><StatCard title="Checked In" value={31}/><StatCard title="Pending" value={4}/><StatCard title="Completed" value={27}/></div>}
+
+==================== components\dashboard\EmptyState.tsx ====================
+export default function EmptyState(){return <div className="card">No records found.</div>}
+
+==================== components\dashboard\ErrorState.tsx ====================
+export default function ErrorState(){return <div className="card">Something went wrong.</div>}
+
+==================== components\dashboard\Loader.tsx ====================
+export default function Loader(){return <div className="card">Loading...</div>}
+
+==================== components\dashboard\SearchInput.tsx ====================
+export default function SearchInput(){return <input placeholder="Search visitors..." />;}
+
+==================== components\dashboard\StatCard.tsx ====================
+type Props={title:string;value:string|number;subtitle?:string};
+export default function StatCard({title,value,subtitle}:Props){
+return <div className="card"><h4>{title}</h4><h2 style={{margin:"8px 0"}}>{value}</h2>{subtitle&&<p style={{color:"var(--color-muted)"}}>{subtitle}</p>}</div>;
+}
+
+==================== components\dashboard\Table.tsx ====================
+export default function Table(){return <table><thead><tr><th>Name</th><th>Host</th><th>Status</th></tr></thead><tbody><tr><td>John Doe</td><td>Admin</td><td>Checked In</td></tr></tbody></table>}
+
+==================== components\forms\LoginForm.tsx ====================
+
+==================== components\layout\Breadcrumb.tsx ====================
+
+==================== components\layout\MainLayout.tsx ====================
+import { ReactNode } from "react";
+import Sidebar from "./Sidebar";
+import Topbar from "./Topbar";
+
+export default function MainLayout({children}:{children:ReactNode}){
+  return (
+    <div style={{display:"flex"}}>
+      <Sidebar />
+      <main style={{flex:1,padding:"1.5rem"}}>
+        <Topbar />
+        {children}
+      </main>
+    </div>
+  );
+}
+
+==================== components\layout\PageHeader.tsx ====================
+export default function PageHeader({
+  title,
+  subtitle,
+}:{title:string;subtitle?:string;}){
+  return (
+    <div style={{marginBottom:"1.5rem"}}>
+      <h1 style={{fontSize:"2rem",fontWeight:700}}>{title}</h1>
+      {subtitle && <p style={{color:"var(--color-muted)"}}>{subtitle}</p>}
+    </div>
+  );
+}
+
+==================== components\layout\Sidebar.tsx ====================
+export default function Sidebar() {
+  return (
+    <aside
+      style={{
+        width: 260,
+        minHeight: "100vh",
+        background: "var(--color-primary)",
+        color: "white",
+        padding: "1.5rem",
+      }}
+    >
+      <h2 style={{marginBottom:"2rem"}}>EduSuite</h2>
+      <nav style={{display:"grid",gap:"1rem"}}>
+        <a href="#">Dashboard</a>
+        <a href="#">Visitors</a>
+        <a href="#">Check-In</a>
+        <a href="#">Reports</a>
+        <a href="#">Settings</a>
+      </nav>
+    </aside>
+  );
+}
+
+==================== components\layout\Topbar.tsx ====================
+export default function Topbar() {
+  return (
+    <header
+      className="surface"
+      style={{
+        padding:"1rem 1.5rem",
+        display:"flex",
+        justifyContent:"space-between",
+        alignItems:"center",
+        marginBottom:"1.5rem"
+      }}
+    >
+      <h1>Visitor Management</h1>
+      <span>Admin</span>
+    </header>
+  );
+}
+
+==================== components\modals\ConfirmDialog.tsx ====================
+export default function ConfirmDialog(){return <div className='card'>Confirm Dialog</div>}
+
+==================== components\modals\VisitorModal.tsx ====================
+export default function VisitorModal(){return <div className='card'>Visitor Modal</div>}
+
+==================== components\tables\DataTable.tsx ====================
+export default function DataTable(){return <div className='card'>Enterprise Data Table</div>}
+
+==================== components\ui\Badge.tsx ====================
+import { ReactNode } from "react";
+export default function Badge({children}:{children:ReactNode}){
+ return <span style={{display:"inline-block",padding:"4px 10px",borderRadius:999,background:"var(--color-accent)",fontWeight:600}}>{children}</span>;
+}
+
+==================== components\ui\Button.tsx ====================
+import { ButtonHTMLAttributes } from "react";
+
+type Props = ButtonHTMLAttributes<HTMLButtonElement> & {
+  variant?: "primary" | "secondary";
+};
+
+export default function Button({variant="primary",className="",children,...props}:Props){
+  const cls=variant==="primary"?"primary-btn":"secondary-btn";
+  return <button className={`${cls} ${className}`} {...props}>{children}</button>;
+}
+
+==================== components\ui\Card.tsx ====================
+import { ReactNode } from "react";
+export default function Card({children,className=""}:{children:ReactNode,className?:string}){
+ return <div className={`card ${className}`}>{children}</div>;
+}
+
+==================== components\ui\EmptyState.tsx ====================
+
+==================== components\ui\ErrorState.tsx ====================
+
+==================== components\ui\Input.tsx ====================
+import { InputHTMLAttributes } from "react";
+export default function Input(props:InputHTMLAttributes<HTMLInputElement>){
+ return <input {...props} />;
+}
+
+==================== components\ui\Loader.tsx ====================
+
+==================== components\ui\SearchInput.tsx ====================
+
+==================== components\ui\StatCard.tsx ====================
+
+==================== components\ui\Table.tsx ====================
+
+==================== config\app.ts ====================
+
+==================== config\module.ts ====================
+export const MODULE_KEY='visitor'; export const STATUS='planned';
+
+==================== constants\routes.ts ====================
+
+==================== hooks\useAuth.ts ====================
+export function useAuth(){return {user:null,isAuthenticated:false,loading:false};}
+
+==================== hooks\useVisitorModule.ts ====================
+export function useVisitorModule(){return {loading:false,error:null};}
+
+==================== hooks\useVisitors.ts ====================
+export function useVisitors(){return {visitors:[],loading:false,error:null};}
+
+==================== lib\api.ts ====================
+import axios from 'axios';
+export const api = axios.create({ baseURL: '/api/v1', withCredentials: true });
+
+==================== lib\interceptors.ts ====================
+export const setupInterceptors=()=>{/* attach auth/error interceptors */};
+
+==================== middleware\auth.ts ====================
+export function requireAuth(){return true;}
+
+==================== middleware\permission.ts ====================
+export const hasPermission=(p:string)=>true;
+
+==================== modules\visitor\components\states\EmptyState.tsx ====================
+export default function EmptyState(){return <div>No Records</div>}
+
+==================== modules\visitor\components\states\ErrorState.tsx ====================
+    export default function ErrorState(){return <div>Error</div>}
+
+==================== modules\visitor\components\states\LoadingState.tsx ====================
+export default function LoadingState(){return <div>Loading...</div>}
+
+==================== modules\visitor\components\states\OfflineState.tsx ====================
+export default function OfflineState(){return <div>Offline</div>}
+
+==================== modules\visitor\components\states\RetryState.tsx ====================
+export default function RetryState(){return <button>Retry</button>}
+
+==================== modules\visitor\components\CheckoutButton.tsx ====================
+export default function CheckoutButton(){return <button>Check Out</button>}
+
+==================== modules\visitor\components\DepartmentSelector.tsx ====================
+export default function DepartmentSelector(){return <select><option>Select Department</option></select>}
+
+==================== modules\visitor\components\HostNotification.tsx ====================
+export default function HostNotification(){return <button>Notify Host</button>}
+
+==================== modules\visitor\components\HostSelector.tsx ====================
+export default function HostSelector(){return <select><option>Select Host</option></select>}
+
+==================== modules\visitor\components\IdProofUpload.tsx ====================
+export default function IdProofUpload(){return <input type='file'/>}
+
+==================== modules\visitor\components\Pagination.tsx ====================
+export default function Pagination(){return <div>Pagination</div>}
+
+==================== modules\visitor\components\PassCard.tsx ====================
+export default function PassCard(){return <div>Visitor Pass Card</div>}
+
+==================== modules\visitor\components\PassPreview.tsx ====================
+export default function PassPreview(){return <div>Pass Preview</div>}
+
+==================== modules\visitor\components\PermissionGuard.tsx ====================
+export default function PermissionGuard({children}:any){return children;}
+
+==================== modules\visitor\components\PurposeField.tsx ====================
+export default function PurposeField(){return <textarea placeholder='Purpose of Visit'/>}
+
+==================== modules\visitor\components\QRCodeCard.tsx ====================
+export default function QRCodeCard(){return <div className='card'>QR Code</div>}
+
+==================== modules\visitor\components\QRCodePanel.tsx ====================
+export default function QRCodePanel(){return <div>QR Code</div>}
+
+==================== modules\visitor\components\StatusBadge.tsx ====================
+export default function StatusBadge(){return <span>Checked In</span>}
+
+==================== modules\visitor\components\Timeline.tsx ====================
+export default function Timeline(){return <div className='card'>Timeline</div>}
+
+==================== modules\visitor\components\VisitorCard.tsx ====================
+export default function VisitorCard(){return <div className='card'>Visitor Card</div>}
+
+==================== modules\visitor\components\VisitorFilters.tsx ====================
+export default function VisitorFilters(){return <div>Filters</div>}
+
+==================== modules\visitor\components\VisitorForm.tsx ====================
+export default function VisitorForm(){return <form className='card'>Visitor Form</form>}
+
+==================== modules\visitor\components\VisitorInfoCard.tsx ====================
+export default function VisitorInfoCard(){return <div>Visitor Information</div>}
+
+==================== modules\visitor\components\VisitorPhotoUpload.tsx ====================
+export default function VisitorPhotoUpload(){return <input type='file' accept='image/*'/>}
+
+==================== modules\visitor\components\VisitorRegistrationForm.tsx ====================
+export default function VisitorRegistrationForm(){return <form>{/* Name, Mobile, Purpose, Host, Department, ID Proof, Photo */}</form>}
+
+==================== modules\visitor\components\VisitorSearch.tsx ====================
+export default function VisitorSearch(){return <input placeholder='Search visitors'/>}
+
+==================== modules\visitor\components\VisitorTable.tsx ====================
+export default function VisitorTable(){return <div>Visitor Table</div>}
+
+==================== modules\visitor\components\VisitorTimeline.tsx ====================
+export default function VisitorTimeline(){return <div>Timeline</div>}
+
+==================== modules\visitor\components\VisitSummary.tsx ====================
+export default function VisitSummary(){return <div>Visit Summary</div>}
+
+==================== modules\visitor\hooks\useCheckout.ts ====================
+export function useCheckout(){return {checkout:async()=>{},loading:false};}
+
+==================== modules\visitor\hooks\useDashboard.ts ====================
+export function useDashboard(){return {stats:{today:0,checkedIn:0,pending:0},loading:false};}
+
+==================== modules\visitor\hooks\useHostNotification.ts ====================
+export function useHostNotification(){return {notify:async()=>{},loading:false};}
+
+==================== modules\visitor\hooks\useVisitorList.ts ====================
+
+==================== modules\visitor\hooks\useVisitorPass.ts ====================
+export function useVisitorPass(){return {generatePass:async()=>{},printPass:()=>{},loading:false};}
+
+==================== modules\visitor\hooks\useVisitorRegistration.ts ====================
+export function useVisitorRegistration(){return {submit:async()=>{},loading:false};}
+
+==================== modules\visitor\hooks\useVisitors.ts ====================
+export function useVisitors(){return {visitors:[],loading:false};}
+
+==================== modules\visitor\pages\AddVisitor.tsx ====================
+export default function AddVisitor(){return <h1>Add Visitor</h1>}
+
+==================== modules\visitor\pages\CheckIn.tsx ====================
+export default function CheckIn(){return <div className='card'>QR Check-In Screen</div>}
+
+==================== modules\visitor\pages\CheckOut.tsx ====================
+export default function CheckOut(){return <div className='card'>QR Check-Out Screen</div>}
+
+==================== modules\visitor\pages\Dashboard.tsx ====================
+import VisitorChart from "../../../components/charts/VisitorChart"; export default function Dashboard(){return <><h1>Visitor Dashboard</h1><VisitorChart/></>}
+
+==================== modules\visitor\pages\PassGenerator.tsx ====================
+export default function PassGenerator(){return <h1>Pass Generator</h1>}
+
+==================== modules\visitor\pages\PrintPass.tsx ====================
+export default function PrintPass(){return <main><h1>Print Visitor Pass</h1></main>}
+
+==================== modules\visitor\pages\Reports.tsx ====================
+export default function Reports(){return <h1>Reports</h1>}
+
+==================== modules\visitor\pages\VisitorCheckIn.tsx ====================
+export default function VisitorCheckIn(){return <main><h1>Visitor Check-In</h1></main>}
+
+==================== modules\visitor\pages\VisitorDetails.tsx ====================
+export default function VisitorDetails(){return <main><h1>Visitor Details</h1></main>}
+
+==================== modules\visitor\pages\VisitorHistory.tsx ====================
+export default function VisitorHistory(){return <main><h1>Visitor History</h1></main>}
+
+==================== modules\visitor\pages\VisitorList.tsx ====================
+export default function VisitorList(){return <h1>Visitor List</h1>}
+
+==================== modules\visitor\pages\VisitorLog.tsx ====================
+export default function VisitorLog(){return <main><h1>Visitor Log</h1></main>}
+
+==================== modules\visitor\pages\VisitorPass.tsx ====================
+export default function VisitorPass(){return <main><h1>Visitor Pass</h1></main>}
+
+==================== modules\visitor\pages\VisitorProfile.tsx ====================
+export default function VisitorProfile(){return <main><h1>Visitor Profile</h1></main>}
+
+==================== modules\visitor\services\api.ts ====================
+export const API_BASE='http://localhost:5000/api';
+
+==================== modules\visitor\services\checkout.api.ts ====================
+export const CheckoutAPI={checkout:'/api/v1/visitors/check-out'};
+
+==================== modules\visitor\services\pass.api.ts ====================
+export const PassAPI={generate:'/api/v1/visitors/:visitorLogId/pass',print:'/api/v1/visitors/:visitorLogId/pass',notify:'/api/v1/visitors/:visitorLogId/notify-host'};
+
+==================== modules\visitor\services\visitor-list.api.ts ====================
+export const VisitorListAPI={list:'/api/v1/visitors',details:'/api/v1/visitors/:id'};
+
+==================== modules\visitor\services\visitor.api.ts ====================
+
+==================== modules\visitor\services\visitor.contract.ts ====================
+export interface VisitorCreateRequest{fullName:string;mobile:string;hostId:number;departmentId:number;purpose:string;}
+
+==================== modules\visitor\services\visitor.service.ts ====================
+export async function getVisitors(){return [];}
+
+==================== modules\visitor\types\history.ts ====================
+export interface VisitorHistoryItem{id:number;status:string;checkIn:string;checkOut?:string;}
+
+==================== modules\visitor\types\pass.ts ====================
+export interface VisitorPass{passNumber:string;visitorName:string;hostName:string;status:string;}
+
+==================== modules\visitor\types\visitor-list.ts ====================
+export interface VisitorListItem{id:number;fullName:string;host:string;status:string;checkIn:string;}
+
+==================== modules\visitor\types\visitor.types.ts ====================
+export interface Visitor{id:number;name:string;status:string;}
+
+==================== modules\visitor\utils\exportCsv.ts ====================
+export function exportCsv(){console.log('Export CSV');}
+
+==================== modules\visitor\utils\permissions.ts ====================
+export const VisitorPermissions={view:'visitor.view',manage:'visitor.manage'};
+
+==================== modules\visitor\utils\queryParams.ts ====================
+export const buildQuery=(q:any)=>q;
+
+==================== modules\visitor\utils\validation.ts ====================
+export const visitorValidation={};
+
+==================== providers\AuthProvider.tsx ====================
+import {createContext} from "react"; export const AuthContext=createContext(null); export default function AuthProvider({children}:{children:React.ReactNode}){return <AuthContext.Provider value={null}>{children}</AuthContext.Provider>}
+
+==================== providers\VisitorProvider.tsx ====================
+export default function VisitorProvider({children}:any){return children;}
+
+==================== services\auth.service.ts ====================
+import {api} from "../lib/api"; export const login=(body:any)=>api("/auth/login",{method:"POST",body:JSON.stringify(body)}); export const me=()=>api("/auth/me");
+
+==================== services\dashboard.service.ts ====================
+export async function getDashboardStats(){return {today:0,checkedIn:0,pending:0};}
+
+==================== services\visitor.service.ts ====================
+export const VisitorService={list(){},details(){},checkIn(){},checkOut(){},generatePass(){},notifyHost(){}};
+
+==================== styles\animation.ts ====================
+
+==================== styles\colors.ts ====================
+
+==================== styles\index.ts ====================
+
+==================== styles\spacing.ts ====================
+
+==================== styles\typography.ts ====================
+
+==================== types\auth.ts ====================
+export interface User{id:number;name:string;email:string;role:string;}
+
+==================== utils\apiError.ts ====================
+export const parseApiError=(e:any)=>e?.message||'Unknown error';
+
+==================== utils\toast.ts ====================
+export const toastSuccess=(m:string)=>console.log(m); export const toastError=(m:string)=>console.error(m);
+
+==================== next.config.ts ====================
+import type { NextConfig } from "next";
+
+const nextConfig: NextConfig = {
+  /* config options here */
+};
+
+export default nextConfig;

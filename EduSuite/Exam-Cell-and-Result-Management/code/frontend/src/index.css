@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body {
+  @apply bg-slate-50 text-slate-800;
+}
+
+html.dark, html.dark body {
+  @apply bg-slate-950 text-slate-100;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #cbd5e1 transparent;
+}
+.dark * {
+  scrollbar-color: #334155 transparent;
+}
+
+*::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+*::-webkit-scrollbar-thumb {
+  background-color: #cbd5e1;
+  border-radius: 999px;
+}
+.dark *::-webkit-scrollbar-thumb {
+  background-color: #334155;
+}
+
+.card {
+  @apply bg-white rounded-2xl shadow-soft border border-slate-100;
+}
+
+.input-field {
+  @apply w-full rounded-xl border border-slate-200 bg-white px-3.5 py-2.5 text-sm text-slate-700 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-primary-500/40 focus:border-primary-500 transition;
+}
+
+.btn-primary {
+  @apply inline-flex items-center justify-center gap-2 rounded-xl bg-primary-500 px-4 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-primary-600 active:bg-primary-700 transition disabled:opacity-50 disabled:cursor-not-allowed;
+}
+
+.btn-secondary {
+  @apply inline-flex items-center justify-center gap-2 rounded-xl bg-white border border-slate-200 px-4 py-2.5 text-sm font-semibold text-slate-700 hover:bg-slate-50 transition disabled:opacity-50 disabled:cursor-not-allowed;
+}
+
+.badge {
+  @apply inline-flex items-center gap-1 rounded-full px-2.5 py-1 text-xs font-medium;
+}
+
+/* ---------------------------------------------------------------------- */
+/* Dark mode: broad overrides for the Tailwind utility classes used across
+   every page (cards, tables, text, borders) so the whole app re-themes
+   from the shell down without hand-editing every single component. */
+/* ---------------------------------------------------------------------- */
+.dark .bg-white { background-color: #0f172a; }
+.dark .bg-slate-50 { background-color: #0b1220; }
+.dark .bg-slate-50\/50 { background-color: rgba(15, 23, 42, 0.5); }
+.dark .bg-slate-50\/60 { background-color: rgba(30, 41, 59, 0.6); }
+.dark .bg-slate-100 { background-color: #1e293b; }
+
+.dark .text-slate-800 { color: #f1f5f9; }
+.dark .text-slate-700 { color: #e2e8f0; }
+.dark .text-slate-600 { color: #cbd5e1; }
+.dark .text-slate-500 { color: #94a3b8; }
+.dark .text-slate-400 { color: #64748b; }
+.dark .text-slate-300 { color: #475569; }
+
+.dark .border-slate-100 { border-color: #1e293b; }
+.dark .border-slate-200 { border-color: #334155; }
+.dark .divide-slate-50 > :not([hidden]) ~ :not([hidden]) { border-color: #1e293b; }
+
+.dark .hover\:bg-slate-50:hover { background-color: #1e293b; }
+.dark .hover\:bg-slate-100:hover { background-color: #1e293b; }
+.dark .hover\:text-slate-600:hover { color: #e2e8f0; }
+.dark .hover\:text-slate-700:hover { color: #f1f5f9; }
+.dark .hover\:text-slate-800:hover { color: #f8fafc; }
+
+.dark .bg-primary-50 { background-color: rgba(63, 164, 106, 0.12); }
+.dark .bg-primary-50\/40 { background-color: rgba(63, 164, 106, 0.08); }
+.dark .bg-slate-900\/40 { background-color: rgba(2, 6, 23, 0.7); }
+
+.dark .shadow-soft, .dark .shadow-card { box-shadow: 0 4px 24px -4px rgba(0, 0, 0, 0.4); }

@@ -1,0 +1,25 @@
+import type { Metadata } from "next";
+
+import "./globals.css";
+
+import { AppShell } from "@/components/layout/AppShell";
+
+export const metadata: Metadata = {
+  title: "Registration Management | EduSuite",
+  description:
+    "Student Registration Management module for EduSuite.",
+};
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+    <html lang="en">
+      <body>
+        <AppShell>{children}</AppShell>
+      </body>
+    </html>
+  );
+}

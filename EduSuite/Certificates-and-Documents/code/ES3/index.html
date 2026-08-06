@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EduSuite - Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+    <!-- ═══ SIDEBAR ═══ -->
+    <aside class="sidebar">
+        <div class="logo">
+            <div class="logo-mark">E</div>
+            <div class="logo-text">Edu<span>Suite</span></div>
+        </div>
+
+        <nav class="nav">
+            <div class="nav-section">Main</div>
+            <a href="index.html" class="nav-item active">
+                <span class="nav-icon">✦</span>
+                <span class="nav-label">Dashboard</span>
+            </a>
+            <a href="templates.html" class="nav-item">
+                <span class="nav-icon">◈</span>
+                <span class="nav-label">Templates</span>
+                <span class="nav-badge">12</span>
+            </a>
+            <a href="generate.html" class="nav-item">
+                <span class="nav-icon">◆</span>
+                <span class="nav-label">Generate</span>
+            </a>
+            <a href="register.html" class="nav-item">
+                <span class="nav-icon">▣</span>
+                <span class="nav-label">Issuance</span>
+                <span class="nav-badge">1.2k</span>
+            </a>
+
+            <div class="nav-divider"></div>
+
+            <div class="nav-section">Management</div>
+            <a href="settings.html" class="nav-item">
+                <span class="nav-icon">⚙</span>
+                <span class="nav-label">Settings</span>
+            </a>
+            <a href="#" class="nav-item">
+                <span class="nav-icon">◉</span>
+                <span class="nav-label">Profile</span>
+            </a>
+        </nav>
+
+        <div class="user-section">
+            <div class="user-row">
+                <div class="user-avatar">P</div>
+                <div class="user-info">
+                    <div class="name">Principal</div>
+                    <div class="role">Sunrise Public School</div>
+                    <div class="user-status">● Online</div>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <!-- ═══ MAIN CONTENT ═══ -->
+    <main class="main">
+
+        <!-- Top Bar -->
+        <header class="topbar">
+            <div class="greeting">
+                <h1>Good Morning, Principal 🎉</h1>
+                <p>Here's what's happening with your <span>certificates &amp; ID cards</span></p>
+            </div>
+            <div class="actions">
+                <div class="search-wrapper">
+                    <span class="search-icon">⌕</span>
+                    <input type="text" placeholder="Search certificates..." />
+                </div>
+                <button class="btn-icon" title="Notifications">
+                    ◌
+                    <span class="dot"></span>
+                </button>
+                <button class="btn-theme" id="themeToggle" title="Toggle Theme">◐</button>
+            </div>
+        </header>
+
+        <!-- Quick Stats -->
+        <section class="quick-stats">
+            <div class="quick-stat">
+                <div class="qs-top">
+                    <span class="qs-icon gold">▣</span>
+                    <span class="qs-change">↑ 12%</span>
+                </div>
+                <div class="qs-number">1,247</div>
+                <div class="qs-label">Total Issued</div>
+                <div class="qs-trend">+148 from last month</div>
+            </div>
+
+            <div class="quick-stat">
+                <div class="qs-top">
+                    <span class="qs-icon navy">◈</span>
+                    <span class="qs-change">↑ 2</span>
+                </div>
+                <div class="qs-number">12</div>
+                <div class="qs-label">Active Templates</div>
+                <div class="qs-trend">3 in draft</div>
+            </div>
+
+            <div class="quick-stat">
+                <div class="qs-top">
+                    <span class="qs-icon green">◆</span>
+                    <span class="qs-change">↑ 5%</span>
+                </div>
+                <div class="qs-number">89</div>
+                <div class="qs-label">This Month</div>
+                <div class="qs-trend">On track for record month</div>
+            </div>
+
+            <div class="quick-stat">
+                <div class="qs-top">
+                    <span class="qs-icon gold-light">✦</span>
+                    <span class="qs-change">↑ 8%</span>
+                </div>
+                <div class="qs-number">23</div>
+                <div class="qs-label">New This Week</div>
+                <div class="qs-trend">+4 from last week</div>
+            </div>
+        </section>
+
+        <!-- Main Grid -->
+        <div class="main-grid">
+            <div class="card">
+                <div class="card-header">
+                    <h3>Weekly Issuance</h3>
+                    <a href="#" class="action-link">View Details →</a>
+                </div>
+                <div class="area-chart">
+                    <div class="chart-grid">
+                        <span class="grid-line" style="top:0%"></span>
+                        <span class="grid-line" style="top:33%"></span>
+                        <span class="grid-line" style="top:66%"></span>
+                        <span class="grid-line" style="top:100%"></span>
+
+                        <div class="chart-bar-wrapper">
+                            <span class="chart-bar-value">65</span>
+                            <div class="chart-bar"></div>
+                            <span class="chart-bar-label">Mon</span>
+                        </div>
+                        <div class="chart-bar-wrapper">
+                            <span class="chart-bar-value">85</span>
+                            <div class="chart-bar"></div>
+                            <span class="chart-bar-label">Tue</span>
+                        </div>
+                        <div class="chart-bar-wrapper">
+                            <span class="chart-bar-value">45</span>
+                            <div class="chart-bar"></div>
+                            <span class="chart-bar-label">Wed</span>
+                        </div>
+                        <div class="chart-bar-wrapper">
+                            <span class="chart-bar-value">95</span>
+                            <div class="chart-bar"></div>
+                            <span class="chart-bar-label">Thu</span>
+                        </div>
+                        <div class="chart-bar-wrapper">
+                            <span class="chart-bar-value">55</span>
+                            <div class="chart-bar"></div>
+                            <span class="chart-bar-label">Fri</span>
+                        </div>
+                        <div class="chart-bar-wrapper">
+                            <span class="chart-bar-value">75</span>
+                            <div class="chart-bar"></div>
+                            <span class="chart-bar-label">Sat</span>
+                        </div>
+                        <div class="chart-bar-wrapper">
+                            <span class="chart-bar-value">40</span>
+                            <div class="chart-bar"></div>
+                            <span class="chart-bar-label">Sun</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <h3>Certificate Distribution</h3>
+                    <a href="#" class="action-link">Details →</a>
+                </div>
+                <div class="donut-wrap">
+                    <div class="donut-ring"></div>
+                    <div class="donut-legend-grid">
+                        <span class="legend-item">
+                            <span class="dot" style="background:#C8A04E;"></span>
+                            Academic 35%
+                        </span>
+                        <span class="legend-item">
+                            <span class="dot" style="background:#0F2147;"></span>
+                            Sports 27%
+                        </span>
+                        <span class="legend-item">
+                            <span class="dot" style="background:#E8D5A3;"></span>
+                            ID Cards 20%
+                        </span>
+                        <span class="legend-item">
+                            <span class="dot" style="background:#1A3566;"></span>
+                            Others 18%
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Activity Feed -->
+        <div class="card" style="margin-top:24px;">
+            <div class="card-header">
+                <h3>Recent Activity</h3>
+                <a href="#" class="action-link">View All →</a>
+            </div>
+            <div class="activity-list">
+                <div class="activity-item">
+                    <span class="a-icon gold">◈</span>
+                    <div class="a-content">
+                        <div class="title">Certificate <strong>CERT-2026-0001</strong> issued to <strong>Aarav Mehta</strong></div>
+                        <div class="desc">Generated by Principal</div>
+                    </div>
+                    <span class="a-time">2m ago</span>
+                </div>
+
+                <div class="activity-item">
+                    <span class="a-icon navy">◆</span>
+                    <div class="a-content">
+                        <div class="title">New template <strong>"Sports Certificate 2026"</strong> created</div>
+                        <div class="desc">Created by Coordinator</div>
+                    </div>
+                    <span class="a-time">15m ago</span>
+                </div>
+
+                <div class="activity-item">
+                    <span class="a-icon gold-light">▣</span>
+                    <div class="a-content">
+                        <div class="title">ID Card <strong>ID-2026-0001</strong> generated for <strong>Kabir Khan</strong></div>
+                        <div class="desc">Generated by Admin</div>
+                    </div>
+                    <span class="a-time">1h ago</span>
+                </div>
+
+                <div class="activity-item">
+                    <span class="a-icon navy-light">✦</span>
+                    <div class="a-content">
+                        <div class="title">Template <strong>"Achievement Certificate"</strong> updated</div>
+                        <div class="desc">Updated by Principal</div>
+                    </div>
+                    <span class="a-time">3h ago</span>
+                </div>
+
+                <div class="activity-item">
+                    <span class="a-icon red">◌</span>
+                    <div class="a-content">
+                        <div class="title">Certificate <strong>CERT-2026-0003</strong> revoked</div>
+                        <div class="desc">Revoked by Admin</div>
+                    </div>
+                    <span class="a-time">5h ago</span>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

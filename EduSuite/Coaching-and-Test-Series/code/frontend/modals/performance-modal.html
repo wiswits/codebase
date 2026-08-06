@@ -1,0 +1,52 @@
+<div class="section-title">📈 Performance Overview</div>
+
+<div class="stat-grid">
+    <div class="stat-item">
+        <span class="value" style="color: var(--indigo-light)">42</span>
+        <span class="label">Completed Tests</span>
+    </div>
+    <div class="stat-item">
+        <span class="value" style="color: #34D399">73.4%</span>
+        <span class="label">Average Score</span>
+    </div>
+    <div class="stat-item">
+        <span class="value" style="color: #F59E0B">82%</span>
+        <span class="label">Accuracy</span>
+    </div>
+</div>
+
+<div class="section-title">📊 Subject-wise Breakdown</div>
+
+<div class="list-item">
+    <div class="left"><span class="icon">🔬</span><span class="name">Physics</span></div>
+    <div class="right"><span style="color: #818CF8; font-weight: 600;">78%</span></div>
+</div>
+<div class="list-item">
+    <div class="left"><span class="icon">🧪</span><span class="name">Chemistry</span></div>
+    <div class="right"><span style="color: #34D399; font-weight: 600;">65%</span></div>
+</div>
+<div class="list-item">
+    <div class="left"><span class="icon">📐</span><span class="name">Mathematics</span></div>
+    <div class="right"><span style="color: #F59E0B; font-weight: 600;">92%</span></div>
+</div>
+<div class="list-item">
+    <div class="left"><span class="icon">🧬</span><span class="name">Biology</span></div>
+    <div class="right"><span style="color: #8B5CF6; font-weight: 600;">71%</span></div>
+</div>
+
+<div style="margin-top: var(--space-4); padding-top: var(--space-4); border-top: 1px solid var(--border-color);">
+    <div style="display: flex; flex-wrap: wrap; gap: var(--space-3);">
+        <span style="font-size: 0.75rem; color: var(--text-muted);">
+            🏆 Best: <strong style="color: var(--text-secondary);">Mathematics (92%)</strong>
+        </span>
+        <span style="font-size: 0.75rem; color: var(--text-muted);">
+            📉 Needs improvement: <strong style="color: #EF4444;">Chemistry (65%)</strong>
+        </span>
+    </div>
+</div>
+
+<div class="action-group" style="display: flex; gap: var(--space-3); flex-wrap: wrap; margin-top: var(--space-4);">
+    <button class="action-btn" onclick="window.modalSystem.close(); window.modalSystem.openAnalytics()">📊 View Detailed Analytics</button>
+    <button class="action-btn secondary" onclick="window.exportReport()">📥 Export Report</button>
+    <button class="action-btn secondary" onclick="window.modalSystem.close()">Close</button>
+</div>

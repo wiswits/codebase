@@ -1,0 +1,90 @@
+<div style="margin-bottom: 16px; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-muted, rgba(255,255,255,0.5));">📝 Create New Test</div>
+
+<form id="createTestForm" style="display: flex; flex-direction: column; gap: 16px;">
+    <div>
+        <label style="display: block; font-size: 0.8rem; font-weight: 500; color: var(--text-secondary, rgba(255,255,255,0.85)); margin-bottom: 4px;">Test Title *</label>
+        <input type="text" id="testTitle" placeholder="e.g., AITS 2026 - Physics" style="width: 100%; padding: 10px 14px; background: var(--bg-card, rgba(17,17,26,0.7)); border: 1px solid var(--border-color, rgba(255,255,255,0.06)); border-radius: 8px; color: var(--text-primary, #FFFFFF); font-size: 0.9rem; font-family: 'Inter', sans-serif;">
+    </div>
+
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+        <div>
+            <label style="display: block; font-size: 0.8rem; font-weight: 500; color: var(--text-secondary, rgba(255,255,255,0.85)); margin-bottom: 4px;">Test Type *</label>
+            <select id="testType" style="width: 100%; padding: 10px 14px; background: var(--bg-card, rgba(17,17,26,0.7)); border: 1px solid var(--border-color, rgba(255,255,255,0.06)); border-radius: 8px; color: var(--text-primary, #FFFFFF); font-size: 0.85rem; font-family: 'Inter', sans-serif;">
+                <option value="part">Part Syllabus</option>
+                <option value="full">Full Syllabus</option>
+                <option value="aits">AITS</option>
+                <option value="mock">Mock</option>
+                <option value="custom">Custom</option>
+            </select>
+        </div>
+        <div>
+            <label style="display: block; font-size: 0.8rem; font-weight: 500; color: var(--text-secondary, rgba(255,255,255,0.85)); margin-bottom: 4px;">Mode *</label>
+            <select id="testMode" style="width: 100%; padding: 10px 14px; background: var(--bg-card, rgba(17,17,26,0.7)); border: 1px solid var(--border-color, rgba(255,255,255,0.06)); border-radius: 8px; color: var(--text-primary, #FFFFFF); font-size: 0.85rem; font-family: 'Inter', sans-serif;">
+                <option value="online">Online</option>
+                <option value="omr">OMR</option>
+                <option value="both">Both</option>
+            </select>
+        </div>
+    </div>
+
+    <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px;">
+        <div>
+            <label style="display: block; font-size: 0.8rem; font-weight: 500; color: var(--text-secondary, rgba(255,255,255,0.85)); margin-bottom: 4px;">Duration (mins) *</label>
+            <input type="number" id="testDuration" value="180" min="30" max="360" step="30" style="width: 100%; padding: 10px 14px; background: var(--bg-card, rgba(17,17,26,0.7)); border: 1px solid var(--border-color, rgba(255,255,255,0.06)); border-radius: 8px; color: var(--text-primary, #FFFFFF); font-size: 0.9rem; font-family: 'Inter', sans-serif;">
+        </div>
+        <div>
+            <label style="display: block; font-size: 0.8rem; font-weight: 500; color: var(--text-secondary, rgba(255,255,255,0.85)); margin-bottom: 4px;">Total Marks</label>
+            <input type="number" id="testMarks" value="300" step="10" style="width: 100%; padding: 10px 14px; background: var(--bg-card, rgba(17,17,26,0.7)); border: 1px solid var(--border-color, rgba(255,255,255,0.06)); border-radius: 8px; color: var(--text-primary, #FFFFFF); font-size: 0.9rem; font-family: 'Inter', sans-serif;">
+        </div>
+        <div>
+            <label style="display: block; font-size: 0.8rem; font-weight: 500; color: var(--text-secondary, rgba(255,255,255,0.85)); margin-bottom: 4px;">Batch</label>
+            <select id="testBatch" style="width: 100%; padding: 10px 14px; background: var(--bg-card, rgba(17,17,26,0.7)); border: 1px solid var(--border-color, rgba(255,255,255,0.06)); border-radius: 8px; color: var(--text-primary, #FFFFFF); font-size: 0.85rem; font-family: 'Inter', sans-serif;">
+                <option value="alpha">Alpha</option>
+                <option value="beta">Beta</option>
+                <option value="gamma">Gamma</option>
+                <option value="all">All Batches</option>
+            </select>
+        </div>
+    </div>
+
+    <div>
+        <label style="display: block; font-size: 0.8rem; font-weight: 500; color: var(--text-secondary, rgba(255,255,255,0.85)); margin-bottom: 4px;">Subjects</label>
+        <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+            <label style="display: flex; align-items: center; gap: 6px; font-size: 0.8rem; color: var(--text-secondary, rgba(255,255,255,0.85)); cursor: pointer;">
+                <input type="checkbox" checked> Physics
+            </label>
+            <label style="display: flex; align-items: center; gap: 6px; font-size: 0.8rem; color: var(--text-secondary, rgba(255,255,255,0.85)); cursor: pointer;">
+                <input type="checkbox" checked> Chemistry
+            </label>
+            <label style="display: flex; align-items: center; gap: 6px; font-size: 0.8rem; color: var(--text-secondary, rgba(255,255,255,0.85)); cursor: pointer;">
+                <input type="checkbox" checked> Mathematics
+            </label>
+            <label style="display: flex; align-items: center; gap: 6px; font-size: 0.8rem; color: var(--text-secondary, rgba(255,255,255,0.85)); cursor: pointer;">
+                <input type="checkbox"> Biology
+            </label>
+        </div>
+    </div>
+
+    <div>
+        <label style="display: block; font-size: 0.8rem; font-weight: 500; color: var(--text-secondary, rgba(255,255,255,0.85)); margin-bottom: 4px;">Syllabus / Chapters</label>
+        <textarea id="testSyllabus" rows="2" placeholder="e.g., Mechanics, Thermodynamics, Optics" style="width: 100%; padding: 10px 14px; background: var(--bg-card, rgba(17,17,26,0.7)); border: 1px solid var(--border-color, rgba(255,255,255,0.06)); border-radius: 8px; color: var(--text-primary, #FFFFFF); font-size: 0.85rem; font-family: 'Inter', sans-serif; resize: vertical;"></textarea>
+    </div>
+
+    <div style="display: flex; gap: 12px; flex-wrap: wrap; margin-top: 8px;">
+        <button type="submit" class="action-btn" style="padding: 10px 32px; border-radius: 9999px; background: linear-gradient(135deg, #4F46E5, #8B5CF6); color: #FFFFFF; font-weight: 600; font-size: 0.85rem; border: none; cursor: pointer; box-shadow: 0 2px 16px rgba(79,70,229,0.25);">✅ Create Test</button>
+        <button type="button" class="action-btn secondary" onclick="window.modalSystem.close()" style="padding: 10px 32px; border-radius: 9999px; background: var(--bg-card, rgba(17,17,26,0.7)); border: 1px solid var(--border-color, rgba(255,255,255,0.06)); color: var(--text-secondary, rgba(255,255,255,0.85)); font-weight: 600; font-size: 0.85rem; cursor: pointer;">Cancel</button>
+    </div>
+</form>
+
+<script>
+    document.getElementById('createTestForm')?.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const title = document.getElementById('testTitle').value;
+        if (!title) {
+            window.showToast('⚠️ Please enter a test title');
+            return;
+        }
+        window.modalSystem.close();
+        window.showToast('✅ Test "' + title + '" created successfully!');
+    });
+</script>

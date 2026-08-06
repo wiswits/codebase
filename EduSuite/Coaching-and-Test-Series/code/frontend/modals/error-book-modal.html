@@ -1,0 +1,45 @@
+<div class="section-title">📕 Error Book</div>
+
+<div class="stat-grid">
+    <div class="stat-item">
+        <span class="value" style="color: #EF4444">12</span>
+        <span class="label">Total Errors</span>
+    </div>
+    <div class="stat-item">
+        <span class="value" style="color: #34D399">4</span>
+        <span class="label">Mastered</span>
+    </div>
+    <div class="stat-item">
+        <span class="value" style="color: #F59E0B">8</span>
+        <span class="label">In Progress</span>
+    </div>
+</div>
+
+<div class="section-title">📋 Error List</div>
+
+<div class="list-item">
+    <div class="left"><span class="icon">🔬</span><span class="name">Newton's Laws</span></div>
+    <div class="right"><span class="badge-status in-progress">In Progress</span></div>
+</div>
+<div class="list-item">
+    <div class="left"><span class="icon">🧪</span><span class="name">Thermodynamics</span></div>
+    <div class="right"><span class="badge-status mastered">Mastered ✅</span></div>
+</div>
+<div class="list-item">
+    <div class="left"><span class="icon">🧬</span><span class="name">Organic Chemistry</span></div>
+    <div class="right"><span class="badge-status in-progress">In Progress</span></div>
+</div>
+<div class="list-item">
+    <div class="left"><span class="icon">📐</span><span class="name">Calculus</span></div>
+    <div class="right"><span class="badge-status review">Review</span></div>
+</div>
+<div class="list-item">
+    <div class="left"><span class="icon">🔬</span><span class="name">Optics</span></div>
+    <div class="right"><span class="badge-status mastered">Mastered ✅</span></div>
+</div>
+
+<div class="action-group" style="display: flex; gap: var(--space-3); flex-wrap: wrap; margin-top: var(--space-4);">
+    <button class="action-btn" onclick="window.modalSystem.close(); window.showToast('📚 Starting revision deck...')">📚 Start Revision Deck</button>
+    <button class="action-btn secondary" onclick="window.exportErrorBook()">📥 Export Error Book</button>
+    <button class="action-btn secondary" onclick="window.modalSystem.close()">Close</button>
+</div>

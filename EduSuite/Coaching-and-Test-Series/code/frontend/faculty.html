@@ -1,0 +1,2250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Faculty Panel — EduTech Solutions</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/theme.css" />
+    <link rel="stylesheet" href="css/faculty.css" />
+    <button class="btn-primary-sm" onclick="window.exportFacultyReport()">📥 Export Report</button>
+    <style>
+        /* ========================================
+           FACULTY PANEL - Complete Styles
+           ======================================== */
+
+        :root {
+            --navy: #0A0A0F;
+            --slate: #11111A;
+            --slate-card: rgba(17, 17, 26, 0.85);
+            --indigo: #4F46E5;
+            --indigo-light: #818CF8;
+            --indigo-glow: rgba(79, 70, 229, 0.2);
+            --white: #FFFFFF;
+            --white-soft: rgba(255, 255, 255, 0.85);
+            --white-muted: rgba(255, 255, 255, 0.5);
+            --glass-border: rgba(255, 255, 255, 0.06);
+            --font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            --space-1: 4px;
+            --space-2: 8px;
+            --space-3: 12px;
+            --space-4: 16px;
+            --space-5: 24px;
+            --space-6: 32px;
+            --radius-sm: 8px;
+            --radius-md: 12px;
+            --radius-lg: 20px;
+            --radius-full: 9999px;
+        }
+
+        body {
+            font-family: var(--font);
+            background: var(--navy);
+            color: var(--white);
+            margin: 0;
+            padding-top: 72px;
+            min-height: 100vh;
+            transition: background 0.3s ease;
+        }
+
+        /* ========================================
+           NAVBAR
+           ======================================== */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            padding: 0 var(--space-5);
+            background: var(--slate);
+            border-bottom: 1px solid var(--glass-border);
+            transition: background 0.4s, box-shadow 0.4s;
+        }
+
+        .navbar.scrolled {
+            background: rgba(10, 10, 15, 0.8);
+            backdrop-filter: blur(24px) saturate(1.4);
+        }
+
+        .nav-container {
+            max-width: 1280px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 72px;
+        }
+
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: var(--space-3);
+            font-weight: 700;
+            font-size: 1.1rem;
+            letter-spacing: -0.02em;
+        }
+
+        .nav-logo svg {
+            flex-shrink: 0;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: var(--space-6);
+        }
+
+        .nav-links a {
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: var(--white-muted);
+            transition: color 0.3s;
+            position: relative;
+            text-decoration: none;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--indigo);
+            transition: width 0.3s;
+        }
+        .nav-links a:hover::after,
+        .nav-links a.active::after {
+            width: 100%;
+        }
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: var(--white);
+        }
+
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: var(--space-3);
+        }
+
+        .theme-toggle {
+            position: relative;
+            width: 44px;
+            height: 24px;
+            border-radius: 12px;
+            background: var(--bg-secondary, #11111A);
+            border: 1px solid var(--glass-border);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            padding: 2px;
+            flex-shrink: 0;
+        }
+
+        .theme-toggle .toggle-track {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .theme-toggle .toggle-thumb {
+            position: absolute;
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            background: var(--indigo);
+            transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+            top: 1px;
+            left: 2px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 10px;
+            box-shadow: 0 2px 8px rgba(79, 70, 229, 0.3);
+        }
+
+        [data-theme="light"] .theme-toggle .toggle-thumb {
+            left: calc(100% - 20px);
+            background: #F59E0B;
+        }
+
+        .theme-toggle .toggle-thumb svg {
+            width: 12px;
+            height: 12px;
+            fill: white;
+        }
+
+        [data-theme="light"] .theme-toggle .toggle-thumb svg {
+            fill: #0A0A0F;
+        }
+
+        .user-badge {
+            font-size: 0.85rem;
+            color: var(--white-soft);
+            padding: 6px 14px;
+            background: rgba(255, 255, 255, 0.04);
+            border-radius: var(--radius-full);
+            border: 1px solid var(--glass-border);
+        }
+
+        .btn-ghost {
+            font-weight: 600;
+            font-size: 0.875rem;
+            padding: 10px 22px;
+            border-radius: var(--radius-full);
+            transition: all 0.3s;
+            background: transparent;
+            color: var(--white-muted);
+            border: none;
+            cursor: pointer;
+        }
+        .btn-ghost:hover {
+            color: var(--white);
+        }
+
+        .nav-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            padding: 4px;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+        .nav-toggle span {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background: var(--white);
+            border-radius: 2px;
+            transition: 0.3s;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links,
+            .nav-actions .btn-ghost {
+                display: none;
+            }
+            .nav-toggle {
+                display: flex;
+            }
+        }
+
+        /* ========================================
+           FACULTY WRAPPER
+           ======================================== */
+        .faculty-wrapper {
+            display: flex;
+            min-height: calc(100vh - 72px);
+            max-width: 1440px;
+            margin: 0 auto;
+            padding: 0 var(--space-5);
+            gap: var(--space-6);
+        }
+
+        /* ========================================
+           SIDEBAR
+           ======================================== */
+        .faculty-sidebar {
+            width: 220px;
+            padding: var(--space-6) 0;
+            flex-shrink: 0;
+            position: sticky;
+            top: 72px;
+            height: calc(100vh - 72px);
+            overflow-y: auto;
+        }
+
+        .faculty-sidebar::-webkit-scrollbar {
+            width: 3px;
+        }
+        .faculty-sidebar::-webkit-scrollbar-thumb {
+            background: var(--indigo);
+            border-radius: 4px;
+        }
+
+        .sidebar-section {
+            margin-bottom: var(--space-5);
+        }
+
+        .sidebar-section-title {
+            font-size: 0.65rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--white-muted);
+            opacity: 0.5;
+            padding: 0 var(--space-3);
+            margin-bottom: var(--space-2);
+        }
+
+        .sidebar-nav-item {
+            display: flex;
+            align-items: center;
+            gap: var(--space-3);
+            padding: 8px 14px;
+            border-radius: var(--radius-md);
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: var(--white-muted);
+            transition: all 0.3s;
+            text-decoration: none;
+            cursor: pointer;
+            position: relative;
+            background: none;
+            border: none;
+            width: 100%;
+            text-align: left;
+        }
+
+        .sidebar-nav-item:hover {
+            background: rgba(255, 255, 255, 0.04);
+            color: var(--white-soft);
+        }
+
+        .sidebar-nav-item.active {
+            background: rgba(79, 70, 229, 0.12);
+            color: var(--indigo-light);
+            box-shadow: inset 2px 0 0 var(--indigo);
+        }
+
+        .sidebar-nav-item .icon {
+            font-size: 1.1rem;
+            width: 24px;
+            text-align: center;
+        }
+
+        .sidebar-nav-item .badge {
+            margin-left: auto;
+            font-size: 0.6rem;
+            padding: 1px 8px;
+            background: var(--indigo);
+            border-radius: var(--radius-full);
+            color: var(--white);
+        }
+
+        .sidebar-footer {
+            padding-top: var(--space-4);
+            border-top: 1px solid var(--glass-border);
+            display: flex;
+            align-items: center;
+            gap: var(--space-3);
+            margin-top: var(--space-4);
+        }
+
+        .user-avatar {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--indigo), #8B5CF6);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            font-size: 0.8rem;
+        }
+
+        .user-info strong {
+            display: block;
+            font-size: 0.8rem;
+        }
+        .user-info span {
+            font-size: 0.7rem;
+            color: var(--white-muted);
+        }
+
+        /* ========================================
+           MAIN CONTENT
+           ======================================== */
+        .faculty-main {
+            flex: 1;
+            padding: var(--space-6) 0 var(--space-8);
+            min-width: 0;
+        }
+
+        /* ========================================
+           HEADER
+           ======================================== */
+        .dashboard-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: var(--space-6);
+            flex-wrap: wrap;
+            gap: var(--space-3);
+        }
+
+        .header-left h1 {
+            font-size: 1.4rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            margin: 0;
+            color: var(--white);
+        }
+
+        .header-left p {
+            font-size: 0.85rem;
+            color: var(--white-muted);
+            margin: 2px 0 0 0;
+        }
+
+        .header-right {
+            display: flex;
+            align-items: center;
+            gap: var(--space-3);
+        }
+
+        .icon-btn {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--slate-card);
+            border: 1px solid var(--glass-border);
+            color: var(--white);
+            font-size: 1.1rem;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+        .icon-btn:hover {
+            background: rgba(255, 255, 255, 0.06);
+            border-color: rgba(79, 70, 229, 0.2);
+        }
+
+        .btn-primary-sm {
+            padding: 8px 20px;
+            border-radius: var(--radius-full);
+            background: linear-gradient(135deg, var(--indigo), #8B5CF6);
+            color: var(--white);
+            font-weight: 600;
+            font-size: 0.8rem;
+            border: none;
+            transition: all 0.3s;
+            box-shadow: 0 2px 16px var(--indigo-glow);
+            cursor: pointer;
+        }
+        .btn-primary-sm:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 24px var(--indigo-glow);
+        }
+
+        /* ========================================
+           STATS
+           ======================================== */
+        .faculty-stats {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: var(--space-4);
+            margin-bottom: var(--space-6);
+        }
+
+        .stat-card {
+            background: var(--slate-card);
+            border: 1px solid var(--glass-border);
+            border-radius: var(--radius-md);
+            padding: var(--space-5);
+            backdrop-filter: blur(8px);
+            transition: all 0.3s;
+            cursor: default;
+        }
+        .stat-card:hover {
+            border-color: rgba(79, 70, 229, 0.15);
+        }
+
+        .stat-label {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            color: var(--white-muted);
+        }
+
+        .stat-value {
+            display: block;
+            font-size: 2rem;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            margin: 4px 0;
+            color: var(--white);
+        }
+
+        .stat-change {
+            font-size: 0.75rem;
+        }
+        .stat-change.up {
+            color: #34D399;
+        }
+        .stat-change.down {
+            color: #EF4444;
+        }
+
+        /* ========================================
+           FACULTY GRID
+           ======================================== */
+        .faculty-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: var(--space-4);
+            margin-bottom: var(--space-6);
+        }
+
+        .chart-card {
+            background: var(--slate-card);
+            border: 1px solid var(--glass-border);
+            border-radius: var(--radius-md);
+            padding: var(--space-5);
+            backdrop-filter: blur(8px);
+            transition: all 0.3s;
+        }
+        .chart-card:hover {
+            border-color: rgba(79, 70, 229, 0.1);
+        }
+        .chart-card h3 {
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin: 0 0 var(--space-4) 0;
+            color: var(--white-soft);
+        }
+
+        /* ========================================
+           DOUBT QUEUE
+           ======================================== */
+        .doubt-queue {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-3);
+        }
+
+        .doubt-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: var(--space-3) var(--space-4);
+            border-radius: var(--radius-md);
+            flex-wrap: wrap;
+            gap: var(--space-3);
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid var(--glass-border);
+            transition: all 0.3s;
+        }
+        .doubt-item:hover {
+            border-color: rgba(79, 70, 229, 0.15);
+        }
+
+        .doubt-item .doubt-student {
+            font-weight: 500;
+            font-size: 0.85rem;
+        }
+
+        .doubt-item .doubt-topic {
+            font-size: 0.75rem;
+            color: var(--white-muted);
+            display: block;
+        }
+
+        .doubt-status {
+            font-size: 0.6rem;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            padding: 2px 10px;
+            border-radius: var(--radius-full);
+            font-weight: 600;
+        }
+        .doubt-status.pending {
+            background: rgba(251, 191, 36, 0.15);
+            color: #F59E0B;
+        }
+        .doubt-status.assigned {
+            background: rgba(96, 165, 250, 0.15);
+            color: #60A5FA;
+        }
+        .doubt-status.resolved {
+            background: rgba(52, 211, 153, 0.15);
+            color: #34D399;
+        }
+
+        .doubt-sla {
+            font-size: 0.7rem;
+            color: var(--white-muted);
+        }
+        .doubt-sla.urgent {
+            color: #EF4444;
+        }
+
+        .btn-sm {
+            padding: 4px 14px;
+            border-radius: var(--radius-full);
+            font-size: 0.7rem;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .btn-sm.assign {
+            background: var(--indigo);
+            color: var(--white);
+        }
+        .btn-sm.resolve {
+            background: #34D399;
+            color: var(--white);
+        }
+        .btn-sm:hover {
+            transform: translateY(-1px);
+        }
+
+        /* ========================================
+           QUICK STATS
+           ======================================== */
+        .quick-stats-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-2);
+            margin-bottom: var(--space-4);
+        }
+
+        .quick-stat-item {
+            text-align: center;
+            padding: 8px;
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: var(--radius-sm);
+        }
+
+        .quick-stat-item .num {
+            display: block;
+            font-size: 1.4rem;
+            font-weight: 700;
+        }
+
+        .quick-stat-item .label {
+            font-size: 0.6rem;
+            color: var(--white-muted);
+        }
+
+        .quick-stat-big {
+            text-align: center;
+            padding: var(--space-3);
+            background: rgba(52, 211, 153, 0.06);
+            border-radius: var(--radius-sm);
+            border-left: 2px solid #34D399;
+        }
+
+        .quick-stat-big .big-num {
+            font-size: 2rem;
+            font-weight: 800;
+            color: #34D399;
+        }
+
+        .quick-stat-big .big-label {
+            font-size: 0.7rem;
+            color: var(--white-muted);
+        }
+
+        /* ========================================
+           FACULTY CHARTS
+           ======================================== */
+        .faculty-charts {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-4);
+        }
+
+        /* ========================================
+           LIVE CHART - Bar Chart
+           ======================================== */
+        .chart-container {
+            position: relative;
+            width: 100%;
+            height: 180px;
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-around;
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--glass-border);
+        }
+
+        .chart-bar-group {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex: 1;
+            gap: 6px;
+            height: 100%;
+            justify-content: flex-end;
+        }
+
+        .chart-bar-track {
+            width: 36px;
+            height: 140px;
+            background: rgba(255, 255, 255, 0.04);
+            border-radius: 6px 6px 0 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .chart-bar-fill {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            border-radius: 6px 6px 0 0;
+            transition: height 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+            min-height: 4px;
+        }
+
+        .chart-bar-fill.indigo {
+            background: linear-gradient(180deg, var(--indigo-light), var(--indigo));
+        }
+        .chart-bar-fill.green {
+            background: linear-gradient(180deg, #6EE7B7, #34D399);
+        }
+        .chart-bar-fill.orange {
+            background: linear-gradient(180deg, #FCD34D, #F59E0B);
+        }
+        .chart-bar-fill.purple {
+            background: linear-gradient(180deg, #A78BFA, #8B5CF6);
+        }
+        .chart-bar-fill.blue {
+            background: linear-gradient(180deg, #60A5FA, #3B82F6);
+        }
+        .chart-bar-fill.pink {
+            background: linear-gradient(180deg, #F472B6, #EC4899);
+        }
+
+        .chart-bar-value {
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: var(--white-soft);
+        }
+
+        .chart-bar-label {
+            font-size: 0.6rem;
+            color: var(--white-muted);
+            text-align: center;
+        }
+
+        /* ========================================
+           LIVE CHART - Horizontal Bar
+           ======================================== */
+        .chart-horizontal {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-3);
+            padding: var(--space-2) 0;
+        }
+
+        .chart-horizontal-item {
+            display: flex;
+            align-items: center;
+            gap: var(--space-3);
+        }
+
+        .chart-horizontal-item .h-label {
+            font-size: 0.8rem;
+            font-weight: 500;
+            width: 80px;
+            flex-shrink: 0;
+            color: var(--white-soft);
+        }
+
+        .chart-horizontal-item .h-track {
+            flex: 1;
+            height: 8px;
+            background: rgba(255, 255, 255, 0.04);
+            border-radius: 6px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .chart-horizontal-item .h-track .h-fill {
+            height: 100%;
+            border-radius: 6px;
+            transition: width 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .chart-horizontal-item .h-value {
+            font-size: 0.75rem;
+            font-weight: 600;
+            width: 40px;
+            text-align: right;
+            color: var(--white-soft);
+        }
+
+        /* ========================================
+           SECTION CONTENT
+           ======================================== */
+        .section-content {
+            display: block;
+        }
+
+        .section-content.hidden {
+            display: none;
+        }
+
+        /* ========================================
+           STUDENTS LIST
+           ======================================== */
+        .student-list {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-2);
+        }
+
+        .student-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: var(--space-3) var(--space-4);
+            border-radius: var(--radius-md);
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid var(--glass-border);
+            transition: all 0.3s;
+        }
+        .student-item:hover {
+            border-color: rgba(79, 70, 229, 0.15);
+        }
+
+        .student-item .student-info {
+            display: flex;
+            align-items: center;
+            gap: var(--space-3);
+        }
+
+        .student-item .student-avatar-sm {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--indigo), var(--purple, #8B5CF6));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.7rem;
+            font-weight: 600;
+        }
+
+        .student-item .student-name {
+            font-weight: 500;
+            font-size: 0.85rem;
+        }
+
+        .student-item .student-batch {
+            font-size: 0.65rem;
+            color: var(--white-muted);
+        }
+
+        .student-item .student-status {
+            font-size: 0.6rem;
+            padding: 2px 10px;
+            border-radius: var(--radius-full);
+            font-weight: 600;
+        }
+        .student-item .student-status.active {
+            background: rgba(52, 211, 153, 0.12);
+            color: #34D399;
+        }
+        .student-item .student-status.pending {
+            background: rgba(251, 191, 36, 0.12);
+            color: #F59E0B;
+        }
+
+        /* ========================================
+           QUESTION BANK
+           ======================================== */
+        .question-list {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-2);
+        }
+
+        .question-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: var(--space-3) var(--space-4);
+            border-radius: var(--radius-md);
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid var(--glass-border);
+        }
+
+        .question-item .q-text {
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        .question-item .q-meta {
+            font-size: 0.65rem;
+            color: var(--white-muted);
+        }
+
+        /* ========================================
+           TEACHER EFFECTIVENESS
+           ======================================== */
+        .effectiveness-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-4);
+            margin-top: var(--space-4);
+        }
+
+        .effectiveness-item {
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: var(--radius-md);
+            padding: var(--space-4);
+            text-align: center;
+            border: 1px solid var(--glass-border);
+            transition: all 0.3s;
+        }
+
+        .effectiveness-item:hover {
+            border-color: rgba(79, 70, 229, 0.15);
+        }
+
+        .effectiveness-item .eff-value {
+            display: block;
+            font-size: 1.8rem;
+            font-weight: 800;
+            margin-bottom: 2px;
+        }
+
+        .effectiveness-item .eff-label {
+            font-size: 0.65rem;
+            color: var(--white-muted);
+            font-weight: 500;
+        }
+
+        .effectiveness-item .eff-change {
+            font-size: 0.6rem;
+            display: block;
+            margin-top: 4px;
+        }
+        .effectiveness-item .eff-change.up {
+            color: #34D399;
+        }
+        .effectiveness-item .eff-change.down {
+            color: #EF4444;
+        }
+
+        /* ========================================
+           RESPONSIVE
+           ======================================== */
+        @media (max-width: 1024px) {
+            .faculty-stats {
+                grid-template-columns: 1fr 1fr;
+            }
+            .faculty-grid {
+                grid-template-columns: 1fr;
+            }
+            .faculty-charts {
+                grid-template-columns: 1fr;
+            }
+            .effectiveness-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .faculty-sidebar {
+                display: none;
+            }
+            .faculty-wrapper {
+                padding: 0 var(--space-3);
+            }
+            .faculty-stats {
+                grid-template-columns: 1fr 1fr;
+            }
+            .dashboard-header {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            .header-right {
+                justify-content: flex-start;
+            }
+            .doubt-item {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            .effectiveness-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .faculty-stats {
+                grid-template-columns: 1fr;
+            }
+            .quick-stats-grid {
+                grid-template-columns: 1fr;
+            }
+            .chart-bar-track {
+                width: 24px;
+                height: 100px;
+            }
+            .chart-horizontal-item .h-label {
+                width: 60px;
+                font-size: 0.7rem;
+            }
+        }
+
+        /* ========================================
+           THEME TOGGLE LIGHT MODE OVERRIDES
+           ======================================== */
+        [data-theme="light"] body {
+            background: #F8F9FC;
+        }
+
+        [data-theme="light"] .navbar {
+            background: #FFFFFF;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+        }
+
+        [data-theme="light"] .stat-card,
+        [data-theme="light"] .chart-card,
+        [data-theme="light"] .doubt-item,
+        [data-theme="light"] .student-item,
+        [data-theme="light"] .question-item,
+        [data-theme="light"] .effectiveness-item {
+            background: rgba(255, 255, 255, 0.85);
+            border-color: rgba(0, 0, 0, 0.06);
+        }
+
+        [data-theme="light"] .stat-label,
+        [data-theme="light"] .stat-value,
+        [data-theme="light"] .header-left h1,
+        [data-theme="light"] .chart-card h3,
+        [data-theme="light"] .chart-bar-value,
+        [data-theme="light"] .chart-horizontal-item .h-label,
+        [data-theme="light"] .chart-horizontal-item .h-value {
+            color: #0A0A0F;
+        }
+
+        [data-theme="light"] .stat-change,
+        [data-theme="light"] .header-left p,
+        [data-theme="light"] .chart-bar-label,
+        [data-theme="light"] .effectiveness-item .eff-label {
+            color: #6B7280;
+        }
+
+        [data-theme="light"] .sidebar-nav-item {
+            color: #6B7280;
+        }
+        [data-theme="light"] .sidebar-nav-item:hover {
+            color: #0A0A0F;
+        }
+        [data-theme="light"] .sidebar-nav-item.active {
+            background: rgba(79, 70, 229, 0.08);
+            color: var(--indigo);
+        }
+
+        [data-theme="light"] .sidebar-section-title {
+            color: #6B7280;
+        }
+
+        [data-theme="light"] .user-info strong {
+            color: #0A0A0F;
+        }
+        [data-theme="light"] .user-info span {
+            color: #6B7280;
+        }
+
+        [data-theme="light"] .doubt-item .doubt-topic {
+            color: #6B7280;
+        }
+
+        [data-theme="light"] .student-item .student-batch {
+            color: #6B7280;
+        }
+
+        [data-theme="light"] .question-item .q-meta {
+            color: #6B7280;
+        }
+
+        [data-theme="light"] .quick-stat-item {
+            background: rgba(0, 0, 0, 0.02);
+        }
+        [data-theme="light"] .quick-stat-item .label {
+            color: #6B7280;
+        }
+        [data-theme="light"] .quick-stat-big {
+            background: rgba(52, 211, 153, 0.06);
+        }
+        [data-theme="light"] .quick-stat-big .big-label {
+            color: #6B7280;
+        }
+
+        [data-theme="light"] .user-badge {
+            color: #0A0A0F;
+            border-color: rgba(0, 0, 0, 0.06);
+        }
+
+        [data-theme="light"] .btn-ghost {
+            color: #6B7280;
+        }
+        [data-theme="light"] .btn-ghost:hover {
+            color: #0A0A0F;
+        }
+
+        [data-theme="light"] .icon-btn {
+            background: rgba(255, 255, 255, 0.85);
+            border-color: rgba(0, 0, 0, 0.06);
+            color: #0A0A0F;
+        }
+        [data-theme="light"] .icon-btn:hover {
+            background: #FFFFFF;
+            border-color: var(--indigo);
+        }
+
+        [data-theme="light"] .sidebar-footer {
+            border-color: rgba(0, 0, 0, 0.06);
+        }
+
+        [data-theme="light"] .nav-links a {
+            color: #6B7280;
+        }
+        [data-theme="light"] .nav-links a:hover,
+        [data-theme="light"] .nav-links a.active {
+            color: #0A0A0F;
+        }
+
+        [data-theme="light"] .nav-logo span {
+            color: #0A0A0F;
+        }
+
+        [data-theme="light"] .chart-bar-track {
+            background: rgba(0, 0, 0, 0.04);
+        }
+
+        [data-theme="light"] .chart-horizontal-item .h-track {
+            background: rgba(0, 0, 0, 0.04);
+        }
+
+        /* ========================================
+           TOAST NOTIFICATION
+           ======================================== */
+        .toast-notification {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            padding: 12px 24px;
+            background: #11111A;
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            border-radius: 12px;
+            backdrop-filter: blur(12px);
+            color: #FFFFFF;
+            font-size: 0.85rem;
+            z-index: 99999;
+            animation: slideUp 0.4s ease;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+            font-family: 'Inter', sans-serif;
+        }
+
+        [data-theme="light"] .toast-notification {
+            background: #FFFFFF;
+            border-color: rgba(0, 0, 0, 0.06);
+            color: #0A0A0F;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
+
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* ========================================
+           ANIMATION FOR LIVE UPDATES
+           ======================================== */
+        @keyframes pulseGlow {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.6; }
+        }
+
+        .live-indicator {
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #34D399;
+            animation: pulseGlow 1.5s ease-in-out infinite;
+            margin-left: 8px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ==================== NAVIGATION ==================== -->
+    <nav class="navbar glass-nav">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <svg width="32" height="32" viewBox="0 0 36 36" fill="none">
+                    <rect x="2" y="2" width="32" height="32" rx="10" fill="#4F46E5" />
+                    <path d="M12 24L18 12L24 24" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M14 20H22" stroke="white" stroke-width="2" stroke-linecap="round" />
+                </svg>
+                <span>EduTech</span>
+            </div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="dashboard.html">Dashboard</a>
+                <a href="test-series.html">Test Series</a>
+                <a href="pyq-bank.html">PYQ Bank</a>
+                <a href="faculty.html" class="active">Faculty</a>
+            </div>
+            <div class="nav-actions">
+                <button class="theme-toggle" aria-label="Toggle theme">
+                    <span class="toggle-track">
+                        <span class="toggle-thumb">
+                            <svg viewBox="0 0 24 24"><path d="M12 18C8.68629 18 6 15.3137 6 12C6 8.68629 8.68629 6 12 6C15.3137 6 18 8.68629 18 12C18 15.3137 15.3137 18 12 18ZM11 1H13V4H11V1ZM11 20H13V23H11V20ZM3.51472 4.92893L4.92893 3.51472L7.05025 5.63604L5.63604 7.05025L3.51472 4.92893ZM16.9497 18.364L18.364 16.9497L20.4853 19.0711L19.0711 20.4853L16.9497 18.364ZM19.0711 3.51472L20.4853 4.92893L18.364 7.05025L16.9497 5.63604L19.0711 3.51472ZM5.63604 16.9497L7.05025 18.364L4.92893 20.4853L3.51472 19.0711L5.63604 16.9497ZM23 11V13H20V11H23ZM4 11V13H1V11H4Z"/></svg>
+                        </span>
+                    </span>
+                </button>
+                <span class="user-badge">👨‍🏫 Dr. Sharma</span>
+                <button class="btn-ghost">Logout</button>
+                <button class="nav-toggle" aria-label="Menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ==================== FACULTY PANEL ==================== -->
+    <div class="faculty-wrapper">
+
+        <!-- ==================== SIDEBAR ==================== -->
+        <aside class="faculty-sidebar">
+            <div class="sidebar-section">
+                <div class="sidebar-section-title">Overview</div>
+                <button class="sidebar-nav-item active" data-section="overview">
+                    <span class="icon">📊</span> Overview
+                </button>
+                <button class="sidebar-nav-item" data-section="doubts">
+                    <span class="icon">💬</span> Doubt Queue
+                    <span class="badge">8</span>
+                </button>
+                <button class="sidebar-nav-item" data-section="tests">
+                    <span class="icon">📝</span> My Tests
+                </button>
+                <button class="sidebar-nav-item" data-section="students">
+                    <span class="icon">👥</span> Students
+                </button>
+                <button class="sidebar-nav-item" data-section="questions">
+                    <span class="icon">📚</span> Question Bank
+                </button>
+                <button class="sidebar-nav-item" data-section="performance">
+                    <span class="icon">📊</span> Performance
+                </button>
+                <button class="sidebar-nav-item" data-section="settings">
+                    <span class="icon">⚙️</span> Settings
+                </button>
+            </div>
+            <div class="sidebar-footer">
+                <div class="user-avatar">DS</div>
+                <div class="user-info">
+                    <strong>Dr. Sharma</strong>
+                    <span>Faculty · Physics</span>
+                </div>
+            </div>
+        </aside>
+
+        <!-- ==================== MAIN CONTENT ==================== -->
+        <main class="faculty-main">
+
+            <!-- Header -->
+            <header class="dashboard-header">
+                <div class="header-left">
+                    <h1>Faculty Panel</h1>
+                    <p>Welcome back, Dr. Sharma 👨‍🏫</p>
+                </div>
+                <div class="header-right">
+                    <button class="icon-btn">🔔</button>
+                    <button class="btn-primary-sm" onclick="window.modalSystem.openCreateTest()">+ Create Test</button>
+                </div>
+            </header>
+
+            <!-- ======================================== -->
+            <!-- SECTION: OVERVIEW (Default) -->
+            <!-- ======================================== -->
+            <div id="section-overview" class="section-content">
+
+                <!-- Stats -->
+                <section class="faculty-stats">
+                    <div class="stat-card">
+                        <span class="stat-label">Students</span>
+                        <span class="stat-value" data-count="48">0</span>
+                        <span class="stat-change up">↑ 5 this month</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-label">Doubts Resolved</span>
+                        <span class="stat-value" data-count="124">0</span>
+                        <span class="stat-change up">↑ 92% resolved</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-label">Avg. Response Time</span>
+                        <span class="stat-value" data-count="4.2">0</span>
+                        <span class="stat-change">⏱️ hours</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-label">Tests Created</span>
+                        <span class="stat-value" data-count="18">0</span>
+                        <span class="stat-change up">↑ 3 this month</span>
+                    </div>
+                </section>
+
+                <!-- Faculty Grid -->
+                <section class="faculty-grid">
+                    <!-- Doubt Queue -->
+                    <div class="chart-card">
+                        <h3>💬 Doubt Queue <span style="font-size:0.7rem;color:var(--white-muted)">(SLA priority)</span></h3>
+                        <div class="doubt-queue">
+                            <div class="doubt-item">
+                                <div>
+                                    <span class="doubt-student">Rahul K.</span>
+                                    <span class="doubt-topic">Newton's Laws doubt</span>
+                                </div>
+                                <div style="display:flex;align-items:center;gap:var(--space-2);flex-wrap:wrap;">
+                                    <span class="doubt-status assigned">Assigned</span>
+                                    <span class="doubt-sla urgent">⏰ 2h left</span>
+                                    <button class="btn-sm resolve">Resolve</button>
+                                </div>
+                            </div>
+                            <div class="doubt-item">
+                                <div>
+                                    <span class="doubt-student">Priya M.</span>
+                                    <span class="doubt-topic">Thermodynamics problem</span>
+                                </div>
+                                <div style="display:flex;align-items:center;gap:var(--space-2);flex-wrap:wrap;">
+                                    <span class="doubt-status pending">Pending</span>
+                                    <span class="doubt-sla">⏰ 12h left</span>
+                                    <button class="btn-sm assign">Assign</button>
+                                </div>
+                            </div>
+                            <div class="doubt-item">
+                                <div>
+                                    <span class="doubt-student">Amit S.</span>
+                                    <span class="doubt-topic">Optics numerical</span>
+                                </div>
+                                <div style="display:flex;align-items:center;gap:var(--space-2);flex-wrap:wrap;">
+                                    <span class="doubt-status pending">Pending</span>
+                                    <span class="doubt-sla">⏰ 18h left</span>
+                                    <button class="btn-sm assign">Assign</button>
+                                </div>
+                            </div>
+                            <div class="doubt-item">
+                                <div>
+                                    <span class="doubt-student">Sneha R.</span>
+                                    <span class="doubt-topic">Magnetism question</span>
+                                </div>
+                                <div style="display:flex;align-items:center;gap:var(--space-2);flex-wrap:wrap;">
+                                    <span class="doubt-status resolved">Resolved</span>
+                                    <span class="doubt-sla">✅ 3h ago</span>
+                                    <span style="font-size:0.7rem;color:#34D399">★ 4.8</span>
+                                </div>
+                            </div>
+                            <div class="doubt-item">
+                                <div>
+                                    <span class="doubt-student">Vikram P.</span>
+                                    <span class="doubt-topic">Wave optics doubt</span>
+                                </div>
+                                <div style="display:flex;align-items:center;gap:var(--space-2);flex-wrap:wrap;">
+                                    <span class="doubt-status assigned">Assigned</span>
+                                    <span class="doubt-sla urgent">⏰ 30m left</span>
+                                    <button class="btn-sm resolve">Resolve</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Quick Stats -->
+                    <div class="chart-card">
+                        <h3>📊 Quick Stats</h3>
+                        <div style="display:flex;flex-direction:column;gap:var(--space-4)">
+                            <div class="quick-stat-big">
+                                <span class="big-num">92%</span>
+                                <span class="big-label">SLA Compliance</span>
+                            </div>
+                            <div class="quick-stats-grid">
+                                <div class="quick-stat-item">
+                                    <span class="num" style="color:var(--indigo-light)">48</span>
+                                    <span class="label">Students</span>
+                                </div>
+                                <div class="quick-stat-item">
+                                    <span class="num" style="color:#34D399">18</span>
+                                    <span class="label">Tests</span>
+                                </div>
+                                <div class="quick-stat-item">
+                                    <span class="num" style="color:#F59E0B">4.7</span>
+                                    <span class="label">Rating</span>
+                                </div>
+                                <div class="quick-stat-item">
+                                    <span class="num" style="color:#8B5CF6">124</span>
+                                    <span class="label">Doubts</span>
+                                </div>
+                            </div>
+                            <div style="padding:var(--space-3);background:rgba(52,211,153,0.06);border-radius:var(--radius-sm);border-left:2px solid #34D399">
+                                <span style="font-size:0.75rem;color:var(--white-soft)">🎯 Your students improved by <strong>15%</strong> this month</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Performance Charts -->
+                <section class="faculty-charts">
+                    <div class="chart-card">
+                        <h3>📈 Batch Performance <span class="live-indicator"></span></h3>
+                        <div class="chart-container" id="batchChart">
+                            <div class="chart-bar-group">
+                                <div class="chart-bar-track">
+                                    <div class="chart-bar-fill indigo" data-height="85"></div>
+                                </div>
+                                <span class="chart-bar-value">85%</span>
+                                <span class="chart-bar-label">Alpha</span>
+                            </div>
+                            <div class="chart-bar-group">
+                                <div class="chart-bar-track">
+                                    <div class="chart-bar-fill green" data-height="68"></div>
+                                </div>
+                                <span class="chart-bar-value">68%</span>
+                                <span class="chart-bar-label">Beta</span>
+                            </div>
+                            <div class="chart-bar-group">
+                                <div class="chart-bar-track">
+                                    <div class="chart-bar-fill orange" data-height="52"></div>
+                                </div>
+                                <span class="chart-bar-value">52%</span>
+                                <span class="chart-bar-label">Gamma</span>
+                            </div>
+                            <div class="chart-bar-group">
+                                <div class="chart-bar-track">
+                                    <div class="chart-bar-fill purple" data-height="94"></div>
+                                </div>
+                                <span class="chart-bar-value">94%</span>
+                                <span class="chart-bar-label">Toppers</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="chart-card">
+                        <h3>📊 Subject-wise Performance <span class="live-indicator"></span></h3>
+                        <div class="chart-container" id="subjectChart">
+                            <div class="chart-bar-group">
+                                <div class="chart-bar-track">
+                                    <div class="chart-bar-fill indigo" data-height="78"></div>
+                                </div>
+                                <span class="chart-bar-value">78%</span>
+                                <span class="chart-bar-label">Physics</span>
+                            </div>
+                            <div class="chart-bar-group">
+                                <div class="chart-bar-track">
+                                    <div class="chart-bar-fill green" data-height="65"></div>
+                                </div>
+                                <span class="chart-bar-value">65%</span>
+                                <span class="chart-bar-label">Chemistry</span>
+                            </div>
+                            <div class="chart-bar-group">
+                                <div class="chart-bar-track">
+                                    <div class="chart-bar-fill orange" data-height="92"></div>
+                                </div>
+                                <span class="chart-bar-value">92%</span>
+                                <span class="chart-bar-label">Maths</span>
+                            </div>
+                            <div class="chart-bar-group">
+                                <div class="chart-bar-track">
+                                    <div class="chart-bar-fill purple" data-height="71"></div>
+                                </div>
+                                <span class="chart-bar-value">71%</span>
+                                <span class="chart-bar-label">Biology</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Teacher Effectiveness -->
+                <section class="faculty-charts" style="margin-top:var(--space-4);">
+                    <div class="chart-card" style="grid-column: 1 / -1;">
+                        <h3>👨‍🏫 Teacher Effectiveness <span class="live-indicator"></span></h3>
+                        <div class="effectiveness-grid">
+                            <div class="effectiveness-item">
+                                <span class="eff-value" style="color:#34D399">4.7</span>
+                                <span class="eff-label">Student Satisfaction</span>
+                                <span class="eff-change up">↑ 0.3 this month</span>
+                            </div>
+                            <div class="effectiveness-item">
+                                <span class="eff-value" style="color:#60A5FA">96%</span>
+                                <span class="eff-label">Doubt Resolution Rate</span>
+                                <span class="eff-change up">↑ 2% this month</span>
+                            </div>
+                            <div class="effectiveness-item">
+                                <span class="eff-value" style="color:#F59E0B">88%</span>
+                                <span class="eff-label">Test Completion Rate</span>
+                                <span class="eff-change up">↑ 5% this month</span>
+                            </div>
+                            <div class="effectiveness-item">
+                                <span class="eff-value" style="color:#34D399">+15%</span>
+                                <span class="eff-label">Student Improvement</span>
+                                <span class="eff-change up">↑ 3% this month</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- ======================================== -->
+            <!-- SECTION: PERFORMANCE (Full Details) -->
+            <!-- ======================================== -->
+            <div id="section-performance" class="section-content hidden">
+                <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--space-4);margin-bottom:var(--space-4)">
+                    <div class="chart-card">
+                        <h3>📈 Batch Performance <span class="live-indicator"></span></h3>
+                        <div class="chart-container" id="batchChartFull" style="height:200px;">
+                            <div class="chart-bar-group">
+                                <div class="chart-bar-track">
+                                    <div class="chart-bar-fill indigo" data-height="85"></div>
+                                </div>
+                                <span class="chart-bar-value">85%</span>
+                                <span class="chart-bar-label">Alpha</span>
+                            </div>
+                            <div class="chart-bar-group">
+                                <div class="chart-bar-track">
+                                    <div class="chart-bar-fill green" data-height="68"></div>
+                                </div>
+                                <span class="chart-bar-value">68%</span>
+                                <span class="chart-bar-label">Beta</span>
+                            </div>
+                            <div class="chart-bar-group">
+                                <div class="chart-bar-track">
+                                    <div class="chart-bar-fill orange" data-height="52"></div>
+                                </div>
+                                <span class="chart-bar-value">52%</span>
+                                <span class="chart-bar-label">Gamma</span>
+                            </div>
+                            <div class="chart-bar-group">
+                                <div class="chart-bar-track">
+                                    <div class="chart-bar-fill purple" data-height="94"></div>
+                                </div>
+                                <span class="chart-bar-value">94%</span>
+                                <span class="chart-bar-label">Toppers</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="chart-card">
+                        <h3>📊 Subject-wise Performance <span class="live-indicator"></span></h3>
+                        <div class="chart-container" id="subjectChartFull" style="height:200px;">
+                            <div class="chart-bar-group">
+                                <div class="chart-bar-track">
+                                    <div class="chart-bar-fill indigo" data-height="78"></div>
+                                </div>
+                                <span class="chart-bar-value">78%</span>
+                                <span class="chart-bar-label">Physics</span>
+                            </div>
+                            <div class="chart-bar-group">
+                                <div class="chart-bar-track">
+                                    <div class="chart-bar-fill green" data-height="65"></div>
+                                </div>
+                                <span class="chart-bar-value">65%</span>
+                                <span class="chart-bar-label">Chemistry</span>
+                            </div>
+                            <div class="chart-bar-group">
+                                <div class="chart-bar-track">
+                                    <div class="chart-bar-fill orange" data-height="92"></div>
+                                </div>
+                                <span class="chart-bar-value">92%</span>
+                                <span class="chart-bar-label">Maths</span>
+                            </div>
+                            <div class="chart-bar-group">
+                                <div class="chart-bar-track">
+                                    <div class="chart-bar-fill purple" data-height="71"></div>
+                                </div>
+                                <span class="chart-bar-value">71%</span>
+                                <span class="chart-bar-label">Biology</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="chart-card" style="margin-bottom:var(--space-4)">
+                    <h3>👨‍🏫 Teacher Effectiveness <span class="live-indicator"></span></h3>
+                    <div class="effectiveness-grid" style="grid-template-columns:repeat(4,1fr);">
+                        <div class="effectiveness-item">
+                            <span class="eff-value" style="color:#34D399">4.7</span>
+                            <span class="eff-label">Student Satisfaction</span>
+                            <span class="eff-change up">↑ 0.3 this month</span>
+                        </div>
+                        <div class="effectiveness-item">
+                            <span class="eff-value" style="color:#60A5FA">96%</span>
+                            <span class="eff-label">Doubt Resolution Rate</span>
+                            <span class="eff-change up">↑ 2% this month</span>
+                        </div>
+                        <div class="effectiveness-item">
+                            <span class="eff-value" style="color:#F59E0B">88%</span>
+                            <span class="eff-label">Test Completion Rate</span>
+                            <span class="eff-change up">↑ 5% this month</span>
+                        </div>
+                        <div class="effectiveness-item">
+                            <span class="eff-value" style="color:#34D399">+15%</span>
+                            <span class="eff-label">Student Improvement</span>
+                            <span class="eff-change up">↑ 3% this month</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="chart-card">
+                    <h3>📈 Performance Trends Over Time</h3>
+                    <div style="padding:var(--space-4);text-align:center;color:var(--white-muted);">
+                        <span style="font-size:0.85rem;">📊 Interactive trend chart coming soon</span>
+                        <div style="margin-top:var(--space-3);display:flex;gap:var(--space-2);justify-content:center;flex-wrap:wrap;">
+                            <span style="font-size:0.65rem;padding:2px 10px;background:rgba(52,211,153,0.12);border-radius:var(--radius-full);color:#34D399;">↗️ Physics: +6%</span>
+                            <span style="font-size:0.65rem;padding:2px 10px;background:rgba(239,68,68,0.12);border-radius:var(--radius-full);color:#EF4444;">↘️ Chemistry: -2%</span>
+                            <span style="font-size:0.65rem;padding:2px 10px;background:rgba(52,211,153,0.12);border-radius:var(--radius-full);color:#34D399;">↗️ Maths: +8%</span>
+                            <span style="font-size:0.65rem;padding:2px 10px;background:rgba(52,211,153,0.12);border-radius:var(--radius-full);color:#34D399;">↗️ Biology: +3%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ======================================== -->
+            <!-- SECTION: DOUBT QUEUE -->
+            <!-- ======================================== -->
+            <div id="section-doubts" class="section-content hidden">
+                <div class="chart-card" style="margin-bottom:var(--space-4)">
+                    <h3>💬 All Doubts <span style="font-size:0.7rem;color:var(--white-muted)">(SLA priority)</span></h3>
+                    <div class="doubt-queue">
+                        <div class="doubt-item">
+                            <div>
+                                <span class="doubt-student">Rahul K.</span>
+                                <span class="doubt-topic">Newton's Laws doubt</span>
+                            </div>
+                            <div style="display:flex;align-items:center;gap:var(--space-2);flex-wrap:wrap;">
+                                <span class="doubt-status assigned">Assigned</span>
+                                <span class="doubt-sla urgent">⏰ 2h left</span>
+                                <button class="btn-sm resolve">Resolve</button>
+                            </div>
+                        </div>
+                        <div class="doubt-item">
+                            <div>
+                                <span class="doubt-student">Priya M.</span>
+                                <span class="doubt-topic">Thermodynamics problem</span>
+                            </div>
+                            <div style="display:flex;align-items:center;gap:var(--space-2);flex-wrap:wrap;">
+                                <span class="doubt-status pending">Pending</span>
+                                <span class="doubt-sla">⏰ 12h left</span>
+                                <button class="btn-sm assign">Assign</button>
+                            </div>
+                        </div>
+                        <div class="doubt-item">
+                            <div>
+                                <span class="doubt-student">Amit S.</span>
+                                <span class="doubt-topic">Optics numerical</span>
+                            </div>
+                            <div style="display:flex;align-items:center;gap:var(--space-2);flex-wrap:wrap;">
+                                <span class="doubt-status pending">Pending</span>
+                                <span class="doubt-sla">⏰ 18h left</span>
+                                <button class="btn-sm assign">Assign</button>
+                            </div>
+                        </div>
+                        <div class="doubt-item">
+                            <div>
+                                <span class="doubt-student">Sneha R.</span>
+                                <span class="doubt-topic">Magnetism question</span>
+                            </div>
+                            <div style="display:flex;align-items:center;gap:var(--space-2);flex-wrap:wrap;">
+                                <span class="doubt-status resolved">Resolved</span>
+                                <span class="doubt-sla">✅ 3h ago</span>
+                                <span style="font-size:0.7rem;color:#34D399">★ 4.8</span>
+                            </div>
+                        </div>
+                        <div class="doubt-item">
+                            <div>
+                                <span class="doubt-student">Vikram P.</span>
+                                <span class="doubt-topic">Wave optics doubt</span>
+                            </div>
+                            <div style="display:flex;align-items:center;gap:var(--space-2);flex-wrap:wrap;">
+                                <span class="doubt-status assigned">Assigned</span>
+                                <span class="doubt-sla urgent">⏰ 30m left</span>
+                                <button class="btn-sm resolve">Resolve</button>
+                            </div>
+                        </div>
+                        <div class="doubt-item">
+                            <div>
+                                <span class="doubt-student">Neha G.</span>
+                                <span class="doubt-topic">Kinematics doubt</span>
+                            </div>
+                            <div style="display:flex;align-items:center;gap:var(--space-2);flex-wrap:wrap;">
+                                <span class="doubt-status pending">Pending</span>
+                                <span class="doubt-sla">⏰ 20h left</span>
+                                <button class="btn-sm assign">Assign</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ======================================== -->
+            <!-- SECTION: STUDENTS -->
+            <!-- ======================================== -->
+            <div id="section-students" class="section-content hidden">
+                <div class="chart-card" style="margin-bottom:var(--space-4)">
+                    <h3>👥 My Students <span style="font-size:0.7rem;color:var(--white-muted)">(48 total)</span></h3>
+                    <div class="student-list">
+                        <div class="student-item">
+                            <div class="student-info">
+                                <div class="student-avatar-sm">RK</div>
+                                <div>
+                                    <span class="student-name">Rahul Kumar</span>
+                                    <span class="student-batch">Alpha Batch · Physics</span>
+                                </div>
+                            </div>
+                            <span class="student-status active">Active</span>
+                        </div>
+                        <div class="student-item">
+                            <div class="student-info">
+                                <div class="student-avatar-sm">PM</div>
+                                <div>
+                                    <span class="student-name">Priya Mehta</span>
+                                    <span class="student-batch">Beta Batch · Chemistry</span>
+                                </div>
+                            </div>
+                            <span class="student-status active">Active</span>
+                        </div>
+                        <div class="student-item">
+                            <div class="student-info">
+                                <div class="student-avatar-sm">AS</div>
+                                <div>
+                                    <span class="student-name">Amit Singh</span>
+                                    <span class="student-batch">Alpha Batch · Physics</span>
+                                </div>
+                            </div>
+                            <span class="student-status pending">Pending</span>
+                        </div>
+                        <div class="student-item">
+                            <div class="student-info">
+                                <div class="student-avatar-sm">SR</div>
+                                <div>
+                                    <span class="student-name">Sneha Reddy</span>
+                                    <span class="student-batch">Gamma Batch · Biology</span>
+                                </div>
+                            </div>
+                            <span class="student-status active">Active</span>
+                        </div>
+                        <div class="student-item">
+                            <div class="student-info">
+                                <div class="student-avatar-sm">VP</div>
+                                <div>
+                                    <span class="student-name">Vikram Patel</span>
+                                    <span class="student-batch">Alpha Batch · Physics</span>
+                                </div>
+                            </div>
+                            <span class="student-status active">Active</span>
+                        </div>
+                        <div class="student-item">
+                            <div class="student-info">
+                                <div class="student-avatar-sm">NG</div>
+                                <div>
+                                    <span class="student-name">Neha Gupta</span>
+                                    <span class="student-batch">Beta Batch · Mathematics</span>
+                                </div>
+                            </div>
+                            <span class="student-status pending">Pending</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ======================================== -->
+            <!-- SECTION: QUESTION BANK -->
+            <!-- ======================================== -->
+            <div id="section-questions" class="section-content hidden">
+                <div class="chart-card" style="margin-bottom:var(--space-4)">
+                    <h3>📚 Question Bank <span style="font-size:0.7rem;color:var(--white-muted)">(124 questions)</span></h3>
+                    <div class="question-list">
+                        <div class="question-item">
+                            <span class="q-text">Newton's Second Law Application</span>
+                            <span class="q-meta">Physics · Mechanics · Medium</span>
+                        </div>
+                        <div class="question-item">
+                            <span class="q-text">Thermodynamics - First Law</span>
+                            <span class="q-meta">Physics · Thermodynamics · Hard</span>
+                        </div>
+                        <div class="question-item">
+                            <span class="q-text">Optics - Lens Formula</span>
+                            <span class="q-meta">Physics · Optics · Easy</span>
+                        </div>
+                        <div class="question-item">
+                            <span class="q-text">Magnetism - Ampere's Law</span>
+                            <span class="q-meta">Physics · Electromagnetism · Hard</span>
+                        </div>
+                        <div class="question-item">
+                            <span class="q-text">Wave Optics - Interference</span>
+                            <span class="q-meta">Physics · Optics · Medium</span>
+                        </div>
+                        <div class="question-item">
+                            <span class="q-text">Kinematics - Projectile Motion</span>
+                            <span class="q-meta">Physics · Mechanics · Easy</span>
+                        </div>
+                    </div>
+                    <div style="margin-top:var(--space-4);display:flex;gap:var(--space-3);flex-wrap:wrap;">
+                        <button class="btn-primary-sm" onclick="window.modalSystem.openQuestionBank()">+ Add Question</button>
+                        <button class="btn-ghost" style="border:1px solid var(--glass-border);padding:8px 20px;border-radius:var(--radius-full);">Import Questions</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ======================================== -->
+            <!-- SECTION: MY TESTS -->
+            <!-- ======================================== -->
+            <div id="section-tests" class="section-content hidden">
+                <div class="chart-card" style="margin-bottom:var(--space-4)">
+                    <h3>📝 My Tests <span style="font-size:0.7rem;color:var(--white-muted)">(18 created)</span></h3>
+                    <div style="display:flex;flex-direction:column;gap:var(--space-2)">
+                        <div class="doubt-item" style="justify-content:space-between;">
+                            <div>
+                                <span style="font-weight:500;">AITS 2026 - Physics</span>
+                                <span style="font-size:0.7rem;color:var(--white-muted);display:block;">Jul 20, 2026 · 3h · 180 marks</span>
+                            </div>
+                            <span class="doubt-status pending">Upcoming</span>
+                        </div>
+                        <div class="doubt-item" style="justify-content:space-between;">
+                            <div>
+                                <span style="font-weight:500;">Part Syllabus - Mechanics</span>
+                                <span style="font-size:0.7rem;color:var(--white-muted);display:block;">Jul 15, 2026 · 2h · 120 marks</span>
+                            </div>
+                            <span class="doubt-status resolved">Completed</span>
+                        </div>
+                        <div class="doubt-item" style="justify-content:space-between;">
+                            <div>
+                                <span style="font-weight:500;">Full Syllabus - PCM</span>
+                                <span style="font-size:0.7rem;color:var(--white-muted);display:block;">Jul 25, 2026 · 3h · 300 marks</span>
+                            </div>
+                            <span class="doubt-status pending">Upcoming</span>
+                        </div>
+                        <div class="doubt-item" style="justify-content:space-between;">
+                            <div>
+                                <span style="font-weight:500;">Mock Test - Physics</span>
+                                <span style="font-size:0.7rem;color:var(--white-muted);display:block;">Jul 10, 2026 · 2h · 100 marks</span>
+                            </div>
+                            <span class="doubt-status resolved">Completed</span>
+                        </div>
+                    </div>
+                    <div style="margin-top:var(--space-4);display:flex;gap:var(--space-3);flex-wrap:wrap;">
+                        <button class="btn-primary-sm" id="createTestBtn2">+ Create New Test</button>
+                        <button class="btn-ghost" style="border:1px solid var(--glass-border);padding:8px 20px;border-radius:var(--radius-full);">View All</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ======================================== -->
+            <!-- SECTION: SETTINGS -->
+            <!-- ======================================== -->
+            <div id="section-settings" class="section-content hidden">
+                <div class="chart-card" style="margin-bottom:var(--space-4)">
+                    <h3>⚙️ Settings</h3>
+                    <div style="display:flex;flex-direction:column;gap:var(--space-4)">
+                        <div style="display:flex;justify-content:space-between;align-items:center;padding:var(--space-3) 0;border-bottom:1px solid var(--glass-border);">
+                            <div>
+                                <div style="font-weight:500;">Profile Settings</div>
+                                <div style="font-size:0.75rem;color:var(--white-muted);">Update your personal information</div>
+                            </div>
+                            <button class="btn-primary-sm">Edit Profile</button>
+                        </div>
+                        <div style="display:flex;justify-content:space-between;align-items:center;padding:var(--space-3) 0;border-bottom:1px solid var(--glass-border);">
+                            <div>
+                                <div style="font-weight:500;">Notification Preferences</div>
+                                <div style="font-size:0.75rem;color:var(--white-muted);">Manage email and push notifications</div>
+                            </div>
+                            <button class="btn-primary-sm">Configure</button>
+                        </div>
+                        <div style="display:flex;justify-content:space-between;align-items:center;padding:var(--space-3) 0;border-bottom:1px solid var(--glass-border);">
+                            <div>
+                                <div style="font-weight:500;">SLA Settings</div>
+                                <div style="font-size:0.75rem;color:var(--white-muted);">Configure doubt resolution SLAs</div>
+                            </div>
+                            <button class="btn-primary-sm">Configure</button>
+                        </div>
+                        <div style="display:flex;justify-content:space-between;align-items:center;padding:var(--space-3) 0;">
+                            <div>
+                                <div style="font-weight:500;">Account Security</div>
+                                <div style="font-size:0.75rem;color:var(--white-muted);">Change password, 2FA settings</div>
+                            </div>
+                            <button class="btn-primary-sm">Manage</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+    </div>
+    <!-- ======================================== -->
+    <!-- COMPLETE SCRIPTS -->
+    <!-- ======================================== -->
+    <script>
+        // ========================================
+        // THEME TOGGLE
+        // ========================================
+        (function() {
+            let currentTheme = localStorage.getItem('edutech-theme') || 'dark';
+
+            function applyTheme(theme) {
+                document.documentElement.setAttribute('data-theme', theme);
+                localStorage.setItem('edutech-theme', theme);
+                currentTheme = theme;
+
+                const toggle = document.querySelector('.theme-toggle');
+                if (toggle) {
+                    const thumb = toggle.querySelector('.toggle-thumb');
+                    if (thumb) {
+                        if (theme === 'light') {
+                            thumb.innerHTML = `<svg viewBox="0 0 24 24"><path d="M12 18C8.68629 18 6 15.3137 6 12C6 8.68629 8.68629 6 12 6C15.3137 6 18 8.68629 18 12C18 15.3137 15.3137 18 12 18ZM11 1H13V4H11V1ZM11 20H13V23H11V20ZM3.51472 4.92893L4.92893 3.51472L7.05025 5.63604L5.63604 7.05025L3.51472 4.92893ZM16.9497 18.364L18.364 16.9497L20.4853 19.0711L19.0711 20.4853L16.9497 18.364ZM19.0711 3.51472L20.4853 4.92893L18.364 7.05025L16.9497 5.63604L19.0711 3.51472ZM5.63604 16.9497L7.05025 18.364L4.92893 20.4853L3.51472 19.0711L5.63604 16.9497ZM23 11V13H20V11H23ZM4 11V13H1V11H4Z"/></svg>`;
+                        } else {
+                            thumb.innerHTML = `<svg viewBox="0 0 24 24"><path d="M12 18C8.68629 18 6 15.3137 6 12C6 8.68629 8.68629 6 12 6C15.3137 6 18 8.68629 18 12C18 15.3137 15.3137 18 12 18ZM11 1H13V4H11V1ZM11 20H13V23H11V20ZM3.51472 4.92893L4.92893 3.51472L7.05025 5.63604L5.63604 7.05025L3.51472 4.92893ZM16.9497 18.364L18.364 16.9497L20.4853 19.0711L19.0711 20.4853L16.9497 18.364ZM19.0711 3.51472L20.4853 4.92893L18.364 7.05025L16.9497 5.63604L19.0711 3.51472ZM5.63604 16.9497L7.05025 18.364L4.92893 20.4853L3.51472 19.0711L5.63604 16.9497ZM23 11V13H20V11H23ZM4 11V13H1V11H4Z"/></svg>`;
+                        }
+                    }
+                }
+            }
+
+            function toggleTheme() {
+                const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+                applyTheme(newTheme);
+            }
+
+            applyTheme(currentTheme);
+
+            const toggle = document.querySelector('.theme-toggle');
+            if (toggle) {
+                toggle.addEventListener('click', toggleTheme);
+            }
+
+            window.themeManager = {
+                currentTheme: () => currentTheme,
+                applyTheme: applyTheme,
+                toggleTheme: toggleTheme
+            };
+        })();
+
+        // ========================================
+        // ANIMATE LIVE CHARTS
+        // ========================================
+        function animateLiveCharts() {
+            const barFills = document.querySelectorAll('.chart-bar-fill');
+            
+            barFills.forEach(function(bar) {
+                const targetHeight = parseInt(bar.dataset.height);
+                if (!targetHeight) return;
+                
+                bar.style.height = '0%';
+                
+                setTimeout(function() {
+                    bar.style.height = targetHeight + '%';
+                }, 200 + Math.random() * 300);
+            });
+
+            const hFills = document.querySelectorAll('.h-fill');
+            hFills.forEach(function(bar, index) {
+                const targetWidth = bar.style.width;
+                bar.style.width = '0%';
+                setTimeout(function() {
+                    bar.style.width = targetWidth;
+                }, 300 + index * 100);
+            });
+
+            const effValues = document.querySelectorAll('.eff-value');
+            effValues.forEach(function(el) {
+                const text = el.textContent;
+                const isPercentage = text.includes('%');
+                const isDecimal = text.includes('.');
+                let target = parseFloat(text);
+                
+                if (!target) return;
+                
+                const duration = 1500;
+                const startTime = performance.now();
+                
+                function updateEffValue(time) {
+                    const progress = Math.min((time - startTime) / duration, 1);
+                    const eased = 1 - Math.pow(1 - progress, 3);
+                    const current = eased * target;
+                    
+                    if (isDecimal) {
+                        el.textContent = current.toFixed(1);
+                    } else if (isPercentage) {
+                        el.textContent = Math.floor(current) + '%';
+                    } else {
+                        el.textContent = Math.floor(current);
+                    }
+                    
+                    if (progress < 1) {
+                        requestAnimationFrame(updateEffValue);
+                    } else {
+                        el.textContent = text;
+                    }
+                }
+                
+                requestAnimationFrame(updateEffValue);
+            });
+        }
+
+        // ========================================
+        // LIVE UPDATE SIMULATION
+        // ========================================
+        function startLiveUpdates() {
+            setInterval(function() {
+                const bars = document.querySelectorAll('.chart-bar-fill');
+                bars.forEach(function(bar) {
+                    const currentHeight = parseFloat(bar.style.height) || parseFloat(bar.dataset.height);
+                    if (currentHeight) {
+                        const fluctuation = (Math.random() - 0.5) * 4;
+                        let newHeight = Math.max(10, Math.min(100, currentHeight + fluctuation));
+                        bar.style.height = newHeight + '%';
+                        
+                        const parent = bar.closest('.chart-bar-group');
+                        if (parent) {
+                            const valueEl = parent.querySelector('.chart-bar-value');
+                            if (valueEl) {
+                                valueEl.textContent = Math.round(newHeight) + '%';
+                            }
+                        }
+                    }
+                });
+            }, 5000);
+        }
+
+        // ========================================
+        // SIDEBAR NAVIGATION
+        // ========================================
+        const navItems = document.querySelectorAll('.sidebar-nav-item');
+        const sections = {
+            overview: document.getElementById('section-overview'),
+            doubts: document.getElementById('section-doubts'),
+            students: document.getElementById('section-students'),
+            questions: document.getElementById('section-questions'),
+            performance: document.getElementById('section-performance'),
+            tests: document.getElementById('section-tests'),
+            settings: document.getElementById('section-settings')
+        };
+
+        function switchSection(sectionName) {
+            Object.values(sections).forEach(function(section) {
+                if (section) section.classList.add('hidden');
+            });
+
+            if (sections[sectionName]) {
+                sections[sectionName].classList.remove('hidden');
+                if (sectionName === 'performance' || sectionName === 'overview') {
+                    setTimeout(animateLiveCharts, 300);
+                }
+            }
+
+            navItems.forEach(function(item) {
+                item.classList.remove('active');
+                if (item.dataset.section === sectionName) {
+                    item.classList.add('active');
+                }
+            });
+        }
+
+        navItems.forEach(function(item) {
+            item.addEventListener('click', function(e) {
+                e.preventDefault();
+                const section = this.dataset.section;
+                if (section) {
+                    switchSection(section);
+                    const label = this.textContent.trim().replace(/[0-9]+/g, '').trim();
+                    showToast('📂 Opening ' + label);
+                }
+            });
+        });
+
+        // ========================================
+        // DOUBT BUTTON ACTIONS
+        // ========================================
+        function handleDoubtAction(e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            const button = this;
+            const action = button.textContent.trim();
+            const doubtItem = button.closest('.doubt-item');
+
+            if (!doubtItem) return;
+
+            const studentName = doubtItem.querySelector('.doubt-student')?.textContent || 'Student';
+            const statusBadge = doubtItem.querySelector('.doubt-status');
+
+            if (action === 'Assign' || action === 'Assign ✓') {
+                button.textContent = 'Assigned ✓';
+                button.className = 'btn-sm resolve';
+                if (statusBadge) {
+                    statusBadge.className = 'doubt-status assigned';
+                    statusBadge.textContent = 'Assigned';
+                }
+                showToast('✅ Doubt assigned to ' + studentName);
+
+            } else if (action === 'Resolve' || action === 'Resolve ✓') {
+                button.textContent = 'Resolved ✓';
+                button.className = 'btn-sm';
+                button.style.background = '#34D399';
+                button.style.color = '#fff';
+                if (statusBadge) {
+                    statusBadge.className = 'doubt-status resolved';
+                    statusBadge.textContent = 'Resolved';
+                }
+                showToast('✅ Doubt resolved for ' + studentName);
+            }
+        }
+
+        function bindDoubtButtons() {
+            const buttons = document.querySelectorAll('.btn-sm');
+            buttons.forEach(function(btn) {
+                btn.removeEventListener('click', handleDoubtAction);
+                btn.addEventListener('click', handleDoubtAction);
+            });
+        }
+
+        bindDoubtButtons();
+
+        // ========================================
+        // ANIMATE COUNTERS
+        // ========================================
+        function animateCounters() {
+            const counters = document.querySelectorAll('.stat-value');
+
+            counters.forEach(function(counter) {
+                const target = parseFloat(counter.dataset.count);
+                if (!target && target !== 0) return;
+
+                const duration = 1500;
+                const startTime = performance.now();
+
+                function updateCounter(time) {
+                    const progress = Math.min((time - startTime) / duration, 1);
+                    const eased = 1 - Math.pow(1 - progress, 3);
+                    const current = eased * target;
+
+                    if (target % 1 !== 0) {
+                        counter.textContent = current.toFixed(1);
+                    } else {
+                        counter.textContent = Math.floor(current).toLocaleString();
+                    }
+
+                    if (progress < 1) {
+                        requestAnimationFrame(updateCounter);
+                    } else {
+                        if (target % 1 !== 0) {
+                            counter.textContent = target.toFixed(1);
+                        } else {
+                            counter.textContent = target.toLocaleString();
+                        }
+                    }
+                }
+
+                requestAnimationFrame(updateCounter);
+            });
+        }
+
+        // ========================================
+        // TOAST NOTIFICATION
+        // ========================================
+        function showToast(message) {
+            const existing = document.querySelector('.toast-notification');
+            if (existing) existing.remove();
+
+            const toast = document.createElement('div');
+            toast.className = 'toast-notification';
+            toast.textContent = message;
+            document.body.appendChild(toast);
+
+            setTimeout(function() {
+                toast.style.opacity = '0';
+                toast.style.transform = 'translateY(20px)';
+                toast.style.transition = 'opacity 0.3s, transform 0.3s';
+                setTimeout(function() { toast.remove(); }, 300);
+            }, 2500);
+        }
+
+        // ========================================
+        // CREATE TEST BUTTONS
+        // ========================================
+        document.querySelectorAll('#createTestBtn, #createTestBtn2').forEach(function(btn) {
+            if (btn) {
+                btn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    showToast('📝 Opening test creation wizard...');
+                });
+            }
+        });
+
+        var addQBtn = document.getElementById('addQuestionBtn');
+        if (addQBtn) {
+            addQBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                showToast('📝 Opening question creator...');
+            });
+        }
+
+        // ========================================
+        // ICON BUTTONS
+        // ========================================
+        document.querySelectorAll('.icon-btn').forEach(function(btn) {
+            btn.addEventListener('click', function(e) {
+                e.preventDefault();
+                var label = this.textContent.trim();
+                if (label === '🔔') {
+                    showToast('🔔 You have 3 new notifications');
+                } else {
+                    showToast('🔹 Button clicked');
+                }
+            });
+        });
+
+        // ========================================
+        // INITIALIZE
+        // ========================================
+        setTimeout(function() {
+            animateCounters();
+            animateLiveCharts();
+            startLiveUpdates();
+        }, 300);
+
+        // ========================================
+        // MUTATION OBSERVER - Watch for new doubt buttons
+        // ========================================
+        var observer = new MutationObserver(function(mutations) {
+            mutations.forEach(function(mutation) {
+                if (mutation.type === 'childList') {
+                    var newButtons = document.querySelectorAll('.btn-sm:not([data-bound])');
+                    newButtons.forEach(function(btn) {
+                        btn.dataset.bound = 'true';
+                        btn.addEventListener('click', handleDoubtAction);
+                    });
+                }
+            });
+        });
+
+        observer.observe(document.body, { childList: true, subtree: true });
+
+        // ========================================
+        // EXPOSE TO GLOBAL
+        // ========================================
+        window.facultyPanel = {
+            switchSection: switchSection,
+            animateLiveCharts: animateLiveCharts,
+            animateCounters: animateCounters,
+            bindDoubtButtons: bindDoubtButtons,
+            showToast: showToast
+        };
+
+        console.log('👨‍🏫 Faculty Panel loaded with LIVE charts!');
+        console.log('📊 Charts update every 5 seconds with simulated data');
+    </script>
+    <script src="js/theme-toggle.js"></script>
+    <script src="js/faculty.js"></script>
+    <script src="js/modal.js"></script>
+    <script src="js/api.js"></script>
+
+</body>
+</html>

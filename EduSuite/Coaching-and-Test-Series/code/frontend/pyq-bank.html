@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PYQ Bank — EduTech Solutions</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/theme.css" />
+    <link rel="stylesheet" href="css/pyq-bank.css" />
+    <button class="btn-primary-sm" onclick="window.exportPYQList()">📥 Export PYQs</button>
+</head>
+<body>
+
+    <nav class="navbar glass-nav">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <svg width="32" height="32" viewBox="0 0 36 36" fill="none">
+                    <rect x="2" y="2" width="32" height="32" rx="10" fill="#4F46E5" />
+                    <path d="M12 24L18 12L24 24" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M14 20H22" stroke="white" stroke-width="2" stroke-linecap="round" />
+                </svg>
+                <span>EduTech</span>
+            </div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="dashboard.html">Dashboard</a>
+                <a href="test-series.html">Test Series</a>
+                <a href="pyq-bank.html" class="active">PYQ Bank</a>
+                <a href="faculty.html">Faculty</a>
+            </div>
+            <div class="nav-actions">
+                <span class="user-badge">👤 Student</span>
+                <button class="btn-ghost">Logout</button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="pyq-wrapper">
+        <div class="section-header">
+            <span class="section-tag">PYQ Bank</span>
+            <h2 class="section-title">📚 Previous Year Questions</h2>
+            <p class="section-subtitle">JEE · NEET · NTSE · RMO · INMO — Year-tagged for easy practice</p>
+        </div>
+
+        <div class="pyq-stats">
+            <div class="pyq-stat-card">
+                <span class="num" data-count="1248">0</span>
+                <span class="label">Total Questions</span>
+            </div>
+            <div class="pyq-stat-card">
+                <span class="num" data-count="5">0</span>
+                <span class="label">Exams</span>
+            </div>
+            <div class="pyq-stat-card">
+                <span class="num" data-count="8">0</span>
+                <span class="label">Years</span>
+            </div>
+            <div class="pyq-stat-card">
+                <span class="num" data-count="4">0</span>
+                <span class="label">Subjects</span>
+            </div>
+        </div>
+
+        <div class="pyq-filters">
+            <div class="filter-group">
+                <label>📚 Exam</label>
+                <select class="filter-select">
+                    <option>All Exams</option>
+                    <option>JEE Main</option>
+                    <option>JEE Advanced</option>
+                    <option>NEET</option>
+                    <option>NTSE</option>
+                    <option>RMO</option>
+                    <option>INMO</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label>📅 Year</label>
+                <select class="filter-select">
+                    <option>All Years</option>
+                    <option>2025</option>
+                    <option>2024</option>
+                    <option>2023</option>
+                    <option>2022</option>
+                    <option>2021</option>
+                    <option>2020</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label>📖 Subject</label>
+                <select class="filter-select">
+                    <option>All Subjects</option>
+                    <option>Physics</option>
+                    <option>Chemistry</option>
+                    <option>Mathematics</option>
+                    <option>Biology</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label>⭐ Difficulty</label>
+                <select class="filter-select">
+                    <option>All</option>
+                    <option>Easy</option>
+                    <option>Medium</option>
+                    <option>Hard</option>
+                </select>
+            </div>
+            <button class="btn-primary-sm">Apply Filters</button>
+        </div>
+
+        <div class="pyq-grid">
+            <div class="pyq-card glass-card">
+                <div class="pyq-tags">
+                    <span class="pyq-tag jee">JEE Main</span>
+                    <span class="pyq-tag year">2024</span>
+                </div>
+                <h4>Newton's Laws of Motion</h4>
+                <span class="subject">Physics · Mechanics</span>
+                <span class="year">📅 2024 · 5 questions</span>
+            </div>
+            <div class="pyq-card glass-card">
+                <div class="pyq-tags">
+                    <span class="pyq-tag neet">NEET</span>
+                    <span class="pyq-tag year">2024</span>
+                </div>
+                <h4>Organic Chemistry - Hydrocarbons</h4>
+                <span class="subject">Chemistry · Organic</span>
+                <span class="year">📅 2024 · 8 questions</span>
+            </div>
+            <div class="pyq-card glass-card">
+                <div class="pyq-tags">
+                    <span class="pyq-tag ntse">NTSE</span>
+                    <span class="pyq-tag year">2023</span>
+                </div>
+                <h4>Number Systems & Algebra</h4>
+                <span class="subject">Mathematics · Algebra</span>
+                <span class="year">📅 2023 · 6 questions</span>
+            </div>
+            <div class="pyq-card glass-card">
+                <div class="pyq-tags">
+                    <span class="pyq-tag rmo">RMO</span>
+                    <span class="pyq-tag year">2024</span>
+                </div>
+                <h4>Combinatorics & Number Theory</h4>
+                <span class="subject">Mathematics · Olympiad</span>
+                <span class="year">📅 2024 · 4 questions</span>
+            </div>
+            <div class="pyq-card glass-card">
+                <div class="pyq-tags">
+                    <span class="pyq-tag inmo">INMO</span>
+                    <span class="pyq-tag year">2023</span>
+                </div>
+                <h4>Geometry & Inequalities</h4>
+                <span class="subject">Mathematics · Olympiad</span>
+                <span class="year">📅 2023 · 3 questions</span>
+            </div>
+            <div class="pyq-card glass-card">
+                <div class="pyq-tags">
+                    <span class="pyq-tag jee">JEE Advanced</span>
+                    <span class="pyq-tag year">2024</span>
+                </div>
+                <h4>Electromagnetic Induction</h4>
+                <span class="subject">Physics · Electrodynamics</span>
+                <span class="year">📅 2024 · 7 questions</span>
+            </div>
+            <div class="pyq-card glass-card">
+                <div class="pyq-tags">
+                    <span class="pyq-tag neet">NEET</span>
+                    <span class="pyq-tag year">2023</span>
+                </div>
+                <h4>Human Physiology</h4>
+                <span class="subject">Biology · Zoology</span>
+                <span class="year">📅 2023 · 10 questions</span>
+            </div>
+            <div class="pyq-card glass-card">
+                <div class="pyq-tags">
+                    <span class="pyq-tag jee">JEE Main</span>
+                    <span class="pyq-tag year">2023</span>
+                </div>
+                <h4>Differential Calculus</h4>
+                <span class="subject">Mathematics · Calculus</span>
+                <span class="year">📅 2023 · 8 questions</span>
+            </div>
+            <div class="pyq-card glass-card">
+                <div class="pyq-tags">
+                    <span class="pyq-tag ntse">NTSE</span>
+                    <span class="pyq-tag year">2024</span>
+                </div>
+                <h4>Periodic Table & Bonding</h4>
+                <span class="subject">Chemistry · Inorganic</span>
+                <span class="year">📅 2024 · 5 questions</span>
+            </div>
+        </div>
+    </div>
+    <script src="js/theme-toggle.js"></script>
+    <script src="js/pyq-bank.js"></script>
+
+</body>
+</html>

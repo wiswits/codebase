@@ -1,0 +1,1307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0A0A0F" />
+    <title>Student Workspace — EduTech Solutions</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800;14..32,900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/theme.css" />
+    <link rel="stylesheet" href="css/dashboard.css" />
+    <link rel="stylesheet" href="css/modal.css" />
+    <style>
+    
+        /* ========================================
+           STUDENT WORKSPACE - Dashboard Styles
+           ======================================== */
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            margin: 0;
+            padding-top: 72px;
+            min-height: 100vh;
+            overflow-x: hidden;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+
+        /* ========================================
+           NAVBAR OVERRIDE
+           ======================================== */
+        .navbar {
+            background: var(--bg-secondary);
+            border-bottom: 1px solid var(--border-color);
+            transition: background 0.3s ease, border-color 0.3s ease;
+        }
+
+        .navbar.scrolled {
+            background: var(--bg-secondary);
+            backdrop-filter: blur(24px) saturate(1.4);
+        }
+
+        .nav-logo span {
+            color: var(--text-primary);
+        }
+
+        .nav-links a {
+            color: var(--text-muted);
+        }
+
+        .nav-links a:hover {
+            color: var(--text-primary);
+        }
+
+        .nav-links a.active {
+            color: var(--text-primary);
+        }
+
+        .user-badge {
+            color: var(--text-secondary);
+            background: var(--bg-hover);
+            border-color: var(--border-color);
+        }
+
+        .btn-ghost {
+            color: var(--text-muted);
+        }
+        .btn-ghost:hover {
+            color: var(--text-primary);
+        }
+
+        /* ========================================
+           NAV ACTIONS - Theme Toggle in Nav
+           ======================================== */
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: var(--space-3);
+        }
+
+        .nav-actions .theme-toggle {
+            margin-right: 4px;
+        }
+
+        /* ========================================
+           WORKSPACE WRAPPER
+           ======================================== */
+        .workspace-wrapper {
+            display: flex;
+            min-height: calc(100vh - 72px);
+            max-width: 1440px;
+            margin: 0 auto;
+            padding: 0 var(--space-5);
+            gap: var(--space-6);
+        }
+
+        /* ========================================
+           SIDEBAR
+           ======================================== */
+        .workspace-sidebar {
+            width: 220px;
+            padding: var(--space-6) 0;
+            flex-shrink: 0;
+            position: sticky;
+            top: 72px;
+            height: calc(100vh - 72px);
+            overflow-y: auto;
+        }
+
+        .workspace-sidebar::-webkit-scrollbar {
+            width: 3px;
+        }
+        .workspace-sidebar::-webkit-scrollbar-thumb {
+            background: var(--indigo);
+            border-radius: 4px;
+        }
+
+        .sidebar-section {
+            margin-bottom: var(--space-5);
+        }
+
+        .sidebar-section-title {
+            font-size: 0.65rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--text-dim);
+            padding: 0 var(--space-3);
+            margin-bottom: var(--space-2);
+        }
+
+        .sidebar-nav-item {
+            display: flex;
+            align-items: center;
+            gap: var(--space-3);
+            padding: 8px 14px;
+            border-radius: var(--radius-md);
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: var(--text-muted);
+            transition: all 0.3s;
+            text-decoration: none;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .sidebar-nav-item:hover {
+            background: var(--bg-hover);
+            color: var(--text-secondary);
+        }
+
+        .sidebar-nav-item.active {
+            background: rgba(79, 70, 229, 0.12);
+            color: var(--indigo-light);
+        }
+
+        .sidebar-nav-item .icon {
+            font-size: 1.1rem;
+            width: 24px;
+            text-align: center;
+        }
+
+        .sidebar-nav-item .badge {
+            margin-left: auto;
+            font-size: 0.6rem;
+            padding: 1px 8px;
+            background: rgba(251, 191, 36, 0.15);
+            color: var(--warning);
+            border-radius: var(--radius-full);
+            font-weight: 600;
+        }
+
+        .sidebar-nav-item .badge.error {
+            background: rgba(239, 68, 68, 0.15);
+            color: var(--danger);
+        }
+
+        /* ========================================
+           MAIN CONTENT
+           ======================================== */
+        .workspace-main {
+            flex: 1;
+            padding: var(--space-6) 0 var(--space-8);
+            min-width: 0;
+        }
+
+        /* ========================================
+           HEADER
+           ======================================== */
+        .workspace-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: var(--space-6);
+            flex-wrap: wrap;
+            gap: var(--space-3);
+        }
+
+        .workspace-header-left h1 {
+            font-size: 1.4rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            margin: 0;
+            color: var(--text-primary);
+        }
+
+        .workspace-header-left .subtitle {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin: 2px 0 0 0;
+        }
+
+        .workspace-header-right {
+            display: flex;
+            align-items: center;
+            gap: var(--space-3);
+        }
+
+        .header-action-btn {
+            padding: 6px 16px;
+            border-radius: var(--radius-full);
+            background: var(--bg-hover);
+            border: 1px solid var(--border-color);
+            color: var(--text-secondary);
+            font-size: 0.75rem;
+            font-weight: 500;
+            transition: all 0.3s;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .header-action-btn:hover {
+            background: var(--bg-card);
+            border-color: var(--indigo);
+        }
+
+        .header-action-btn.primary {
+            background: linear-gradient(135deg, var(--indigo), var(--purple));
+            border: none;
+            color: var(--text-primary);
+            box-shadow: 0 2px 16px var(--indigo-glow);
+        }
+
+        .header-action-btn.primary:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 24px var(--indigo-glow);
+        }
+
+        /* ========================================
+           GREETING BANNER
+           ======================================== */
+        .greeting-banner {
+            background: linear-gradient(135deg, rgba(79, 70, 229, 0.08), rgba(139, 92, 246, 0.04));
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-lg);
+            padding: var(--space-5) var(--space-6);
+            margin-bottom: var(--space-6);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: var(--space-4);
+        }
+
+        .greeting-banner-left h2 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin: 0 0 4px 0;
+            color: var(--text-primary);
+        }
+
+        .greeting-banner-left p {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin: 0;
+        }
+
+        .greeting-banner-right {
+            display: flex;
+            align-items: center;
+            gap: var(--space-3);
+        }
+
+        .greeting-banner-right .badge {
+            font-size: 0.65rem;
+            padding: 4px 14px;
+            border-radius: var(--radius-full);
+            background: rgba(52, 211, 153, 0.12);
+            color: var(--success);
+            border: 1px solid rgba(52, 211, 153, 0.15);
+            font-weight: 600;
+        }
+
+        /* ========================================
+           STATS ROW
+           ======================================== */
+        .stats-row {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: var(--space-3);
+            margin-bottom: var(--space-6);
+        }
+
+        .stat-card-mini {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            padding: var(--space-4);
+            text-align: center;
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+
+        .stat-card-mini:hover {
+            border-color: var(--indigo);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px var(--shadow-color);
+        }
+
+        .stat-card-mini .value {
+            display: block;
+            font-size: 1.6rem;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            margin-bottom: 2px;
+            color: var(--text-primary);
+        }
+
+        .stat-card-mini .label {
+            font-size: 0.65rem;
+            color: var(--text-muted);
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+        }
+
+        .stat-card-mini .change {
+            font-size: 0.6rem;
+            color: var(--success);
+            display: block;
+            margin-top: 2px;
+        }
+
+        .stat-card-mini .change.down {
+            color: var(--danger);
+        }
+
+        .stat-card-mini .change.warning {
+            color: var(--warning);
+        }
+
+        .stat-card-mini.pending .value {
+            color: var(--warning);
+        }
+        .stat-card-mini.review .value {
+            color: var(--danger);
+        }
+
+        /* ========================================
+           MAIN GRID
+           ======================================== */
+        .main-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: var(--space-5);
+            margin-bottom: var(--space-6);
+        }
+
+        /* ========================================
+           CARDS
+           ======================================== */
+        .card {
+            background: var(--bg-card-solid);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-lg);
+            padding: var(--space-5);
+            transition: all 0.3s;
+        }
+
+        .card:hover {
+            border-color: rgba(79, 70, 229, 0.08);
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: var(--space-4);
+        }
+
+        .card-header h3 {
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin: 0;
+            color: var(--text-primary);
+        }
+
+        .card-header .link {
+            font-size: 0.75rem;
+            color: var(--indigo-light);
+            text-decoration: none;
+            font-weight: 500;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        .card-header .link:hover {
+            color: var(--text-primary);
+        }
+
+        /* ========================================
+           SUBJECT BARS
+           ======================================== */
+        .subject-bars {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-3);
+        }
+
+        .subject-bar-item {
+            display: flex;
+            align-items: center;
+            gap: var(--space-3);
+        }
+
+        .subject-bar-item .subject-name {
+            font-size: 0.8rem;
+            font-weight: 500;
+            width: 80px;
+            flex-shrink: 0;
+            color: var(--text-secondary);
+        }
+
+        .subject-bar-item .bar-track {
+            flex: 1;
+            height: 6px;
+            background: var(--bg-hover);
+            border-radius: 6px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .subject-bar-item .bar-track .bar-fill {
+            height: 100%;
+            border-radius: 6px;
+            transition: width 1.2s ease;
+            position: relative;
+        }
+
+        .subject-bar-item .bar-track .bar-fill.physics {
+            background: linear-gradient(90deg, #818CF8, #4F46E5);
+        }
+        .subject-bar-item .bar-track .bar-fill.chemistry {
+            background: linear-gradient(90deg, #34D399, #059669);
+        }
+        .subject-bar-item .bar-track .bar-fill.maths {
+            background: linear-gradient(90deg, #F59E0B, #D97706);
+        }
+        .subject-bar-item .bar-track .bar-fill.biology {
+            background: linear-gradient(90deg, #8B5CF6, #6D28D9);
+        }
+
+        .subject-bar-item .subject-score {
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--text-secondary);
+            width: 36px;
+            text-align: right;
+            flex-shrink: 0;
+        }
+
+        /* ========================================
+           EXAM READINESS
+           ======================================== */
+        .exam-readiness {
+            text-align: center;
+            padding: var(--space-5) 0;
+            cursor: pointer;
+        }
+
+        .exam-readiness .icon-big {
+            font-size: 2.8rem;
+            display: block;
+            margin-bottom: var(--space-3);
+        }
+
+        .exam-readiness h4 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin: 0 0 4px 0;
+            color: var(--text-primary);
+        }
+
+        .exam-readiness p {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin: 0 0 var(--space-4) 0;
+        }
+
+        .exam-readiness .btn-outline-sm {
+            padding: 6px 20px;
+            border-radius: var(--radius-full);
+            border: 1px solid var(--border-color);
+            background: transparent;
+            color: var(--text-secondary);
+            font-size: 0.8rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .exam-readiness .btn-outline-sm:hover {
+            border-color: var(--indigo);
+            background: rgba(79, 70, 229, 0.06);
+        }
+
+        /* ========================================
+           COMING UP / EMPTY STATE
+           ======================================== */
+        .empty-state {
+            text-align: center;
+            padding: var(--space-5) 0;
+            cursor: pointer;
+        }
+
+        .empty-state .icon-big {
+            font-size: 2.4rem;
+            display: block;
+            margin-bottom: var(--space-3);
+        }
+
+        .empty-state h4 {
+            font-size: 0.95rem;
+            font-weight: 600;
+            margin: 0 0 4px 0;
+            color: var(--text-primary);
+        }
+
+        .empty-state p {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            margin: 0;
+        }
+
+        .empty-state .btn-outline-sm {
+            margin-top: var(--space-3);
+            padding: 6px 20px;
+            border-radius: var(--radius-full);
+            border: 1px solid var(--border-color);
+            background: transparent;
+            color: var(--text-secondary);
+            font-size: 0.8rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .empty-state .btn-outline-sm:hover {
+            border-color: var(--indigo);
+            background: rgba(79, 70, 229, 0.06);
+        }
+
+        /* ========================================
+           FULL ANALYTICS SECTION
+           ======================================== */
+        .full-analytics {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: var(--space-5);
+        }
+
+        .analytics-card .card-header .link {
+            font-size: 0.75rem;
+            color: var(--indigo-light);
+            text-decoration: none;
+            font-weight: 500;
+            cursor: pointer;
+        }
+
+        .analytics-card .card-header .link:hover {
+            color: var(--text-primary);
+        }
+
+        .analytics-card .subject-bars {
+            gap: var(--space-4);
+        }
+
+        .analytics-card .subject-bar-item .subject-name {
+            width: 80px;
+        }
+
+        .analytics-card .subject-bar-item .bar-track {
+            height: 8px;
+        }
+
+        /* ========================================
+           OPEN PLANNER CARD
+           ======================================== */
+        .open-planner-card {
+            text-align: center;
+            padding: var(--space-6) var(--space-4);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 200px;
+            cursor: pointer;
+        }
+
+        .open-planner-card .icon-big {
+            font-size: 2.8rem;
+            display: block;
+            margin-bottom: var(--space-3);
+        }
+
+        .open-planner-card h4 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin: 0 0 4px 0;
+            color: var(--text-primary);
+        }
+
+        .open-planner-card p {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin: 0 0 var(--space-4) 0;
+        }
+
+        .open-planner-card .btn-outline-sm {
+            padding: 6px 20px;
+            border-radius: var(--radius-full);
+            border: 1px solid var(--border-color);
+            background: transparent;
+            color: var(--text-secondary);
+            font-size: 0.8rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .open-planner-card .btn-outline-sm:hover {
+            border-color: var(--indigo);
+            background: rgba(79, 70, 229, 0.06);
+        }
+
+        /* ========================================
+           RESPONSIVE
+           ======================================== */
+        @media (max-width: 1200px) {
+            .stats-row {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (max-width: 992px) {
+            .main-grid {
+                grid-template-columns: 1fr;
+            }
+            .full-analytics {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .workspace-wrapper {
+                flex-direction: column;
+                padding: 0 var(--space-3);
+            }
+
+            .workspace-sidebar {
+                width: 100%;
+                position: static;
+                height: auto;
+                padding: var(--space-3) 0;
+                display: flex;
+                flex-wrap: wrap;
+                gap: var(--space-2);
+                border-bottom: 1px solid var(--border-color);
+                margin-bottom: var(--space-4);
+            }
+
+            .sidebar-section {
+                margin-bottom: 0;
+                display: flex;
+                flex-wrap: wrap;
+                gap: var(--space-1);
+            }
+
+            .sidebar-section-title {
+                display: none;
+            }
+
+            .sidebar-nav-item {
+                padding: 6px 12px;
+                font-size: 0.75rem;
+            }
+
+            .sidebar-nav-item .badge {
+                display: none;
+            }
+
+            .stats-row {
+                grid-template-columns: repeat(3, 1fr);
+                gap: var(--space-2);
+            }
+
+            .stat-card-mini {
+                padding: var(--space-3);
+            }
+            .stat-card-mini .value {
+                font-size: 1.2rem;
+            }
+
+            .greeting-banner {
+                flex-direction: column;
+                text-align: center;
+                padding: var(--space-4);
+            }
+
+            .greeting-banner-left h2 {
+                font-size: 1rem;
+            }
+
+            .workspace-header {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .workspace-header-right {
+                flex-wrap: wrap;
+            }
+
+            .card {
+                padding: var(--space-4);
+            }
+
+            .subject-bar-item .subject-name {
+                width: 60px;
+                font-size: 0.7rem;
+            }
+
+            .nav-actions .theme-toggle {
+                order: -1;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .stats-row {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .workspace-sidebar {
+                gap: var(--space-1);
+            }
+
+            .sidebar-nav-item {
+                font-size: 0.7rem;
+                padding: 4px 10px;
+            }
+
+            .greeting-banner-right .badge {
+                font-size: 0.55rem;
+                padding: 2px 10px;
+            }
+
+            .subject-bar-item .subject-name {
+                width: 50px;
+                font-size: 0.65rem;
+            }
+            .subject-bar-item .subject-score {
+                font-size: 0.65rem;
+                width: 30px;
+            }
+
+            .nav-actions .btn-ghost {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ==================== NAVIGATION ==================== -->
+    <nav class="navbar glass-nav">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <svg width="32" height="32" viewBox="0 0 36 36" fill="none">
+                    <rect x="2" y="2" width="32" height="32" rx="10" fill="#4F46E5" />
+                    <path d="M12 24L18 12L24 24" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M14 20H22" stroke="white" stroke-width="2" stroke-linecap="round" />
+                </svg>
+                <span>EduTech</span>
+            </div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="dashboard.html" class="active">Dashboard</a>
+                <a href="test-series.html">Test Series</a>
+                <a href="pyq-bank.html">PYQ Bank</a>
+                <a href="faculty.html">Faculty</a>
+            </div>
+            <div class="nav-actions">
+                <!-- Theme Toggle -->
+                <button class="theme-toggle" aria-label="Toggle theme">
+                    <span class="toggle-track">
+                        <span class="toggle-thumb">
+                            <svg viewBox="0 0 24 24"><path d="M12 18C8.68629 18 6 15.3137 6 12C6 8.68629 8.68629 6 12 6C15.3137 6 18 8.68629 18 12C18 15.3137 15.3137 18 12 18ZM11 1H13V4H11V1ZM11 20H13V23H11V20ZM3.51472 4.92893L4.92893 3.51472L7.05025 5.63604L5.63604 7.05025L3.51472 4.92893ZM16.9497 18.364L18.364 16.9497L20.4853 19.0711L19.0711 20.4853L16.9497 18.364ZM19.0711 3.51472L20.4853 4.92893L18.364 7.05025L16.9497 5.63604L19.0711 3.51472ZM5.63604 16.9497L7.05025 18.364L4.92893 20.4853L3.51472 19.0711L5.63604 16.9497ZM23 11V13H20V11H23ZM4 11V13H1V11H4Z"/></svg>
+                        </span>
+                    </span>
+                </button>
+                <span class="user-badge">👤 Anil K.</span>
+                <button class="btn-ghost">Logout</button>
+                <button class="nav-toggle" aria-label="Menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ==================== WORKSPACE ==================== -->
+    <div class="workspace-wrapper">
+
+        <!-- ==================== SIDEBAR ==================== -->
+        <aside class="workspace-sidebar">
+            <div class="sidebar-section">
+                <div class="sidebar-section-title">Workspace</div>
+                <a href="#" class="sidebar-nav-item active" data-modal="overview">
+                    <span class="icon">📊</span> Overview
+                </a>
+                <a href="#" class="sidebar-nav-item" data-modal="tests">
+                    <span class="icon">📝</span> My Tests
+                    <span class="badge">3</span>
+                </a>
+                <a href="#" class="sidebar-nav-item" data-modal="planner">
+                    <span class="icon">📅</span> Study Planner
+                </a>
+                <a href="#" class="sidebar-nav-item" data-modal="analytics">
+                    <span class="icon">📈</span> Analytics
+                </a>
+                <a href="#" class="sidebar-nav-item" data-modal="errorbook">
+                    <span class="icon">📕</span> Error Book
+                    <span class="badge error">12</span>
+                </a>
+            </div>
+        </aside>
+
+        <!-- ==================== MAIN CONTENT ==================== -->
+        <main class="workspace-main">
+
+            <!-- Header -->
+            <header class="workspace-header">
+                <div class="workspace-header-left">
+                    <h1>Student workspace</h1>
+                    <p class="subtitle">Anil Kumar · Alpha Batch</p>
+                </div>
+                <div class="workspace-header-right">
+                    <button class="header-action-btn">🔔 Notifications</button>
+                    <button class="header-action-btn primary" data-modal="start-test">+ Start Test</button>
+                </div>
+            </header>
+
+            <!-- Greeting Banner -->
+            <div class="greeting-banner">
+                <div class="greeting-banner-left">
+                    <h2>🎯 Ready to conquer today?</h2>
+                    <p>Track your tests, plan focused revision and turn every mistake into measurable progress.</p>
+                </div>
+                <div class="greeting-banner-right">
+                    <span class="badge">🔥 24 day streak</span>
+                </div>
+            </div>
+
+            <!-- Stats Row -->
+            <div class="stats-row">
+                <div class="stat-card-mini" data-modal="performance">
+                    <span class="value" data-count="42">0</span>
+                    <span class="label">Completed tests</span>
+                </div>
+                <div class="stat-card-mini" data-modal="performance">
+                    <span class="value" data-count="73.4">0</span>
+                    <span class="label">Average score</span>
+                    <span class="change">↑ 4.2%</span>
+                </div>
+                <div class="stat-card-mini" data-modal="performance">
+                    <span class="value" data-count="82">0</span>
+                    <span class="label">Accuracy</span>
+                    <span class="change">↑ 3.1%</span>
+                </div>
+                <div class="stat-card-mini pending" data-modal="tests">
+                    <span class="value" data-count="3">0</span>
+                    <span class="label">Pending</span>
+                    <span class="change warning">⏳ 3 tests</span>
+                </div>
+                <div class="stat-card-mini review" data-modal="errorbook">
+                    <span class="value" data-count="8">0</span>
+                    <span class="label">To review</span>
+                    <span class="change down">⚠️ 8 mistakes</span>
+                </div>
+                <div class="stat-card-mini" data-modal="planner">
+                    <span class="value" data-count="0">0</span>
+                    <span class="label">Study tasks</span>
+                    <span class="change">📚 0 open</span>
+                </div>
+            </div>
+
+            <!-- Add this stat card -->
+<div class="stat-card-mini" onclick="window.modalSystem.openOMRDetails()">
+    <span class="value" data-count="0">0</span>
+    <span class="label">OMR Tests</span>
+    <span class="change">📄 0 processed</span>
+</div>
+
+            <!-- Main Grid -->
+            <div class="main-grid">
+
+                <!-- Performance Overview -->
+                <div class="card">
+                    <div class="card-header">
+                        <h3>📈 Performance Overview</h3>
+                        <span class="link" data-modal="performance">View all →</span>
+                    </div>
+                    <div class="subject-bars">
+                        <div class="subject-bar-item">
+                            <span class="subject-name">Physics</span>
+                            <div class="bar-track">
+                                <div class="bar-fill physics" style="width:78%"></div>
+                            </div>
+                            <span class="subject-score">78%</span>
+                        </div>
+                        <div class="subject-bar-item">
+                            <span class="subject-name">Chemistry</span>
+                            <div class="bar-track">
+                                <div class="bar-fill chemistry" style="width:65%"></div>
+                            </div>
+                            <span class="subject-score">65%</span>
+                        </div>
+                        <div class="subject-bar-item">
+                            <span class="subject-name">Mathematics</span>
+                            <div class="bar-track">
+                                <div class="bar-fill maths" style="width:92%"></div>
+                            </div>
+                            <span class="subject-score">92%</span>
+                        </div>
+                        <div class="subject-bar-item">
+                            <span class="subject-name">Biology</span>
+                            <div class="bar-track">
+                                <div class="bar-fill biology" style="width:71%"></div>
+                            </div>
+                            <span class="subject-score">71%</span>
+                        </div>
+                    </div>
+                    <div style="margin-top: var(--space-4); padding-top: var(--space-3); border-top: 1px solid var(--border-color); display: flex; justify-content: space-between; font-size: 0.75rem; color: var(--text-muted);">
+                        <span>📊 Avg. score: <strong style="color: var(--text-secondary);">76.5%</strong></span>
+                        <span>🏆 Best: Mathematics <strong style="color: var(--text-secondary);">92%</strong></span>
+                    </div>
+                </div>
+
+                <!-- Right Column -->
+                <div class="right-column" style="display: flex; flex-direction: column; gap: var(--space-5);">
+
+                    <!-- Exam Readiness -->
+                    <div class="card" data-modal="exam-readiness">
+                        <div class="card-header">
+                            <h3>🎯 Exam readiness</h3>
+                        </div>
+                        <div class="exam-readiness">
+                            <span class="icon-big">📊</span>
+                            <h4>Add a completed test</h4>
+                            <p>to calculate readiness.</p>
+                            <button class="btn-outline-sm" data-modal="start-test">+ Add Test</button>
+                        </div>
+                    </div>
+
+                    <!-- Coming Up -->
+                    <div class="card" data-modal="coming-up">
+                        <div class="card-header">
+                            <h3>📅 Coming up</h3>
+                            <span class="link" data-modal="coming-up">View planner →</span>
+                        </div>
+                        <div class="empty-state">
+                            <span class="icon-big">📭</span>
+                            <h4>No upcoming tests or tasks yet.</h4>
+                            <p>Check back later for your schedule.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Full Analytics Section -->
+            <div class="full-analytics">
+
+                <!-- Subject-wise Performance -->
+                <div class="card analytics-card">
+                    <div class="card-header">
+                        <h3>📊 Subject-wise Performance</h3>
+                        <span class="link" data-modal="analytics">Full analytics →</span>
+                    </div>
+                    <p style="font-size: 0.8rem; color: var(--text-muted); margin: -8px 0 var(--space-4) 0;">Average scores from completed tests</p>
+                    <div class="subject-bars">
+                        <div class="subject-bar-item">
+                            <span class="subject-name">Physics</span>
+                            <div class="bar-track">
+                                <div class="bar-fill physics" style="width:78%"></div>
+                            </div>
+                            <span class="subject-score">78%</span>
+                        </div>
+                        <div class="subject-bar-item">
+                            <span class="subject-name">Chemistry</span>
+                            <div class="bar-track">
+                                <div class="bar-fill chemistry" style="width:65%"></div>
+                            </div>
+                            <span class="subject-score">65%</span>
+                        </div>
+                        <div class="subject-bar-item">
+                            <span class="subject-name">Mathematics</span>
+                            <div class="bar-track">
+                                <div class="bar-fill maths" style="width:92%"></div>
+                            </div>
+                            <span class="subject-score">92%</span>
+                        </div>
+                        <div class="subject-bar-item">
+                            <span class="subject-name">Biology</span>
+                            <div class="bar-track">
+                                <div class="bar-fill biology" style="width:71%"></div>
+                            </div>
+                            <span class="subject-score">71%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Open Planner -->
+                <div class="card open-planner-card" data-modal="planner">
+                    <span class="icon-big">📋</span>
+                    <h4>Open planner</h4>
+                    <p>Complete a scored test to see your subject breakdown.</p>
+                    <button class="btn-outline-sm" data-modal="start-test">📝 Take a Test</button>
+                </div>
+
+            </div>
+
+            <!-- Quick Actions -->
+<div class="quick-actions glass-card">
+    <h3>⚡ Quick Actions</h3>
+    <div class="action-grid">
+        <button class="action-btn" onclick="window.modalSystem.openStartTest()">
+            <span>📝</span> Take Test
+        </button>
+        <button class="action-btn" onclick="window.modalSystem.openErrorBookFull()">
+            <span>📕</span> Error Book
+        </button>
+        <button class="action-btn" onclick="window.modalSystem.openDPPGenerate()">
+            <span>🧩</span> DPP
+        </button>
+        <button class="action-btn" onclick="window.modalSystem.openComingUp()">
+            <span>💬</span> Ask Doubt
+        </button>
+        <button class="action-btn" onclick="window.location.href='pyq-bank.html'">
+            <span>📚</span> PYQ Practice
+        </button>
+        <button class="action-btn" onclick="window.modalSystem.openAnalytics()">
+            <span>📊</span> Analytics
+        </button>
+    </div>
+</div>
+
+            
+        </main>
+    </div>
+
+    <!-- ========================================
+    SCRIPTS
+    ======================================== -->
+    
+    <script>
+        // ========================================
+        // DASHBOARD SPECIFIC JAVASCRIPT
+        // ========================================
+
+        // ========================================
+        // ANIMATED COUNTERS
+        // ========================================
+        const counters = document.querySelectorAll('.stat-card-mini .value');
+
+        const animateCounter = (el) => {
+            const target = parseFloat(el.dataset.count);
+            if (!target && target !== 0) return;
+            const duration = 1500;
+            const startTime = performance.now();
+
+            const update = (time) => {
+                const progress = Math.min((time - startTime) / duration, 1);
+                const eased = 1 - Math.pow(1 - progress, 3);
+                const current = eased * target;
+
+                if (target % 1 !== 0) {
+                    el.textContent = current.toFixed(1) + '%';
+                } else {
+                    el.textContent = Math.floor(current).toLocaleString();
+                }
+
+                if (progress < 1) {
+                    requestAnimationFrame(update);
+                } else {
+                    if (target % 1 !== 0) {
+                        el.textContent = target.toFixed(1) + '%';
+                    } else {
+                        el.textContent = target.toLocaleString();
+                    }
+                }
+            };
+
+            requestAnimationFrame(update);
+        };
+
+        setTimeout(() => {
+            counters.forEach(c => animateCounter(c));
+        }, 300);
+
+        // ========================================
+        // ANIMATE SUBJECT BARS ON LOAD
+        // ========================================
+        const barFills = document.querySelectorAll('.bar-fill');
+        setTimeout(() => {
+            barFills.forEach(bar => {
+                const width = bar.style.width;
+                bar.style.width = '0%';
+                setTimeout(() => {
+                    bar.style.width = width;
+                }, 100);
+            });
+        }, 400);
+
+        // ========================================
+        // MODAL TRIGGERS
+        // ========================================
+        document.querySelectorAll('[data-modal]').forEach(el => {
+            el.addEventListener('click', function(e) {
+                const modal = this.dataset.modal;
+
+                // Don't trigger if it's a button inside
+                if (e.target.closest('button') && this !== e.target) return;
+
+                switch (modal) {
+                    case 'performance':
+                        window.modalSystem.openPerformance();
+                        break;
+                    case 'exam-readiness':
+                        window.modalSystem.openExamReadiness();
+                        break;
+                    case 'coming-up':
+                        window.modalSystem.openComingUp();
+                        break;
+                    case 'analytics':
+                        window.modalSystem.openAnalytics();
+                        break;
+                    case 'planner':
+                        window.modalSystem.openPlanner();
+                        break;
+                    case 'errorbook':
+                        window.modalSystem.openErrorBook();
+                        break;
+                    case 'start-test':
+                        window.modalSystem.create('📝 Start Test', `
+                            <div class="empty-modal-state">
+                                <span class="icon">📝</span>
+                                <h4>Ready to take a test?</h4>
+                                <p>Choose a test from your available test series.</p>
+                                <div style="margin-top: var(--space-4); display: flex; gap: var(--space-3); justify-content: center; flex-wrap: wrap;">
+                                    <button class="action-btn" onclick="window.modalSystem.close(); showToast('🚀 Starting AITS 2026...')">AITS 2026</button>
+                                    <button class="action-btn" onclick="window.modalSystem.close(); showToast('🚀 Starting Part Syllabus Test...')">Part Syllabus</button>
+                                    <button class="action-btn secondary" onclick="window.modalSystem.close()">Cancel</button>
+                                </div>
+                            </div>
+                        `);
+                        break;
+                    case 'tests':
+                        window.modalSystem.create('📝 My Tests', `
+                            <div class="section-title">📋 Available Tests</div>
+                            <div class="list-item">
+                                <div class="left"><span class="icon">🏆</span><span class="name">AITS 2026 - Physics</span></div>
+                                <div class="right"><span class="badge-status pending">Pending</span></div>
+                            </div>
+                            <div class="list-item">
+                                <div class="left"><span class="icon">📝</span><span class="name">Part Syllabus - Chemistry</span></div>
+                                <div class="right"><span class="badge-status pending">Pending</span></div>
+                            </div>
+                            <div class="list-item">
+                                <div class="left"><span class="icon">📚</span><span class="name">Full Syllabus - Mathematics</span></div>
+                                <div class="right"><span class="badge-status pending">Pending</span></div>
+                            </div>
+                            <div class="list-item">
+                                <div class="left"><span class="icon">✅</span><span class="name">Mock Test - Biology</span></div>
+                                <div class="right"><span class="badge-status completed">Completed</span></div>
+                            </div>
+                            <div style="margin-top: var(--space-4); display: flex; gap: var(--space-3); flex-wrap: wrap;">
+                                <button class="action-btn" onclick="window.modalSystem.close(); showToast('🚀 Starting test...')">Start Test</button>
+                                <button class="action-btn secondary" onclick="window.modalSystem.close()">Close</button>
+                            </div>
+                        `);
+                        break;
+                    default:
+                        showToast(`📂 Opening ${modal}...`);
+                }
+            });
+        });
+
+        // ========================================
+// SIDEBAR NAVIGATION
+// ========================================
+document.querySelectorAll('.sidebar-nav-item').forEach(item => {
+    item.addEventListener('click', function(e) {
+        e.preventDefault();
+
+        document.querySelectorAll('.sidebar-nav-item').forEach(i => {
+            i.classList.remove('active');
+        });
+
+        this.classList.add('active');
+
+           });
+});
+
+        // ========================================
+        // TOAST NOTIFICATION
+        // ========================================
+        function showToast(message) {
+            const existing = document.querySelector('.toast-notification');
+            if (existing) existing.remove();
+
+            const toast = document.createElement('div');
+            toast.className = 'toast-notification';
+            toast.textContent = message;
+            toast.style.cssText = `
+                position: fixed;
+                bottom: 24px;
+                right: 24px;
+                padding: 12px 24px;
+                background: var(--bg-card-solid);
+                border: 1px solid var(--border-color);
+                border-radius: var(--radius-md);
+                backdrop-filter: blur(12px);
+                color: var(--text-primary);
+                font-size: 0.85rem;
+                z-index: 9999;
+                animation: slideUp 0.4s ease;
+                box-shadow: 0 8px 32px var(--shadow-color);
+                font-family: 'Inter', sans-serif;
+            `;
+
+            if (!document.getElementById('toast-style')) {
+                const style = document.createElement('style');
+                style.id = 'toast-style';
+                style.textContent = `
+                    @keyframes slideUp {
+                        from { opacity: 0; transform: translateY(20px); }
+                        to { opacity: 1; transform: translateY(0); }
+                    }
+                `;
+                document.head.appendChild(style);
+            }
+
+            document.body.appendChild(toast);
+
+            setTimeout(() => {
+                toast.style.opacity = '0';
+                toast.style.transform = 'translateY(20px)';
+                toast.style.transition = 'opacity 0.3s, transform 0.3s';
+                setTimeout(() => toast.remove(), 300);
+            }, 2000);
+        }
+
+        // Expose for inline onclick
+        window.showToast = showToast;
+
+        // ========================================
+        // KEYBOARD SHORTCUTS
+        // ========================================
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 't' && !e.ctrlKey && !e.metaKey) {
+                const testBtn = document.querySelector('[data-modal="start-test"]');
+                if (testBtn) testBtn.click();
+            }
+            if (e.key === 'p' && !e.ctrlKey && !e.metaKey) {
+                const perfBtn = document.querySelector('[data-modal="performance"]');
+                if (perfBtn) perfBtn.click();
+            }
+            if (e.key === 'Escape') {
+                window.modalSystem.close();
+            }
+        });
+
+        console.log('📊 Student Workspace loaded successfully');
+        console.log('⌨️ Shortcuts: T = Start Test, P = Performance, ESC = Close Modal');
+        console.log('🌓 Theme: ' + (localStorage.getItem('edutech-theme') || 'dark'));
+    </script>
+     <script src="js/theme-toggle.js"></script>
+    <script src="js/modal.js"></script>
+    <script src="js/dashboard.js"></script>
+    <script src="js/api.js"></script>
+
+</body>
+</html>

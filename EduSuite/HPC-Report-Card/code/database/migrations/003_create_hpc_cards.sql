@@ -1,0 +1,27 @@
+CREATE TABLE IF NOT EXISTS client_hpc_cards (
+
+    id BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,
+
+    org_id BIGINT UNSIGNED NOT NULL,
+
+    student_id BIGINT UNSIGNED NOT NULL,
+
+    academic_cycle_id BIGINT UNSIGNED NOT NULL,
+
+    status ENUM(
+        'FINALIZED'
+    ) NOT NULL DEFAULT 'FINALIZED',
+
+    snapshot_json LONGTEXT NOT NULL,
+
+    finalized_by BIGINT UNSIGNED NOT NULL,
+
+    finalized_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+
+    created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+
+    PRIMARY KEY (id)
+
+) ENGINE=InnoDB
+DEFAULT CHARSET=utf8mb4
+COLLATE=utf8mb4_unicode_ci;

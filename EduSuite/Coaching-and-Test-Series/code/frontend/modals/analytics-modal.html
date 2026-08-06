@@ -1,0 +1,54 @@
+<div class="section-title">📊 Full Analytics</div>
+
+<div class="stat-grid">
+    <div class="stat-item">
+        <span class="value" style="color: var(--indigo-light)">42</span>
+        <span class="label">Tests Taken</span>
+    </div>
+    <div class="stat-item">
+        <span class="value" style="color: #34D399">76.5%</span>
+        <span class="label">Overall Avg</span>
+    </div>
+    <div class="stat-item">
+        <span class="value" style="color: #F59E0B">82%</span>
+        <span class="label">Accuracy</span>
+    </div>
+</div>
+
+<div class="section-title">📊 Subject-wise Performance</div>
+
+<div class="list-item">
+    <div class="left"><span class="icon">🔬</span><span class="name">Physics</span></div>
+    <div class="right"><span style="color: #818CF8; font-weight: 600;">78%</span></div>
+</div>
+<div class="list-item">
+    <div class="left"><span class="icon">🧪</span><span class="name">Chemistry</span></div>
+    <div class="right"><span style="color: #34D399; font-weight: 600;">65%</span></div>
+</div>
+<div class="list-item">
+    <div class="left"><span class="icon">📐</span><span class="name">Mathematics</span></div>
+    <div class="right"><span style="color: #F59E0B; font-weight: 600;">92%</span></div>
+</div>
+<div class="list-item">
+    <div class="left"><span class="icon">🧬</span><span class="name">Biology</span></div>
+    <div class="right"><span style="color: #8B5CF6; font-weight: 600;">71%</span></div>
+</div>
+
+<div class="section-title" style="margin-top: var(--space-5);">📈 Performance Trends</div>
+
+<div style="padding: var(--space-4); background: var(--bg-card); border-radius: var(--radius-md); border: 1px solid var(--border-color); text-align: center;">
+    <span style="font-size: 0.85rem; color: var(--text-secondary);">📈 Your performance is improving! <strong style="color: #34D399;">+4.2%</strong> this month</span>
+    <div style="margin-top: var(--space-3); display: flex; gap: var(--space-2); justify-content: center; flex-wrap: wrap;">
+        <span style="font-size: 0.65rem; padding: 2px 10px; background: var(--bg-hover); border-radius: var(--radius-full); color: #34D399;">↗️ Physics: +6%</span>
+        <span style="font-size: 0.65rem; padding: 2px 10px; background: var(--bg-hover); border-radius: var(--radius-full); color: #EF4444;">↘️ Chemistry: -2%</span>
+        <span style="font-size: 0.65rem; padding: 2px 10px; background: var(--bg-hover); border-radius: var(--radius-full); color: #34D399;">↗️ Maths: +8%</span>
+        <span style="font-size: 0.65rem; padding: 2px 10px; background: var(--bg-hover); border-radius: var(--radius-full); color: #34D399;">↗️ Biology: +3%</span>
+    </div>
+</div>
+
+<div class="action-group" style="display: flex; gap: var(--space-3); flex-wrap: wrap; margin-top: var(--space-4);">
+    <button class="action-btn" onclick="window.modalSystem.close(); window.showToast('📊 Viewing charts...')">📊 View Charts</button>
+    <button class="action-btn secondary" onclick="window.exportAnalytics()">📥 Download Report</button>
+    <button class="action-btn secondary" onclick="window.modalSystem.close(); window.showToast('📧 Sharing with faculty...')">📧 Share with Faculty</button>
+    <button class="action-btn secondary" onclick="window.modalSystem.close()">Close</button>
+</div>

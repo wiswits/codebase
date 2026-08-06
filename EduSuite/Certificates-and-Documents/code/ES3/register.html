@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EduSuite - Issuance Register</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+    <style>
+        .register-controls {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+            align-items: center;
+        }
+
+        .register-controls input,
+        .register-controls select {
+            padding: 8px 14px;
+            border-radius: var(--radius-sm);
+            border: var(--border-light);
+            background: var(--bg-secondary);
+            color: var(--text-primary);
+            font-family: var(--font-primary);
+            font-size: 13px;
+            outline: none;
+            transition: all var(--transition-smooth);
+        }
+
+        .register-controls input:focus,
+        .register-controls select:focus {
+            border-color: var(--gold);
+        }
+
+        .register-controls input {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .register-table-wrap {
+            overflow-x: auto;
+            background: var(--bg-secondary);
+            border-radius: var(--radius-lg);
+            border: var(--border-light);
+            padding: 4px;
+        }
+
+        .register-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 14px;
+        }
+
+        .register-table th {
+            text-align: left;
+            padding: 14px 16px;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: var(--text-muted);
+            font-weight: 600;
+            border-bottom: var(--border-light);
+        }
+
+        .register-table td {
+            padding: 12px 16px;
+            border-bottom: var(--border-light);
+            color: var(--text-primary);
+        }
+
+        .register-table tr:hover td {
+            background: var(--bg-tertiary);
+        }
+
+        .register-table .status-badge {
+            display: inline-block;
+            padding: 2px 12px;
+            border-radius: var(--radius-full);
+            font-size: 11px;
+            font-weight: 600;
+        }
+
+        .register-table .status-badge.active {
+            background: rgba(34, 197, 94, 0.10);
+            color: #22c55e;
+        }
+
+        .register-table .status-badge.revoked {
+            background: rgba(239, 68, 68, 0.10);
+            color: #ef4444;
+        }
+
+        .register-table .type-badge {
+            display: inline-block;
+            padding: 2px 10px;
+            border-radius: var(--radius-sm);
+            font-size: 11px;
+            font-weight: 600;
+        }
+
+        .register-table .type-badge.cert {
+            background: rgba(15, 33, 71, 0.08);
+            color: var(--navy);
+        }
+
+        .register-table .type-badge.id {
+            background: rgba(200, 160, 78, 0.08);
+            color: var(--gold);
+        }
+
+        .register-table .action-btns {
+            display: flex;
+            gap: 6px;
+        }
+
+        .register-table .action-btns button {
+            padding: 4px 10px;
+            border: none;
+            border-radius: var(--radius-sm);
+            font-size: 12px;
+            cursor: pointer;
+            transition: all var(--transition-smooth);
+            background: var(--bg-tertiary);
+            color: var(--text-secondary);
+        }
+
+        .register-table .action-btns button:hover {
+            background: var(--gold);
+            color: var(--navy);
+        }
+
+        .pagination {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 4px 0;
+            font-size: 13px;
+            color: var(--text-secondary);
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .pagination .pages {
+            display: flex;
+            gap: 4px;
+        }
+
+        .pagination .pages button {
+            padding: 6px 14px;
+            border: var(--border-light);
+            border-radius: var(--radius-sm);
+            background: var(--bg-secondary);
+            color: var(--text-secondary);
+            cursor: pointer;
+            transition: all var(--transition-smooth);
+        }
+
+        .pagination .pages button.active {
+            background: var(--gold);
+            color: var(--navy);
+            border-color: var(--gold);
+        }
+
+        .pagination .pages button:hover:not(.active) {
+            border-color: var(--gold);
+        }
+
+        @media (max-width: 768px) {
+            .register-controls {
+                flex-direction: column;
+            }
+            .register-controls input {
+                min-width: 100%;
+            }
+            .pagination {
+                flex-direction: column;
+                align-items: stretch;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ═══ SIDEBAR ═══ -->
+    <aside class="sidebar">
+        <div class="logo">
+            <div class="logo-mark">E</div>
+            <div class="logo-text">Edu<span>Suite</span></div>
+        </div>
+
+        <nav class="nav">
+            <div class="nav-section">Main</div>
+            <a href="index.html" class="nav-item">
+                <span class="nav-icon">✦</span>
+                <span class="nav-label">Dashboard</span>
+            </a>
+            <a href="templates.html" class="nav-item">
+                <span class="nav-icon">◈</span>
+                <span class="nav-label">Templates</span>
+                <span class="nav-badge">12</span>
+            </a>
+            <a href="generate.html" class="nav-item">
+                <span class="nav-icon">◆</span>
+                <span class="nav-label">Generate</span>
+            </a>
+            <a href="register.html" class="nav-item active">
+                <span class="nav-icon">▣</span>
+                <span class="nav-label">Issuance</span>
+                <span class="nav-badge">1.2k</span>
+            </a>
+
+            <div class="nav-divider"></div>
+            <div class="nav-section">Management</div>
+            <a href="settings.html" class="nav-item">
+                <span class="nav-icon">⚙</span>
+                <span class="nav-label">Settings</span>
+            </a>
+            <a href="#" class="nav-item">
+                <span class="nav-icon">◉</span>
+                <span class="nav-label">Profile</span>
+            </a>
+        </nav>
+
+        <div class="user-section">
+            <div class="user-row">
+                <div class="user-avatar">P</div>
+                <div class="user-info">
+                    <div class="name">Principal</div>
+                    <div class="role">Sunrise Public School</div>
+                    <div class="user-status">● Online</div>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <!-- ═══ MAIN ═══ -->
+    <main class="main">
+        <header class="topbar">
+            <div class="greeting">
+                <h1>Issuance Register</h1>
+                <p>Track all issued certificates and ID cards</p>
+            </div>
+            <div class="actions">
+                <button class="btn-theme" id="themeToggle">◐</button>
+            </div>
+        </header>
+
+        <div class="register-controls">
+            <input type="text" placeholder="🔍 Search by serial, name, or student..." />
+            <select>
+                <option>All Types</option>
+                <option>Certificates</option>
+                <option>ID Cards</option>
+            </select>
+            <select>
+                <option>All Status</option>
+                <option>Active</option>
+                <option>Revoked</option>
+            </select>
+            <select>
+                <option>This Month</option>
+                <option>Last Month</option>
+                <option>This Year</option>
+                <option>All Time</option>
+            </select>
+        </div>
+
+        <div class="register-table-wrap">
+            <table class="register-table">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Serial Number</th>
+                        <th>Recipient</th>
+                        <th>Type</th>
+                        <th>Date</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td><strong>CERT-2026-0001</strong></td>
+                        <td>Aarav Mehta</td>
+                        <td><span class="type-badge cert">Certificate</span></td>
+                        <td>15 Jul 2026</td>
+                        <td><span class="status-badge active">Active</span></td>
+                        <td>
+                            <div class="action-btns">
+                                <button>View</button>
+                                <button>Download</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td><strong>CERT-2026-0002</strong></td>
+                        <td>Diya Patel</td>
+                        <td><span class="type-badge cert">Certificate</span></td>
+                        <td>15 Jul 2026</td>
+                        <td><span class="status-badge active">Active</span></td>
+                        <td>
+                            <div class="action-btns">
+                                <button>View</button>
+                                <button>Download</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td><strong>ID-2026-0001</strong></td>
+                        <td>Kabir Khan</td>
+                        <td><span class="type-badge id">ID Card</span></td>
+                        <td>15 Jul 2026</td>
+                        <td><span class="status-badge active">Active</span></td>
+                        <td>
+                            <div class="action-btns">
+                                <button>View</button>
+                                <button>Download</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td><strong>CERT-2026-0003</strong></td>
+                        <td>Sana Gupta</td>
+                        <td><span class="type-badge cert">Certificate</span></td>
+                        <td>14 Jul 2026</td>
+                        <td><span class="status-badge active">Active</span></td>
+                        <td>
+                            <div class="action-btns">
+                                <button>View</button>
+                                <button>Download</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td><strong>ID-2026-0002</strong></td>
+                        <td>Rahul Verma</td>
+                        <td><span class="type-badge id">ID Card</span></td>
+                        <td>14 Jul 2026</td>
+                        <td><span class="status-badge revoked">Revoked</span></td>
+                        <td>
+                            <div class="action-btns">
+                                <button>View</button>
+                                <button>Download</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td><strong>CERT-2026-0004</strong></td>
+                        <td>Priya Singh</td>
+                        <td><span class="type-badge cert">Certificate</span></td>
+                        <td>13 Jul 2026</td>
+                        <td><span class="status-badge active">Active</span></td>
+                        <td>
+                            <div class="action-btns">
+                                <button>View</button>
+                                <button>Download</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td><strong>CERT-2026-0005</strong></td>
+                        <td>Amit Kumar</td>
+                        <td><span class="type-badge cert">Certificate</span></td>
+                        <td>12 Jul 2026</td>
+                        <td><span class="status-badge active">Active</span></td>
+                        <td>
+                            <div class="action-btns">
+                                <button>View</button>
+                                <button>Download</button>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="pagination">
+            <span>Showing 1-7 of 1,247 entries</span>
+            <div class="pages">
+                <button>‹</button>
+                <button class="active">1</button>
+                <button>2</button>
+                <button>3</button>
+                <button>...</button>
+                <button>178</button>
+                <button>›</button>
+            </div>
+        </div>
+
+    </main>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

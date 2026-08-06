@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EduSuite - Generate</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+    <style>
+        .generate-steps {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .step {
+            background: var(--bg-secondary);
+            border-radius: var(--radius-lg);
+            padding: 24px 28px;
+            border: var(--border-light);
+            transition: all var(--transition-smooth);
+        }
+
+        .step:hover {
+            border-color: var(--border-gold);
+        }
+
+        .step .step-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 16px;
+        }
+
+        .step .step-number {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: var(--gold-gradient);
+            color: var(--navy);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 14px;
+            flex-shrink: 0;
+        }
+
+        .step .step-title {
+            font-family: var(--font-display);
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        .step .step-desc {
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+
+        .step .step-content {
+            padding-top: 12px;
+        }
+
+        .step select,
+        .step input {
+            width: 100%;
+            max-width: 400px;
+            padding: 10px 16px;
+            border-radius: var(--radius-sm);
+            border: var(--border-light);
+            background: var(--bg-tertiary);
+            color: var(--text-primary);
+            font-family: var(--font-primary);
+            font-size: 14px;
+            outline: none;
+            transition: all var(--transition-smooth);
+        }
+
+        .step select:focus,
+        .step input:focus {
+            border-color: var(--gold);
+            box-shadow: 0 0 0 4px rgba(200, 160, 78, 0.08);
+        }
+
+        .student-list {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            margin-top: 12px;
+        }
+
+        .student-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 10px 14px;
+            background: var(--bg-tertiary);
+            border-radius: var(--radius-sm);
+            border: var(--border-light);
+            transition: all var(--transition-smooth);
+            cursor: pointer;
+        }
+
+        .student-item:hover {
+            border-color: var(--border-gold);
+        }
+
+        .student-item input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+            accent-color: var(--gold);
+            cursor: pointer;
+        }
+
+        .student-item .s-info {
+            flex: 1;
+        }
+
+        .student-item .s-name {
+            font-weight: 500;
+            font-size: 14px;
+        }
+
+        .student-item .s-roll {
+            font-size: 12px;
+            color: var(--text-muted);
+        }
+
+        .student-item .s-status {
+            font-size: 12px;
+            color: var(--text-muted);
+        }
+
+        .preview-box {
+            background: var(--bg-tertiary);
+            border-radius: var(--radius-sm);
+            padding: 20px;
+            border: var(--border-light);
+            margin-top: 12px;
+            text-align: center;
+            min-height: 120px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .preview-box .placeholder-text {
+            color: var(--text-muted);
+            font-size: 14px;
+        }
+
+        .preview-box .preview-title {
+            font-family: var(--font-display);
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--gold);
+        }
+
+        .generate-actions {
+            display: flex;
+            gap: 12px;
+            margin-top: 24px;
+            flex-wrap: wrap;
+        }
+
+        .generate-actions .btn-secondary {
+            padding: 10px 24px;
+            border: var(--border-light);
+            background: var(--bg-tertiary);
+            border-radius: var(--radius-full);
+            font-weight: 500;
+            font-size: 14px;
+            color: var(--text-secondary);
+            cursor: pointer;
+            transition: all var(--transition-smooth);
+        }
+
+        .generate-actions .btn-secondary:hover {
+            border-color: var(--gold);
+            color: var(--gold);
+        }
+
+        @media (max-width: 768px) {
+            .step {
+                padding: 18px;
+            }
+            .step select,
+            .step input {
+                max-width: 100%;
+            }
+            .generate-actions {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ═══ SIDEBAR ═══ -->
+    <aside class="sidebar">
+        <div class="logo">
+            <div class="logo-mark">E</div>
+            <div class="logo-text">Edu<span>Suite</span></div>
+        </div>
+
+        <nav class="nav">
+            <div class="nav-section">Main</div>
+            <a href="index.html" class="nav-item">
+                <span class="nav-icon">✦</span>
+                <span class="nav-label">Dashboard</span>
+            </a>
+            <a href="templates.html" class="nav-item">
+                <span class="nav-icon">◈</span>
+                <span class="nav-label">Templates</span>
+                <span class="nav-badge">12</span>
+            </a>
+            <a href="generate.html" class="nav-item active">
+                <span class="nav-icon">◆</span>
+                <span class="nav-label">Generate</span>
+            </a>
+            <a href="register.html" class="nav-item">
+                <span class="nav-icon">▣</span>
+                <span class="nav-label">Issuance</span>
+                <span class="nav-badge">1.2k</span>
+            </a>
+
+            <div class="nav-divider"></div>
+            <div class="nav-section">Management</div>
+            <a href="settings.html" class="nav-item">
+                <span class="nav-icon">⚙</span>
+                <span class="nav-label">Settings</span>
+            </a>
+            <a href="#" class="nav-item">
+                <span class="nav-icon">◉</span>
+                <span class="nav-label">Profile</span>
+            </a>
+        </nav>
+
+        <div class="user-section">
+            <div class="user-row">
+                <div class="user-avatar">P</div>
+                <div class="user-info">
+                    <div class="name">Principal</div>
+                    <div class="role">Sunrise Public School</div>
+                    <div class="user-status">● Online</div>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <!-- ═══ MAIN ═══ -->
+    <main class="main">
+        <header class="topbar">
+            <div class="greeting">
+                <h1>Generate Certificates</h1>
+                <p>Select a template and students to generate certificates</p>
+            </div>
+            <div class="actions">
+                <button class="btn-theme" id="themeToggle">◐</button>
+            </div>
+        </header>
+
+        <div class="generate-steps">
+            <!-- Step 1 -->
+            <div class="step">
+                <div class="step-header">
+                    <span class="step-number">1</span>
+                    <div>
+                        <div class="step-title">Select Template</div>
+                        <div class="step-desc">Choose a template for your certificates</div>
+                    </div>
+                </div>
+                <div class="step-content">
+                    <select>
+                        <option>Achievement Certificate 2025</option>
+                        <option>Sports Participation Certificate</option>
+                        <option>Student ID Card</option>
+                        <option>Transfer Certificate</option>
+                        <option>Art Competition Certificate</option>
+                        <option>Computer Course Certificate</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="step">
+                <div class="step-header">
+                    <span class="step-number">2</span>
+                    <div>
+                        <div class="step-title">Select Students</div>
+                        <div class="step-desc">Choose students to receive certificates</div>
+                    </div>
+                </div>
+                <div class="step-content">
+                    <input type="text" placeholder="Search students..." style="max-width:100%;" />
+                    <div class="student-list">
+                        <div class="student-item">
+                            <input type="checkbox" checked />
+                            <div class="s-info">
+                                <div class="s-name">Aarav Mehta</div>
+                                <div class="s-roll">Roll: 01 • Class 10-A</div>
+                            </div>
+                            <span class="s-status">Ready</span>
+                        </div>
+                        <div class="student-item">
+                            <input type="checkbox" checked />
+                            <div class="s-info">
+                                <div class="s-name">Diya Patel</div>
+                                <div class="s-roll">Roll: 02 • Class 10-A</div>
+                            </div>
+                            <span class="s-status">Ready</span>
+                        </div>
+                        <div class="student-item">
+                            <input type="checkbox" />
+                            <div class="s-info">
+                                <div class="s-name">Kabir Khan</div>
+                                <div class="s-roll">Roll: 03 • Class 10-A</div>
+                            </div>
+                            <span class="s-status">Pending</span>
+                        </div>
+                        <div class="student-item">
+                            <input type="checkbox" checked />
+                            <div class="s-info">
+                                <div class="s-name">Sana Gupta</div>
+                                <div class="s-roll">Roll: 04 • Class 10-A</div>
+                            </div>
+                            <span class="s-status">Ready</span>
+                        </div>
+                        <div class="student-item">
+                            <input type="checkbox" />
+                            <div class="s-info">
+                                <div class="s-name">Rahul Verma</div>
+                                <div class="s-roll">Roll: 05 • Class 10-A</div>
+                            </div>
+                            <span class="s-status">Pending</span>
+                        </div>
+                    </div>
+                    <div style="margin-top:12px; font-size:13px; color:var(--text-muted);">
+                        Selected: 3 students
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="step">
+                <div class="step-header">
+                    <span class="step-number">3</span>
+                    <div>
+                        <div class="step-title">Preview & Generate</div>
+                        <div class="step-desc">Review and generate your certificates</div>
+                    </div>
+                </div>
+                <div class="step-content">
+                    <div style="margin-bottom:12px;">
+                        <label style="font-size:13px; font-weight:500;">Issue Date</label>
+                        <input type="date" value="2026-07-15" style="max-width:200px;" />
+                    </div>
+                    <div class="preview-box">
+                        <div class="preview-title">🏅 CERTIFICATE OF ACHIEVEMENT</div>
+                        <div style="margin:12px 0;">
+                            This is to certify that<br />
+                            <strong style="font-size:18px;">Aarav Mehta</strong><br />
+                            has successfully completed<br />
+                            <strong>Class 10-A</strong><br />
+                            with distinction
+                        </div>
+                        <div style="font-size:12px; color:var(--text-muted);">
+                            Preview for Aarav Mehta
+                        </div>
+                    </div>
+                    <div class="generate-actions">
+                        <button class="btn-secondary">👁️ Preview All</button>
+                        <button class="btn-primary">📄 Generate 3 Certificates</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

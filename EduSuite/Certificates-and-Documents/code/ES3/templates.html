@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EduSuite - Templates</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+    <style>
+        /* ─── Templates Specific ─── */
+        .templates-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 16px;
+            margin-bottom: 28px;
+        }
+
+        .templates-header .left h2 {
+            font-family: var(--font-display);
+            font-size: 26px;
+            font-weight: 600;
+        }
+
+        .templates-header .left p {
+            color: var(--text-secondary);
+            font-size: 14px;
+        }
+
+        .templates-header .right {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+        }
+
+        .btn-primary {
+            padding: 10px 24px;
+            background: var(--gold-gradient);
+            color: var(--navy);
+            border: none;
+            border-radius: var(--radius-full);
+            font-weight: 600;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all var(--transition-smooth);
+            font-family: var(--font-primary);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-glow);
+        }
+
+        .templates-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 20px;
+        }
+
+        .template-card {
+            background: var(--bg-secondary);
+            border-radius: var(--radius-lg);
+            padding: 24px;
+            border: var(--border-light);
+            transition: all var(--transition-smooth);
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .template-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--border-gold);
+        }
+
+        .template-card .tc-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 12px;
+        }
+
+        .template-card .tc-icon {
+            font-size: 32px;
+        }
+
+        .template-card .tc-badge {
+            font-size: 10px;
+            font-weight: 600;
+            padding: 4px 12px;
+            border-radius: var(--radius-full);
+            background: rgba(34, 197, 94, 0.10);
+            color: #22c55e;
+        }
+
+        .template-card .tc-badge.draft {
+            background: rgba(245, 158, 11, 0.10);
+            color: #f59e0b;
+        }
+
+        .template-card .tc-name {
+            font-family: var(--font-display);
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .template-card .tc-desc {
+            font-size: 13px;
+            color: var(--text-secondary);
+            margin-bottom: 12px;
+        }
+
+        .template-card .tc-stats {
+            display: flex;
+            gap: 20px;
+            font-size: 12px;
+            color: var(--text-muted);
+            padding-top: 12px;
+            border-top: var(--border-light);
+        }
+
+        .template-card .tc-actions {
+            display: flex;
+            gap: 8px;
+            margin-top: 12px;
+        }
+
+        .template-card .tc-actions button {
+            padding: 6px 16px;
+            border: var(--border-light);
+            background: var(--bg-tertiary);
+            border-radius: var(--radius-sm);
+            font-size: 12px;
+            font-weight: 500;
+            color: var(--text-secondary);
+            cursor: pointer;
+            transition: all var(--transition-smooth);
+        }
+
+        .template-card .tc-actions button:hover {
+            border-color: var(--gold);
+            color: var(--gold);
+        }
+
+        .template-card .tc-actions .btn-edit {
+            background: rgba(15, 33, 71, 0.08);
+            color: var(--navy);
+            border-color: rgba(15, 33, 71, 0.15);
+        }
+
+        .template-card .tc-actions .btn-delete {
+            background: rgba(239, 68, 68, 0.08);
+            color: #ef4444;
+            border-color: rgba(239, 68, 68, 0.15);
+        }
+
+        @media (max-width: 768px) {
+            .templates-grid {
+                grid-template-columns: 1fr;
+            }
+            .templates-header {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            .templates-header .right {
+                flex-wrap: wrap;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ═══ SIDEBAR ═══ -->
+    <aside class="sidebar">
+        <div class="logo">
+            <div class="logo-mark">E</div>
+            <div class="logo-text">Edu<span>Suite</span></div>
+        </div>
+
+        <nav class="nav">
+            <div class="nav-section">Main</div>
+            <a href="index.html" class="nav-item">
+                <span class="nav-icon">✦</span>
+                <span class="nav-label">Dashboard</span>
+            </a>
+            <a href="templates.html" class="nav-item active">
+                <span class="nav-icon">◈</span>
+                <span class="nav-label">Templates</span>
+                <span class="nav-badge">12</span>
+            </a>
+            <a href="generate.html" class="nav-item">
+                <span class="nav-icon">◆</span>
+                <span class="nav-label">Generate</span>
+            </a>
+            <a href="register.html" class="nav-item">
+                <span class="nav-icon">▣</span>
+                <span class="nav-label">Issuance</span>
+                <span class="nav-badge">1.2k</span>
+            </a>
+
+            <div class="nav-divider"></div>
+
+            <div class="nav-section">Management</div>
+            <a href="settings.html" class="nav-item">
+                <span class="nav-icon">⚙</span>
+                <span class="nav-label">Settings</span>
+            </a>
+            <a href="#" class="nav-item">
+                <span class="nav-icon">◉</span>
+                <span class="nav-label">Profile</span>
+            </a>
+        </nav>
+
+        <div class="user-section">
+            <div class="user-row">
+                <div class="user-avatar">P</div>
+                <div class="user-info">
+                    <div class="name">Principal</div>
+                    <div class="role">Sunrise Public School</div>
+                    <div class="user-status">● Online</div>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <!-- ═══ MAIN ═══ -->
+    <main class="main">
+
+        <!-- Top Bar -->
+        <header class="topbar">
+            <div class="greeting">
+                <h1>Templates</h1>
+                <p>Create and manage certificate &amp; ID card templates</p>
+            </div>
+            <div class="actions">
+                <div class="search-wrapper">
+                    <span class="search-icon">⌕</span>
+                    <input type="text" placeholder="Search templates..." />
+                </div>
+                <button class="btn-theme" id="themeToggle">◐</button>
+            </div>
+        </header>
+
+        <!-- Templates Header -->
+        <div class="templates-header">
+            <div class="left">
+                <h2>All Templates</h2>
+                <p>12 templates • 9 active • 3 draft</p>
+            </div>
+            <div class="right">
+                <select style="padding:8px 16px; border-radius:var(--radius-full); border:var(--border-light); background:var(--bg-secondary); color:var(--text-primary); font-family:var(--font-primary); outline:none;">
+                    <option>All Types</option>
+                    <option>Certificates</option>
+                    <option>ID Cards</option>
+                </select>
+                <button class="btn-primary">+ New Template</button>
+            </div>
+        </div>
+
+        <!-- Templates Grid -->
+        <div class="templates-grid">
+            <div class="template-card">
+                <div class="tc-top">
+                    <span class="tc-icon">🏅</span>
+                    <span class="tc-badge">Active</span>
+                </div>
+                <div class="tc-name">Achievement Certificate</div>
+                <div class="tc-desc">Academic certificate for student achievement</div>
+                <div class="tc-stats">
+                    <span>📄 345 issued</span>
+                    <span>🕐 Last used: Today</span>
+                </div>
+                <div class="tc-actions">
+                    <button>Preview</button>
+                    <button class="btn-edit">Edit</button>
+                    <button class="btn-delete">Delete</button>
+                </div>
+            </div>
+
+            <div class="template-card">
+                <div class="tc-top">
+                    <span class="tc-icon">⚽</span>
+                    <span class="tc-badge">Active</span>
+                </div>
+                <div class="tc-name">Sports Participation</div>
+                <div class="tc-desc">Certificate for sports events and competitions</div>
+                <div class="tc-stats">
+                    <span>📄 234 issued</span>
+                    <span>🕐 Last used: 14 Jul</span>
+                </div>
+                <div class="tc-actions">
+                    <button>Preview</button>
+                    <button class="btn-edit">Edit</button>
+                    <button class="btn-delete">Delete</button>
+                </div>
+            </div>
+
+            <div class="template-card">
+                <div class="tc-top">
+                    <span class="tc-icon">🪪</span>
+                    <span class="tc-badge">Active</span>
+                </div>
+                <div class="tc-name">Student ID Card</div>
+                <div class="tc-desc">Standard student identification card</div>
+                <div class="tc-stats">
+                    <span>📄 189 issued</span>
+                    <span>🕐 Last used: Today</span>
+                </div>
+                <div class="tc-actions">
+                    <button>Preview</button>
+                    <button class="btn-edit">Edit</button>
+                    <button class="btn-delete">Delete</button>
+                </div>
+            </div>
+
+            <div class="template-card">
+                <div class="tc-top">
+                    <span class="tc-icon">📜</span>
+                    <span class="tc-badge draft">Draft</span>
+                </div>
+                <div class="tc-name">Transfer Certificate</div>
+                <div class="tc-desc">School leaving certificate</div>
+                <div class="tc-stats">
+                    <span>📄 78 issued</span>
+                    <span>🕐 Last used: 12 Jul</span>
+                </div>
+                <div class="tc-actions">
+                    <button>Preview</button>
+                    <button class="btn-edit">Edit</button>
+                    <button class="btn-delete">Delete</button>
+                </div>
+            </div>
+
+            <div class="template-card">
+                <div class="tc-top">
+                    <span class="tc-icon">🎨</span>
+                    <span class="tc-badge">Active</span>
+                </div>
+                <div class="tc-name">Art Competition</div>
+                <div class="tc-desc">Certificate for art & craft competitions</div>
+                <div class="tc-stats">
+                    <span>📄 56 issued</span>
+                    <span>🕐 Last used: 10 Jul</span>
+                </div>
+                <div class="tc-actions">
+                    <button>Preview</button>
+                    <button class="btn-edit">Edit</button>
+                    <button class="btn-delete">Delete</button>
+                </div>
+            </div>
+
+            <div class="template-card">
+                <div class="tc-top">
+                    <span class="tc-icon">💻</span>
+                    <span class="tc-badge draft">Draft</span>
+                </div>
+                <div class="tc-name">Computer Course</div>
+                <div class="tc-desc">Completion certificate for computer courses</div>
+                <div class="tc-stats">
+                    <span>📄 34 issued</span>
+                    <span>🕐 Last used: 08 Jul</span>
+                </div>
+                <div class="tc-actions">
+                    <button>Preview</button>
+                    <button class="btn-edit">Edit</button>
+                    <button class="btn-delete">Delete</button>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<div class="section-title">🎯 Exam Readiness</div>
+
+<div class="empty-modal-state">
+    <span class="icon">📊</span>
+    <h4>Add a completed test to calculate readiness</h4>
+    <p>Your exam readiness score will appear here once you complete your first test.</p>
+</div>
+
+<div class="insight-box">
+    <div style="display: flex; align-items: flex-start; gap: var(--space-3, 12px);">
+        <span class="insight-icon">💡</span>
+        <div>
+            <div class="insight-title">Pro Tip</div>
+            <div class="insight-text">Taking at least 3 tests per week helps you track progress effectively.</div>
+        </div>
+    </div>
+</div>
+
+<div class="action-group">
+    <button class="action-btn" onclick="window.modalSystem.close(); window.showToast('📝 Starting a new test...')">📝 Take a Test</button>
+    <button class="action-btn secondary" onclick="window.modalSystem.close(); window.showToast('📤 Opening OMR upload...')">📤 Upload OMR</button>
+    <button class="action-btn secondary" onclick="window.modalSystem.close()">Close</button>
+</div>

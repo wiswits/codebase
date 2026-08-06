@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Test Series — EduTech Solutions</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/theme.css" />
+    <link rel="stylesheet" href="css/test-series.css" />
+    <button class="btn-primary-sm" onclick="window.exportTestSchedule()">📥 Export Schedule</button>
+</head>
+<body>
+
+    <!-- ==================== NAVIGATION ==================== -->
+    <nav class="navbar glass-nav">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <svg width="32" height="32" viewBox="0 0 36 36" fill="none">
+                    <rect x="2" y="2" width="32" height="32" rx="10" fill="#4F46E5" />
+                    <path d="M12 24L18 12L24 24" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M14 20H22" stroke="white" stroke-width="2" stroke-linecap="round" />
+                </svg>
+                <span>EduTech</span>
+            </div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="dashboard.html">Dashboard</a>
+                <a href="test-series.html" class="active">Test Series</a>
+                <a href="pyq-bank.html">PYQ Bank</a>
+                <a href="faculty.html">Faculty</a>
+            </div>
+            <div class="nav-actions">
+                <button class="theme-toggle" aria-label="Toggle theme">
+                    <span class="toggle-track">
+                        <span class="toggle-thumb">
+                            <svg viewBox="0 0 24 24"><path d="M12 18C8.68629 18 6 15.3137 6 12C6 8.68629 8.68629 6 12 6C15.3137 6 18 8.68629 18 12C18 15.3137 15.3137 18 12 18ZM11 1H13V4H11V1ZM11 20H13V23H11V20ZM3.51472 4.92893L4.92893 3.51472L7.05025 5.63604L5.63604 7.05025L3.51472 4.92893ZM16.9497 18.364L18.364 16.9497L20.4853 19.0711L19.0711 20.4853L16.9497 18.364ZM19.0711 3.51472L20.4853 4.92893L18.364 7.05025L16.9497 5.63604L19.0711 3.51472ZM5.63604 16.9497L7.05025 18.364L4.92893 20.4853L3.51472 19.0711L5.63604 16.9497ZM23 11V13H20V11H23ZM4 11V13H1V11H4Z"/></svg>
+                        </span>
+                    </span>
+                </button>
+                <span class="user-badge">👤 Student</span>
+                <button class="btn-ghost" onclick="window.location.href='login.html'">Logout</button>
+                <button class="nav-toggle" aria-label="Menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ==================== MAIN CONTENT ==================== -->
+    <div class="test-series-wrapper">
+        <div class="section-header">
+            <span class="section-tag">Test Series</span>
+            <h2 class="section-title">📝 All Tests</h2>
+            <p class="section-subtitle">Part Syllabus · Full Syllabus · AITS · Mock — All in one place</p>
+        </div>
+
+        <!-- Test Types -->
+        <div class="test-types">
+            <div class="test-type-card" onclick="filterTests('part')">
+                <span class="icon">📝</span>
+                <h4>Part Syllabus</h4>
+                <p>Chapter-wise tests</p>
+                <span class="count">12 available</span>
+            </div>
+            <div class="test-type-card" onclick="filterTests('full')">
+                <span class="icon">📚</span>
+                <h4>Full Syllabus</h4>
+                <p>Complete syllabus tests</p>
+                <span class="count">8 available</span>
+            </div>
+            <div class="test-type-card highlight" onclick="filterTests('aits')">
+                <span class="icon">🏆</span>
+                <h4>AITS</h4>
+                <p>All India Test Series</p>
+                <span class="count">6 available</span>
+            </div>
+            <div class="test-type-card" onclick="filterTests('mock')">
+                <span class="icon">🎯</span>
+                <h4>Mock</h4>
+                <p>Full simulation</p>
+                <span class="count">4 available</span>
+            </div>
+        </div>
+
+        <!-- Test List -->
+        <div class="test-list-full">
+            <div class="test-card-full glass-card" data-type="aits">
+                <div class="test-info-full">
+                    <span class="test-badge aits">AITS</span>
+                    <div><span style="font-weight:500">Full Syllabus Mock - Physics</span><span style="font-size:0.7rem;color:var(--white-muted);display:block">Class 12 · JEE Advanced</span></div>
+                </div>
+                <div class="test-meta-full">
+                    <span>📅 Jul 20, 2026</span>
+                    <span>⏰ 10:00 AM</span>
+                    <span>⏱️ 3h</span>
+                    <span>📊 180 marks</span>
+                    <button class="btn-primary-sm" onclick="startTest('AITS 2026 - Physics')">Start</button>
+                </div>
+            </div>
+
+            <div class="test-card-full glass-card" data-type="part">
+                <div class="test-info-full">
+                    <span class="test-badge part">Part Syllabus</span>
+                    <div><span style="font-weight:500">Chemistry - Organic Chemistry</span><span style="font-size:0.7rem;color:var(--white-muted);display:block">Class 12 · NEET</span></div>
+                </div>
+                <div class="test-meta-full">
+                    <span>📅 Jul 22, 2026</span>
+                    <span>⏰ 2:00 PM</span>
+                    <span>⏱️ 2h</span>
+                    <span>📊 120 marks</span>
+                    <button class="btn-primary-sm" onclick="startTest('Part Syllabus - Chemistry')">Start</button>
+                </div>
+            </div>
+
+            <div class="test-card-full glass-card" data-type="full">
+                <div class="test-info-full">
+                    <span class="test-badge full">Full Syllabus</span>
+                    <div><span style="font-weight:500">Complete Mock - PCM</span><span style="font-size:0.7rem;color:var(--white-muted);display:block">Class 12 · JEE Main</span></div>
+                </div>
+                <div class="test-meta-full">
+                    <span>📅 Jul 25, 2026</span>
+                    <span>⏰ 9:00 AM</span>
+                    <span>⏱️ 3h</span>
+                    <span>📊 300 marks</span>
+                    <button class="btn-primary-sm" onclick="startTest('Full Syllabus - PCM')">Start</button>
+                </div>
+            </div>
+
+            <div class="test-card-full glass-card" data-type="mock">
+                <div class="test-info-full">
+                    <span class="test-badge mock">Mock</span>
+                    <div><span style="font-weight:500">Full Simulation - NEET</span><span style="font-size:0.7rem;color:var(--white-muted);display:block">Class 12 · NEET</span></div>
+                </div>
+                <div class="test-meta-full">
+                    <span>📅 Jul 28, 2026</span>
+                    <span>⏰ 10:00 AM</span>
+                    <span>⏱️ 3h</span>
+                    <span>📊 720 marks</span>
+                    <button class="btn-primary-sm" onclick="startTest('Full Simulation - NEET')">Start</button>
+                </div>
+            </div>
+
+            <div class="test-card-full glass-card" data-type="aits">
+                <div class="test-info-full">
+                    <span class="test-badge aits">AITS</span>
+                    <div><span style="font-weight:500">AITS - Physics & Chemistry</span><span style="font-size:0.7rem;color:var(--white-muted);display:block">Class 12 · JEE Advanced</span></div>
+                </div>
+                <div class="test-meta-full">
+                    <span>📅 Jul 30, 2026</span>
+                    <span>⏰ 8:00 AM</span>
+                    <span>⏱️ 3h</span>
+                    <span>📊 240 marks</span>
+                    <button class="btn-primary-sm" onclick="startTest('AITS - Physics & Chemistry')">Start</button>
+                </div>
+            </div>
+
+            <div class="test-card-full glass-card" data-type="part">
+                <div class="test-info-full">
+                    <span class="test-badge part">Part Syllabus</span>
+                    <div><span style="font-weight:500">Mathematics - Calculus</span><span style="font-size:0.7rem;color:var(--white-muted);display:block">Class 12 · JEE Main</span></div>
+                </div>
+                <div class="test-meta-full">
+                    <span>📅 Aug 2, 2026</span>
+                    <span>⏰ 3:00 PM</span>
+                    <span>⏱️ 2h</span>
+                    <span>📊 100 marks</span>
+                    <button class="btn-primary-sm" onclick="startTest('Mathematics - Calculus')">Start</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ======================================== -->
+    <!-- SCRIPTS - SINGLE INSTANCE, CORRECT PATHS -->
+    <!-- ======================================== -->
+    <script src="js/theme-toggle.js"></script>
+    <script src="js/modal.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/test-series.js"></script>
+
+    <script>
+        // ========================================
+        // TEST SERIES FUNCTIONS
+        // ========================================
+
+        // ========================================
+        // FILTER TESTS
+        // ========================================
+        function filterTests(type) {
+            const cards = document.querySelectorAll('.test-card-full');
+            const typeCards = document.querySelectorAll('.test-type-card');
+            
+            // Update active state on type cards
+            typeCards.forEach(card => {
+                card.classList.remove('highlight');
+            });
+            
+            // Find clicked card and highlight it
+            typeCards.forEach(card => {
+                if (card.querySelector('h4')?.textContent.toLowerCase().includes(type)) {
+                    card.classList.add('highlight');
+                }
+            });
+
+            // Show/hide test cards
+            cards.forEach(card => {
+                if (type === 'all') {
+                    card.style.display = 'flex';
+                } else {
+                    const cardType = card.dataset.type;
+                    if (cardType === type) {
+                        card.style.display = 'flex';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                }
+            });
+
+            showToast('📋 Filtering: ' + type.charAt(0).toUpperCase() + type.slice(1) + ' Tests');
+        }
+
+        // ========================================
+        // START TEST
+        // ========================================
+        function startTest(testName) {
+            showToast('📝 Starting "' + testName + '"...');
+            // Optionally open modal or redirect
+            window.modalSystem.create('📝 Start Test', `
+                <div class="empty-modal-state">
+                    <span class="icon">📝</span>
+                    <h4>Starting: ${testName}</h4>
+                    <p>You are about to begin this test. Make sure you have a stable internet connection.</p>
+                    <div style="margin-top: var(--space-4); display: flex; gap: var(--space-3); justify-content: center; flex-wrap: wrap;">
+                        <button class="action-btn" onclick="window.modalSystem.close(); showToast('🚀 Test started! Good luck!')">Begin Test</button>
+                        <button class="action-btn secondary" onclick="window.modalSystem.close()">Cancel</button>
+                    </div>
+                </div>
+            `);
+        }
+
+        // ========================================
+        // TOAST NOTIFICATION
+        // ========================================
+        function showToast(message) {
+            const existing = document.querySelector('.toast-notification');
+            if (existing) existing.remove();
+
+            const toast = document.createElement('div');
+            toast.className = 'toast-notification';
+            toast.textContent = message;
+            toast.style.cssText = `
+                position: fixed;
+                bottom: 24px;
+                right: 24px;
+                padding: 12px 24px;
+                background: var(--bg-card-solid);
+                border: 1px solid var(--border-color);
+                border-radius: var(--radius-md);
+                backdrop-filter: blur(12px);
+                color: var(--text-primary);
+                font-size: 0.85rem;
+                z-index: 9999;
+                animation: slideUp 0.4s ease;
+                box-shadow: 0 8px 32px var(--shadow-color);
+                font-family: 'Inter', sans-serif;
+            `;
+
+            if (!document.getElementById('toast-style')) {
+                const style = document.createElement('style');
+                style.id = 'toast-style';
+                style.textContent = `
+                    @keyframes slideUp {
+                        from { opacity: 0; transform: translateY(20px); }
+                        to { opacity: 1; transform: translateY(0); }
+                    }
+                `;
+                document.head.appendChild(style);
+            }
+
+            document.body.appendChild(toast);
+
+            setTimeout(() => {
+                toast.style.opacity = '0';
+                toast.style.transform = 'translateY(20px)';
+                toast.style.transition = 'opacity 0.3s, transform 0.3s';
+                setTimeout(() => toast.remove(), 300);
+            }, 2500);
+        }
+
+        window.showToast = showToast;
+
+        // ========================================
+        // KEYBOARD SHORTCUTS
+        // ========================================
+        document.addEventListener('keydown', function(e) {
+            // 'f' key - focus on first filter
+            if (e.key === 'f' && !e.ctrlKey && !e.metaKey) {
+                e.preventDefault();
+                const firstType = document.querySelector('.test-type-card');
+                if (firstType) firstType.click();
+            }
+        });
+
+        console.log('📝 Test Series loaded successfully');
+        console.log('⌨️ Press F to filter tests');
+        console.log('🌓 Theme:', localStorage.getItem('edutech-theme') || 'dark');
+    </script>
+
+</body>
+</html>

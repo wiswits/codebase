@@ -1,0 +1,116 @@
+/* Card base */
+.card {
+  @apply bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden transition-all duration-200;
+}
+
+.card-hover {
+  @apply hover:shadow-lg hover:-translate-y-1;
+}
+
+.card-header {
+  @apply px-6 py-4 border-b border-gray-200 dark:border-gray-700;
+}
+
+.card-body {
+  @apply px-6 py-4;
+}
+
+.card-footer {
+  @apply px-6 py-4 border-t border-gray-200 dark:border-gray-700;
+}
+
+/* Card variants */
+.card-primary {
+  @apply border-l-4 border-l-indigo-500;
+}
+
+.card-success {
+  @apply border-l-4 border-l-green-500;
+}
+
+.card-danger {
+  @apply border-l-4 border-l-red-500;
+}
+
+.card-warning {
+  @apply border-l-4 border-l-yellow-500;
+}
+
+.card-info {
+  @apply border-l-4 border-l-blue-500;
+}
+
+/* Stats card */
+.card-stats {
+  @apply p-6 bg-white dark:bg-gray-800 rounded-lg shadow;
+}
+
+.card-stats .stat-icon {
+  @apply w-12 h-12 rounded-full flex items-center justify-center text-white;
+}
+
+.card-stats .stat-value {
+  @apply text-2xl font-bold text-gray-900 dark:text-white mt-2;
+}
+
+.card-stats .stat-label {
+  @apply text-sm text-gray-500 dark:text-gray-400;
+}
+
+.card-stats .stat-change {
+  @apply text-xs font-medium mt-1;
+}
+
+.card-stats .stat-change.positive {
+  @apply text-green-600 dark:text-green-400;
+}
+
+.card-stats .stat-change.negative {
+  @apply text-red-600 dark:text-red-400;
+}
+
+/* Profile card */
+.card-profile {
+  @apply bg-white dark:bg-gray-800 rounded-lg shadow overflow-hidden;
+}
+
+.card-profile .profile-header {
+  @apply h-32 bg-gradient-to-r from-indigo-500 to-purple-500;
+}
+
+.card-profile .profile-avatar {
+  @apply -mt-16 mx-auto w-32 h-32 rounded-full border-4 border-white dark:border-gray-800 object-cover;
+}
+
+.card-profile .profile-name {
+  @apply text-center text-xl font-bold text-gray-900 dark:text-white mt-2;
+}
+
+.card-profile .profile-role {
+  @apply text-center text-sm text-gray-500 dark:text-gray-400;
+}
+
+/* Dark mode adjustments */
+.dark .card {
+  @apply bg-gray-800 border-gray-700;
+}
+
+.dark .card-header {
+  @apply border-gray-700;
+}
+
+.dark .card-footer {
+  @apply border-gray-700;
+}
+
+.dark .card-stats {
+  @apply bg-gray-800;
+}
+
+.dark .card-profile {
+  @apply bg-gray-800;
+}
+
+.dark .card-profile .profile-avatar {
+  @apply border-gray-800;
+}

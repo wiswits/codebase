@@ -1,0 +1,166 @@
+/* APEX Design Tokens */
+:root {
+  /* Colors */
+  --apex-navy: #0F2147;
+  --apex-gold: #C8A04E;
+  --apex-ivory: #F7F4EC;
+  --apex-grey: #9AA0A6;
+
+  /* Color variations */
+  --apex-navy-light: #1a3a6e;
+  --apex-navy-dark: #0a162e;
+  --apex-gold-light: #dbb86d;
+  --apex-gold-dark: #b08a3e;
+
+  /* Typography */
+  --font-display: 'Playfair Display', serif;
+  --font-body: 'Source Sans 3', sans-serif;
+
+  /* Font sizes */
+  --font-size-xs: 0.75rem;   /* 12px */
+  --font-size-sm: 0.875rem;  /* 14px */
+  --font-size-base: 1rem;    /* 16px */
+  --font-size-lg: 1.125rem;  /* 18px */
+  --font-size-xl: 1.25rem;   /* 20px */
+  --font-size-2xl: 1.5rem;   /* 24px */
+  --font-size-3xl: 1.875rem; /* 30px */
+  --font-size-4xl: 2.25rem;  /* 36px */
+  --font-size-5xl: 3rem;     /* 48px */
+
+  /* Font weights */
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  /* Spacing */
+  --spacing-0: 0;
+  --spacing-1: 0.25rem;  /* 4px */
+  --spacing-2: 0.5rem;   /* 8px */
+  --spacing-3: 0.75rem;  /* 12px */
+  --spacing-4: 1rem;     /* 16px */
+  --spacing-5: 1.25rem;  /* 20px */
+  --spacing-6: 1.5rem;   /* 24px */
+  --spacing-8: 2rem;     /* 32px */
+  --spacing-10: 2.5rem;  /* 40px */
+  --spacing-12: 3rem;    /* 48px */
+  --spacing-16: 4rem;    /* 64px */
+  --spacing-20: 5rem;    /* 80px */
+  --spacing-24: 6rem;    /* 96px */
+
+  /* Border radius */
+  --radius-none: 0;
+  --radius-sm: 0.125rem;  /* 2px */
+  --radius-base: 0.25rem; /* 4px */
+  --radius-md: 0.375rem;  /* 6px */
+  --radius-lg: 0.5rem;    /* 8px */
+  --radius-xl: 0.75rem;   /* 12px */
+  --radius-2xl: 1rem;     /* 16px */
+  --radius-3xl: 1.5rem;   /* 24px */
+  --radius-full: 9999px;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-base: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  --shadow-2xl: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+  --shadow-inner: inset 0 2px 4px 0 rgb(0 0 0 / 0.05);
+  --shadow-none: 0 0 #0000;
+
+  /* Transitions */
+  --transition-fast: 150ms;
+  --transition-base: 250ms;
+  --transition-slow: 350ms;
+  --transition-xslow: 500ms;
+
+  /* Z-index layers */
+  --z-base: 1;
+  --z-dropdown: 10;
+  --z-sticky: 20;
+  --z-fixed: 30;
+  --z-modal: 40;
+  --z-popover: 50;
+  --z-toast: 60;
+  --z-tooltip: 70;
+}
+
+/* Dark mode overrides */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.3);
+    --shadow-base: 0 1px 3px 0 rgb(0 0 0 / 0.4), 0 1px 2px -1px rgb(0 0 0 / 0.4);
+    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.4), 0 2px 4px -2px rgb(0 0 0 / 0.4);
+    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.4), 0 4px 6px -4px rgb(0 0 0 / 0.4);
+    --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.4), 0 8px 10px -6px rgb(0 0 0 / 0.4);
+  }
+}
+
+/* Print styles */
+@media print {
+  :root {
+    --shadow-sm: none;
+    --shadow-base: none;
+    --shadow-md: none;
+    --shadow-lg: none;
+    --shadow-xl: none;
+    --shadow-2xl: none;
+    --shadow-inner: none;
+  }
+}
+
+/* Utility classes for tokens */
+.text-apex-navy { color: var(--apex-navy); }
+.text-apex-gold { color: var(--apex-gold); }
+.text-apex-ivory { color: var(--apex-ivory); }
+.text-apex-grey { color: var(--apex-grey); }
+
+.bg-apex-navy { background-color: var(--apex-navy); }
+.bg-apex-gold { background-color: var(--apex-gold); }
+.bg-apex-ivory { background-color: var(--apex-ivory); }
+.bg-apex-grey { background-color: var(--apex-grey); }
+
+.border-apex-navy { border-color: var(--apex-navy); }
+.border-apex-gold { border-color: var(--apex-gold); }
+.border-apex-ivory { border-color: var(--apex-ivory); }
+.border-apex-grey { border-color: var(--apex-grey); }
+
+.hover\\:text-apex-navy:hover { color: var(--apex-navy); }
+.hover\\:text-apex-gold:hover { color: var(--apex-gold); }
+
+.hover\\:bg-apex-navy:hover { background-color: var(--apex-navy); }
+.hover\\:bg-apex-gold:hover { background-color: var(--apex-gold); }
+.hover\\:bg-apex-ivory:hover { background-color: var(--apex-ivory); }
+
+.focus\\:ring-apex-navy:focus { --tw-ring-color: var(--apex-navy); }
+.focus\\:ring-apex-gold:focus { --tw-ring-color: var(--apex-gold); }
+
+/* Font classes */
+.font-display { font-family: var(--font-display); }
+.font-body { font-family: var(--font-body); }
+
+/* Shadow classes */
+.shadow-apex-sm { box-shadow: var(--shadow-sm); }
+.shadow-apex-base { box-shadow: var(--shadow-base); }
+.shadow-apex-md { box-shadow: var(--shadow-md); }
+.shadow-apex-lg { box-shadow: var(--shadow-lg); }
+.shadow-apex-xl { box-shadow: var(--shadow-xl); }
+.shadow-apex-2xl { box-shadow: var(--shadow-2xl); }
+.shadow-apex-inner { box-shadow: var(--shadow-inner); }
+
+/* Transition classes */
+.transition-apex-fast { transition-duration: var(--transition-fast); }
+.transition-apex-base { transition-duration: var(--transition-base); }
+.transition-apex-slow { transition-duration: var(--transition-slow); }
+.transition-apex-xslow { transition-duration: var(--transition-xslow); }
+
+/* Z-index classes */
+.z-dropdown { z-index: var(--z-dropdown); }
+.z-sticky { z-index: var(--z-sticky); }
+.z-fixed { z-index: var(--z-fixed); }
+.z-modal { z-index: var(--z-modal); }
+.z-popover { z-index: var(--z-popover); }
+.z-toast { z-index: var(--z-toast); }
+.z-tooltip { z-index: var(--z-tooltip); }

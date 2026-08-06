@@ -1,0 +1,4 @@
+vacancy_id,first_name,last_name,email,phone,current_stage,total_experience,current_company,current_designation,current_city,current_state,highest_qualification,application_date
+1,Rahul,Sharma,rahul.sharma@email.com,9876543210,Applied,2.5,ABC Corp,Developer,Delhi,Delhi,B.Tech,2026-08-01
+1,Priya,Singh,priya.singh@email.com,9876543211,Screening,3.0,XYZ Ltd,Designer,Bangalore,Karnataka,B.Des,2026-08-02
+2,Amit,Kumar,amit.kumar@email.com,9876543212,Shortlisted,1.5,Startup Inc,Analyst,Mumbai,Maharashtra,PGDM,2026-08-03

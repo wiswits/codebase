@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EduTech Solutions — The Future of Competitive Exam Preparation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800;14..32,900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/theme.css" /></head>
+<body>
+
+    <!-- ==================== CURSOR ==================== -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-ring"></div>
+
+    <!-- ==================== MESH BACKGROUND ==================== -->
+    <div class="mesh-bg">
+        <div class="mesh-orbe mesh-orbe-1"></div>
+        <div class="mesh-orbe mesh-orbe-2"></div>
+        <div class="mesh-orbe mesh-orbe-3"></div>
+        <div class="mesh-orbe mesh-orbe-4"></div>
+    </div>
+    <div class="noise-overlay"></div>
+
+    <!-- ==================== NAVIGATION ==================== -->
+    <nav class="navbar glass-nav">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
+                    <rect x="2" y="2" width="32" height="32" rx="10" fill="#4F46E5" />
+                    <path d="M12 24L18 12L24 24" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M14 20H22" stroke="white" stroke-width="2" stroke-linecap="round" />
+                </svg>
+                <span>EduTech</span>
+            </div>
+            <div class="nav-links">
+                <a href="index.html" class="active">Home</a>
+                <a href="dashboard.html">Dashboard</a>
+                <a href="test-series.html">Test Series</a>
+                <a href="pyq-bank.html">PYQ Bank</a>
+                <a href="faculty.html">Faculty</a>
+            </div>
+           <div class="nav-actions">
+    <button class="theme-toggle" aria-label="Toggle theme">
+        <span class="toggle-track">
+            <span class="toggle-thumb">
+                <svg viewBox="0 0 24 24"><path d="M12 18C8.68629 18 6 15.3137 6 12C6 8.68629 8.68629 6 12 6C15.3137 6 18 8.68629 18 12C18 15.3137 15.3137 18 12 18ZM11 1H13V4H11V1ZM11 20H13V23H11V20ZM3.51472 4.92893L4.92893 3.51472L7.05025 5.63604L5.63604 7.05025L3.51472 4.92893ZM16.9497 18.364L18.364 16.9497L20.4853 19.0711L19.0711 20.4853L16.9497 18.364ZM19.0711 3.51472L20.4853 4.92893L18.364 7.05025L16.9497 5.63604L19.0711 3.51472ZM5.63604 16.9497L7.05025 18.364L4.92893 20.4853L3.51472 19.0711L5.63604 16.9497ZM23 11V13H20V11H23ZM4 11V13H1V11H4Z"/></svg>
+            </span>
+        </span>
+    </button>
+    <button class="btn-ghost">Sign In</button>
+    <button class="btn-primary">Start Free Trial</button>
+    <button class="nav-toggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+    </button>
+</div>
+    </nav>
+
+    <!-- ==================== HERO ==================== -->
+    <section class="hero" id="hero">
+        <div class="hero-container">
+            <div class="hero-badge">
+                <span class="badge-dot"></span>
+                JEE · NEET · OLYMPIAD · NTSE · RMO · INMO
+            </div>
+            <h1 class="hero-title">
+                The Future of<br />
+                <span class="hero-highlight">Competitive Exam</span><br />
+                Preparation
+            </h1>
+            <p class="hero-subtitle">
+                AI-powered coaching platform with batch management, test series,<br />
+                analytics, error book, DPP, PYQs, and doubt resolution — all in one place.
+            </p>
+            <div class="hero-actions">
+                <button class="btn-primary btn-large">
+                    Start Free Trial
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M4 10H16M16 10L11 5M16 10L11 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </button>
+                <button class="btn-secondary btn-large">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.5" />
+                        <path d="M8 7L13 10L8 13V7Z" fill="currentColor" />
+                    </svg>
+                    Watch Demo
+                </button>
+            </div>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-number" data-count="50000">0</span>
+                    <span class="stat-label">Students</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-count="1200">0</span>
+                    <span class="stat-label">Institutes</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-count="150000">0</span>
+                    <span class="stat-label">Tests Conducted</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-count="99.9">0</span>
+                    <span class="stat-label">Uptime SLA</span>
+                </div>
+            </div>
+            <div class="hero-dashboard">
+    <div class="dashboard-float">
+      <div class="dashboard-placeholder" style="min-height: 280px; padding: var(--space-5); background: linear-gradient(145deg, #1a1a2e, #0a0a0f); border-radius: var(--radius-lg); border: 1px solid var(--glass-border); position: relative; overflow: visible; cursor: pointer; transition: all 0.3s ease;">
+    <a href="dashboard.html" style="text-decoration: none; color: inherit; display: block;">
+        <div style="display: flex; justify-content: space-between; align-items: center; padding-bottom: var(--space-3); border-bottom: 1px solid rgba(255,255,255,0.06);">
+            <span style="font-size: 0.9rem; font-weight: 600; color: var(--white-soft);">📊 Performance Dashboard</span>
+            <span style="font-size: 0.6rem; padding: 2px 12px; background: rgba(79,70,229,0.15); color: var(--indigo-light); border-radius: 9999px; font-weight: 600; border: 1px solid rgba(79,70,229,0.15);">Click to open →</span>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-3); padding: var(--space-3) 0;">
+            <div style="text-align: center; padding: var(--space-2); background: rgba(255,255,255,0.02); border-radius: var(--radius-sm);">
+                <span style="display: block; font-size: 1.4rem; font-weight: 700; color: var(--white);">87.3%</span>
+                <span style="font-size: 0.6rem; color: var(--white-muted); text-transform: uppercase; letter-spacing: 0.04em;">Accuracy</span>
+            </div>
+            <div style="text-align: center; padding: var(--space-2); background: rgba(255,255,255,0.02); border-radius: var(--radius-sm);">
+                <span style="display: block; font-size: 1.4rem; font-weight: 700; color: var(--white);">#42</span>
+                <span style="font-size: 0.6rem; color: var(--white-muted); text-transform: uppercase; letter-spacing: 0.04em;">Rank</span>
+            </div>
+            <div style="text-align: center; padding: var(--space-2); background: rgba(255,255,255,0.02); border-radius: var(--radius-sm);">
+                <span style="display: block; font-size: 1.4rem; font-weight: 700; color: var(--white);">🔥24</span>
+                <span style="font-size: 0.6rem; color: var(--white-muted); text-transform: uppercase; letter-spacing: 0.04em;">DPP Streak</span>
+            </div>
+        </div>
+        <div style="display: flex; justify-content: space-around; align-items: flex-end; height: 80px; padding-top: var(--space-3); border-top: 1px solid rgba(255,255,255,0.06);">
+            <div style="display: flex; flex-direction: column; align-items: center; gap: 4px; flex: 1;">
+                <div style="width: 28px; height: 78%; border-radius: 4px 4px 0 0; background: linear-gradient(180deg, var(--indigo), var(--indigo-light)); min-height: 8px;"></div>
+                <span style="font-size: 0.55rem; color: var(--white-muted);">Physics</span>
+            </div>
+            <div style="display: flex; flex-direction: column; align-items: center; gap: 4px; flex: 1;">
+                <div style="width: 28px; height: 65%; border-radius: 4px 4px 0 0; background: linear-gradient(180deg, #34D399, #059669); min-height: 8px;"></div>
+                <span style="font-size: 0.55rem; color: var(--white-muted);">Chemistry</span>
+            </div>
+            <div style="display: flex; flex-direction: column; align-items: center; gap: 4px; flex: 1;">
+                <div style="width: 28px; height: 92%; border-radius: 4px 4px 0 0; background: linear-gradient(180deg, #F59E0B, #D97706); min-height: 8px;"></div>
+                <span style="font-size: 0.55rem; color: var(--white-muted);">Maths</span>
+            </div>
+            <div style="display: flex; flex-direction: column; align-items: center; gap: 4px; flex: 1;">
+                <div style="width: 28px; height: 71%; border-radius: 4px 4px 0 0; background: linear-gradient(180deg, #8B5CF6, #6D28D9); min-height: 8px;"></div>
+                <span style="font-size: 0.55rem; color: var(--white-muted);">Biology</span>
+            </div>
+        </div>
+    </a>
+
+    <!-- Floating Cards -->
+    <div style="position: absolute; top: 10%; left: -8%; background: rgba(17,17,26,0.92); backdrop-filter: blur(16px); border: 1px solid rgba(255,255,255,0.06); border-radius: 12px; padding: 12px 16px; min-width: 120px; box-shadow: 0 8px 32px rgba(0,0,0,0.5); animation: floatCard 6s ease-in-out infinite; pointer-events: none;">
+        <span style="font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--white-muted); font-weight: 600; display: block;">Accuracy</span>
+        <span style="font-size: 1.4rem; font-weight: 700; display: block; margin-top: 2px;">87.3%</span>
+        <div style="width: 100%; height: 4px; background: rgba(255,255,255,0.06); border-radius: 4px; margin-top: 8px; overflow: hidden;">
+            <div style="height: 100%; background: linear-gradient(90deg, var(--indigo), var(--purple)); border-radius: 4px; width: 87.3%;"></div>
+        </div>
+    </div>
+    <div style="position: absolute; top: -5%; right: -6%; background: rgba(17,17,26,0.92); backdrop-filter: blur(16px); border: 1px solid rgba(255,255,255,0.06); border-radius: 12px; padding: 12px 16px; min-width: 120px; box-shadow: 0 8px 32px rgba(0,0,0,0.5); animation: floatCard 6s ease-in-out infinite; animation-delay: 2s; pointer-events: none;">
+        <span style="font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--white-muted); font-weight: 600; display: block;">Rank</span>
+        <span style="font-size: 1.4rem; font-weight: 700; display: block; margin-top: 2px;">#42</span>
+        <span style="font-size: 0.75rem; color: #34D399; display: block; margin-top: 2px;">↑ 12 positions</span>
+    </div>
+    <div style="position: absolute; bottom: 5%; right: -5%; background: rgba(17,17,26,0.92); backdrop-filter: blur(16px); border: 1px solid rgba(255,255,255,0.06); border-radius: 12px; padding: 12px 16px; min-width: 120px; box-shadow: 0 8px 32px rgba(0,0,0,0.5); animation: floatCard 6s ease-in-out infinite; animation-delay: 4s; pointer-events: none;">
+        <span style="font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--white-muted); font-weight: 600; display: block;">DPP Streak</span>
+        <span style="font-size: 1.4rem; font-weight: 700; display: block; margin-top: 2px;">🔥 24</span>
+        <span style="font-size: 0.7rem; color: var(--white-muted); display: block; margin-top: 2px;">days</span>
+    </div>
+</div>
+    </section>
+
+    <!-- ==================== FEATURES ==================== -->
+    <section class="features" id="features">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-tag">Features</span>
+                <h2 class="section-title">Everything you need to<br />run a world-class coaching institute</h2>
+                <p class="section-subtitle">From Alpha/Beta/Gamma batch management to AI-driven analytics — built for JEE, NEET &amp; Olympiad prep.</p>
+            </div>
+            <div class="feature-grid">
+    <!-- Batch Management → Dashboard -->
+    <a href="dashboard.html" class="feature-card glass-card" style="text-decoration: none; color: inherit; display: block; cursor: pointer;">
+        <div class="feature-icon">👥</div>
+        <h3>Batch Management</h3>
+        <p>Alpha · Beta · Gamma batches with auto-promote/demote based on rank. Seamless student lifecycle management.</p>
+        <div class="feature-tags">
+            <span>Auto-Promote</span>
+            <span>Alpha/Beta/Gamma</span>
+            <span>Rank-based</span>
+        </div>
+    </a>
+
+    <!-- Test Series → test-series.html -->
+    <a href="test-series.html" class="feature-card glass-card" style="text-decoration: none; color: inherit; display: block; cursor: pointer;">
+        <div class="feature-icon">📝</div>
+        <h3>Test Series</h3>
+        <p>Part Syllabus · Full Syllabus · AITS · Mock tests. Complete test management with scheduling and batch assignment.</p>
+        <div class="feature-tags">
+            <span>Part Syllabus</span>
+            <span>Full Syllabus</span>
+            <span>AITS</span>
+            <span>Mock</span>
+        </div>
+    </a>
+
+    <!-- OMR + Online Engine → dashboard.html -->
+    <a href="dashboard.html" class="feature-card glass-card" style="text-decoration: none; color: inherit; display: block; cursor: pointer;">
+        <div class="feature-icon">📄</div>
+        <h3>OMR + Online Engine</h3>
+        <p>Automated OMR scanning with bubble detection, plus online test attempts with timer and auto-save.</p>
+        <div class="feature-tags">
+            <span>OMR Scanner</span>
+            <span>Online Test</span>
+            <span>Auto-Save</span>
+        </div>
+    </a>
+
+    <!-- Rank Card → dashboard.html -->
+    <a href="dashboard.html" class="feature-card glass-card" style="text-decoration: none; color: inherit; display: block; cursor: pointer;">
+        <div class="feature-icon">🏆</div>
+        <h3>Rank Card</h3>
+        <p>AIR · Batch Rank · Percentile · Subject-wise breakdown · Topper comparison. Complete performance view.</p>
+        <div class="feature-tags">
+            <span>AIR</span>
+            <span>Batch Rank</span>
+            <span>Percentile</span>
+            <span>Topper Compare</span>
+        </div>
+    </a>
+
+    <!-- Error Book → dashboard.html -->
+    <a href="dashboard.html" class="feature-card glass-card" style="text-decoration: none; color: inherit; display: block; cursor: pointer;">
+        <div class="feature-icon">📕</div>
+        <h3>Error Book</h3>
+        <p>Auto-collect wrong questions → personalized revision deck. Master mistakes one by one.</p>
+        <div class="feature-tags">
+            <span>Auto-Collect</span>
+            <span>Revision Deck</span>
+            <span>Personalized</span>
+        </div>
+    </a>
+
+    <!-- DPP Engine → dashboard.html -->
+    <a href="dashboard.html" class="feature-card glass-card" style="text-decoration: none; color: inherit; display: block; cursor: pointer;">
+        <div class="feature-icon">🧩</div>
+        <h3>DPP Engine</h3>
+        <p>Daily personalized practice problems at fixed time + streak tracking. Build daily habits.</p>
+        <div class="feature-tags">
+            <span>Daily Push</span>
+            <span>Streak Tracking</span>
+            <span>Personalized</span>
+        </div>
+    </a>
+
+    <!-- PYQ Bank → pyq-bank.html -->
+    <a href="pyq-bank.html" class="feature-card glass-card" style="text-decoration: none; color: inherit; display: block; cursor: pointer;">
+        <div class="feature-icon">📚</div>
+        <h3>PYQ Bank</h3>
+        <p>Year-tagged questions for JEE · NEET · NTSE · RMO · INMO. Practice with real exam questions.</p>
+        <div class="feature-tags">
+            <span>JEE</span>
+            <span>NEET</span>
+            <span>NTSE</span>
+            <span>RMO</span>
+            <span>INMO</span>
+        </div>
+    </a>
+
+    <a href="dashboard.html" class="feature-card glass-card feature-large" style="text-decoration: none; color: inherit; display: block; cursor: pointer;">
+        <div class="feature-icon">📊</div>
+        <h3>Attempt Analytics</h3>
+        <p>Time-per-Question · Accuracy · Silly Mistake % · Speed-vs-Accuracy Quadrant. Deep insights into every attempt.</p>
+        <div class="feature-tags">
+            <span>Time-per-Q</span>
+            <span>Accuracy</span>
+            <span>Silly Mistakes</span>
+            <span>Speed vs Accuracy</span>
+        </div>
+        <div class="feature-preview">
+            <div class="mini-quadrant">
+                <div class="mini-quad q1">Fast & Accurate</div>
+                <div class="mini-quad q2">Fast & Inaccurate</div>
+                <div class="mini-quad q3">Slow & Accurate</div>
+                <div class="mini-quad q4">Slow & Inaccurate</div>
+                <div class="mini-marker">●</div>
+            </div>
+        </div>
+    </a>
+
+    <!-- Doubt Desk → faculty.html -->
+    <a href="faculty.html" class="feature-card glass-card" style="text-decoration: none; color: inherit; display: block; cursor: pointer;">
+        <div class="feature-icon">💬</div>
+        <h3>Doubt Desk</h3>
+        <p>Async doubt resolution → faculty queue → SLA tracking. Never leave a student's question unanswered.</p>
+        <div class="feature-tags">
+            <span>Async</span>
+            <span>Faculty Queue</span>
+            <span>SLA</span>
+        </div>
+    </a>
+
+    <!-- Faculty Panel → faculty.html -->
+    <a href="faculty.html" class="feature-card glass-card" style="text-decoration: none; color: inherit; display: block; cursor: pointer;">
+        <div class="feature-icon">👨‍🏫</div>
+        <h3>Faculty Panel</h3>
+        <p>Performance dashboard, student tracking, doubt management, and test creation — all in one place.</p>
+        <div class="feature-tags">
+            <span>Performance</span>
+            <span>Student Tracking</span>
+            <span>Doubt Management</span>
+        </div>
+    </a>
+</div>
+    </section>
+
+    <!-- ==================== ANALYTICS SHOWCASE ==================== -->
+    <section class="analytics-showcase" id="analytics">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-tag">Analytics</span>
+                <h2 class="section-title">See your performance<br />like never before</h2>
+                <p class="section-subtitle">Every data point that matters — visualized for actionable insights.</p>
+            </div>
+            <div class="analytics-grid">
+                <div class="analytics-card quadrant-full">
+                    <h3>Speed vs Accuracy Quadrant</h3>
+                    <div class="quadrant-container">
+                        <div class="quadrant-grid-full">
+                            <div class="quadrant-cell q1">
+                                <div class="quadrant-label">Fast & Accurate</div>
+                                <div class="quadrant-desc">Top performers — maintain this zone</div>
+                            </div>
+                            <div class="quadrant-cell q2">
+                                <div class="quadrant-label">Fast & Inaccurate</div>
+                                <div class="quadrant-desc">Work on accuracy — slow down</div>
+                            </div>
+                            <div class="quadrant-cell q3">
+                                <div class="quadrant-label">Slow & Accurate</div>
+                                <div class="quadrant-desc">Increase speed — practice timed tests</div>
+                            </div>
+                            <div class="quadrant-cell q4">
+                                <div class="quadrant-label">Slow & Inaccurate</div>
+                                <div class="quadrant-desc">Needs improvement — focus on basics</div>
+                            </div>
+                            <div class="quadrant-marker-full">Your Zone</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="analytics-card glass-card">
+                    <h3>Time per Question</h3>
+                    <div class="heatmap-small">
+                        <div class="heat-row">
+                            <div class="heat-cell" style="opacity:0.3">Q1</div>
+                            <div class="heat-cell" style="opacity:0.9">Q2</div>
+                            <div class="heat-cell" style="opacity:0.4">Q3</div>
+                            <div class="heat-cell" style="opacity:0.7">Q4</div>
+                            <div class="heat-cell" style="opacity:0.6">Q5</div>
+                        </div>
+                        <div class="heat-row">
+                            <div class="heat-cell" style="opacity:0.2">Q6</div>
+                            <div class="heat-cell" style="opacity:0.8">Q7</div>
+                            <div class="heat-cell" style="opacity:0.5">Q8</div>
+                            <div class="heat-cell" style="opacity:0.9">Q9</div>
+                            <div class="heat-cell" style="opacity:0.3">Q10</div>
+                        </div>
+                        <div class="heat-row">
+                            <div class="heat-cell" style="opacity:0.7">Q11</div>
+                            <div class="heat-cell" style="opacity:0.4">Q12</div>
+                            <div class="heat-cell" style="opacity:0.8">Q13</div>
+                            <div class="heat-cell" style="opacity:0.5">Q14</div>
+                            <div class="heat-cell" style="opacity:0.9">Q15</div>
+                        </div>
+                    </div>
+                    <div class="heat-legend">
+                        <span>Faster</span>
+                        <div class="legend-line"></div>
+                        <span>Slower</span>
+                    </div>
+                </div>
+                <div class="analytics-card glass-card">
+                    <h3>Subject-wise Accuracy</h3>
+                    <div class="accuracy-list">
+                        <div class="acc-item">
+                            <span>Physics</span>
+                            <div class="acc-bar"><div style="width:85%"></div></div>
+                            <span>85%</span>
+                        </div>
+                        <div class="acc-item">
+                            <span>Chemistry</span>
+                            <div class="acc-bar"><div style="width:68%"></div></div>
+                            <span>68%</span>
+                        </div>
+                        <div class="acc-item">
+                            <span>Mathematics</span>
+                            <div class="acc-bar"><div style="width:92%"></div></div>
+                            <span>92%</span>
+                        </div>
+                        <div class="acc-item">
+                            <span>Biology</span>
+                            <div class="acc-bar"><div style="width:74%"></div></div>
+                            <span>74%</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="analytics-card glass-card">
+                    <h3>Silly Mistakes</h3>
+                    <div class="silly-stats">
+                        <div class="silly-number">
+                            <span class="silly-value">12</span>
+                            <span class="silly-label">Silly mistakes in last test</span>
+                        </div>
+                        <div class="silly-number">
+                            <span class="silly-value">23%</span>
+                            <span class="silly-label">of total incorrect</span>
+                        </div>
+                        <div class="silly-tip">
+                            💡 Tip: Review your answers carefully before submitting
+                        </div>
+                    </div>
+                </div>
+                <div class="analytics-card glass-card">
+                    <h3>Topper Comparison</h3>
+                    <div class="topper-compare">
+                        <div class="compare-row">
+                            <span>You</span>
+                            <div class="compare-bar"><div style="width:78%"></div></div>
+                            <span>178/200</span>
+                        </div>
+                        <div class="compare-row topper">
+                            <span>🏆 Topper</span>
+                            <div class="compare-bar"><div style="width:98%"></div></div>
+                            <span>195/200</span>
+                        </div>
+                        <div class="compare-diff">
+                            Difference: <strong>17 marks</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== AI SECTION ==================== -->
+    <section class="ai-section" id="ai">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-tag">AI-Powered</span>
+                <h2 class="section-title">Your AI Academic Assistant</h2>
+                <p class="section-subtitle">Every mistake becomes your next breakthrough. AI that learns with you.</p>
+            </div>
+            <div class="ai-grid-full">
+                <div class="ai-card-full glass-card">
+                    <div class="ai-icon-full">🎯</div>
+                    <h4>Weak Topic Detection</h4>
+                    <p>AI analyzes your attempt patterns to identify exact topics where you need improvement.</p>
+                    <div class="ai-demo">Physics: 4 weak topics identified</div>
+                </div>
+                <div class="ai-card-full glass-card">
+                    <div class="ai-icon-full">📈</div>
+                    <h4>Predicted AIR</h4>
+                    <p>Real-time rank prediction based on your current performance trends and peer comparison.</p>
+                    <div class="ai-demo">Predicted AIR: 142 (±15)</div>
+                </div>
+                <div class="ai-card-full glass-card">
+                    <div class="ai-icon-full">🧩</div>
+                    <h4>Personalized DPP</h4>
+                    <p>Daily practice problems automatically generated from your weak areas and error book.</p>
+                    <div class="ai-demo">Next DPP: 12 questions, 4 from weak topics</div>
+                </div>
+                <div class="ai-card-full glass-card">
+                    <div class="ai-icon-full">🧠</div>
+                    <h4>Smart Revision Planner</h4>
+                    <p>AI schedules revision using spaced repetition — exactly when you're about to forget.</p>
+                    <div class="ai-demo">5 topics due for revision today</div>
+                </div>
+                <div class="ai-card-full glass-card">
+                    <div class="ai-icon-full">📊</div>
+                    <h4>Performance Forecast</h4>
+                    <p>Predict your future performance and get personalized recommendations to improve.</p>
+                    <div class="ai-demo">↓ 8% if no intervention, ↑ 15% with focused practice</div>
+                </div>
+                <div class="ai-card-full glass-card">
+                    <div class="ai-icon-full">🔄</div>
+                    <h4>Adaptive Learning</h4>
+                    <p>The system adapts to your learning style, difficulty preference, and pace.</p>
+                    <div class="ai-demo">80% of students show improvement in 4 weeks</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== TESTIMONIALS ==================== -->
+    <section class="testimonials" id="testimonials">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-tag">Testimonials</span>
+                <h2 class="section-title">Loved by institutes<br />across India</h2>
+            </div>
+            <div class="testimonials-marquee">
+                <div class="testimonial-track">
+                    <div class="testimonial-card glass-card">
+                        <div class="testimonial-avatar">AK</div>
+                        <div class="testimonial-content">
+                            <p>"EduTech transformed our coaching. The auto-promotion feature saved us hours of manual work."</p>
+                            <div class="testimonial-author">
+                                <strong>Dr. Anil Kumar</strong>
+                                <span>Director, All India JEE Academy</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card glass-card">
+                        <div class="testimonial-avatar">SM</div>
+                        <div class="testimonial-content">
+                            <p>"The error book and DPP engine are game-changers. Our students' ranks improved significantly."</p>
+                            <div class="testimonial-author">
+                                <strong>Dr. Sita Mehta</strong>
+                                <span>Founder, NEET Excellence</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card glass-card">
+                        <div class="testimonial-avatar">RV</div>
+                        <div class="testimonial-content">
+                            <p>"From batch management to doubt resolution, everything is seamless. Faculty productivity is up 40%."</p>
+                            <div class="testimonial-author">
+                                <strong>Rajesh Verma</strong>
+                                <span>Academic Head, Olympiad Prep</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card glass-card">
+                        <div class="testimonial-avatar">PS</div>
+                        <div class="testimonial-content">
+                            <p>"The speed-vs-accuracy quadrant alone is worth it. Our students now understand exactly where to improve."</p>
+                            <div class="testimonial-author">
+                                <strong>Priya Sharma</strong>
+                                <span>CEO, EdTech Innovators</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card glass-card">
+                        <div class="testimonial-avatar">RK</div>
+                        <div class="testimonial-content">
+                            <p>"PYQ bank with year tagging makes it so easy to assign relevant practice. The analytics are incredible."</p>
+                            <div class="testimonial-author">
+                                <strong>Rajesh Kumar</strong>
+                                <span>Director, IITian's Hub</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== PRICING ==================== -->
+    <section class="pricing" id="pricing">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-tag">Pricing</span>
+                <h2 class="section-title">Choose the plan that<br />fits your institute</h2>
+            </div>
+            <div class="pricing-grid">
+    <!-- Starter Plan -->
+    <div class="pricing-card" onclick="window.modalSystem.openPricingModal('starter')" style="cursor: pointer;">
+        <div class="pricing-header">
+            <h3>Starter</h3>
+            <p>For small coaching centers</p>
+            <div class="pricing-price">
+                <span class="price-amount">₹9,999</span>
+                <span class="price-period">/month</span>
+            </div>
+        </div>
+        <ul class="pricing-features">
+            <li>Up to 100 students</li>
+            <li>Batch Management (2 batches)</li>
+            <li>Online tests only</li>
+            <li>Basic analytics</li>
+            <li>Error book</li>
+            <li>Email support</li>
+        </ul>
+        <button class="btn-outline" onclick="event.stopPropagation(); window.modalSystem.openPricingModal('starter')">Get Started</button>
+    </div>
+
+    <!-- Professional Plan (Featured) -->
+    <div class="pricing-card featured" onclick="window.modalSystem.openPricingModal('professional')" style="cursor: pointer;">
+        <div class="pricing-badge">Most Popular</div>
+        <div class="pricing-header">
+            <h3>Professional</h3>
+            <p>For growing institutes</p>
+            <div class="pricing-price">
+                <span class="price-amount">₹19,999</span>
+                <span class="price-period">/month</span>
+            </div>
+        </div>
+        <ul class="pricing-features">
+            <li>Up to 500 students</li>
+            <li>Alpha/Beta/Gamma + Auto-promote</li>
+            <li>Online + OMR tests</li>
+            <li>Advanced analytics + AI</li>
+            <li>Error book + DPP</li>
+            <li>PYQ Bank (JEE/NEET/NTSE)</li>
+            <li>Doubt desk with SLA</li>
+            <li>Faculty panel</li>
+            <li>Priority support</li>
+        </ul>
+        <button class="btn-primary" onclick="event.stopPropagation(); window.modalSystem.openPricingModal('professional')">Start Free Trial</button>
+    </div>
+
+    <!-- Enterprise Plan -->
+    <div class="pricing-card" onclick="window.modalSystem.openPricingModal('enterprise')" style="cursor: pointer;">
+        <div class="pricing-header">
+            <h3>Enterprise</h3>
+            <p>For large coaching chains</p>
+            <div class="pricing-price">
+                <span class="price-amount">Custom</span>
+                <span class="price-period">/month</span>
+            </div>
+        </div>
+        <ul class="pricing-features">
+            <li>Unlimited students</li>
+            <li>All features + custom</li>
+            <li>All exam types supported</li>
+            <li>Dedicated account manager</li>
+            <li>Custom integrations</li>
+            <li>SLA guarantee</li>
+            <li>24/7 priority support</li>
+            <li>On-premise option</li>
+        </ul>
+        <button class="btn-outline" onclick="event.stopPropagation(); window.modalSystem.openPricingModal('enterprise')">Contact Sales</button>
+    </div>
+</div>
+    </section>
+
+    <!-- ==================== FAQ ==================== -->
+    <section class="faq" id="faq">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-tag">FAQ</span>
+                <h2 class="section-title">Frequently asked<br />questions</h2>
+            </div>
+            <div class="faq-list">
+                <div class="faq-item glass-card">
+                    <button class="faq-question">
+                        <span>What is EduTech Solutions?</span>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 5V19M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>EduTech Solutions is a complete coaching management platform for JEE, NEET, and Olympiad preparation. It manages batches, tests, analytics, error books, DPPs, PYQs, doubt resolution, and faculty performance — all in one place.</p>
+                    </div>
+                </div>
+                <div class="faq-item glass-card">
+                    <button class="faq-question">
+                        <span>How does auto-promotion/demotion work?</span>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 5V19M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Students are automatically promoted or demoted based on their cumulative rank in a set of tests. For example, top 10% of Alpha batch move to Gamma, bottom 10% move to Beta. Academic heads can override manually.</p>
+                    </div>
+                </div>
+                <div class="faq-item glass-card">
+                    <button class="faq-question">
+                        <span>Which exams are supported?</span>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 5V19M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>We support JEE Main, JEE Advanced, NEET, NTSE, RMO, INMO, and Olympiad exams. The platform is fully configurable for any competitive exam.</p>
+                    </div>
+                </div>
+                <div class="faq-item glass-card">
+                    <button class="faq-question">
+                        <span>Can I migrate my existing student data?</span>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 5V19M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Absolutely. We provide a dedicated migration assistant and onboarding support for all new customers. We can import student data, test history, and batch structures from Excel, CSV, or your existing system.</p>
+                    </div>
+                </div>
+                <div class="faq-item glass-card">
+                    <button class="faq-question">
+                        <span>How does the OMR engine work?</span>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 5V19M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Upload scanned OMR sheets (PDF or JPEG). Our automated engine detects bubbles, maps them to the question paper, and calculates scores. You can manually override any detection errors.</p>
+                    </div>
+                </div>
+                <div class="faq-item glass-card">
+                    <button class="faq-question">
+                        <span>Is there a free trial available?</span>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 5V19M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes, we offer a 14-day free trial with full access to all Professional features. No credit card required. You can import up to 50 students during the trial.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
+                    <rect x="2" y="2" width="32" height="32" rx="10" fill="#4F46E5" />
+                    <path d="M12 24L18 12L24 24" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M14 20H22" stroke="white" stroke-width="2" stroke-linecap="round" />
+                </svg>
+                <span>EduTech</span>
+                <p>The future of competitive exam preparation.</p>
+                <div class="footer-exams">
+                    <span>JEE</span>
+                    <span>NEET</span>
+                    <span>NTSE</span>
+                    <span>RMO</span>
+                    <span>INMO</span>
+                </div>
+            </div>
+            <div class="footer-links">
+                <div class="footer-col">
+                    <h4>Product</h4>
+                    <a href="index.html">Home</a>
+                    <a href="dashboard.html">Dashboard</a>
+                    <a href="test-series.html">Test Series</a>
+                    <a href="pyq-bank.html">PYQ Bank</a>
+                    <a href="faculty.html">Faculty</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <a href="#">Documentation</a>
+                    <a href="#">API</a>
+                    <a href="#">Help Center</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <a href="#">About</a>
+                    <a href="#">Blog</a>
+                    <a href="#">Careers</a>
+                    <a href="#">Contact</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <a href="#">hello@edutech.com</a>
+                    <a href="#">+91 12345 67890</a>
+                    <div class="footer-social">
+                        <a href="#">Twitter</a>
+                        <a href="#">LinkedIn</a>
+                        <a href="#">YouTube</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 EduTech Solutions. All rights reserved. JEE · NEET · Olympiad · NTSE · RMO · INMO</p>
+        </div>
+    </footer>
+
+     <script src="js/script.js"></script>
+    <script src="js/theme-toggle.js"></script>
+</body>
+</html>

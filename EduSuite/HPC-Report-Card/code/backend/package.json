@@ -1,0 +1,38 @@
+{
+  "name": "edusuite-hpc-report-card-backend",
+  "version": "1.0.0",
+  "description": "EduSuite HPC Report Card Backend",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js",
+    "lint": "echo \"No lint configured\""
+  },
+  "keywords": [
+    "edusuite",
+    "hpc",
+    "report-card",
+    "node",
+    "express",
+    "mariadb"
+  ],
+  "author": "EduSuite Engineering Team",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.1",
+    "express": "^5.1.0",
+    "helmet": "^8.1.0",
+    "mariadb": "^3.4.5",
+    "morgan": "^1.10.0",
+    "swagger-jsdoc": "^6.3.0",
+    "swagger-ui-express": "^5.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}

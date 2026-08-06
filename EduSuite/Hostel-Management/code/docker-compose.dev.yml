@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:15-alpine
+    container_name: hms-postgres-dev
+    environment:
+      POSTGRES_DB: hms_dev_db
+      POSTGRES_USER: hms_dev_user
+      POSTGRES_PASSWORD: hms_dev_password
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata_dev:/var/lib/postgresql/data
+    restart: unless-stopped
+
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: hms-pgadmin
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@hms.com
+      PGADMIN_DEFAULT_PASSWORD: adminpassword
+    ports:
+      - "5050:80"
+    depends_on:
+      - postgres
+    restart: unless-stopped
+
+volumes:
+  pgdata_dev:

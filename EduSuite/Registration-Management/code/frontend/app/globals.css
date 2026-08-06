@@ -1,0 +1,95 @@
+@import "tailwindcss";
+
+:root {
+  --edusuite-navy: #0f2147;
+  --edusuite-navy-light: #183463;
+  --edusuite-navy-soft: #e9edf4;
+
+  --edusuite-gold: #c8a04e;
+  --edusuite-gold-dark: #a98439;
+  --edusuite-gold-soft: #f5ecd8;
+
+  --edusuite-ivory: #f7f4ec;
+  --edusuite-ivory-dark: #eee9dc;
+
+  --edusuite-white: #ffffff;
+
+  --edusuite-text: #172033;
+  --edusuite-text-muted: #687386;
+  --edusuite-border: #e4dfd3;
+
+  --success: #15803d;
+  --success-soft: #ecfdf3;
+
+  --warning: #b45309;
+  --warning-soft: #fff7ed;
+
+  --danger: #b42318;
+  --danger-soft: #fef3f2;
+
+  --info: #1d4ed8;
+  --info-soft: #eff6ff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--edusuite-ivory);
+  color: var(--edusuite-text);
+  font-family: Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button:not(:disabled),
+a {
+  cursor: pointer;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--edusuite-gold);
+  outline-offset: 2px;
+}
+
+::selection {
+  background: var(--edusuite-gold-soft);
+  color: var(--edusuite-navy);
+}
+
+::-webkit-scrollbar {
+  width: 9px;
+  height: 9px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--edusuite-ivory);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c9c2b4;
+  border: 2px solid var(--edusuite-ivory);
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--edusuite-gold);
+}

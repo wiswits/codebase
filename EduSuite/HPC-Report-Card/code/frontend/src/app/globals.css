@@ -1,0 +1,168 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap");
+
+@import "tailwindcss";
+
+:root {
+  --background:#F8F5EF;
+color:#0B1F51;;
+  --foreground: #0F2147;
+
+  --navy: #0F2147;
+  --navy-light: #1B3468;
+  --navy-dark: #081431;
+
+  --gold: #C8A04E;
+  --gold-light: #DDBE7C;
+  --gold-dark: #A6812F;
+
+  --ivory: #F7F4EC;
+}
+
+/* Ensures these tokens are always available as Tailwind utilities
+   (bg-navy, text-gold, border-ivory, etc.) regardless of how the
+   legacy tailwind.config.js is picked up in this Tailwind v4 setup. */
+@theme inline {
+  --color-primary: #0B1F51;
+  --color-secondary: #D4AF37;
+  --color-background: #F8F5EF;
+  --color-surface: #FFFFFF;
+
+  --color-success: #10B981;
+  --color-warning: #F59E0B;
+  --color-danger: #EF4444;
+  --color-info: #3B82F6;
+
+  --color-navy: var(--navy);
+  --color-navy-light: var(--navy-light);
+  --color-navy-dark: var(--navy-dark);
+
+  --color-gold: var(--gold);
+  --color-gold-light: var(--gold-light);
+  --color-gold-dark: var(--gold-dark);
+
+  --color-ivory: var(--ivory);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(180deg, #FFFDF8 0%, #F7F3EC 100%);
+  background-attachment: fixed;
+  color: var(--foreground);
+  font-family: "Source Sans 3", sans-serif;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Playfair Display", serif;
+  color: var(--navy);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ============================= */
+/* Animations                    */
+/* ============================= */
+
+.animate-in {
+  animation: animateIn 0.25s ease-out;
+}
+
+.slide-in-from-right {
+  animation: slideInFromRight 0.3s ease-out;
+}
+
+.fade-in {
+  animation: fadeIn 0.25s ease-out;
+}
+
+.scale-in {
+  animation: scaleIn 0.2s ease-out;
+}
+
+@keyframes animateIn {
+  from {
+    opacity: 0;
+    transform: scale(.97);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideInFromRight {
+  from {
+    opacity: 0;
+    transform: translateX(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(.92);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* ============================= */
+/* Scrollbar                     */
+/* ============================= */
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--gold);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--ivory);
+}
+*{
+transition:.25s ease;
+}

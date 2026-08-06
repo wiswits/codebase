@@ -1,0 +1,47 @@
+<div style="margin-bottom: 16px; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-muted, rgba(255,255,255,0.5));">📚 Question Bank Manager</div>
+
+<!-- Stats -->
+<div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 16px;">
+    <div style="text-align: center; padding: 12px; background: var(--bg-card, rgba(17,17,26,0.7)); border: 1px solid var(--border-color, rgba(255,255,255,0.06)); border-radius: 12px;">
+        <span style="display: block; font-size: 1.4rem; font-weight: 800; color: #818CF8;">124</span>
+        <span style="font-size: 0.65rem; color: var(--text-muted, rgba(255,255,255,0.5)); font-weight: 500; text-transform: uppercase; letter-spacing: 0.04em;">Total Questions</span>
+    </div>
+    <div style="text-align: center; padding: 12px; background: var(--bg-card, rgba(17,17,26,0.7)); border: 1px solid var(--border-color, rgba(255,255,255,0.06)); border-radius: 12px;">
+        <span style="display: block; font-size: 1.4rem; font-weight: 800; color: #34D399;">42</span>
+        <span style="font-size: 0.65rem; color: var(--text-muted, rgba(255,255,255,0.5)); font-weight: 500; text-transform: uppercase; letter-spacing: 0.04em;">PYQs</span>
+    </div>
+    <div style="text-align: center; padding: 12px; background: var(--bg-card, rgba(17,17,26,0.7)); border: 1px solid var(--border-color, rgba(255,255,255,0.06)); border-radius: 12px;">
+        <span style="display: block; font-size: 1.4rem; font-weight: 800; color: #F59E0B;">36</span>
+        <span style="font-size: 0.65rem; color: var(--text-muted, rgba(255,255,255,0.5)); font-weight: 500; text-transform: uppercase; letter-spacing: 0.04em;">MCQs</span>
+    </div>
+    <div style="text-align: center; padding: 12px; background: var(--bg-card, rgba(17,17,26,0.7)); border: 1px solid var(--border-color, rgba(255,255,255,0.06)); border-radius: 12px;">
+        <span style="display: block; font-size: 1.4rem; font-weight: 800; color: #8B5CF6;">46</span>
+        <span style="font-size: 0.65rem; color: var(--text-muted, rgba(255,255,255,0.5)); font-weight: 500; text-transform: uppercase; letter-spacing: 0.04em;">NAT</span>
+    </div>
+</div>
+
+<!-- Question List -->
+<div style="margin-bottom: 12px; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-muted, rgba(255,255,255,0.5));">📋 Recent Questions</div>
+
+<div class="list-item">
+    <div class="left"><span class="icon">🔬</span><span class="name">Newton's Second Law Application</span></div>
+    <div class="right"><span style="font-size:0.6rem;padding:2px 10px;border-radius:9999px;background:rgba(79,70,229,0.12);color:#818CF8;">Physics</span></div>
+</div>
+<div class="list-item">
+    <div class="left"><span class="icon">🧪</span><span class="name">Thermodynamics - First Law</span></div>
+    <div class="right"><span style="font-size:0.6rem;padding:2px 10px;border-radius:9999px;background:rgba(52,211,153,0.12);color:#34D399;">Chemistry</span></div>
+</div>
+<div class="list-item">
+    <div class="left"><span class="icon">📐</span><span class="name">Differential Calculus</span></div>
+    <div class="right"><span style="font-size:0.6rem;padding:2px 10px;border-radius:9999px;background:rgba(251,191,36,0.12);color:#F59E0B;">Mathematics</span></div>
+</div>
+<div class="list-item">
+    <div class="left"><span class="icon">🧬</span><span class="name">Human Physiology - Digestion</span></div>
+    <div class="right"><span style="font-size:0.6rem;padding:2px 10px;border-radius:9999px;background:rgba(139,92,246,0.12);color:#8B5CF6;">Biology</span></div>
+</div>
+
+<div style="display: flex; gap: 12px; flex-wrap: wrap; margin-top: 16px;">
+    <button class="action-btn" onclick="window.modalSystem.close(); window.showToast('📝 Opening question creator...')" style="padding: 8px 24px; border-radius: 9999px; background: linear-gradient(135deg, #4F46E5, #8B5CF6); color: #FFFFFF; font-weight: 600; font-size: 0.8rem; border: none; cursor: pointer;">+ Add Question</button>
+    <button class="action-btn secondary" onclick="window.modalSystem.close(); window.showToast('📤 Importing questions...')" style="padding: 8px 24px; border-radius: 9999px; background: var(--bg-card, rgba(17,17,26,0.7)); border: 1px solid var(--border-color, rgba(255,255,255,0.06)); color: var(--text-secondary, rgba(255,255,255,0.85)); font-weight: 600; font-size: 0.8rem; cursor: pointer;">📤 Import CSV</button>
+    <button class="action-btn secondary" onclick="window.modalSystem.close()" style="padding: 8px 24px; border-radius: 9999px; background: var(--bg-card, rgba(17,17,26,0.7)); border: 1px solid var(--border-color, rgba(255,255,255,0.06)); color: var(--text-secondary, rgba(255,255,255,0.85)); font-weight: 600; font-size: 0.8rem; cursor: pointer;">Close</button>
+</div>

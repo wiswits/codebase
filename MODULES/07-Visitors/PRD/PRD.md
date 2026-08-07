@@ -1,6 +1,6 @@
 # PRD — Visitors
 
-**Purpose.** Who is in the building, signed in by the front desk. Ported from EduSuite via the intake pipeline — the reference port.
+**Purpose.** Who is in the building, signed in by the front desk. Ported from the intern build via the intake pipeline — the reference port.
 
 **Primary roles.** admin, principal, reception
 

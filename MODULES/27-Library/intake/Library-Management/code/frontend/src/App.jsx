@@ -14,7 +14,7 @@ export default function App() {
   const { loading, currentUser } = useAuth();
 
   if (loading) {
-    return <div className="flex items-center justify-center min-h-screen text-gray-500">Loading EduSuite Library...</div>;
+    return <div className="flex items-center justify-center min-h-screen text-gray-500">Loading WisWits Library...</div>;
   }
 
   if (!currentUser) {

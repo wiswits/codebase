@@ -1,5 +1,5 @@
 -- ============================================================
--- EduSuite Alumni Directory
+-- WisWits Alumni Directory
 -- Development Seed Data
 -- Module: STL-ALU
 --

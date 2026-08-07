@@ -159,7 +159,7 @@ export default function CreateEvent() {
 
           <p>
             Create and configure a new institutional
-            event for your EduSuite workspace.
+            event for your WisWits workspace.
           </p>
         </div>
 

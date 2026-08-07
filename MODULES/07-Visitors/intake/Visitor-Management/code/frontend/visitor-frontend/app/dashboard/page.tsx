@@ -79,7 +79,7 @@ export default function DashboardPage() {
           </span>
 
           <div>
-            <strong>EduSuite</strong>
+            <strong>WisWits</strong>
             <span>Visitor Management</span>
           </div>
         </Link>

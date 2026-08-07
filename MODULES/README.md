@@ -2,8 +2,8 @@
 
 **One folder per module. No module appears twice, anywhere in this repo.**
 
-There used to be two shelves here — `WisWits-Modules/` (what prod runs) and `EduSuite/`
-(the intern builds) — and 26 of the intern modules were a second folder for something the
+There used to be two shelves here — `WisWits-Modules/` (what prod runs) and a separate
+intern shelf — and 26 of the intern modules were a second folder for something the
 first shelf already had a slot for. Alumni had three. Payroll had two. That is gone: the
 intern build now lives **inside** the module it belongs to, as `intake/`.
 
@@ -16,8 +16,8 @@ MODULES/
     CODE_MAP.md    where the LIVE code is in wiswits-code (never edit a copy)
     PRD/PRD.md     the native spec
     code/          frozen prod snapshot (commit 31210d4e) — or code/NOTE.md if none exists
-    intake/        the intern/EduSuite build, ONLY where one exists
-      <EduSuite-Module-Name>/
+    intake/        the intern build, ONLY where one exists
+      <Build-Name>/
         STATUS.md    the intern-side verdict
         PRD/         their spec (PRD+CTO+Engineering+Analysis, or the CONTRACT)
         code/        their build (or code-incoming/ where it was never assembled)
@@ -63,7 +63,7 @@ proof — 2,942 lines of intern work in the product, consent ladder and crisis s
 | **18-Curriculum-CIE** | Academics | SOON-GATED (one-flag flip ready) | 17 | — |
 | **19-Lesson-Content** | Academics | LIVE | 11 | — |
 | **20-Personalised-Learning-Recovery** | Academics | LIVE (thin) — upgrade path ready | 5 | ✅ Personalised-Learning |
-| **21-Student-Observations** | Academics | GAP — blocked upstream (EduSuite not assembled) | — (placeholder) | ⏳ Student-Observations |
+| **21-Student-Observations** | Academics | GAP — blocked upstream (the intern team never assembled it) | — (placeholder) | ⏳ Student-Observations |
 | **22-Teaching-Canvas** | Academics | BUILT, NO NAV — wire or park decision pending | 4 | — |
 | **23-Wellbeing-and-Happiness** | Student Life | SOON-GATED — cycle 1 ported and on prod (the `code/` snapshot predates it; live paths are in `CODE_MAP.md`). Cycle 2 = counsellor desk | — (placeholder) | ✅ Wellbeing-and-Happiness |
 | **24-Events** | Student Life | LIVE | 31 | ✅ Event-Management |

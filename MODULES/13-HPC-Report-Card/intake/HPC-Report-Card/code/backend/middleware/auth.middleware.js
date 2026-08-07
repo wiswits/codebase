@@ -1,6 +1,6 @@
 /**
  * ============================================================
- * EduSuite SaaS Platform
+ * WisWits SaaS Platform
  * Authentication Middleware
  * ------------------------------------------------------------
  * Responsibility:

@@ -1,8 +1,8 @@
 {
-  "name": "edusuite-registration-management-backend",
+  "name": "wiswits-registration-management-backend",
   "version": "1.0.0",
   "private": true,
-  "description": "EduSuite Registration Management integrated backend",
+  "description": "WisWits Registration Management integrated backend",
   "main": "dist/server.js",
   "scripts": {
     "dev": "tsx watch src/server.ts",

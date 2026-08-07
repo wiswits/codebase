@@ -537,7 +537,7 @@ export default async function VisitorDetailsPage({
                 <>
                   <div className="visitor-detail-pass-preview">
                     <span>
-                      EDUSUITE VISITOR PASS
+                      WISWITS VISITOR PASS
                     </span>
 
                     <strong>

@@ -7,20 +7,20 @@
 
 | Field | Value |
 |-------|-------|
-| Product | EduSuite SaaS Platform |
+| Product | WisWits SaaS Platform |
 | Module | Admission Management |
 | Module Code | ADM-MGMT |
 | Document Type | CTO Technical Specification |
 | Version | 1.0 |
 | Status | Draft |
-| Architecture Version | EduSuite Engineering Standard v1 |
+| Architecture Version | WisWits Engineering Standard v1 |
 
 
 # Purpose
 
 This document defines the technical architecture, engineering standards, implementation guidelines, and platform alignment strategy for the Admission Management Module.
 
-Unlike the Product Requirements Document (PRD), this specification focuses on **how the module shall be engineered**, ensuring consistency with the EduSuite SaaS Platform architecture.
+Unlike the Product Requirements Document (PRD), this specification focuses on **how the module shall be engineered**, ensuring consistency with the WisWits SaaS Platform architecture.
 
 This document shall serve as the primary technical reference for architects, backend developers, frontend developers, database engineers, DevOps engineers, QA teams, and integration teams.
 
@@ -29,7 +29,7 @@ This document shall serve as the primary technical reference for architects, bac
 
 The technical implementation of the Admission Management Module shall:
 
-- Align with EduSuite platform architecture.
+- Align with WisWits platform architecture.
 - Maximize code reuse.
 - Support multi-tenant deployment.
 - Maintain security by default.
@@ -44,7 +44,7 @@ The technical implementation of the Admission Management Module shall:
 
 # 2. Existing Technical Analysis
 
-The legacy Admission Management implementation demonstrates a mature business workflow but differs from the EduSuite engineering standards in several architectural areas.
+The legacy Admission Management implementation demonstrates a mature business workflow but differs from the WisWits engineering standards in several architectural areas.
 
 The following observations summarize the existing implementation.
 
@@ -122,7 +122,7 @@ Limitations
 
 # 3. Platform Gap Assessment
 
-| Engineering Area | Existing Module | EduSuite Standard | Action |
+| Engineering Area | Existing Module | WisWits Standard | Action |
 |------------------|----------------|-------------------|--------|
 | Frontend Framework | React + Vite | Next.js App Router | Migrate |
 | Routing | React Router | App Router | Replace |
@@ -132,18 +132,18 @@ Limitations
 | Authorization | Local Roles | Platform RBAC (`requirePermission()`) | Replace |
 | Audit Logging | Local | Shared Audit Service | Integrate |
 | Notifications | Module-specific | Platform Notification Service | Integrate |
-| Design System | Local Components | EduSuite Design System | Adopt |
+| Design System | Local Components | WisWits Design System | Adopt |
 
 ---
 
 # 4. Target Platform Architecture
 
-The Admission Management Module shall be implemented as a native EduSuite platform module.
+The Admission Management Module shall be implemented as a native WisWits platform module.
 
 The architecture shall follow the platform's modular engineering approach.
 
 ```text
-EduSuite Platform
+WisWits Platform
 
 │
 
@@ -234,7 +234,7 @@ The module shall consume shared platform services rather than implementing dupli
 | Component | Standard |
 |-----------|----------|
 | Version Control | Git |
-| Repository | EduSuite GitHub Organization |
+| Repository | WisWits GitHub Organization |
 | Package Manager | npm |
 | Environment Management | .env |
 | CI/CD | Platform Pipeline |
@@ -381,13 +381,13 @@ apps/
                 └── migrations/
 ```
 
-The structure shall remain consistent with all EduSuite platform modules.
+The structure shall remain consistent with all WisWits platform modules.
 
 ---
 
 # 9. Coding Standards
 
-The Admission Management Module shall comply with the EduSuite Engineering Standards.
+The Admission Management Module shall comply with the WisWits Engineering Standards.
 
 Requirements include:
 
@@ -407,9 +407,9 @@ No module-specific implementation shall duplicate platform services where reusab
 
 # 10. Backend Architecture Overview
 
-The Admission Management Module shall follow the EduSuite Backend Engineering Standard based on a layered architecture. Business logic shall remain independent of transport, persistence, and presentation layers.
+The Admission Management Module shall follow the WisWits Backend Engineering Standard based on a layered architecture. Business logic shall remain independent of transport, persistence, and presentation layers.
 
-The backend shall be designed for modularity, maintainability, security, scalability, and seamless integration with the EduSuite SaaS Platform.
+The backend shall be designed for modularity, maintainability, security, scalability, and seamless integration with the WisWits SaaS Platform.
 
 ---
 
@@ -509,7 +509,7 @@ offer.routes.ts
 
 Authentication shall NOT be implemented inside the Admission module.
 
-The module shall exclusively use the shared EduSuite authentication middleware.
+The module shall exclusively use the shared WisWits authentication middleware.
 
 Approved Standard
 
@@ -552,7 +552,7 @@ Authentication is a platform responsibility.
 
 # 14. Authorization Standard
 
-Authorization shall follow the EduSuite Role-Based Access Control (RBAC) model.
+Authorization shall follow the WisWits Role-Based Access Control (RBAC) model.
 
 The module shall use:
 
@@ -674,7 +674,7 @@ This ensures:
 
 # 19. API Standards
 
-All APIs shall follow the EduSuite API conventions.
+All APIs shall follow the WisWits API conventions.
 
 General Principles
 
@@ -874,7 +874,7 @@ The backend implementation shall comply with the following mandatory standards.
 
 # 27. Database Architecture Overview
 
-The Admission Management Module shall use the EduSuite Platform Database Architecture.
+The Admission Management Module shall use the WisWits Platform Database Architecture.
 
 The database layer shall provide:
 
@@ -1007,7 +1007,7 @@ Relationships shall enforce referential integrity while supporting efficient que
 
 # 31. Table Standards
 
-Every business table shall follow the EduSuite database standard.
+Every business table shall follow the WisWits database standard.
 
 Required Columns
 
@@ -1342,7 +1342,7 @@ Sensitive information shall only be accessible through authorized business servi
 
 # 44. Frontend Architecture Overview
 
-The Admission Management Module shall be implemented using the EduSuite Frontend Engineering Standard.
+The Admission Management Module shall be implemented using the WisWits Frontend Engineering Standard.
 
 The frontend architecture shall emphasize:
 
@@ -1354,7 +1354,7 @@ The frontend architecture shall emphasize:
 - Maintainability
 - Platform consistency
 
-The module shall integrate seamlessly with the EduSuite Design System and shared frontend infrastructure.
+The module shall integrate seamlessly with the WisWits Design System and shared frontend infrastructure.
 
 ---
 
@@ -1384,7 +1384,7 @@ The following technologies shall not be introduced unless approved by the platfo
 
 # 46. Frontend Project Structure
 
-The module shall follow the standardized EduSuite frontend structure.
+The module shall follow the standardized WisWits frontend structure.
 
 ```text
 apps/
@@ -1466,7 +1466,7 @@ Routing shall follow the platform's file-based routing convention.
 
 # 48. Layout Architecture
 
-All Admission Management pages shall inherit the shared EduSuite layout.
+All Admission Management pages shall inherit the shared WisWits layout.
 
 Layout responsibilities include:
 
@@ -1628,7 +1628,7 @@ Business rules shall always be enforced by the backend even if validated on the 
 
 # 54. Design System Standards
 
-The Admission Management Module shall comply with the EduSuite Design System.
+The Admission Management Module shall comply with the WisWits Design System.
 
 Approved Design Tokens
 
@@ -1706,7 +1706,7 @@ Approved UI Components
 - Filters
 - Pagination
 
-The interface shall remain consistent with other EduSuite modules.
+The interface shall remain consistent with other intern builds.
 
 ---
 
@@ -1728,7 +1728,7 @@ Instead, the module shall use:
 
 ✔ Platform Modal Components
 
-Notifications shall remain consistent with the EduSuite user experience.
+Notifications shall remain consistent with the WisWits user experience.
 
 ---
 
@@ -1800,7 +1800,7 @@ All frontend implementations shall comply with the following standards.
 
 ### Design
 
-✔ EduSuite Design System
+✔ WisWits Design System
 
 ✔ Approved Color Tokens
 
@@ -1839,7 +1839,7 @@ All frontend implementations shall comply with the following standards.
 
 # 61. Security Architecture
 
-The Admission Management Module shall comply with the EduSuite Platform Security Architecture.
+The Admission Management Module shall comply with the WisWits Platform Security Architecture.
 
 Security shall be implemented as a platform responsibility rather than a module-specific implementation.
 
@@ -1849,7 +1849,7 @@ The module shall consume approved shared security services wherever available.
 
 ## Authentication
 
-Authentication shall be provided exclusively through the EduSuite Authentication Service.
+Authentication shall be provided exclusively through the WisWits Authentication Service.
 
 Approved Standard
 
@@ -1877,7 +1877,7 @@ req.user.role
 
 ## Authorization
 
-Authorization shall follow the EduSuite RBAC model.
+Authorization shall follow the WisWits RBAC model.
 
 Approved Standard
 
@@ -1980,7 +1980,7 @@ Business-critical transactional data shall not rely solely on cached values.
 
 # 64. Logging & Monitoring
 
-The module shall integrate with the EduSuite monitoring framework.
+The module shall integrate with the WisWits monitoring framework.
 
 Application logs shall include:
 
@@ -2002,7 +2002,7 @@ Monitoring shall support:
 
 # 65. Testing Strategy
 
-Testing shall follow the EduSuite Engineering Quality Standards.
+Testing shall follow the WisWits Engineering Quality Standards.
 
 ## Unit Testing
 
@@ -2107,7 +2107,7 @@ Frontend
 
 # 67. DevOps & Deployment Strategy
 
-Deployment shall follow the EduSuite Platform deployment process.
+Deployment shall follow the WisWits Platform deployment process.
 
 Pipeline stages include:
 
@@ -2241,7 +2241,7 @@ Production Deployment
 
 Existing code shall be referenced for business understanding only.
 
-New implementation shall conform to EduSuite engineering standards.
+New implementation shall conform to WisWits engineering standards.
 
 ---
 
@@ -2296,7 +2296,7 @@ Future enhancements shall reuse existing platform services wherever possible.
 
 # 74. Engineering Governance
 
-The Admission Management Module shall remain compliant with the EduSuite Engineering Governance Model.
+The Admission Management Module shall remain compliant with the WisWits Engineering Governance Model.
 
 Every future enhancement shall:
 
@@ -2316,13 +2316,13 @@ No feature shall bypass the established engineering process.
 
 The existing Admission Management implementation demonstrates a mature and reusable business workflow.
 
-However, the legacy implementation shall **not** be merged directly into the EduSuite SaaS Platform.
+However, the legacy implementation shall **not** be merged directly into the WisWits SaaS Platform.
 
 Instead, it shall serve as a **business reference** for a fresh implementation built in accordance with:
 
-- EduSuite Product Requirements Document (PRD)
-- EduSuite CTO Technical Specification
-- EduSuite Engineering Execution Plan
-- EduSuite Platform Standards
+- WisWits Product Requirements Document (PRD)
+- WisWits CTO Technical Specification
+- WisWits Engineering Execution Plan
+- WisWits Platform Standards
 
 This approach ensures architectural consistency, maintainability, security, scalability, and long-term p

@@ -8,7 +8,7 @@
 
 ## Scope (current edition)
 - Basic scorecard exists (see #33)
-- EduSuite HR-PMS = goals/review-cycles source, must be scoped school-sized
+- the HR-PMS intern build = goals/review-cycles source, must be scoped school-sized
 
 ## Requirements (inherited, non-negotiable)
 - Module anatomy per `PRODUCT_PRD.md` §2 (org_id scoping, permissions, audit, six loading

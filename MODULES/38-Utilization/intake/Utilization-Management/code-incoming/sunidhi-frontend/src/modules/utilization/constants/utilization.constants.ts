@@ -5,7 +5,7 @@
 // "BENCH MANAGEMENT" sections), not invented here.
 //
 // Brand colors below come from the contract's "DESIGN SYSTEM" section
-// and are mandatory across every EduSuite module:
+// and are mandatory across every intern build:
 // Primary #0F2147 · Gold #C8A04E · Ivory #F7F4EC
 
 import { AllocationStatus, BenchRecordStatus, EmploymentStatus } from "../types/utilization.types";

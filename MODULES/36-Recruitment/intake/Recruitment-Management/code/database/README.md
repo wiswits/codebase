@@ -104,7 +104,7 @@ after completing all migrations.
 
 ## Developed For
 
-EduSuite SaaS Platform
+WisWits SaaS Platform
 
 Recruitment Management Module
 

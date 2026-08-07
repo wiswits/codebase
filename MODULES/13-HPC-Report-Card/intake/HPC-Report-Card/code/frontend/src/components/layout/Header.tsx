@@ -5,7 +5,7 @@ export function Header() {
   return (
     <header className="flex h-16 items-center gap-4 border-b border-navy/10 bg-white px-6">
       <div className="md:hidden">
-        <p className="font-playfair text-base font-semibold text-navy">EduSuite HPC</p>
+        <p className="font-playfair text-base font-semibold text-navy">WisWits HPC</p>
       </div>
 
       <div className="relative hidden max-w-sm flex-1 md:block">

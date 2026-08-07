@@ -1,5 +1,5 @@
 # ============================================================
-# EduSuite SaaS
+# WisWits SaaS
 # HR-PMS (Performance Management System)
 # Database Design Document
 # ============================================================
@@ -20,12 +20,12 @@ This document describes the design decisions, architecture, and implementation s
 
 The schema has been designed according to:
 
-- EduSuite Engineering Standards
+- WisWits Engineering Standards
 - CTO Technical Specification
 - Module Engineering Contract
 - Sir's Integration Remarks
 
-The objective is to ensure that the database is production-ready, scalable, and integrates seamlessly with the EduSuite SaaS platform.
+The objective is to ensure that the database is production-ready, scalable, and integrates seamlessly with the WisWits SaaS platform.
 
 ---
 
@@ -186,7 +186,7 @@ References to shared platform entities such as:
 - Employees
 - Users
 
-are intentionally deferred until the HR-PMS module is integrated into the complete EduSuite SaaS database.
+are intentionally deferred until the HR-PMS module is integrated into the complete WisWits SaaS database.
 
 This keeps the standalone module independent while remaining integration-ready.
 
@@ -339,7 +339,7 @@ The HR-PMS database will integrate with:
 - Notification Service
 - Dashboard Module
 
-This design minimizes coupling while allowing seamless integration into the main EduSuite platform.
+This design minimizes coupling while allowing seamless integration into the main WisWits platform.
 
 ---
 
@@ -367,7 +367,7 @@ The schema has been designed keeping the following principles in mind:
 - Compatible with shared database helpers
 - Compatible with shared audit logging
 - Tenant-aware structure
-- Easy drop-in integration with the main EduSuite repository
+- Easy drop-in integration with the main intern team's upstream workspacesitory
 
 ---
 
@@ -393,9 +393,9 @@ The current design supports these enhancements without major restructuring.
 
 The HR-PMS database has been designed as a production-ready, scalable, and integration-friendly module.
 
-It follows the EduSuite engineering standards, satisfies the approved module contract, and aligns with the CTO's technical specifications and Sir's integration expectations.
+It follows the WisWits engineering standards, satisfies the approved module contract, and aligns with the CTO's technical specifications and Sir's integration expectations.
 
-The schema is suitable for backend development, frontend integration, testing, and future expansion within the EduSuite SaaS ecosystem.
+The schema is suitable for backend development, frontend integration, testing, and future expansion within the WisWits SaaS ecosystem.
 
 ---
 

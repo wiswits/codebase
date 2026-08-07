@@ -12,7 +12,7 @@ const asyncHandler = require('../utils/asyncHandler');
  *
  *   { sub: <userId>, orgId: <tenantId>, roles: [...], permissions: [...] }
  *
- * IMPORTANT: If EduSuite already has (or later introduces) a canonical
+ * IMPORTANT: If WisWits already has (or later introduces) a canonical
  * authentication module elsewhere in the system, this middleware should be
  * replaced with that implementation rather than run alongside it. Module
  * developers must not maintain a second, independent auth system

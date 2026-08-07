@@ -2,7 +2,7 @@ const nodemailer = require('nodemailer');
 
 /**
  * PRD section 8 lists the notification service as "to confirm" - it may already exist
- * elsewhere in EduSuite. This service implements a real, working email/SMS sender that
+ * elsewhere in WisWits. This service implements a real, working email/SMS sender that
  * gracefully falls back to console logging when SMTP/SMS credentials are not configured,
  * so the app is fully runnable out of the box (Assumption - see README).
  */

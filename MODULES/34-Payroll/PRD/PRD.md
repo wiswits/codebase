@@ -8,7 +8,7 @@
 
 ## Scope (current edition)
 - ('Coming Q2 2026' tab today)
-- Scope source: Neha's HRMS build + EduSuite HR-Payroll contract — payroll ONLY
+- Scope source: Neha's HRMS build + the HR-Payroll intern contract — payroll ONLY
 
 ## Requirements (inherited, non-negotiable)
 - Module anatomy per `PRODUCT_PRD.md` §2 (org_id scoping, permissions, audit, six loading

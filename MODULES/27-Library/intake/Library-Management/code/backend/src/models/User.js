@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 // NOTE: Per PRD section 11/12, real authentication is not yet built.
 // This collection stores demo users so the dev-only role switcher
 // (frontend) can simulate admin/teacher/student/parent sessions.
-// In production this would be replaced by EduSuite's shared core
+// In production this would be replaced by WisWits's shared core
 // organization/user data — this module would just reference userId + orgId.
 
 const userSchema = new mongoose.Schema(

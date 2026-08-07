@@ -3,7 +3,7 @@
  *
  * This service defines the module-side notification boundary.
  *
- * Production integration can connect this to EduSuite's shared
+ * Production integration can connect this to WisWits's shared
  * notification/communication infrastructure.
  */
 

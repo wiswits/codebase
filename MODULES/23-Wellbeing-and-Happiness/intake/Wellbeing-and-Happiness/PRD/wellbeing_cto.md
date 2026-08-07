@@ -5,19 +5,19 @@
 
 | Field | Value |
 |-------|-------|
-| Product | EduSuite SaaS Platform |
+| Product | WisWits SaaS Platform |
 | Module | Wellbeing & Happiness |
 | Module Code | WHM |
 | Document Type | CTO Technical Specification |
 | Version | 1.0 |
 | Status | Draft |
-| Architecture Version | EduSuite Engineering Standard v1 |
+| Architecture Version | WisWits Engineering Standard v1 |
 
 # Purpose
 
 This document defines the technical architecture, engineering standards, migration strategy, and implementation guidelines for the Wellbeing & Happiness module.
 
-It complements the Product Requirements Document (PRD) by defining how the module shall be engineered while ensuring alignment with the EduSuite SaaS Platform architecture.
+It complements the Product Requirements Document (PRD) by defining how the module shall be engineered while ensuring alignment with the WisWits SaaS Platform architecture.
 
 ---
 
@@ -36,13 +36,13 @@ It complements the Product Requirements Document (PRD) by defining how the modul
 
 The implementation of the Wellbeing & Happiness module shall:
 
-- Align with EduSuite platform architecture.
+- Align with WisWits platform architecture.
 - Reuse shared platform services.
 - Support secure multi-tenant deployment.
 - Protect confidential wellbeing information.
 - Deliver scalable counselling and wellbeing workflows.
 - Support configurable institutional policies.
-- Follow EduSuite engineering standards.
+- Follow WisWits engineering standards.
 - Minimize technical debt.
 - Support future AI-assisted wellbeing capabilities while preserving human oversight.
 
@@ -50,7 +50,7 @@ The implementation of the Wellbeing & Happiness module shall:
 
 # 2. Existing Technical Analysis
 
-The existing Wellbeing & Happiness module provides a mature digital wellbeing solution but differs from EduSuite platform standards in several architectural areas.
+The existing Wellbeing & Happiness module provides a mature digital wellbeing solution but differs from WisWits platform standards in several architectural areas.
 
 ---
 
@@ -76,7 +76,7 @@ Current implementation uses:
 
 - JavaScript instead of TypeScript
 - Vite instead of Next.js
-- No EduSuite Design System
+- No WisWits Design System
 - No shared layouts
 - Limited reusable component library
 
@@ -136,14 +136,14 @@ Current implementation provides:
 ### Limitations
 
 - No shared query abstraction
-- Requires EduSuite multi-tenant migration
+- Requires WisWits multi-tenant migration
 - Needs standardized schema conventions
 
 ---
 
 # 3. Platform Gap Assessment
 
-| Engineering Area | Existing Module | EduSuite Standard | Required Action |
+| Engineering Area | Existing Module | WisWits Standard | Required Action |
 |------------------|----------------|-------------------|-----------------|
 | Frontend Framework | React + Vite | Next.js App Router | Rebuild |
 | Language | JavaScript | TypeScript | Migrate |
@@ -153,16 +153,16 @@ Current implementation provides:
 | Audit Logging | Local | Shared Audit Service | Integrate |
 | Notifications | Local Alerts | Shared Notification Service | Integrate |
 | Database Access | Direct SQL | Shared query() / withTransaction() | Replace |
-| Layout | Local Layout | Shared EduSuite Layout | Replace |
+| Layout | Local Layout | Shared WisWits Layout | Replace |
 
 ---
 
 # 4. Target Platform Architecture
 
-The Wellbeing & Happiness module shall be implemented as a native EduSuite platform module.
+The Wellbeing & Happiness module shall be implemented as a native WisWits platform module.
 
 ```text
-EduSuite Platform
+WisWits Platform
 
 │
 
@@ -375,7 +375,7 @@ apps/
 
 # 9. Coding Standards
 
-The Wellbeing & Happiness module shall comply with EduSuite Engineering Standards.
+The Wellbeing & Happiness module shall comply with WisWits Engineering Standards.
 
 Mandatory requirements include:
 
@@ -388,7 +388,7 @@ Mandatory requirements include:
 - Audit logging for every business mutation
 - Shared notification service
 - Shared database utilities
-- EduSuite Design System
+- WisWits Design System
 - Comprehensive validation
 - Reusable services and components
 - Independent Signal Evaluation and Crisis Workflow engines
@@ -397,7 +397,7 @@ No module shall duplicate shared platform functionality where an approved platfo
 
 # 10. Backend Architecture Overview
 
-The Wellbeing & Happiness module shall follow the EduSuite Backend Engineering Standard based on a layered architecture.
+The Wellbeing & Happiness module shall follow the WisWits Backend Engineering Standard based on a layered architecture.
 
 The backend shall support confidential wellbeing workflows, counselling case management, crisis escalation, referrals, reporting, and platform integrations while ensuring security, privacy, scalability, maintainability, and regulatory compliance.
 
@@ -522,7 +522,7 @@ notification.routes.ts
 
 Authentication shall **NOT** be implemented inside the Wellbeing & Happiness module.
 
-The module shall exclusively use the shared EduSuite authentication middleware.
+The module shall exclusively use the shared WisWits authentication middleware.
 
 Approved Standard
 
@@ -563,7 +563,7 @@ Authentication remains a platform responsibility.
 
 # 14. Authorization Standard
 
-Authorization shall follow the EduSuite Role-Based Access Control (RBAC) model.
+Authorization shall follow the WisWits Role-Based Access Control (RBAC) model.
 
 The module shall use:
 
@@ -737,7 +737,7 @@ Benefits include:
 
 # 21. API Standards
 
-All APIs shall follow EduSuite REST conventions.
+All APIs shall follow WisWits REST conventions.
 
 General Principles
 
@@ -916,7 +916,7 @@ Notification templates shall remain configurable through the platform.
 
 # 27. Backend Engineering Standards
 
-All backend implementations shall comply with EduSuite Engineering Standards.
+All backend implementations shall comply with WisWits Engineering Standards.
 
 ### Security
 
@@ -956,7 +956,7 @@ All backend implementations shall comply with EduSuite Engineering Standards.
 - Shared Database Layer
 # 28. Database Architecture Overview
 
-The Wellbeing & Happiness module shall adopt the EduSuite Platform Database Architecture.
+The Wellbeing & Happiness module shall adopt the WisWits Platform Database Architecture.
 
 The database layer shall provide:
 
@@ -975,7 +975,7 @@ MariaDB shall be the approved relational database management system.
 
 # 29. Database Design Principles
 
-The database shall follow EduSuite engineering standards.
+The database shall follow WisWits engineering standards.
 
 ## Normalization
 
@@ -1109,7 +1109,7 @@ Relationships shall enforce referential integrity while protecting confidential 
 
 # 32. Table Standards
 
-Every business table shall follow the EduSuite database standard.
+Every business table shall follow the WisWits database standard.
 
 Required Columns
 
@@ -1145,7 +1145,7 @@ Business tables shall use consistent naming conventions.
 
 # 33. Naming Conventions
 
-Database objects shall follow EduSuite naming standards.
+Database objects shall follow WisWits naming standards.
 
 ## Tables
 
@@ -1352,7 +1352,7 @@ The platform migration runner determines the active database.
 
 # 37. SQL Standards
 
-All SQL shall comply with EduSuite database standards.
+All SQL shall comply with WisWits database standards.
 
 Required
 
@@ -1507,7 +1507,7 @@ The database layer shall comply with the following standards.
 Sensitive journal entries, counselling notes, crisis records, and consent information shall only be accessible through authorized business services.
 # 44. Frontend Architecture Overview
 
-The Wellbeing & Happiness module shall adopt the EduSuite Frontend Architecture.
+The Wellbeing & Happiness module shall adopt the WisWits Frontend Architecture.
 
 The frontend shall provide:
 
@@ -1520,7 +1520,7 @@ The frontend shall provide:
 - Accessibility compliance
 - Consistent user experience across all user roles
 
-The frontend shall be implemented using **Next.js App Router** and the EduSuite Design System.
+The frontend shall be implemented using **Next.js App Router** and the WisWits Design System.
 
 ---
 
@@ -1545,7 +1545,7 @@ No alternative frontend framework shall be used.
 
 # 46. Frontend Project Structure
 
-The module shall follow the standard EduSuite frontend architecture.
+The module shall follow the standard WisWits frontend architecture.
 
 ```text
 modules/
@@ -1645,7 +1645,7 @@ React Router shall not be used.
 
 # 48. Layout Architecture
 
-The module shall use the shared EduSuite Dashboard Layout.
+The module shall use the shared WisWits Dashboard Layout.
 
 Standard layout:
 
@@ -1700,7 +1700,7 @@ Core components include:
 - Empty State
 - Loading Skeleton
 
-All components shall follow the EduSuite Design System.
+All components shall follow the WisWits Design System.
 
 ---
 
@@ -1753,7 +1753,7 @@ Report API
 Notification API
 ```
 
-REST endpoints shall follow EduSuite API conventions.
+REST endpoints shall follow WisWits API conventions.
 
 ---
 
@@ -1800,7 +1800,7 @@ Role-specific dashboards shall expose only information permitted by the platform
 
 # 54. Design System
 
-The module shall adopt the EduSuite Design System.
+The module shall adopt the WisWits Design System.
 
 Standard UI elements include:
 
@@ -1817,7 +1817,7 @@ Standard UI elements include:
 - Navigation
 - Layout Components
 
-The design shall promote a calm, supportive, and accessible user experience while remaining consistent with the overall EduSuite platform.
+The design shall promote a calm, supportive, and accessible user experience while remaining consistent with the overall WisWits platform.
 
 ---
 
@@ -1886,7 +1886,7 @@ Error messages shall avoid exposing confidential implementation details or sensi
 
 # 59. Frontend Security
 
-Frontend security shall follow EduSuite platform standards.
+Frontend security shall follow WisWits platform standards.
 
 Requirements include:
 
@@ -1904,7 +1904,7 @@ Confidential counselling notes, journal entries, crisis evaluations, and consent
 
 # 60. Frontend Engineering Standards
 
-The frontend shall comply with EduSuite engineering standards.
+The frontend shall comply with WisWits engineering standards.
 
 ### Architecture
 
@@ -1941,7 +1941,7 @@ The frontend shall comply with EduSuite engineering standards.
 - Shared Layout Components
 # 61. Security Architecture
 
-The Wellbeing & Happiness module shall comply with the EduSuite Platform Security Architecture.
+The Wellbeing & Happiness module shall comply with the WisWits Platform Security Architecture.
 
 Due to the highly confidential nature of wellbeing information, additional safeguards shall be applied while reusing shared platform security services.
 
@@ -1949,7 +1949,7 @@ Due to the highly confidential nature of wellbeing information, additional safeg
 
 ## Authentication
 
-Authentication shall be provided exclusively through the EduSuite Authentication Service.
+Authentication shall be provided exclusively through the WisWits Authentication Service.
 
 Approved Standard
 
@@ -1979,7 +1979,7 @@ req.user.role
 
 ## Authorization
 
-Authorization shall follow the EduSuite Role-Based Access Control (RBAC) framework.
+Authorization shall follow the WisWits Role-Based Access Control (RBAC) framework.
 
 Approved Standard
 
@@ -2101,7 +2101,7 @@ The following shall always retrieve real-time data:
 
 # 64. Logging & Monitoring
 
-The module shall integrate with the EduSuite monitoring framework.
+The module shall integrate with the WisWits monitoring framework.
 
 Application logs shall include:
 
@@ -2131,7 +2131,7 @@ Monitoring shall support:
 
 # 65. Testing Strategy
 
-Testing shall comply with EduSuite Engineering Quality Standards.
+Testing shall comply with WisWits Engineering Quality Standards.
 
 ## Unit Testing
 
@@ -2193,7 +2193,7 @@ Crisis workflow testing shall include human review scenarios.
 
 # 66. Code Quality Standards
 
-Every implementation shall comply with EduSuite Engineering Standards.
+Every implementation shall comply with WisWits Engineering Standards.
 
 ## Architecture
 
@@ -2257,7 +2257,7 @@ Every implementation shall comply with EduSuite Engineering Standards.
 
 # 67. DevOps & Deployment Strategy
 
-Deployment shall follow the EduSuite Platform deployment workflow.
+Deployment shall follow the WisWits Platform deployment workflow.
 
 ```text
 Developer
@@ -2398,7 +2398,7 @@ Migration principles:
 - Existing source code shall **not** be copied directly.
 - Existing workflows shall be analyzed and redesigned where necessary.
 - Existing implementation shall be used only to understand business processes.
-- Development shall begin from a clean codebase following EduSuite engineering standards.
+- Development shall begin from a clean codebase following WisWits engineering standards.
 - Shared platform services shall replace all module-specific implementations.
 
 ---
@@ -2475,15 +2475,15 @@ No feature shall bypass the established engineering governance process.
 
 The current Wellbeing & Happiness implementation provides a strong operational foundation for student wellbeing management, counselling workflows, referral processes, crisis management, and institutional wellbeing analytics.
 
-However, it shall **not** be merged directly into the EduSuite SaaS Platform.
+However, it shall **not** be merged directly into the WisWits SaaS Platform.
 
 Instead, it shall serve as a **business and workflow reference** for a fresh implementation built according to:
 
-- EduSuite Product Requirements Document (PRD)
-- EduSuite CTO Technical Specification
-- EduSuite Engineering Execution Plan
-- EduSuite Platform Standards
+- WisWits Product Requirements Document (PRD)
+- WisWits CTO Technical Specification
+- WisWits Engineering Execution Plan
+- WisWits Platform Standards
 
-This approach ensures architectural consistency, security, privacy, scalability, maintainability, and long-term compatibility with the EduSuite SaaS ecosystem while preserving ethical, human-centered wellbeing practices.
+This approach ensures architectural consistency, security, privacy, scalability, maintainability, and long-term compatibility with the WisWits SaaS ecosystem while preserving ethical, human-centered wellbeing practices.
 
 ent care.

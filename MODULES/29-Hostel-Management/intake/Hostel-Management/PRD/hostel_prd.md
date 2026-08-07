@@ -7,7 +7,7 @@
 
 | Field | Value |
 |-------|-------|
-| Product | EduSuite SaaS Platform |
+| Product | WisWits SaaS Platform |
 | Module Name | Hostel Management |
 | Module Code | HMS |
 | Document Type | Product Requirements Document |
@@ -22,7 +22,7 @@ The Hostel Management module provides a centralized platform for managing hostel
 
 The module streamlines hostel administration by digitizing accommodation workflows, improving room utilization, strengthening security, reducing manual work, and providing real-time operational insights for hostel administrators and institutional management.
 
-This Product Requirements Document defines the business, functional, operational, and user experience requirements for implementing the Hostel Management module as part of the EduSuite SaaS Platform.
+This Product Requirements Document defines the business, functional, operational, and user experience requirements for implementing the Hostel Management module as part of the WisWits SaaS Platform.
 
 ---
 
@@ -73,7 +73,7 @@ The analysis of the existing implementation identified the following business ca
 - Audit Logging
 - Permission Management
 
-These capabilities provide a strong functional foundation for migration into the EduSuite platform.
+These capabilities provide a strong functional foundation for migration into the WisWits platform.
 
 ---
 
@@ -166,7 +166,7 @@ The module shall include:
 
 # 9. Out of Scope
 
-The following capabilities belong to other EduSuite modules:
+The following capabilities belong to other intern builds:
 
 - Student Admission Management
 - Learning Management System (LMS)
@@ -788,7 +788,7 @@ So that I can monitor operational performance.
 | BR-HMS-006 | Gate passes shall only be issued for approved leave or authorized movement. |
 | BR-HMS-007 | Complaints shall be assigned to responsible staff before resolution. |
 | BR-HMS-008 | Every operational activity shall generate an audit record. |
-| BR-HMS-009 | Notifications shall use the shared EduSuite Notification Service. |
+| BR-HMS-009 | Notifications shall use the shared WisWits Notification Service. |
 | BR-HMS-010 | All hostel records shall remain isolated by organization (`org_id`) within the multi-tenant platform. |
 
 # 20. Screen Inventory
@@ -853,7 +853,7 @@ Dashboard
 └── Settings
 ```
 
-Navigation shall remain consistent with the EduSuite Design System.
+Navigation shall remain consistent with the WisWits Design System.
 
 ---
 
@@ -1099,7 +1099,7 @@ The interface shall support:
 
 # 33. User Experience Guidelines
 
-The Hostel Management module shall comply with the EduSuite Design System.
+The Hostel Management module shall comply with the WisWits Design System.
 
 ### Consistency
 
@@ -1146,7 +1146,7 @@ Pages shall remain responsive while handling large datasets including hostel inf
 
 ### Design Consistency
 
-The module shall use the approved EduSuite color palette, typography, spacing, reusable components, layouts, and iconography to maintain a unified user experience across the EduSuite SaaS Platform.
+The module shall use the approved WisWits color palette, typography, spacing, reusable components, layouts, and iconography to maintain a unified user experience across the WisWits SaaS Platform.
 # 34. Reports Catalogue
 
 The Hostel Management module shall provide operational and analytical reports to support hostel administration, accommodation planning, security monitoring, and institutional decision-making.
@@ -1210,7 +1210,7 @@ Notifications shall:
 
 - Be configurable
 - Be role-based
-- Use the shared EduSuite Notification Service
+- Use the shared WisWits Notification Service
 - Support audit logging
 - Prevent duplicate notifications
 
@@ -1218,7 +1218,7 @@ Notifications shall:
 
 # 36. Permission Matrix
 
-Access shall follow the EduSuite Role-Based Access Control (RBAC) framework.
+Access shall follow the WisWits Role-Based Access Control (RBAC) framework.
 
 | Feature | Admin | Hostel Admin | Warden | Security | Student | Management |
 |----------|:----:|:------------:|:------:|:--------:|:-------:|:----------:|
@@ -1238,7 +1238,7 @@ Access shall follow the EduSuite Role-Based Access Control (RBAC) framework.
 
 # 37. Integration Matrix
 
-The module shall integrate with the following EduSuite modules.
+The module shall integrate with the following intern builds.
 
 | Module | Purpose | Data Flow |
 |----------|---------|-----------|
@@ -1263,7 +1263,7 @@ All integrations shall:
 - Maintain data consistency
 - Respect organization isolation
 - Prevent duplicate records
-- Follow EduSuite API contracts
+- Follow WisWits API contracts
 
 ---
 
@@ -1444,7 +1444,7 @@ Examples include:
 The system shall provide meaningful error messages while preserving data integrity and ensuring hostel operations remain accurate, secure, and consistent.
 # 44. Security Requirements
 
-The Hostel Management module shall comply with the EduSuite Platform Security Standards.
+The Hostel Management module shall comply with the WisWits Platform Security Standards.
 
 Security shall be implemented using shared platform services rather than module-specific implementations.
 
@@ -1452,7 +1452,7 @@ Security shall be implemented using shared platform services rather than module-
 
 ## Authentication
 
-The module shall use the EduSuite Authentication Service.
+The module shall use the WisWits Authentication Service.
 
 Authentication shall support:
 
@@ -1468,7 +1468,7 @@ Authentication shall never be implemented independently inside the module.
 
 ## Authorization
 
-Access to hostel resources shall follow the EduSuite Role-Based Access Control (RBAC) framework.
+Access to hostel resources shall follow the WisWits Role-Based Access Control (RBAC) framework.
 
 Permissions shall be assigned according to user roles including:
 
@@ -1598,7 +1598,7 @@ Institutions should be able to configure:
 
 # 47. User Experience Principles
 
-The Hostel Management module shall follow the EduSuite Design System.
+The Hostel Management module shall follow the WisWits Design System.
 
 Core principles include:
 
@@ -1785,7 +1785,7 @@ The module shall be evaluated using:
 - Intelligent resource optimization
 - Enterprise campus accommodation intelligence
 
-Future enhancements shall follow the EduSuite Product Governance process.
+Future enhancements shall follow the WisWits Product Governance process.
 
 ---
 
@@ -1809,10 +1809,10 @@ Future enhancements shall follow the EduSuite Product Governance process.
 This Product Requirements Document has been prepared with reference to:
 
 - Hostel Management Module Analysis Report
-- EduSuite Product Vision
-- EduSuite Documentation Standards
-- EduSuite Design System
-- EduSuite Engineering Standards
+- WisWits Product Vision
+- WisWits Documentation Standards
+- WisWits Design System
+- WisWits Engineering Standards
 
 Technical implementation details are documented separately within the CTO Technical Specification.
 
@@ -1820,7 +1820,7 @@ Technical implementation details are documented separately within the CTO Techni
 
 # 59. Conclusion
 
-The Hostel Management module establishes a comprehensive platform for managing hostel infrastructure, student accommodation, attendance, leave, gate passes, complaints, and operational reporting within the EduSuite SaaS Platform.
+The Hostel Management module establishes a comprehensive platform for managing hostel infrastructure, student accommodation, attendance, leave, gate passes, complaints, and operational reporting within the WisWits SaaS Platform.
 
 This Product Requirements Document defines the business vision, operational workflows, governance standards, and quality expectations required to deliver a secure, scalable, and intelligent hostel management solution.
 

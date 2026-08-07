@@ -1,7 +1,7 @@
 # HR-PMS — Jatin's Frontend Contribution
 
 Performance Management & Appraisal (`hr_pms`) module frontend, built for
-EduSuite per the **HR-PMS Module Engineering Contract** and the **EduSuite
+WisWits per the **HR-PMS Module Engineering Contract** and the **WisWits
 Engineering Standards**. This package contains **only Jatin's frontend
 scope** — no backend (Neha) or database (Khushboo) implementation.
 
@@ -81,7 +81,7 @@ The module runs fully standalone during independent frontend development:
 Component -> Hook -> PMS Service -> Mock API (in-memory, simulated latency/errors)
 ```
 
-To point at the real EduSuite backend later:
+To point at the real WisWits backend later:
 
 1. Set `NEXT_PUBLIC_PMS_USE_MOCK=false` in `.env.local`
 2. Set `NEXT_PUBLIC_API_BASE_URL` to the real API origin
@@ -109,7 +109,7 @@ change without touching UI code.
 **dev-only role switcher** ("Demo as" selector in the top bar) so reviewers,
 HR admins, and employees can all be exercised without a real auth backend.
 
-**This is not authorization.** The real EduSuite backend independently
+**This is not authorization.** The real WisWits backend independently
 enforces every permission; the frontend's checks are UX convenience only.
 
 ## 7. Validation performed
@@ -128,7 +128,7 @@ enforces every permission; the frontend's checks are UX convenience only.
 The Engineering Standards and Module Contract left several implementation
 details unlocked. Where that happened, the safest, most API-ready choice was
 made and is listed here — **none of this should be read as an official
-EduSuite requirement**:
+WisWits requirement**:
 
 - **Cycle status enum** (`draft | active | in_review | closed`) — not locked
   by the contract; chosen for a coherent lifecycle demo.
@@ -181,11 +181,11 @@ npm run start
 
 ## 12. Integration notes for the team lead / integration lead
 
-- Drop `app/hr/pms/**` and `modules/pms/**` into the real EduSuite Next.js
+- Drop `app/hr/pms/**` and `modules/pms/**` into the real WisWits Next.js
   app (or merge `app/hr/pms` into the existing `app/` tree if a different
   route-group structure is already in place).
 - Replace `PmsUserProvider`'s mock role switcher with the real
-  authenticated-user/session provider once EduSuite's auth/RBAC integration
+  authenticated-user/session provider once WisWits's auth/RBAC integration
   is available; `hasPermission()` should then be sourced from real session
   permissions rather than `mocks/seed-data.ts`.
 - Flip `NEXT_PUBLIC_PMS_USE_MOCK=false` and set `NEXT_PUBLIC_API_BASE_URL`

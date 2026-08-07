@@ -1,12 +1,12 @@
 # WisWits — Product Requirements Document (Master)
 
 > **One product. One shape. Every module.**
-> This PRD unifies everything — the live platform, the EduSuite assemblies, the intern
+> This PRD unifies everything — the live platform, the team assemblies, the intern
 > repos, the local builds — into a single product definition. Anything that ships must
 > fit this document; anything that doesn't fit gets reshaped or rejected.
 >
 > Companion documents: `FINAL_LAUNCH_PLAN.md` (the execution plan, updated every
-> session) · `EduSuite/ROADMAP.md` (intake sequencing) · `CLAUDE.md` (the constitution —
+> session) · `intake/ROADMAP.md` (intake sequencing) · `CLAUDE.md` (the constitution —
 > where this PRD and the constitution disagree, **the constitution wins**).
 
 ---
@@ -31,7 +31,7 @@ system. Automated subscriptions/Razorpay come later and must never gate a launch
 
 ## 2. The one rule that makes it one product
 
-Every module — whether written by us, ported from EduSuite, or built from an intern PRD —
+Every module — whether written by us, ported from an intern build, or built from an intern PRD —
 has exactly the same anatomy. A user cannot tell who built a module or where it came from.
 
 ### Module anatomy (the contract)
@@ -55,15 +55,15 @@ has exactly the same anatomy. A user cannot tell who built a module or where it 
 ### Module lifecycle (every module, no exceptions)
 
 ```
-EduSuite repo (upstream)            wiswits-code (this repo)                    prod
+intern team's upstream workspace (upstream)            wiswits-code (this repo)                    prod
 ┌─────────────────────┐   copy    ┌──────────────┐  port   ┌────────────┐ gate ┌──────┐
-│ Modules_Repo + PRDs │ ────────► │ EduSuite/<M>/│ ──────► │ apps/* +   │ ───► │ live │
+│ Modules_Repo + PRDs │ ────────► │ intake/<M>/│ ──────► │ apps/* +   │ ───► │ live │
 │ (Khushboo assembles)│           │ code+PRD+    │ 1/cycle │ soon:true  │ AK   │ flag │
 └─────────────────────┘           │ STATUS.md    │         │ on staging │ test │ off  │
                                   └──────────────┘         └────────────┘      └──────┘
 ```
 
-- **`EduSuite/` in this repo is the staging shelf** — inert, never imported by `apps/`.
+- **`intake/` in this repo is the staging shelf** — inert, never imported by `apps/`.
 - **PRD-first:** before porting, diff `PRD/` against `code/` — build what the PRD promises
   only where the code actually delivers it; log gaps in the module's `STATUS.md`.
 - **One module per cycle** through the port stage — never batch (bisectability).
@@ -81,7 +81,7 @@ owner console, playbooks — excluded from the 60 but still maintained).
 | 3 | Parents + linking | LIVE (linking BE has no nav) | wire parent-link surface |
 | 4 | Admissions (CRM pipeline) | LIVE | absorb number-series + doc-checklist ideas from intern builds; REJECT both intern admission modules |
 | 5 | Groups (houses/clubs) | soon-gated | flow-test → flag off |
-| 6 | Alumni (directory + network + mentorship) | soon-gated, 3 builds to reconcile | one reconciliation: native table + EduSuite port + Neha's mentorship features |
+| 6 | Alumni (directory + network + mentorship) | soon-gated, 3 builds to reconcile | one reconciliation: native table + intern port + Neha's mentorship features |
 | 7 | Visitor Management | soon-gated, DONE | flow-test → flag off |
 
 ### Domain: Academics
@@ -90,29 +90,29 @@ owner console, playbooks — excluded from the 60 but still maintained).
 | 8 | Classes & Sections | LIVE | — |
 | 9 | Timetable | LIVE | — |
 | 10 | Student Attendance | LIVE | — |
-| 11 | Assessments & Exams | LIVE | EduSuite Exam Cell = exam-ops layer (hall tickets, seating, invigilation) to evaluate ON TOP |
+| 11 | Assessments & Exams | LIVE | the Exam Cell build = exam-ops layer (hall tickets, seating, invigilation) to evaluate ON TOP |
 | 12 | Report Cards (designer) | LIVE | — |
-| 13 | HPC Report Card (NEP holistic) | GAP — EduSuite build ready | `EduSuite/HPC-Report-Card/` |
+| 13 | HPC Report Card (NEP holistic) | GAP — intern build ready | `intake/HPC-Report-Card/` |
 | 14 | Question Bank | LIVE | — |
 | 15 | Quizzes (CBT) | LIVE | mine Coaching build for OMR/batches/doubts later |
 | 16 | Worksheets | LIVE | — |
 | 17 | Homework Diary | LIVE | — |
 | 18 | Curriculum (CIE) | soon-gated | flow-test → flag off (grade-agnostic, changes nothing for schools yet) |
 | 19 | Lesson Content (Study Zone) | LIVE | — |
-| 20 | Personalised Learning (Recovery) | LIVE (thin) | upgrade with Anil's engine — `EduSuite/Personalised-Learning/` — as "recovery v2", NOT a parallel module |
-| 21 | Student Observations | GAP | blocked upstream — EduSuite hasn't assembled |
+| 20 | Personalised Learning (Recovery) | LIVE (thin) | upgrade with Anil's engine — `intake/Personalised-Learning/` — as "recovery v2", NOT a parallel module |
+| 21 | Student Observations | GAP | blocked upstream — the team hadn't assembled |
 | 22 | Teaching Canvas | built, no nav | wire or park explicitly |
 
 ### Domain: Student Life
 | # | Module | Today | Source |
 |---|---|---|---|
-| 23 | Wellbeing & Happiness (Care Layer) | GAP — build ready | `EduSuite/Wellbeing-and-Happiness/` — best build in portfolio |
+| 23 | Wellbeing & Happiness (Care Layer) | GAP — build ready | `intake/Wellbeing-and-Happiness/` — best build in portfolio |
 | 24 | Events | LIVE | — |
 | 25 | Gallery | LIVE | — |
 | 26 | Calendar | LIVE | — |
 | 27 | Library | LIVE | diff intern build; port only real gaps |
 | 28 | Transport | LIVE | — |
-| 29 | Hostel Management | GAP — build ready | `EduSuite/Hostel-Management/` — most mature intern build |
+| 29 | Hostel Management | GAP — build ready | `intake/Hostel-Management/` — most mature intern build |
 | 30 | Medical Room | HOLD | §16-gated — AK's explicit call required |
 
 ### Domain: Staff & HR
@@ -121,10 +121,10 @@ owner console, playbooks — excluded from the 60 but still maintained).
 | 31 | Staff Attendance (geofence) | LIVE | biometric contract = future device-sync layer |
 | 32 | Staff Leaves | LIVE | — |
 | 33 | Work Reports & Scorecards | LIVE | — |
-| 34 | Payroll | placeholder tab | the ONE real HR gap — scope from Neha's build + EduSuite contract, payroll only |
-| 35 | Performance Mgmt (PMS) | thin | scope a school-sized version from EduSuite HR-PMS (not corporate HR) |
-| 36 | Recruitment | GAP — EduSuite build ready | `EduSuite/Recruitment-Management/` |
-| 37 | EMPS extras (tasks/meetings/chat) | GAP (partial) | only the missing pieces from `EduSuite/EMPS-Employee-Productivity/` |
+| 34 | Payroll | placeholder tab | the ONE real HR gap — scope from Neha's build + the payroll contract, payroll only |
+| 35 | Performance Mgmt (PMS) | thin | scope a school-sized version from the HR-PMS intern build (not corporate HR) |
+| 36 | Recruitment | GAP — intern build ready | `intake/Recruitment-Management/` |
+| 37 | EMPS extras (tasks/meetings/chat) | GAP (partial) | only the missing pieces from `intake/EMPS-Employee-Productivity/` |
 | 38 | Utilization | HOLD | blocked upstream, low priority |
 
 ### Domain: Finance
@@ -133,13 +133,13 @@ owner console, playbooks — excluded from the 60 but still maintained).
 | 39 | Fee Structures & Assignment | LIVE | — |
 | 40 | Fee Collection & Ledger | LIVE | — |
 | 41 | Fee Gateway (school collects online) | config exists | verify end-to-end before marketing |
-| 42 | Asset & Inventory | GAP — build ready | `EduSuite/Asset-and-Inventory/` |
+| 42 | Asset & Inventory | GAP — build ready | `intake/Asset-and-Inventory/` |
 | 43 | Our SaaS Billing | **manual at launch (LOCKED by AK)** | Sales = bargain → onboard → invoice → live. Owner console invoices + manual org activation are the launch path; automated Razorpay subscriptions stay post-launch. Billing must never block a launch. |
 
 ### Domain: Communication & Community
 | # | Module | Today | Source |
 |---|---|---|---|
-| 44 | Announcements & Messages | LIVE | EduSuite Communication contract = likely redundant; confirm then close |
+| 44 | Announcements & Messages | LIVE | the Communication contract = likely redundant; confirm then close |
 | 45 | WhatsApp | LIVE | — |
 | 46 | Notifications | LIVE (chrome) | — |
 | 47 | Feedback Surveys | LIVE | — |

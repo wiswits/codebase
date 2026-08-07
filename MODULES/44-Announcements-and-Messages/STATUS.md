@@ -3,7 +3,7 @@
 **Domain:** Communication
 **Status:** LIVE
 
-**What it is:** School-to-community communication hub. EduSuite Communication-Admin contract likely redundant against this — confirm, then close.
+**What it is:** School-to-community communication hub. the Communication-Admin intern build contract likely redundant against this — confirm, then close.
 
 ## Features
 - Announcements + threaded messages
@@ -13,7 +13,7 @@ See `CODE_MAP.md` for where the LIVE code is, `PRD/PRD.md` for the spec.
 
 ---
 
-## Intake — the intern/EduSuite build for this module
+## Intake — the intern build for this module
 
 | Build (in `intake/`) | Files | State | What is in the way |
 |---|---|---|---|

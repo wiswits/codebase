@@ -1,11 +1,11 @@
 # ============================================================
-# EduSuite ERP
+# WisWits ERP
 # Utilization Management Module Engineering Contract
 # ============================================================
 
 Module Name      : Utilization Management
 Organization     : WisWits Edutech Pvt. Ltd.
-Platform         : EduSuite ERP
+Platform         : WisWits ERP
 ============================================================
 
 
@@ -148,7 +148,7 @@ multi-tenant,
 secure,
 scalable,
 maintainable,
-API-driven Utilization Management Module that integrates seamlessly into the EduSuite ERP platform.
+API-driven Utilization Management Module that integrates seamlessly into the WisWits ERP platform.
 
 The module should support thousands of employees,
 multiple organizations,
@@ -188,9 +188,9 @@ Developers MUST NOT
 ❌ Modify previous implementations
 
 
-#  EDUSUITE ENGINEERING STANDARDS
+#  WISWITS ENGINEERING STANDARDS
 
-Every Utilization Management component must follow EduSuite standards.
+Every Utilization Management component must follow WisWits standards.
 
 Required:
 
@@ -2350,5 +2350,5 @@ Every page must include
 
 #  FINAL OBJECTIVE
 
-The Utilization Management Module should provide a complete enterprise solution for monitoring employee utilization, project allocation, capacity planning, workload balancing, reporting, and analytics while remaining secure, scalable, maintainable, and fully compatible with the EduSuite ERP platform.
+The Utilization Management Module should provide a complete enterprise solution for monitoring employee utilization, project allocation, capacity planning, workload balancing, reporting, and analytics while remaining secure, scalable, maintainable, and fully compatible with the WisWits ERP platform.
 

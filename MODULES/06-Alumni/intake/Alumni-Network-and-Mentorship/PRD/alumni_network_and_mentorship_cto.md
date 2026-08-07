@@ -7,20 +7,20 @@
 
 | Field | Value |
 |-------|-------|
-| Product | EduSuite SaaS Platform |
+| Product | WisWits SaaS Platform |
 | Module | Alumni Network & Mentorship |
 | Module Code | ALU-MENT |
 | Document Type | CTO Technical Specification |
 | Version | 1.0 |
 | Status | Draft |
-| Architecture Version | EduSuite Engineering Standard v1 |
+| Architecture Version | WisWits Engineering Standard v1 |
 
 
 # Purpose
 
 This document defines the technical architecture, engineering standards, migration strategy, and implementation guidelines for the Alumni Network & Mentorship Module.
 
-It complements the Product Requirements Document (PRD) by defining **how the module shall be engineered**, ensuring alignment with the EduSuite SaaS Platform architecture and engineering standards.
+It complements the Product Requirements Document (PRD) by defining **how the module shall be engineered**, ensuring alignment with the WisWits SaaS Platform architecture and engineering standards.
 
 ---
 
@@ -39,13 +39,13 @@ It complements the Product Requirements Document (PRD) by defining **how the mod
 
 The implementation of the Alumni Network & Mentorship Module shall:
 
-- Align with EduSuite platform architecture.
+- Align with WisWits platform architecture.
 - Reuse shared platform services.
 - Support multi-tenant deployment.
 - Ensure secure access to alumni data.
 - Provide scalable APIs.
 - Support long-term maintainability.
-- Enable seamless integration with other EduSuite modules.
+- Enable seamless integration with other intern builds.
 - Follow platform coding standards.
 - Minimize technical debt.
 
@@ -53,7 +53,7 @@ The implementation of the Alumni Network & Mentorship Module shall:
 
 # 2. Existing Technical Analysis
 
-The current Alumni Network & Mentorship implementation provides comprehensive business functionality but differs from EduSuite platform standards in several architectural areas.
+The current Alumni Network & Mentorship implementation provides comprehensive business functionality but differs from WisWits platform standards in several architectural areas.
 
 ---
 
@@ -78,7 +78,7 @@ Current implementation uses:
 - Uses Vite instead of Next.js.
 - Uses React Router instead of App Router.
 - Does not use the shared platform layout.
-- Local UI components instead of the EduSuite Design System.
+- Local UI components instead of the WisWits Design System.
 
 ---
 
@@ -120,7 +120,7 @@ Current implementation uses:
 
 - Relational schema
 - Suitable for SaaS migration
-- Better alignment with EduSuite standards than document databases
+- Better alignment with WisWits standards than document databases
 
 ### Limitations
 
@@ -131,11 +131,11 @@ Current implementation uses:
 
 # 3. Platform Gap Assessment
 
-| Engineering Area | Existing Module | EduSuite Standard | Required Action |
+| Engineering Area | Existing Module | WisWits Standard | Required Action |
 |------------------|----------------|-------------------|-----------------|
 | Frontend Framework | React + Vite | Next.js App Router | Rebuild |
 | Routing | React Router | App Router | Replace |
-| UI Components | Local Components | EduSuite Design System | Adopt |
+| UI Components | Local Components | WisWits Design System | Adopt |
 | Authentication | Local JWT | Shared authenticate() | Replace |
 | Authorization | Local Permissions | Platform RBAC | Replace |
 | Audit Logging | Module-specific | Shared Audit Service | Integrate |
@@ -146,10 +146,10 @@ Current implementation uses:
 
 # 4. Target Platform Architecture
 
-The Alumni Network & Mentorship Module shall be implemented as a native EduSuite platform module.
+The Alumni Network & Mentorship Module shall be implemented as a native WisWits platform module.
 
 ```text
-EduSuite Platform
+WisWits Platform
 
 │
 
@@ -346,7 +346,7 @@ apps/
 
 # 9. Coding Standards
 
-The Alumni Network & Mentorship Module shall comply with EduSuite Engineering Standards.
+The Alumni Network & Mentorship Module shall comply with WisWits Engineering Standards.
 
 Mandatory requirements include:
 
@@ -359,7 +359,7 @@ Mandatory requirements include:
 - Audit logging for every business mutation
 - Shared notification service
 - Shared database utilities
-- EduSuite Design System
+- WisWits Design System
 - Comprehensive validation
 - Reusable services and components
 
@@ -368,9 +368,9 @@ No module shall duplicate shared platform functionality where an approved servic
 
 # 10. Backend Architecture Overview
 
-The Alumni Network & Mentorship Module shall follow the EduSuite Backend Engineering Standard based on a layered architecture.
+The Alumni Network & Mentorship Module shall follow the WisWits Backend Engineering Standard based on a layered architecture.
 
-The backend shall be designed to support secure alumni engagement, mentorship workflows, event management, donations, and community interactions while remaining scalable, maintainable, and fully integrated with the EduSuite SaaS Platform.
+The backend shall be designed to support secure alumni engagement, mentorship workflows, event management, donations, and community interactions while remaining scalable, maintainable, and fully integrated with the WisWits SaaS Platform.
 
 ---
 
@@ -474,7 +474,7 @@ stories.routes.ts
 
 Authentication shall NOT be implemented inside the Alumni module.
 
-The module shall exclusively use the shared EduSuite authentication middleware.
+The module shall exclusively use the shared WisWits authentication middleware.
 
 Approved Standard
 
@@ -515,7 +515,7 @@ Authentication is a platform responsibility.
 
 # 14. Authorization Standard
 
-Authorization shall follow the EduSuite Role-Based Access Control (RBAC) model.
+Authorization shall follow the WisWits Role-Based Access Control (RBAC) model.
 
 The module shall use:
 
@@ -641,7 +641,7 @@ This ensures:
 
 # 19. API Standards
 
-All APIs shall follow the EduSuite REST API conventions.
+All APIs shall follow the WisWits REST API conventions.
 
 General Principles
 
@@ -823,7 +823,7 @@ Binary storage shall remain outside the business module.
 
 # 26. Backend Engineering Standards
 
-All backend implementations shall comply with EduSuite Engineering Standards.
+All backend implementations shall comply with WisWits Engineering Standards.
 
 ### Security
 
@@ -861,7 +861,7 @@ All backend implementations shall comply with EduSuite Engineering Standards.
 
 # 27. Database Architecture Overview
 
-The Alumni Network & Mentorship Module shall adopt the EduSuite Platform Database Architecture.
+The Alumni Network & Mentorship Module shall adopt the WisWits Platform Database Architecture.
 
 The database layer shall provide:
 
@@ -878,7 +878,7 @@ MariaDB shall be the approved relational database management system.
 
 # 28. Database Design Principles
 
-The Alumni database shall follow the EduSuite engineering standards.
+The Alumni database shall follow the WisWits engineering standards.
 
 ## Normalization
 
@@ -990,7 +990,7 @@ Relationships shall enforce referential integrity while supporting efficient que
 
 # 31. Table Standards
 
-Every business table shall follow the EduSuite standard.
+Every business table shall follow the WisWits standard.
 
 Required Columns
 
@@ -1026,7 +1026,7 @@ Business tables shall use consistent naming conventions.
 
 # 32. Naming Conventions
 
-Database objects shall follow EduSuite naming standards.
+Database objects shall follow WisWits naming standards.
 
 ## Tables
 
@@ -1195,7 +1195,7 @@ The platform migration runner determines the active database.
 
 # 36. SQL Standards
 
-All SQL shall comply with EduSuite database standards.
+All SQL shall comply with WisWits database standards.
 
 Required
 
@@ -1279,7 +1279,7 @@ The database architecture shall support:
 - Backup verification
 - Secure backup storage
 
-Backup policies shall be managed by the EduSuite platform administration.
+Backup policies shall be managed by the WisWits platform administration.
 
 ---
 
@@ -1335,7 +1335,7 @@ Sensitive information shall only be accessible through authorized business servi
 
 # 44. Frontend Architecture Overview
 
-The Alumni Network & Mentorship Module shall be implemented using the EduSuite Frontend Engineering Standard.
+The Alumni Network & Mentorship Module shall be implemented using the WisWits Frontend Engineering Standard.
 
 The frontend architecture shall prioritize:
 
@@ -1347,7 +1347,7 @@ The frontend architecture shall prioritize:
 - Consistent user experience
 - Platform-wide maintainability
 
-The module shall integrate seamlessly with the EduSuite Design System and shared frontend infrastructure.
+The module shall integrate seamlessly with the WisWits Design System and shared frontend infrastructure.
 
 ---
 
@@ -1376,7 +1376,7 @@ No additional frontend frameworks shall be introduced without platform approval.
 
 # 46. Frontend Project Structure
 
-The Alumni module shall follow the standardized EduSuite frontend structure.
+The Alumni module shall follow the standardized WisWits frontend structure.
 
 ```text
 apps/
@@ -1462,7 +1462,7 @@ Routing shall follow the platform file-based routing convention.
 
 # 48. Layout Architecture
 
-All Alumni pages shall inherit the shared EduSuite layout.
+All Alumni pages shall inherit the shared WisWits layout.
 
 The shared layout shall provide:
 
@@ -1610,7 +1610,7 @@ Business rules shall always be enforced on the backend.
 
 # 54. Design System Standards
 
-The Alumni Module shall fully comply with the EduSuite Design System.
+The Alumni Module shall fully comply with the WisWits Design System.
 
 Approved Design Tokens
 
@@ -1664,7 +1664,7 @@ Lucide React
 
 ### Spacing
 
-The EduSuite spacing scale shall be used consistently throughout the module.
+The WisWits spacing scale shall be used consistently throughout the module.
 
 ---
 
@@ -1712,7 +1712,7 @@ Instead, the module shall use:
 
 ✔ Platform Modal Components
 
-All notifications shall remain consistent with the EduSuite user experience.
+All notifications shall remain consistent with the WisWits user experience.
 
 ---
 
@@ -1766,7 +1766,7 @@ Large alumni datasets shall use server-side pagination where supported.
 
 # 60. Frontend Engineering Standards
 
-All frontend implementations shall comply with EduSuite Engineering Standards.
+All frontend implementations shall comply with WisWits Engineering Standards.
 
 ### Architecture
 
@@ -1782,7 +1782,7 @@ All frontend implementations shall comply with EduSuite Engineering Standards.
 
 ### Design
 
-✔ EduSuite Design System
+✔ WisWits Design System
 
 ✔ Approved Color Tokens
 
@@ -1824,11 +1824,11 @@ All frontend implementations shall comply with EduSuite Engineering Standards.
 
 The Frontend Architecture defines the engineering standards required to deliver a consistent, scalable, accessible, and maintainable user interface for the Alumni Network & Mentorship Module.
 
-By adopting the EduSuite platform architecture—including Next.js App Router, shared layouts, reusable UI components, centralized API integration, and the approved design system—the module will integrate seamlessly with the EduSuite SaaS Platform while delivering a modern user experience across all supported devices.
+By adopting the WisWits platform architecture—including Next.js App Router, shared layouts, reusable UI components, centralized API integration, and the approved design system—the module will integrate seamlessly with the WisWits SaaS Platform while delivering a modern user experience across all supported devices.
 
 # 61. Security Architecture
 
-The Alumni Network & Mentorship Module shall comply with the EduSuite Platform Security Architecture.
+The Alumni Network & Mentorship Module shall comply with the WisWits Platform Security Architecture.
 
 Security shall be implemented through shared platform services rather than module-specific implementations.
 
@@ -1836,7 +1836,7 @@ Security shall be implemented through shared platform services rather than modul
 
 ## Authentication
 
-Authentication shall be provided exclusively through the EduSuite Authentication Service.
+Authentication shall be provided exclusively through the WisWits Authentication Service.
 
 Approved Standard
 
@@ -1866,7 +1866,7 @@ req.user.role
 
 ## Authorization
 
-Authorization shall follow the EduSuite Role-Based Access Control (RBAC) framework.
+Authorization shall follow the WisWits Role-Based Access Control (RBAC) framework.
 
 Approved Standard
 
@@ -1978,7 +1978,7 @@ Transactional data shall always be retrieved from the database.
 
 # 64. Logging & Monitoring
 
-The module shall integrate with the EduSuite monitoring framework.
+The module shall integrate with the WisWits monitoring framework.
 
 Application logs shall include:
 
@@ -2000,7 +2000,7 @@ Monitoring shall support:
 
 # 65. Testing Strategy
 
-Testing shall comply with EduSuite Engineering Quality Standards.
+Testing shall comply with WisWits Engineering Quality Standards.
 
 ## Unit Testing
 
@@ -2054,7 +2054,7 @@ Validate complete workflows including:
 
 # 66. Code Quality Standards
 
-Every implementation shall comply with the EduSuite engineering standards.
+Every implementation shall comply with the WisWits engineering standards.
 
 Architecture
 
@@ -2114,7 +2114,7 @@ Frontend
 
 # 67. DevOps & Deployment Strategy
 
-Deployment shall follow the EduSuite Platform deployment workflow.
+Deployment shall follow the WisWits Platform deployment workflow.
 
 ```text
 Developer
@@ -2251,7 +2251,7 @@ Production Deployment
 
 Existing code shall **not** be copied directly.
 
-New implementation shall follow EduSuite engineering standards.
+New implementation shall follow WisWits engineering standards.
 
 ---
 
@@ -2325,13 +2325,13 @@ No feature shall bypass the established engineering governance process.
 
 The current Alumni Network & Mentorship implementation provides a comprehensive business foundation.
 
-However, it shall **not** be merged directly into the EduSuite SaaS Platform.
+However, it shall **not** be merged directly into the WisWits SaaS Platform.
 
 Instead, it shall serve as a **functional reference** for a new implementation built according to:
 
-- EduSuite Product Requirements Document (PRD)
-- EduSuite CTO Technical Specification
-- EduSuite Engineering Execution Plan
-- EduSuite Platform Standards
+- WisWits Product Requirements Document (PRD)
+- WisWits CTO Technical Specification
+- WisWits Engineering Execution Plan
+- WisWits Platform Standards
 
 This approach ensures architectural consistency, platform compatibility, maintainability, security, scalability, and long-term product evolution.

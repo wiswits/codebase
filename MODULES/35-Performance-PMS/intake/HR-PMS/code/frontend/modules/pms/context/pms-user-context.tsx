@@ -10,7 +10,7 @@ import type { PmsCurrentUser, PmsPermission } from "../types";
  * IMPORTANT: This exists to make permission-aware UI possible while the
  * frontend is developed independently, using mock roles. It is NOT an
  * authentication system — Engineering Standards §14/§15 require the real
- * EduSuite auth/RBAC mechanism, and the backend independently re-checks
+ * WisWits auth/RBAC mechanism, and the backend independently re-checks
  * every permission. The role switcher below is a development convenience
  * only and should be replaced by the real session/user once integrated.
  */

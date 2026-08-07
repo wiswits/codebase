@@ -1,5 +1,5 @@
 -- ============================================================
--- EduSuite - Event Management Module
+-- WisWits - Event Management Module
 -- Migration: 001_create_event_management_tables.sql
 -- Database: MariaDB
 -- Purpose: Initial Event Management schema

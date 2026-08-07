@@ -19,7 +19,7 @@ export function Sidebar() {
   return (
     <aside className="hidden w-60 shrink-0 flex-col bg-navy md:flex">
       <div className="px-5 py-6">
-        <p className="font-playfair text-lg font-semibold text-ivory">EduSuite</p>
+        <p className="font-playfair text-lg font-semibold text-ivory">WisWits</p>
         <div className="mt-2 mb-2 h-[2px] w-8 rounded-full bg-gold" />
         <p className="text-xs tracking-wide text-ivory/60">HPC Report Card</p>
       </div>

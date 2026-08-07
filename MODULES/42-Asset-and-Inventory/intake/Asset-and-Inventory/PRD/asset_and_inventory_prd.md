@@ -7,7 +7,7 @@
 
 | Field | Value |
 |-------|-------|
-| Product | EduSuite SaaS Platform |
+| Product | WisWits SaaS Platform |
 | Module Name | Asset & Inventory Management |
 | Module Code | AST-INV |
 | Document Type | Product Requirements Document |
@@ -22,7 +22,7 @@ The Asset & Inventory Management Module is designed to provide educational insti
 
 The module enables institutions to maintain accurate inventory records, monitor stock levels, streamline procurement workflows, manage asset lifecycles, and generate operational reports while ensuring accountability and transparency across departments.
 
-This Product Requirements Document defines the functional and business requirements for the Asset & Inventory Management Module as part of the EduSuite SaaS Platform.
+This Product Requirements Document defines the functional and business requirements for the Asset & Inventory Management Module as part of the WisWits SaaS Platform.
 
 ---
 
@@ -65,7 +65,7 @@ The analysis of the existing implementation identified the following business ca
 - Dashboard
 - Reports
 
-These capabilities provide a strong operational foundation for migration into the EduSuite platform.
+These capabilities provide a strong operational foundation for migration into the WisWits platform.
 
 ---
 
@@ -151,7 +151,7 @@ The module shall include:
 
 # 9. Out of Scope
 
-The following capabilities are managed by other EduSuite modules:
+The following capabilities are managed by other intern builds:
 
 - Finance & Accounting
 - Student Information
@@ -791,7 +791,7 @@ Dashboard
 └── Settings
 ```
 
-Navigation shall remain consistent with the EduSuite Design System.
+Navigation shall remain consistent with the WisWits Design System.
 
 ---
 
@@ -1010,7 +1010,7 @@ Accessibility shall be considered during design and development.
 
 # 33. User Experience Guidelines
 
-The Asset & Inventory Management Module shall comply with the EduSuite Design System.
+The Asset & Inventory Management Module shall comply with the WisWits Design System.
 
 ### Consistency
 
@@ -1055,7 +1055,7 @@ Primary inventory pages shall load efficiently and provide responsive interactio
 
 ### Design Consistency
 
-The module shall use the approved EduSuite color palette, typography, spacing, reusable components, and iconography to maintain a consistent platform experience.
+The module shall use the approved WisWits color palette, typography, spacing, reusable components, and iconography to maintain a consistent platform experience.
 
 # 34. Reports Catalogue
 
@@ -1126,7 +1126,7 @@ Notifications shall:
 
 # 36. Permission Matrix
 
-Access shall follow the EduSuite Role-Based Access Control (RBAC) model.
+Access shall follow the WisWits Role-Based Access Control (RBAC) model.
 
 | Feature | Admin | Inventory Manager | Store Keeper | Procurement Officer | Finance | Management |
 |-----------|:----:|:----------------:|:------------:|:------------------:|:-------:|:----------:|
@@ -1145,7 +1145,7 @@ Access shall follow the EduSuite Role-Based Access Control (RBAC) model.
 
 # 37. Integration Matrix
 
-The module shall integrate with the following EduSuite modules.
+The module shall integrate with the following intern builds.
 
 | Module | Purpose | Data Flow |
 |----------|---------|-----------|
@@ -1333,7 +1333,7 @@ Users shall receive clear and actionable error messages while maintaining data i
 
 # 44. Security Requirements
 
-The Asset & Inventory Management Module shall comply with the EduSuite Platform Security Standards.
+The Asset & Inventory Management Module shall comply with the WisWits Platform Security Standards.
 
 Security shall be implemented using shared platform services rather than module-specific implementations.
 
@@ -1341,7 +1341,7 @@ Security shall be implemented using shared platform services rather than module-
 
 ## Authentication
 
-The module shall use the EduSuite Authentication Service.
+The module shall use the WisWits Authentication Service.
 
 Authentication shall support:
 
@@ -1357,7 +1357,7 @@ Authentication shall not be implemented independently inside the module.
 
 ## Authorization
 
-Access to all module functionality shall follow the EduSuite Role-Based Access Control (RBAC) framework.
+Access to all module functionality shall follow the WisWits Role-Based Access Control (RBAC) framework.
 
 Permissions shall be assigned according to user roles including:
 
@@ -1478,7 +1478,7 @@ Institutions should be able to configure:
 
 # 47. User Experience Principles
 
-The Asset & Inventory Management Module shall follow the EduSuite Design System.
+The Asset & Inventory Management Module shall follow the WisWits Design System.
 
 Core principles include:
 
@@ -1658,7 +1658,7 @@ The module shall be evaluated using:
 - RFID integration
 - Predictive inventory optimization
 
-Future enhancements shall follow the EduSuite Product Governance process.
+Future enhancements shall follow the WisWits Product Governance process.
 
 ---
 
@@ -1674,7 +1674,7 @@ Future enhancements shall follow the EduSuite Product Governance process.
 | Stock Out | Issue of inventory |
 | Return | Returned inventory item |
 | Inventory | Collection of managed products and assets |
-| Organization | Institution using EduSuite |
+| Organization | Institution using WisWits |
 
 ---
 
@@ -1683,10 +1683,10 @@ Future enhancements shall follow the EduSuite Product Governance process.
 This Product Requirements Document has been prepared with reference to:
 
 - Asset & Inventory Module Analysis Report
-- EduSuite Product Vision
-- EduSuite Documentation Standards
-- EduSuite Design System
-- EduSuite Engineering Standards
+- WisWits Product Vision
+- WisWits Documentation Standards
+- WisWits Design System
+- WisWits Engineering Standards
 
 Technical implementation details are intentionally documented in the corresponding CTO Technical Specification.
 
@@ -1694,7 +1694,7 @@ Technical implementation details are intentionally documented in the correspondi
 
 # 59. Conclusion
 
-The Asset & Inventory Management Module establishes a comprehensive solution for managing institutional inventory and operational assets within the EduSuite SaaS Platform.
+The Asset & Inventory Management Module establishes a comprehensive solution for managing institutional inventory and operational assets within the WisWits SaaS Platform.
 
 This Product Requirements Document defines the business vision, functional capabilities, operational requirements, user experience expectations, security considerations, and governance standards required to deliver a scalable and maintainable inventory management solution.
 

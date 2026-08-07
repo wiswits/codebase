@@ -5,7 +5,7 @@ const { fail } = require("../utils/response");
 // The frontend's dev-only role switcher sends the chosen demo user's id
 // in the `x-user-id` header. This middleware resolves that into
 // req.currentUser so controllers can apply the same role checks that
-// will later run against EduSuite's real session/JWT data.
+// will later run against WisWits's real session/JWT data.
 async function attachUser(req, res, next) {
   try {
     const userId = req.header("x-user-id");

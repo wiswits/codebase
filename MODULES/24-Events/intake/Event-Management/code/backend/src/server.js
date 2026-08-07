@@ -3,7 +3,7 @@ const env = require('./config/env');
 const logger = require('./utils/logger');
 
 const server = app.listen(env.PORT, () => {
-  logger.info(`EduSuite backend listening on port ${env.PORT} (${env.NODE_ENV})`);
+  logger.info(`WisWits backend listening on port ${env.PORT} (${env.NODE_ENV})`);
 });
 
 process.on('unhandledRejection', (err) => {

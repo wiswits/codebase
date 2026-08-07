@@ -26,7 +26,7 @@ export default function Sidebar() {
           <BookOpen size={17} color="#fff" />
         </div>
         <div>
-          <div className="text-white font-semibold text-sm">EduSuite</div>
+          <div className="text-white font-semibold text-sm">WisWits</div>
           <div className="text-xs text-slate-400">Library Management</div>
         </div>
       </div>

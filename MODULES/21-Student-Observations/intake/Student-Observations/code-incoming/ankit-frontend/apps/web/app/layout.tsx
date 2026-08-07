@@ -3,9 +3,9 @@ import type { ReactNode } from "react";
 import "./global.css";
 
 export const metadata: Metadata = {
-  title: "EduSuite | Student Observations",
+  title: "WisWits | Student Observations",
   description:
-    "Student observation management module for the EduSuite platform.",
+    "Student observation management module for the WisWits platform.",
 };
 
 interface RootLayoutProps {

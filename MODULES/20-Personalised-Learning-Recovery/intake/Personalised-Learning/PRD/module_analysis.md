@@ -44,7 +44,7 @@ Personalised-Learning/
 
 ✅ Multi-role dashboards
 
-⚠️ Requires migration to EduSuite shared platform architecture
+⚠️ Requires migration to WisWits shared platform architecture
 
 ---
 
@@ -115,7 +115,7 @@ The frontend contains interfaces for:
 
 - JavaScript instead of TypeScript
 - Vite instead of Next.js
-- No EduSuite Design System
+- No WisWits Design System
 - No shared layouts
 - Requires migration to shared UI architecture
 
@@ -188,7 +188,7 @@ The backend currently includes:
 ### Limitations
 
 - Local middleware
-- No EduSuite repository-service architecture
+- No intern team's upstream workspacesitory-service architecture
 - Local authorization implementation
 - Requires shared audit service
 - Requires shared notification service
@@ -216,7 +216,7 @@ Core entities include:
 
 The README indicates approximately **22 database tables** supporting adaptive learning workflows.
 
-Migration to EduSuite database standards is required.
+Migration to WisWits database standards is required.
 
 ---
 
@@ -336,7 +336,7 @@ The implementation currently manages:
 - Behaviour Analysis
 - Analytics Report
 
-Future EduSuite implementation shall further standardize these entities and integrate them with shared platform services.
+Future WisWits implementation shall further standardize these entities and integrate them with shared platform services.
 
 ---
 
@@ -372,7 +372,7 @@ Future EduSuite implementation shall further standardize these entities and inte
 
 # 12. Platform Gap Analysis
 
-| Area | Current Implementation | EduSuite Standard | Recommendation |
+| Area | Current Implementation | WisWits Standard | Recommendation |
 |------|------------------------|-------------------|----------------|
 | Frontend | React + Vite | Next.js App Router | Rebuild |
 | Language | JavaScript | TypeScript | Migrate |
@@ -382,7 +382,7 @@ Future EduSuite implementation shall further standardize these entities and inte
 | Database Access | Direct MySQL | Shared query() | Replace |
 | Notifications | Local Alerts | Shared Notification Service | Integrate |
 | Audit | Limited | Shared Audit Service | Add |
-| Layout | Module-specific | Shared EduSuite Layout | Replace |
+| Layout | Module-specific | Shared WisWits Layout | Replace |
 
 ---
 
@@ -400,7 +400,7 @@ The module provides a comprehensive adaptive learning foundation, including anal
 
 ★★★★★
 
-The architecture is mature and modular, especially the algorithm layer. However, migration to EduSuite standards—including TypeScript, layered backend architecture, shared platform services, and multi-tenant conventions—is required.
+The architecture is mature and modular, especially the algorithm layer. However, migration to WisWits standards—including TypeScript, layered backend architecture, shared platform services, and multi-tenant conventions—is required.
 
 ---
 
@@ -410,4 +410,4 @@ The architecture is mature and modular, especially the algorithm layer. However,
 
 The adaptive learning algorithms, recommendation workflows, and analytics logic are highly reusable.
 
-Following EduSuite engineering policy, the existing implementation shall be treated **only as a business and algorithm reference**. The new module shall be developed from scratch using the approved **PRD**, **CTO Technical Specification**, and **Engineering Execution Plan**.
+Following WisWits engineering policy, the existing implementation shall be treated **only as a business and algorithm reference**. The new module shall be developed from scratch using the approved **PRD**, **CTO Technical Specification**, and **Engineering Execution Plan**.

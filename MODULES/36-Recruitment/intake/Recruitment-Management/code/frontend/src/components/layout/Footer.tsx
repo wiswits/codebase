@@ -10,7 +10,7 @@ export function Footer() {
       <div className="container mx-auto px-4 py-4">
         <div className="flex flex-col sm:flex-row items-center justify-between gap-2 text-sm text-gray-500">
           <p>
-            &copy; {currentYear} EduSuite. All rights reserved.
+            &copy; {currentYear} WisWits. All rights reserved.
           </p>
           <p className="flex items-center gap-1">
             Made with

@@ -106,7 +106,7 @@ const PublicApplicationForm = () => {
           <ShieldCheck size={18} className="text-white" />
         </div>
         <div>
-          <p className="text-white font-semibold text-sm">EduSuite Admissions</p>
+          <p className="text-white font-semibold text-sm">WisWits Admissions</p>
           <p className="text-slate-400 text-xs">Public Application Form (No Login Required)</p>
         </div>
       </header>

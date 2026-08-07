@@ -7,7 +7,7 @@
 
 | Field | Value |
 |-------|-------|
-| Product | EduSuite SaaS Platform |
+| Product | WisWits SaaS Platform |
 | Module | Alumni Network & Mentorship |
 | Module Code | ALU-MENT |
 | Document Type | Engineering Execution Plan |
@@ -19,7 +19,7 @@
 
 This document defines the engineering execution strategy for developing the Alumni Network & Mentorship Module based on the approved Product Requirements Document (PRD) and CTO Technical Specification.
 
-The module shall be developed from scratch following EduSuite platform standards. The legacy implementation shall be used only as a business reference and shall not be copied into the new platform.
+The module shall be developed from scratch following WisWits platform standards. The legacy implementation shall be used only as a business reference and shall not be copied into the new platform.
 
 ---
 
@@ -75,7 +75,7 @@ Production Ready
 
 # 5. Development Standards
 
-The engineering team shall follow the EduSuite engineering standards.
+The engineering team shall follow the WisWits engineering standards.
 
 ### Frontend
 
@@ -178,7 +178,7 @@ All identified issues shall be resolved before release.
 
 # 9. Git Workflow
 
-Development shall follow the EduSuite Git workflow.
+Development shall follow the WisWits Git workflow.
 
 ```text
 main
@@ -259,4 +259,4 @@ The module shall be approved for release only after:
 
 This Engineering Execution Plan provides the implementation roadmap for the Alumni Network & Mentorship Module.
 
-By following the approved Product Requirements Document, CTO Technical Specification, and EduSuite Engineering Standards, the development team shall deliver a secure, scalable, maintainable, and platform-ready Alumni Network & Mentorship Module suitable for integration into the EduSuite SaaS Platform.
+By following the approved Product Requirements Document, CTO Technical Specification, and WisWits Engineering Standards, the development team shall deliver a secure, scalable, maintainable, and platform-ready Alumni Network & Mentorship Module suitable for integration into the WisWits SaaS Platform.

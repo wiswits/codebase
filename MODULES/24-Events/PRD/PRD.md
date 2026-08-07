@@ -1,6 +1,6 @@
 # PRD — Events
 
-**Purpose.** Full event lifecycle — the first EduSuite intake, now richer than its source.
+**Purpose.** Full event lifecycle — the first intern intake, now richer than its source.
 
 **Primary roles.** admin, principal, teacher manage; all school RSVP
 

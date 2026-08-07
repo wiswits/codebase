@@ -7,32 +7,32 @@
 
 | Field | Value |
 |-------|-------|
-| Product | EduSuite SaaS Platform |
+| Product | WisWits SaaS Platform |
 | Module | Asset & Inventory Management |
 | Module Code | AST-INV |
 | Document Type | CTO Technical Specification |
 | Version | 1.0 |
 | Status | Draft |
-| Architecture Version | EduSuite Engineering Standard v1 |
+| Architecture Version | WisWits Engineering Standard v1 |
 
 # Purpose
 
 This document defines the technical architecture, engineering standards, migration strategy, and implementation guidelines for the Asset & Inventory Management Module.
 
-It complements the Product Requirements Document (PRD) by defining **how the module shall be engineered**, ensuring alignment with the EduSuite SaaS Platform architecture and engineering standards.
+It complements the Product Requirements Document (PRD) by defining **how the module shall be engineered**, ensuring alignment with the WisWits SaaS Platform architecture and engineering standards.
 
 
 # 1. Engineering Objectives
 
 The implementation of the Asset & Inventory Management Module shall:
 
-- Align with EduSuite platform architecture.
+- Align with WisWits platform architecture.
 - Reuse shared platform services.
 - Support multi-tenant deployment.
 - Ensure secure inventory operations.
 - Provide scalable APIs.
 - Support long-term maintainability.
-- Enable seamless integration with other EduSuite modules.
+- Enable seamless integration with other intern builds.
 - Follow platform coding standards.
 - Minimize technical debt.
 
@@ -40,7 +40,7 @@ The implementation of the Asset & Inventory Management Module shall:
 
 # 2. Existing Technical Analysis
 
-The current Asset & Inventory implementation provides comprehensive inventory management functionality but differs from EduSuite platform standards in several architectural areas.
+The current Asset & Inventory implementation provides comprehensive inventory management functionality but differs from WisWits platform standards in several architectural areas.
 
 ---
 
@@ -65,7 +65,7 @@ Current implementation uses:
 
 - Uses Vite instead of Next.js.
 - Uses standalone routing instead of App Router.
-- Does not use EduSuite shared layout.
+- Does not use WisWits shared layout.
 - Uses module-specific UI components.
 
 ---
@@ -114,17 +114,17 @@ Current implementation uses:
 
 - Database access does not follow shared platform utilities.
 - Multi-tenant (`org_id`) implementation requires verification.
-- Migration standards need alignment with EduSuite.
+- Migration standards need alignment with WisWits.
 
 ---
 
 # 3. Platform Gap Assessment
 
-| Engineering Area | Existing Module | EduSuite Standard | Required Action |
+| Engineering Area | Existing Module | WisWits Standard | Required Action |
 |------------------|----------------|-------------------|-----------------|
 | Frontend Framework | React + Vite | Next.js App Router | Rebuild |
 | Routing | Local Routing | App Router | Replace |
-| UI Components | Local Components | EduSuite Design System | Adopt |
+| UI Components | Local Components | WisWits Design System | Adopt |
 | Authentication | Local JWT | Shared authenticate() | Replace |
 | Authorization | Local Middleware | Platform RBAC | Replace |
 | Audit Logging | Local / Not Centralized | Shared Audit Service | Integrate |
@@ -135,10 +135,10 @@ Current implementation uses:
 
 # 4. Target Platform Architecture
 
-The Asset & Inventory Management Module shall be implemented as a native EduSuite platform module.
+The Asset & Inventory Management Module shall be implemented as a native WisWits platform module.
 
 ```text
-EduSuite Platform
+WisWits Platform
 
 │
 
@@ -335,7 +335,7 @@ apps/
 
 # 9. Coding Standards
 
-The Asset & Inventory Management Module shall comply with EduSuite Engineering Standards.
+The Asset & Inventory Management Module shall comply with WisWits Engineering Standards.
 
 Mandatory requirements include:
 
@@ -348,7 +348,7 @@ Mandatory requirements include:
 - Audit logging for every business mutation
 - Shared notification service
 - Shared database utilities
-- EduSuite Design System
+- WisWits Design System
 - Comprehensive validation
 - Reusable services and components
 
@@ -357,7 +357,7 @@ No module shall duplicate shared platform functionality where an approved servic
 
 # 10. Backend Architecture Overview
 
-The Asset & Inventory Management Module shall follow the EduSuite Backend Engineering Standard based on a layered architecture.
+The Asset & Inventory Management Module shall follow the WisWits Backend Engineering Standard based on a layered architecture.
 
 The backend shall support secure inventory operations, procurement workflows, stock management, reporting, and platform integrations while ensuring scalability, maintainability, and security.
 
@@ -465,7 +465,7 @@ reports.routes.ts
 
 Authentication shall NOT be implemented inside the Asset & Inventory module.
 
-The module shall exclusively use the shared EduSuite authentication middleware.
+The module shall exclusively use the shared WisWits authentication middleware.
 
 Approved Standard
 
@@ -506,7 +506,7 @@ Authentication remains a platform responsibility.
 
 # 14. Authorization Standard
 
-Authorization shall follow the EduSuite Role-Based Access Control (RBAC) model.
+Authorization shall follow the WisWits Role-Based Access Control (RBAC) model.
 
 The module shall use:
 
@@ -635,7 +635,7 @@ Benefits include:
 
 # 19. API Standards
 
-All APIs shall follow EduSuite REST conventions.
+All APIs shall follow WisWits REST conventions.
 
 General Principles
 
@@ -819,7 +819,7 @@ Binary storage shall remain outside the business module.
 
 # 26. Backend Engineering Standards
 
-All backend implementations shall comply with EduSuite Engineering Standards.
+All backend implementations shall comply with WisWits Engineering Standards.
 
 ### Security
 
@@ -857,7 +857,7 @@ All backend implementations shall comply with EduSuite Engineering Standards.
 
 # 27. Database Architecture Overview
 
-The Asset & Inventory Management Module shall adopt the EduSuite Platform Database Architecture.
+The Asset & Inventory Management Module shall adopt the WisWits Platform Database Architecture.
 
 The database layer shall provide:
 
@@ -874,7 +874,7 @@ MariaDB shall be the approved relational database management system.
 
 # 28. Database Design Principles
 
-The Asset & Inventory database shall follow EduSuite engineering standards.
+The Asset & Inventory database shall follow WisWits engineering standards.
 
 ## Normalization
 
@@ -994,7 +994,7 @@ Relationships shall enforce referential integrity while supporting efficient que
 
 # 31. Table Standards
 
-Every business table shall follow the EduSuite database standard.
+Every business table shall follow the WisWits database standard.
 
 Required Columns
 
@@ -1030,7 +1030,7 @@ Business tables shall use consistent naming conventions.
 
 # 32. Naming Conventions
 
-Database objects shall follow EduSuite naming standards.
+Database objects shall follow WisWits naming standards.
 
 ## Tables
 
@@ -1209,7 +1209,7 @@ The platform migration runner determines the active database.
 
 # 36. SQL Standards
 
-All SQL shall comply with EduSuite database standards.
+All SQL shall comply with WisWits database standards.
 
 Required
 
@@ -1294,7 +1294,7 @@ The database architecture shall support:
 - Backup verification
 - Secure backup storage
 
-Backup policies shall be managed by the EduSuite platform administration.
+Backup policies shall be managed by the WisWits platform administration.
 
 ---
 
@@ -1351,7 +1351,7 @@ Sensitive operational information shall only be accessible through authorized bu
 
 # 44. Frontend Architecture Overview
 
-The Asset & Inventory Management Module shall be implemented using the EduSuite Frontend Engineering Standard.
+The Asset & Inventory Management Module shall be implemented using the WisWits Frontend Engineering Standard.
 
 The frontend architecture shall prioritize:
 
@@ -1363,7 +1363,7 @@ The frontend architecture shall prioritize:
 - Consistent user experience
 - Platform-wide maintainability
 
-The module shall integrate seamlessly with the EduSuite Design System and shared frontend infrastructure.
+The module shall integrate seamlessly with the WisWits Design System and shared frontend infrastructure.
 
 ---
 
@@ -1392,7 +1392,7 @@ No additional frontend frameworks shall be introduced without platform approval.
 
 # 46. Frontend Project Structure
 
-The Asset & Inventory module shall follow the standardized EduSuite frontend structure.
+The Asset & Inventory module shall follow the standardized WisWits frontend structure.
 
 ```text
 apps/
@@ -1484,7 +1484,7 @@ Routing shall follow the platform file-based routing convention.
 
 # 48. Layout Architecture
 
-All Inventory pages shall inherit the shared EduSuite layout.
+All Inventory pages shall inherit the shared WisWits layout.
 
 The shared layout shall provide:
 
@@ -1634,7 +1634,7 @@ Business rules shall always be enforced on the backend.
 
 # 54. Design System Standards
 
-The Asset & Inventory Module shall fully comply with the EduSuite Design System.
+The Asset & Inventory Module shall fully comply with the WisWits Design System.
 
 Approved Design Tokens
 
@@ -1688,7 +1688,7 @@ Lucide React
 
 ### Spacing
 
-The EduSuite spacing scale shall be used consistently throughout the module.
+The WisWits spacing scale shall be used consistently throughout the module.
 
 ---
 
@@ -1736,7 +1736,7 @@ Instead, the module shall use:
 
 ✔ Platform Modal Components
 
-All notifications shall remain consistent with the EduSuite user experience.
+All notifications shall remain consistent with the WisWits user experience.
 
 ---
 
@@ -1790,7 +1790,7 @@ Large inventory datasets shall use server-side pagination where supported.
 
 # 60. Frontend Engineering Standards
 
-All frontend implementations shall comply with EduSuite Engineering Standards.
+All frontend implementations shall comply with WisWits Engineering Standards.
 
 ### Architecture
 
@@ -1806,7 +1806,7 @@ All frontend implementations shall comply with EduSuite Engineering Standards.
 
 ### Design
 
-✔ EduSuite Design System
+✔ WisWits Design System
 
 ✔ Approved Color Tokens
 
@@ -1844,7 +1844,7 @@ All frontend implementations shall comply with EduSuite Engineering Standards.
 
 # 61. Security Architecture
 
-The Asset & Inventory Management Module shall comply with the EduSuite Platform Security Architecture.
+The Asset & Inventory Management Module shall comply with the WisWits Platform Security Architecture.
 
 Security shall be implemented through shared platform services rather than module-specific implementations.
 
@@ -1852,7 +1852,7 @@ Security shall be implemented through shared platform services rather than modul
 
 ## Authentication
 
-Authentication shall be provided exclusively through the EduSuite Authentication Service.
+Authentication shall be provided exclusively through the WisWits Authentication Service.
 
 Approved Standard
 
@@ -1882,7 +1882,7 @@ req.user.role
 
 ## Authorization
 
-Authorization shall follow the EduSuite Role-Based Access Control (RBAC) framework.
+Authorization shall follow the WisWits Role-Based Access Control (RBAC) framework.
 
 Approved Standard
 
@@ -1996,7 +1996,7 @@ Real-time inventory quantities and stock transactions shall always be retrieved 
 
 # 64. Logging & Monitoring
 
-The module shall integrate with the EduSuite monitoring framework.
+The module shall integrate with the WisWits monitoring framework.
 
 Application logs shall include:
 
@@ -2018,7 +2018,7 @@ Monitoring shall support:
 
 # 65. Testing Strategy
 
-Testing shall comply with EduSuite Engineering Quality Standards.
+Testing shall comply with WisWits Engineering Quality Standards.
 
 ## Unit Testing
 
@@ -2072,7 +2072,7 @@ Validate complete workflows including:
 
 # 66. Code Quality Standards
 
-Every implementation shall comply with EduSuite engineering standards.
+Every implementation shall comply with WisWits engineering standards.
 
 ## Architecture
 
@@ -2132,7 +2132,7 @@ Every implementation shall comply with EduSuite engineering standards.
 
 # 67. DevOps & Deployment Strategy
 
-Deployment shall follow the EduSuite Platform deployment workflow.
+Deployment shall follow the WisWits Platform deployment workflow.
 
 ```text
 Developer
@@ -2271,7 +2271,7 @@ The implementation shall follow your established engineering policy:
 
 - Existing source code shall **not** be copied directly.
 - Existing implementation shall be analyzed only for business understanding.
-- Development shall begin from a clean codebase following EduSuite standards.
+- Development shall begin from a clean codebase following WisWits standards.
 - Shared platform services shall replace module-specific implementations.
 
 ---
@@ -2346,13 +2346,13 @@ No feature shall bypass the established engineering governance process.
 
 The current Asset & Inventory implementation provides a comprehensive operational foundation.
 
-However, it shall **not** be merged directly into the EduSuite SaaS Platform.
+However, it shall **not** be merged directly into the WisWits SaaS Platform.
 
 Instead, it shall serve as a **business reference** for a fresh implementation built according to:
 
-- EduSuite Product Requirements Document (PRD)
-- EduSuite CTO Technical Specification
-- EduSuite Engineering Execution Plan
-- EduSuite Platform Standards
+- WisWits Product Requirements Document (PRD)
+- WisWits CTO Technical Specification
+- WisWits Engineering Execution Plan
+- WisWits Platform Standards
 
-This approach ensures architectural consistency, maintainability, scalability, security, and long-term compatibility with the EduSuite SaaS ecosystem.
+This approach ensures architectural consistency, maintainability, scalability, security, and long-term compatibility with the WisWits SaaS ecosystem.

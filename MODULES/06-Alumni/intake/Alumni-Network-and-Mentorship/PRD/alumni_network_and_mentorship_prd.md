@@ -7,7 +7,7 @@
 
 | Field | Value |
 |-------|-------|
-| Product | EduSuite SaaS Platform |
+| Product | WisWits SaaS Platform |
 | Module Name | Alumni Network & Mentorship |
 | Module Code | ALU-MENT |
 | Document Type | Product Requirements Document |
@@ -23,7 +23,7 @@ The Alumni Network & Mentorship Module is designed to strengthen the relationshi
 
 The module enables institutions to maintain long-term relationships with graduates while creating opportunities for students, alumni, faculty, and administrators to collaborate through structured programs and community activities.
 
-This Product Requirements Document defines the functional and business requirements for the Alumni Network & Mentorship Module as part of the EduSuite SaaS Platform.
+This Product Requirements Document defines the functional and business requirements for the Alumni Network & Mentorship Module as part of the WisWits SaaS Platform.
 
 ---
 
@@ -59,7 +59,7 @@ The analysis of the existing implementation identified the following business ca
 - Dashboard
 - Data Import
 
-These capabilities provide a strong business foundation for migration into the EduSuite platform.
+These capabilities provide a strong business foundation for migration into the WisWits platform.
 
 ---
 
@@ -142,7 +142,7 @@ The module shall include:
 
 # 9. Out of Scope
 
-The following are managed by other EduSuite modules:
+The following are managed by other intern builds:
 
 - Student Admissions
 - Student Academics
@@ -831,7 +831,7 @@ Dashboard
 └── Settings
 ```
 
-Navigation shall remain consistent with the EduSuite Design System.
+Navigation shall remain consistent with the WisWits Design System.
 
 ---
 
@@ -1052,7 +1052,7 @@ Accessibility shall be considered throughout the design process.
 
 # 33. User Experience Guidelines
 
-The Alumni Network & Mentorship Module shall follow the EduSuite Design System.
+The Alumni Network & Mentorship Module shall follow the WisWits Design System.
 
 ### Consistency
 
@@ -1097,7 +1097,7 @@ Primary screens should provide fast loading and responsive interactions.
 
 ### Design Consistency
 
-The module shall use the approved EduSuite color palette, typography, spacing, reusable components, and iconography to ensure a unified platform experience.
+The module shall use the approved WisWits color palette, typography, spacing, reusable components, and iconography to ensure a unified platform experience.
 
 # 34. Reports Catalogue
 
@@ -1190,7 +1190,7 @@ Access shall be controlled through Role-Based Access Control (RBAC).
 
 # 37. Integration Matrix
 
-The module shall integrate with approved EduSuite platform modules.
+The module shall integrate with approved WisWits platform modules.
 
 | Module | Purpose | Data Flow |
 |----------|---------|-----------|
@@ -1380,7 +1380,7 @@ Users shall receive clear and actionable error messages while maintaining workfl
 
 # 44. Security Requirements
 
-The Alumni Network & Mentorship Module shall comply with the EduSuite Platform Security Standards.
+The Alumni Network & Mentorship Module shall comply with the WisWits Platform Security Standards.
 
 Security shall be implemented using shared platform services rather than module-specific implementations.
 
@@ -1388,7 +1388,7 @@ Security shall be implemented using shared platform services rather than module-
 
 ## Authentication
 
-The module shall use the EduSuite Authentication Service.
+The module shall use the WisWits Authentication Service.
 
 Authentication shall support:
 
@@ -1404,7 +1404,7 @@ Authentication shall not be implemented independently inside the module.
 
 ## Authorization
 
-Access to all module functionality shall follow the EduSuite Role-Based Access Control (RBAC) framework.
+Access to all module functionality shall follow the WisWits Role-Based Access Control (RBAC) framework.
 
 Permissions shall be assigned according to user roles including:
 
@@ -1524,7 +1524,7 @@ Institutions should be able to configure:
 
 # 47. User Experience Principles
 
-The Alumni Network & Mentorship Module shall follow the EduSuite Design System.
+The Alumni Network & Mentorship Module shall follow the WisWits Design System.
 
 Core principles include:
 
@@ -1705,7 +1705,7 @@ The module shall be evaluated using:
 - Predictive engagement analytics
 - Third-party professional platform integrations
 
-Future enhancements shall follow the EduSuite product governance process.
+Future enhancements shall follow the WisWits product governance process.
 
 ---
 
@@ -1720,7 +1720,7 @@ Future enhancements shall follow the EduSuite product governance process.
 | Reunion | Alumni gathering event |
 | Donation | Financial contribution |
 | Success Story | Published alumni achievement |
-| Organization | Institution using EduSuite |
+| Organization | Institution using WisWits |
 
 ---
 
@@ -1729,10 +1729,10 @@ Future enhancements shall follow the EduSuite product governance process.
 This Product Requirements Document has been prepared with reference to:
 
 - Alumni Network & Mentorship Module Analysis Report
-- EduSuite Product Vision
-- EduSuite Documentation Standards
-- EduSuite Design System
-- EduSuite Engineering Standards
+- WisWits Product Vision
+- WisWits Documentation Standards
+- WisWits Design System
+- WisWits Engineering Standards
 
 Technical implementation details are intentionally documented in the corresponding CTO Technical Specification.
 
@@ -1740,7 +1740,7 @@ Technical implementation details are intentionally documented in the correspondi
 
 # 59. Conclusion
 
-The Alumni Network & Mentorship Module establishes a comprehensive platform for lifelong alumni engagement within the EduSuite SaaS ecosystem.
+The Alumni Network & Mentorship Module establishes a comprehensive platform for lifelong alumni engagement within the WisWits SaaS ecosystem.
 
 This Product Requirements Document defines the business vision, functional capabilities, operational requirements, user experience expectations, security considerations, and governance standards required to deliver a scalable and maintainable alumni management solution.
 

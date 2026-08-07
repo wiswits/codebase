@@ -1,8 +1,8 @@
-# EduSuite — Alumni Directory Module
+# Intake — Alumni Directory Module
 
 ## Overview
 
-The Alumni Directory module is a standalone EduSuite SaaS module for viewing, searching, filtering, and exploring alumni records.
+The Alumni Directory module is a standalone WisWits SaaS module for viewing, searching, filtering, and exploring alumni records.
 
 The module was developed from scratch and assembled from independently developed frontend and backend contributions before final integration.
 
@@ -200,7 +200,7 @@ Frontend API Service
     ↓
 React Components
     ↓
-EduSuite Alumni UI
+WisWits Alumni UI
 
 ---
 
@@ -241,7 +241,7 @@ npm run build
 
 This module intentionally does not implement an independent platform authentication or authorization system.
 
-During integration into the parent EduSuite SaaS platform, platform-level services should provide:
+During integration into the parent WisWits SaaS platform, platform-level services should provide:
 
 - Shared authentication middleware
 - Cookie-based platform authentication
@@ -258,7 +258,7 @@ The standalone module should therefore be adapted to the parent platform's share
 
 ## UI Standards
 
-The module follows the EduSuite visual direction:
+The module follows the WisWits visual direction:
 
 - Navy: #0F2147
 - Gold: #C8A04E
@@ -293,4 +293,4 @@ The final implementation was then:
 
 Alumni Directory is ready for repository submission and parent-platform integration.
 
-Further authentication, permission, audit, registry, and shared-platform alignment should be performed against the main EduSuite SaaS architecture.
+Further authentication, permission, audit, registry, and shared-platform alignment should be performed against the main WisWits SaaS architecture.

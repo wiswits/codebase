@@ -157,7 +157,7 @@ export const NAV_CONFIG: NavGroupDef[] = [
     // forms (admissions enquiry, staff intake, any details form) with a live preview.
     { label: "Forms & Fields", icon: ClipboardList, slugs: ["forms", "fields"], route: "/forms", roles: A },
     // Visitor Management — the front-desk register: who is in the building, sign
-    // in, sign out, gate pass. Ported from EduSuite via docs/pipeline/.
+    // in, sign out, gate pass. Ported from the intern build via docs/pipeline/.
     // `soon: true` per §21 — revealed and clickable on STAGING so the flow can be
     // tested, badged and inert on PRODUCTION so existing schools see nothing
     // half-finished. Dropping this one flag is the whole promotion.

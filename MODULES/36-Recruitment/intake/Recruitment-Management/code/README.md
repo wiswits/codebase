@@ -1,6 +1,6 @@
-# 🚀 EduSuite Recruitment Management Assembly
+# 🚀 WisWits Recruitment Management Assembly
 
-Final integrated Recruitment Management module for the EduSuite ERP platform.
+Final integrated Recruitment Management module for the WisWits ERP platform.
 
 ---
 
@@ -120,6 +120,6 @@ Database & Integration
 
 ---
 
-# © EduSuite
+# © WisWits
 
 WisWits Edutech Pvt. Ltd.

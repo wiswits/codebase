@@ -7,7 +7,7 @@
 
 | Field | Value |
 |-------|-------|
-| Product | EduSuite SaaS Platform |
+| Product | WisWits SaaS Platform |
 | Module Name | Certificates & Documents Management |
 | Module Code | CERT-DOC |
 | Document Type | Product Requirements Document |
@@ -24,7 +24,7 @@ The Certificates & Documents Management Module provides educational institutions
 
 The module standardizes document workflows, improves operational efficiency, strengthens document authenticity through verification mechanisms, and ensures complete traceability using audit records.
 
-This Product Requirements Document defines the business, functional, operational, and user experience requirements for implementing the module as part of the EduSuite SaaS Platform.
+This Product Requirements Document defines the business, functional, operational, and user experience requirements for implementing the module as part of the WisWits SaaS Platform.
 
 ---
 
@@ -70,7 +70,7 @@ The analysis of the existing implementation identified the following business ca
 - Dashboard
 - Settings
 
-These capabilities provide a strong functional foundation for migration into the EduSuite platform.
+These capabilities provide a strong functional foundation for migration into the WisWits platform.
 
 ---
 
@@ -157,7 +157,7 @@ The module shall include:
 
 # 9. Out of Scope
 
-The following capabilities belong to other EduSuite modules:
+The following capabilities belong to other intern builds:
 
 - Student Admissions
 - Examination Management
@@ -785,7 +785,7 @@ Dashboard
 └── Settings
 ```
 
-Navigation shall remain consistent with the EduSuite Design System.
+Navigation shall remain consistent with the WisWits Design System.
 
 ---
 
@@ -1001,7 +1001,7 @@ Accessibility shall be incorporated during design and development.
 
 # 33. User Experience Guidelines
 
-The Certificates & Documents Management Module shall comply with the EduSuite Design System.
+The Certificates & Documents Management Module shall comply with the WisWits Design System.
 
 ### Consistency
 
@@ -1047,7 +1047,7 @@ Primary pages shall load efficiently and provide responsive interactions even wh
 
 ### Design Consistency
 
-The module shall use the approved EduSuite color palette, typography, spacing, reusable components, and iconography to maintain a consistent platform experience.
+The module shall use the approved WisWits color palette, typography, spacing, reusable components, and iconography to maintain a consistent platform experience.
 
 # 34. Reports Catalogue
 
@@ -1118,7 +1118,7 @@ Notifications shall:
 
 # 36. Permission Matrix
 
-Access shall follow the EduSuite Role-Based Access Control (RBAC) framework.
+Access shall follow the WisWits Role-Based Access Control (RBAC) framework.
 
 | Feature | Admin | Certificate Officer | Approval Authority | Staff | Student | Management |
 |-----------|:----:|:------------------:|:------------------:|:-----:|:-------:|:----------:|
@@ -1137,7 +1137,7 @@ Access shall follow the EduSuite Role-Based Access Control (RBAC) framework.
 
 # 37. Integration Matrix
 
-The module shall integrate with the following EduSuite modules.
+The module shall integrate with the following intern builds.
 
 | Module | Purpose | Data Flow |
 |----------|---------|-----------|
@@ -1327,7 +1327,7 @@ Examples include:
 Users shall receive clear and actionable error messages while maintaining data integrity and workflow continuity.
 # 44. Security Requirements
 
-The Certificates & Documents Management Module shall comply with the EduSuite Platform Security Standards.
+The Certificates & Documents Management Module shall comply with the WisWits Platform Security Standards.
 
 Security shall be implemented using shared platform services rather than module-specific implementations.
 
@@ -1335,7 +1335,7 @@ Security shall be implemented using shared platform services rather than module-
 
 ## Authentication
 
-The module shall use the EduSuite Authentication Service.
+The module shall use the WisWits Authentication Service.
 
 Authentication shall support:
 
@@ -1351,7 +1351,7 @@ Authentication shall not be implemented independently inside the module.
 
 ## Authorization
 
-Access to all module functionality shall follow the EduSuite Role-Based Access Control (RBAC) framework.
+Access to all module functionality shall follow the WisWits Role-Based Access Control (RBAC) framework.
 
 Permissions shall be assigned according to user roles including:
 
@@ -1471,7 +1471,7 @@ Institutions should be able to configure:
 
 # 47. User Experience Principles
 
-The Certificates & Documents Management Module shall follow the EduSuite Design System.
+The Certificates & Documents Management Module shall follow the WisWits Design System.
 
 Core principles include:
 
@@ -1653,7 +1653,7 @@ The module shall be evaluated using:
 - International verification integrations
 - Cross-platform digital credentials
 
-Future enhancements shall follow the EduSuite Product Governance process.
+Future enhancements shall follow the WisWits Product Governance process.
 
 ---
 
@@ -1668,7 +1668,7 @@ Future enhancements shall follow the EduSuite Product Governance process.
 | Verification | Validation of document authenticity |
 | Print Queue | Pending print operations |
 | Audit Trail | Chronological activity history |
-| Organization | Institution using EduSuite |
+| Organization | Institution using WisWits |
 
 ---
 
@@ -1677,10 +1677,10 @@ Future enhancements shall follow the EduSuite Product Governance process.
 This Product Requirements Document has been prepared with reference to:
 
 - Certificates & Documents Module Analysis Report
-- EduSuite Product Vision
-- EduSuite Documentation Standards
-- EduSuite Design System
-- EduSuite Engineering Standards
+- WisWits Product Vision
+- WisWits Documentation Standards
+- WisWits Design System
+- WisWits Engineering Standards
 
 Technical implementation details are intentionally documented in the corresponding CTO Technical Specification.
 
@@ -1688,7 +1688,7 @@ Technical implementation details are intentionally documented in the correspondi
 
 # 59. Conclusion
 
-The Certificates & Documents Management Module establishes a comprehensive solution for creating, managing, issuing, verifying, and auditing institutional certificates and official documents within the EduSuite SaaS Platform.
+The Certificates & Documents Management Module establishes a comprehensive solution for creating, managing, issuing, verifying, and auditing institutional certificates and official documents within the WisWits SaaS Platform.
 
 This Product Requirements Document defines the business vision, functional capabilities, operational requirements, user experience expectations, security considerations, and governance standards required to deliver a scalable and maintainable certificate and document management solution.
 

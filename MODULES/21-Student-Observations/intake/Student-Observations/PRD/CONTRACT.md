@@ -1,4 +1,4 @@
-# EduSuite Student Observations Engineering Contract
+# WisWits Student Observations Engineering Contract
 
 **Module Name:** Student Observations\
 **Module Code:** STL-OBS\
@@ -17,14 +17,14 @@
 
 # 1. Purpose of This Contract
 
-This document is the implementation contract for the EduSuite Student
+This document is the implementation contract for the WisWits Student
 Observations module.
 
 It exists so that every team member understands both:
 
 1.  **what Student Observations is and why a school needs it; and**
 2.  **exactly how their assigned frontend/backend/database work must be
-    implemented so that it integrates into the WisWits/EduSuite SaaS
+    implemented so that it integrates into the WisWits/WisWits SaaS
     platform with minimum rework.**
 
 This contract defines:
@@ -207,7 +207,7 @@ controlled way to:
 -   enforce organization isolation;
 -   provide consistent platform feedback and UI states.
 
-The module must remain part of the unified EduSuite/WisWits SaaS
+The module must remain part of the unified intake/WisWits SaaS
 platform.
 
 ------------------------------------------------------------------------

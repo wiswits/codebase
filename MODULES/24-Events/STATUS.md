@@ -3,7 +3,7 @@
 **Domain:** Student Life
 **Status:** LIVE
 
-**What it is:** Full event lifecycle — the first EduSuite intake, now richer than its source.
+**What it is:** Full event lifecycle — the first intern intake, now richer than its source.
 
 ## Features
 - RSVP + capacity locking
@@ -15,7 +15,7 @@ See `CODE_MAP.md` for where the LIVE code is, `PRD/PRD.md` for the spec.
 
 ---
 
-## Intake — the intern/EduSuite build for this module
+## Intake — the intern build for this module
 
 | Build (in `intake/`) | Files | State | What is in the way |
 |---|---|---|---|

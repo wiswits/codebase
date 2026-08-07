@@ -1,4 +1,4 @@
-# EduSuite Student Observations — Database
+# WisWits Student Observations — Database
 
 ## Module
 
@@ -24,7 +24,7 @@ Team Lead / MariaDB / Database Architecture
 ## Purpose
 
 This directory contains the fresh MariaDB database implementation
-for the EduSuite Student Observations module.
+for the WisWits Student Observations module.
 
 The module supports two canonical observation types:
 
@@ -42,7 +42,7 @@ Backend database driver:
 
 mysql2
 
-Final EduSuite backend access must use the platform shared database
+Final WisWits backend access must use the platform shared database
 helpers rather than creating a module-local connection pool.
 
 No ORM is required by this module.
@@ -114,7 +114,7 @@ authoritative identity.
 
 Every observation retains student_id.
 
-The final EduSuite integration must validate the student reference
+The final WisWits integration must validate the student reference
 against the platform's approved student data boundary.
 
 Exact production foreign-key targets are intentionally not guessed in
@@ -126,7 +126,7 @@ this standalone package.
 This standalone implementation does not invent foreign keys to unknown
 parent-platform table names.
 
-During EduSuite integration, the following logical references must be
+During WisWits integration, the following logical references must be
 mapped against the authoritative platform schema:
 
 org_id
@@ -160,7 +160,7 @@ IMPORTANT:
 
 001 is a standalone package sequence.
 
-When this module is incorporated into the main EduSuite migration
+When this module is incorporated into the main WisWits migration
 stream, the migration must be renamed to the next valid migration
 sequence number.
 
@@ -213,7 +213,7 @@ FROM client_student_observations
 WHERE org_id = ?
   AND student_id = ?;
 
-The final module must use the EduSuite shared database helpers.
+The final module must use the WisWits shared database helpers.
 
 Do not create a Student Observations-specific mysql.createPool().
 
@@ -235,7 +235,7 @@ Frontend filtering is not a security mechanism.
 ## Audit Boundary
 
 Create and edit operations require integration with the parent
-EduSuite audit infrastructure.
+WisWits audit infrastructure.
 
 Audit data is not duplicated into the Student Observations table.
 
@@ -244,7 +244,7 @@ The backend/platform layer owns audit execution.
 
 ## Production Integration Notes
 
-Before incorporation into the main EduSuite platform:
+Before incorporation into the main WisWits platform:
 
 1. Confirm the next valid migration number.
 2. Confirm authoritative organization table/reference.
@@ -282,4 +282,4 @@ khushboo-database/
 ## Status
 
 Fresh Student Observations MariaDB implementation prepared for
-development verification and subsequent EduSuite platform alignment.
+development verification and subsequent WisWits platform alignment.

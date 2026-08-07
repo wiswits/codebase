@@ -3,7 +3,7 @@ const { ok, fail } = require("../utils/response");
 
 // GET /api/users/demo-users
 // Public (no auth) - powers the dev-only role switcher on the frontend.
-// This entire endpoint goes away once real EduSuite login is integrated (PRD 11).
+// This entire endpoint goes away once real WisWits login is integrated (PRD 11).
 async function demoUsers(req, res) {
   try {
     const users = await User.find({ orgId: "demo-school" }).sort({ role: 1, name: 1 });

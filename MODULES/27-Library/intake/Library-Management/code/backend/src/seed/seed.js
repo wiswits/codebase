@@ -20,8 +20,8 @@ async function seed() {
   ]);
 
   console.log("Creating demo users...");
-  const admin = await User.create({ orgId: ORG_ID, name: "Jatin Choudhary", role: "admin", email: "admin@edusuite.demo" });
-  const teacher = await User.create({ orgId: ORG_ID, name: "Meera Nair", role: "teacher", email: "teacher@edusuite.demo" });
+  const admin = await User.create({ orgId: ORG_ID, name: "Jatin Choudhary", role: "admin", email: "admin@wiswits.demo" });
+  const teacher = await User.create({ orgId: ORG_ID, name: "Meera Nair", role: "teacher", email: "teacher@wiswits.demo" });
 
   const students = await User.insertMany([
     { orgId: ORG_ID, name: "Rahul Verma", role: "student", studentCode: "STU-1001" },
@@ -36,7 +36,7 @@ async function seed() {
     name: "Suresh Verma",
     role: "parent",
     linkedStudentId: students[0]._id,
-    email: "parent@edusuite.demo",
+    email: "parent@wiswits.demo",
   });
 
   console.log("Creating books...");

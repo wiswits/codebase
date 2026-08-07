@@ -1,6 +1,6 @@
 # Intake sources — where each intern build came from
 
-Every module the intern team has built or spec'd — from the EduSuite repo, from their
+Every module the intern team has built or spec'd — from their shared workspace, from their
 personal repos, and from the local `INTERNS WORK/` folder — so we can track exactly
 what's PRD, what's built, and what's already native.
 
@@ -9,12 +9,12 @@ build, or shipped to a browser.
 
 ## Where they live now
 
-There is no `EduSuite/` folder any more. Each of the 26 builds sits **inside the module
-it belongs to**, so no module is ever two folders:
+There is no separate intern shelf any more. Each of the 26 builds sits **inside the
+module it belongs to**, so no module is ever two folders:
 
 ```
 MODULES/NN-<Module-Name>/
-  intake/<EduSuite-Module-Name>/
+  intake/<Build-Name>/
     code/            the actual build (or code-incoming/ where it was never assembled)
     PRD/             the spec — either Khushboo's full PRD+CTO+Engineering+Analysis set,
                       or the original pre-build CONTRACT.md where no PRD exists yet
@@ -26,16 +26,16 @@ MODULES/NN-<Module-Name>/
 
 ## Where this came from
 
-- **12 modules** ported from `Modules_Repo` / `Modules_Repo_PRD` in the EduSuite repo
+- **12 modules** ported from `Modules_Repo` / `Modules_Repo_PRD` in the shared workspace
   (originally scattered across `Internship26_jatin`, `internship_ankit`, `HMS_ankit`,
   `Internship26_khushboo`, `Internship26_neha`, `Internship26_sunidhi`,
-  `edusuite-certificates`, plus two modules — Wellbeing and Personalised Learning — that
+  the certificates workspace, plus two modules — Wellbeing and Personalised Learning — that
   only ever existed locally in this repo's `INTERNS WORK/` folder, never pushed to GitHub).
-- **7 modules** already assembled directly in the EduSuite repo (Alumni Directory, Event
+- **7 modules** already assembled directly in the shared workspace (Alumni Directory, Event
   Management, HPC Report Card, HR-PMS, Recruitment Management, Registration Management,
   Visitor Management) — code pulled from their `final/` build, PRD is their original
   engineering contract (Khushboo's newer PRD format hasn't been run on these yet).
-- **2 modules** EduSuite has a contract for but hasn't assembled — Student Observations and
+- **2 modules** have a contract but were never assembled — Student Observations and
   Utilization Management are still sitting as unmerged per-developer folders
   (`code-incoming/`), not a working build.
 - **5 modules** are contract-only, zero code anywhere — Biometric Attendance, Communication
@@ -60,4 +60,4 @@ already inside `23-Wellbeing-and-Happiness/intake/…/code/`,
    a port-to-format, not a cut-paste, same as Event/Alumni/Visitor before it.
 4. See `MODULES/INTAKE_ROADMAP.md` for the full sequencing plan across all 26.
 
-Full visual cross-reference: the "WisWits × EduSuite — Complete Module Catalog" artifact.
+Full visual cross-reference: the "WisWits — Complete Module Catalog" artifact.

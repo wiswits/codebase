@@ -17,7 +17,7 @@ export function tenantMiddleware(
   /*
    * DEVELOPMENT / INTEGRATION MODE:
    *
-   * In the final EduSuite SaaS this value must come from the
+   * In the final WisWits SaaS this value must come from the
    * authenticated tenant context.
    *
    * We deliberately do NOT trust req.body.organizationId.

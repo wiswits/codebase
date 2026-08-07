@@ -1,6 +1,6 @@
-# EduSuite Event Management Module
+# WisWits Event Management Module
 
-The EduSuite Event Management Module is a full-stack module developed for managing institutional events, resources, bookings, and related event operations within the EduSuite ecosystem.
+The WisWits Event Management Module is a full-stack module developed for managing institutional events, resources, bookings, and related event operations within the WisWits ecosystem.
 
 ## Module Status
 
@@ -67,7 +67,7 @@ Authorization: Bearer <valid_token>
 
 Temporary development JWTs are intentionally NOT included in this repository because tokens expire and must not be committed to source control.
 
-During final EduSuite integration, authentication should be provided by the main EduSuite authentication system. The Event Management frontend is designed to send the authenticated user's token with protected API requests.
+During final WisWits integration, authentication should be provided by the main WisWits authentication system. The Event Management frontend is designed to send the authenticated user's token with protected API requests.
 
 Therefore, if the module is run independently without a valid token, protected endpoints may return:
 
@@ -131,6 +131,6 @@ DELETE /api/v1/events/:eventId/resources/:bookingId
 
 ## Integration Status
 
-The module is ready for integration into the larger EduSuite application.
+The module is ready for integration into the larger WisWits application.
 
-The main integration requirement is connection with the central EduSuite authentication/session system so that authenticated user tokens are automatically supplied to protected Event Management APIs.
+The main integration requirement is connection with the central WisWits authentication/session system so that authenticated user tokens are automatically supplied to protected Event Management APIs.

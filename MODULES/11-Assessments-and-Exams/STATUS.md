@@ -3,7 +3,7 @@
 **Domain:** Academics
 **Status:** LIVE
 
-**What it is:** Exam definition through marks to published results. EduSuite Exam-Cell build = candidate exam-OPS layer (hall tickets, seating, invigilation) on top — never a replacement.
+**What it is:** Exam definition through marks to published results. the Exam-Cell intern build = candidate exam-OPS layer (hall tickets, seating, invigilation) on top — never a replacement.
 
 ## Features
 - Exam creation + marks entry
@@ -14,7 +14,7 @@ See `CODE_MAP.md` for where the LIVE code is, `PRD/PRD.md` for the spec.
 
 ---
 
-## Intake — the intern/EduSuite build for this module
+## Intake — the intern build for this module
 
 | Build (in `intake/`) | Files | State | What is in the way |
 |---|---|---|---|

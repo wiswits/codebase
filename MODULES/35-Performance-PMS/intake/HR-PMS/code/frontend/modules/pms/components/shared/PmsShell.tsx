@@ -25,7 +25,7 @@ export function PmsShell({ children }: { children: React.ReactNode }) {
         <div className="mx-auto flex max-w-6xl flex-col gap-3 px-4 py-4 sm:flex-row sm:items-center sm:justify-between sm:px-6">
           <div>
             <p className="text-xs font-semibold uppercase tracking-wide text-[#1F3A5F]">
-              EduSuite · hr_pms
+              WisWits · hr_pms
             </p>
             <h1 className="text-lg font-semibold text-slate-900">
               Performance Management &amp; Appraisal

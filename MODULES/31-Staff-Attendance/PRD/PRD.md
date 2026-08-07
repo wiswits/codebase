@@ -1,6 +1,6 @@
 # PRD — Staff Attendance
 
-**Purpose.** Employee attendance with geofencing. EduSuite Biometric contract = future device-sync layer on this, not a new module.
+**Purpose.** Employee attendance with geofencing. the Biometric intern contract = future device-sync layer on this, not a new module.
 
 **Primary roles.** hr_manager, admin, principal; staff self
 

@@ -1,5 +1,5 @@
 # ============================================================
-# EduSuite SaaS
+# WisWits SaaS
 # HR-PMS (Performance Management System)
 # Database Schema Documentation
 # ============================================================
@@ -21,7 +21,7 @@ This document describes the canonical database schema used by the HR Performance
 The schema is designed to:
 
 - Support multi-tenant architecture
-- Follow EduSuite CTO standards
+- Follow WisWits CTO standards
 - Support future integrations
 - Maintain data integrity
 - Work with the shared backend architecture
@@ -33,7 +33,7 @@ The schema is designed to:
 Database Name
 
 ```
-edusuite_hr_pms
+wiswits_hr_pms
 ```
 
 Storage Engine
@@ -445,7 +445,7 @@ The HR-PMS schema follows:
 - Shared platform compatibility
 - Parameterized SQL compatibility
 - Production-ready naming
-- EduSuite CTO standards
+- WisWits CTO standards
 
 ---
 

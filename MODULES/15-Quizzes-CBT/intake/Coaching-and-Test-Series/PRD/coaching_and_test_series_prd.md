@@ -7,7 +7,7 @@
 
 | Field | Value |
 |-------|-------|
-| Product | EduSuite SaaS Platform |
+| Product | WisWits SaaS Platform |
 | Module Name | Coaching & Test Series Management |
 | Module Code | CTS |
 | Document Type | Product Requirements Document |
@@ -24,7 +24,7 @@ The Coaching & Test Series Management Module provides educational institutions a
 
 The module digitizes the complete coaching lifecycle, enabling efficient test administration, automated evaluation, personalized performance tracking, and data-driven academic decision-making.
 
-This Product Requirements Document defines the business, functional, operational, and user experience requirements for implementing the module as part of the EduSuite SaaS Platform.
+This Product Requirements Document defines the business, functional, operational, and user experience requirements for implementing the module as part of the WisWits SaaS Platform.
 
 ---
 
@@ -72,7 +72,7 @@ The analysis of the existing implementation identified the following business ca
 - Doubt Management
 - Authentication
 
-These capabilities provide a strong functional foundation for migration into the EduSuite platform.
+These capabilities provide a strong functional foundation for migration into the WisWits platform.
 
 ---
 
@@ -162,7 +162,7 @@ The module shall include:
 
 # 9. Out of Scope
 
-The following capabilities belong to other EduSuite modules:
+The following capabilities belong to other intern builds:
 
 - Admissions
 - HRMS
@@ -836,7 +836,7 @@ Dashboard
 └── Settings
 ```
 
-Navigation shall remain consistent with the EduSuite Design System.
+Navigation shall remain consistent with the WisWits Design System.
 
 ---
 
@@ -1054,7 +1054,7 @@ The interface shall support:
 
 # 33. User Experience Guidelines
 
-The Coaching & Test Series Management Module shall comply with the EduSuite Design System.
+The Coaching & Test Series Management Module shall comply with the WisWits Design System.
 
 ### Consistency
 
@@ -1101,7 +1101,7 @@ Primary pages shall load efficiently and remain responsive while handling large 
 
 ### Design Consistency
 
-The module shall use the approved EduSuite color palette, typography, spacing, reusable components, and iconography to maintain a unified experience across the SaaS platform.
+The module shall use the approved WisWits color palette, typography, spacing, reusable components, and iconography to maintain a unified experience across the SaaS platform.
 
 # 34. Reports Catalogue
 
@@ -1174,7 +1174,7 @@ Notifications shall:
 
 # 36. Permission Matrix
 
-Access shall follow the EduSuite Role-Based Access Control (RBAC) framework.
+Access shall follow the WisWits Role-Based Access Control (RBAC) framework.
 
 | Feature | Admin | Coordinator | Faculty | Student | Management |
 |----------|:----:|:-----------:|:-------:|:-------:|:----------:|
@@ -1195,7 +1195,7 @@ Access shall follow the EduSuite Role-Based Access Control (RBAC) framework.
 
 # 37. Integration Matrix
 
-The module shall integrate with the following EduSuite modules.
+The module shall integrate with the following intern builds.
 
 | Module | Purpose | Data Flow |
 |----------|---------|-----------|
@@ -1220,7 +1220,7 @@ All integrations shall:
 - Maintain data consistency
 - Respect organization isolation
 - Prevent duplicate records
-- Follow EduSuite API contracts
+- Follow WisWits API contracts
 
 ---
 
@@ -1395,7 +1395,7 @@ The system shall provide meaningful error messages while preserving data integri
 
 # 44. Security Requirements
 
-The Coaching & Test Series Management Module shall comply with the EduSuite Platform Security Standards.
+The Coaching & Test Series Management Module shall comply with the WisWits Platform Security Standards.
 
 Security shall be implemented using shared platform services instead of module-specific implementations.
 
@@ -1403,7 +1403,7 @@ Security shall be implemented using shared platform services instead of module-s
 
 ## Authentication
 
-The module shall use the EduSuite Authentication Service.
+The module shall use the WisWits Authentication Service.
 
 Authentication shall support:
 
@@ -1419,7 +1419,7 @@ Authentication shall never be implemented independently inside the module.
 
 ## Authorization
 
-Access to coaching resources shall follow the EduSuite Role-Based Access Control (RBAC) framework.
+Access to coaching resources shall follow the WisWits Role-Based Access Control (RBAC) framework.
 
 Permissions shall be assigned according to user roles including:
 
@@ -1542,7 +1542,7 @@ Institutions should be able to configure:
 
 # 47. User Experience Principles
 
-The Coaching & Test Series Management Module shall follow the EduSuite Design System.
+The Coaching & Test Series Management Module shall follow the WisWits Design System.
 
 Core principles include:
 
@@ -1726,7 +1726,7 @@ The module shall be evaluated using:
 - Voice-assisted learning
 - International examination support
 
-Future enhancements shall follow the EduSuite Product Governance process.
+Future enhancements shall follow the WisWits Product Governance process.
 
 ---
 
@@ -1750,10 +1750,10 @@ Future enhancements shall follow the EduSuite Product Governance process.
 This Product Requirements Document has been prepared with reference to:
 
 - Coaching & Test Series Module Analysis Report
-- EduSuite Product Vision
-- EduSuite Documentation Standards
-- EduSuite Design System
-- EduSuite Engineering Standards
+- WisWits Product Vision
+- WisWits Documentation Standards
+- WisWits Design System
+- WisWits Engineering Standards
 
 Technical implementation details are documented separately within the CTO Technical Specification.
 
@@ -1761,7 +1761,7 @@ Technical implementation details are documented separately within the CTO Techni
 
 # 59. Conclusion
 
-The Coaching & Test Series Management Module establishes a comprehensive platform for managing coaching operations, assessments, student performance, and academic analytics within the EduSuite SaaS Platform.
+The Coaching & Test Series Management Module establishes a comprehensive platform for managing coaching operations, assessments, student performance, and academic analytics within the WisWits SaaS Platform.
 
 This Product Requirements Document defines the business vision, functional capabilities, operational workflows, governance standards, and quality expectations required to deliver a scalable, secure, and intelligent coaching management solution.
 

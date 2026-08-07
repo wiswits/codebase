@@ -1,6 +1,6 @@
 # PRD — Announcements and Messages
 
-**Purpose.** School-to-community communication hub. EduSuite Communication-Admin contract likely redundant against this — confirm, then close.
+**Purpose.** School-to-community communication hub. the Communication-Admin intern build contract likely redundant against this — confirm, then close.
 
 **Primary roles.** admin, principal, teacher; all receive
 

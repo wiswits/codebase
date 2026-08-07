@@ -44,7 +44,7 @@ Hostel-Management/
 
 ✅ Audit support
 
-⚠️ Requires migration to EduSuite shared platform architecture
+⚠️ Requires migration to WisWits shared platform architecture
 
 ---
 
@@ -118,7 +118,7 @@ The frontend already includes reusable components such as:
 
 - Uses Vite instead of Next.js
 - Uses React Router
-- Requires EduSuite Design System
+- Requires WisWits Design System
 - Needs shared layout integration
 
 ---
@@ -405,7 +405,7 @@ The implementation contains entities for:
 
 # 12. Platform Gap Analysis
 
-| Area | Current Implementation | EduSuite Standard | Recommendation |
+| Area | Current Implementation | WisWits Standard | Recommendation |
 |------|------------------------|-------------------|----------------|
 | Frontend | React + Vite | Next.js App Router | Rebuild |
 | Language | TypeScript | TypeScript | Keep |
@@ -415,7 +415,7 @@ The implementation contains entities for:
 | Database Access | Local DB Layer | Shared query() | Replace |
 | Notifications | Local | Shared Notification Service | Integrate |
 | Audit | Local Audit | Shared Audit Service | Integrate |
-| Layout | Module Layout | Shared EduSuite Layout | Replace |
+| Layout | Module Layout | Shared WisWits Layout | Replace |
 
 ---
 
@@ -433,7 +433,7 @@ The module already covers the complete hostel lifecycle from infrastructure hier
 
 ★★★★★
 
-This is one of the strongest technical implementations reviewed so far. It already includes TypeScript, migrations, RBAC, tenant middleware, audit logging, Redis integration, and a modular architecture. Migration efforts will primarily focus on adopting the EduSuite shared services and Next.js frontend architecture.
+This is one of the strongest technical implementations reviewed so far. It already includes TypeScript, migrations, RBAC, tenant middleware, audit logging, Redis integration, and a modular architecture. Migration efforts will primarily focus on adopting the WisWits shared services and Next.js frontend architecture.
 
 ---
 
@@ -443,7 +443,7 @@ This is one of the strongest technical implementations reviewed so far. It alrea
 
 Business workflows—including hostel hierarchy management, room allocation, transfers, attendance, leave requests, gate passes, complaint management, and reporting—are highly reusable.
 
-Following EduSuite engineering policy, the existing implementation shall be treated **only as a business reference**. The new module shall be developed from scratch using the approved **PRD**, **CTO Technical Specification**, and **Engineering Execution Plan**.
+Following WisWits engineering policy, the existing implementation shall be treated **only as a business reference**. The new module shall be developed from scratch using the approved **PRD**, **CTO Technical Specification**, and **Engineering Execution Plan**.
 
 ---
 

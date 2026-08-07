@@ -7,40 +7,40 @@
 
 | Field | Value |
 |-------|-------|
-| Product | EduSuite SaaS Platform |
+| Product | WisWits SaaS Platform |
 | Module | Coaching & Test Series Management |
 | Module Code | CTS |
 | Document Type | CTO Technical Specification |
 | Version | 1.0 |
 | Status | Draft |
-| Architecture Version | EduSuite Engineering Standard v1 |
+| Architecture Version | WisWits Engineering Standard v1 |
 
 # Purpose
 
 This document defines the technical architecture, engineering standards, migration strategy, and implementation guidelines for the Coaching & Test Series Management Module.
 
-It complements the Product Requirements Document (PRD) by defining how the module shall be engineered while ensuring alignment with the EduSuite SaaS Platform architecture.
+It complements the Product Requirements Document (PRD) by defining how the module shall be engineered while ensuring alignment with the WisWits SaaS Platform architecture.
 
 
 # 1. Engineering Objectives
 
 The implementation of the Coaching & Test Series Management Module shall:
 
-- Align with EduSuite platform architecture.
+- Align with WisWits platform architecture.
 - Reuse shared platform services.
 - Support multi-tenant deployment.
 - Deliver scalable assessment workflows.
 - Enable secure academic operations.
 - Support high-volume concurrent examinations.
 - Maintain long-term maintainability.
-- Follow EduSuite engineering standards.
+- Follow WisWits engineering standards.
 - Minimize technical debt.
 
 ---
 
 # 2. Existing Technical Analysis
 
-The existing Coaching & Test Series implementation provides a comprehensive academic management solution but differs from EduSuite platform standards in several architectural areas.
+The existing Coaching & Test Series implementation provides a comprehensive academic management solution but differs from WisWits platform standards in several architectural areas.
 
 ---
 
@@ -66,7 +66,7 @@ Current implementation uses:
 - Uses static HTML instead of Next.js.
 - No TypeScript.
 - No React component architecture.
-- No EduSuite Design System.
+- No WisWits Design System.
 - No App Router.
 
 ---
@@ -121,16 +121,16 @@ Current implementation uses:
 
 - Direct database access.
 - Multi-tenant (`org_id`) implementation requires verification.
-- Requires migration to EduSuite database standards.
+- Requires migration to WisWits database standards.
 
 ---
 
 # 3. Platform Gap Assessment
 
-| Engineering Area | Existing Module | EduSuite Standard | Required Action |
+| Engineering Area | Existing Module | WisWits Standard | Required Action |
 |------------------|----------------|-------------------|-----------------|
 | Frontend Framework | HTML + JavaScript | Next.js App Router | Rebuild |
-| UI Components | Custom Components | EduSuite Design System | Replace |
+| UI Components | Custom Components | WisWits Design System | Replace |
 | Routing | Static Pages | App Router | Replace |
 | Authentication | Local JWT | Shared authenticate() | Replace |
 | Authorization | Local Roles | Platform RBAC | Replace |
@@ -142,10 +142,10 @@ Current implementation uses:
 
 # 4. Target Platform Architecture
 
-The Coaching & Test Series Management Module shall be implemented as a native EduSuite platform module.
+The Coaching & Test Series Management Module shall be implemented as a native WisWits platform module.
 
 ```text
-EduSuite Platform
+WisWits Platform
 
 │
 
@@ -346,7 +346,7 @@ apps/
 
 # 9. Coding Standards
 
-The Coaching & Test Series Management Module shall comply with EduSuite Engineering Standards.
+The Coaching & Test Series Management Module shall comply with WisWits Engineering Standards.
 
 Mandatory requirements include:
 
@@ -359,14 +359,14 @@ Mandatory requirements include:
 - Audit logging for every business mutation
 - Shared notification service
 - Shared database utilities
-- EduSuite Design System
+- WisWits Design System
 - Comprehensive validation
 - Reusable services and components
 
 No module shall duplicate shared platform functionality where an approved platform service already exists.
 # 10. Backend Architecture Overview
 
-The Coaching & Test Series Management Module shall follow the EduSuite Backend Engineering Standard based on a layered architecture.
+The Coaching & Test Series Management Module shall follow the WisWits Backend Engineering Standard based on a layered architecture.
 
 The backend shall support secure coaching operations, student management, assessments, OMR evaluation, analytics, doubt resolution, and platform integrations while ensuring scalability, maintainability, and security.
 
@@ -480,7 +480,7 @@ reports.routes.ts
 
 Authentication shall NOT be implemented inside the Coaching & Test Series module.
 
-The module shall exclusively use the shared EduSuite authentication middleware.
+The module shall exclusively use the shared WisWits authentication middleware.
 
 Approved Standard
 
@@ -521,7 +521,7 @@ Authentication remains a platform responsibility.
 
 # 14. Authorization Standard
 
-Authorization shall follow the EduSuite Role-Based Access Control (RBAC) model.
+Authorization shall follow the WisWits Role-Based Access Control (RBAC) model.
 
 The module shall use:
 
@@ -660,7 +660,7 @@ Benefits include:
 
 # 19. API Standards
 
-All APIs shall follow EduSuite REST conventions.
+All APIs shall follow WisWits REST conventions.
 
 General Principles
 
@@ -857,7 +857,7 @@ Binary storage shall remain outside the business module.
 
 # 26. Backend Engineering Standards
 
-All backend implementations shall comply with EduSuite Engineering Standards.
+All backend implementations shall comply with WisWits Engineering Standards.
 
 ### Security
 
@@ -895,7 +895,7 @@ All backend implementations shall comply with EduSuite Engineering Standards.
 
 # 27. Database Architecture Overview
 
-The Coaching & Test Series Management Module shall adopt the EduSuite Platform Database Architecture.
+The Coaching & Test Series Management Module shall adopt the WisWits Platform Database Architecture.
 
 The database layer shall provide:
 
@@ -912,7 +912,7 @@ MariaDB shall be the approved relational database management system.
 
 # 28. Database Design Principles
 
-The database shall follow EduSuite engineering standards.
+The database shall follow WisWits engineering standards.
 
 ## Normalization
 
@@ -1043,7 +1043,7 @@ Relationships shall enforce referential integrity while supporting efficient que
 
 # 31. Table Standards
 
-Every business table shall follow the EduSuite database standard.
+Every business table shall follow the WisWits database standard.
 
 Required Columns
 
@@ -1079,7 +1079,7 @@ Business tables shall use consistent naming conventions.
 
 # 32. Naming Conventions
 
-Database objects shall follow EduSuite naming standards.
+Database objects shall follow WisWits naming standards.
 
 ## Tables
 
@@ -1290,7 +1290,7 @@ The platform migration runner determines the active database.
 
 # 36. SQL Standards
 
-All SQL shall comply with EduSuite database standards.
+All SQL shall comply with WisWits database standards.
 
 Required
 
@@ -1375,7 +1375,7 @@ The database architecture shall support:
 - Backup verification
 - Secure backup storage
 
-Backup policies shall be managed by the EduSuite platform administration.
+Backup policies shall be managed by the WisWits platform administration.
 
 ---
 
@@ -1433,7 +1433,7 @@ Sensitive student records, assessment data, analytics, and faculty information s
 
 # 44. Frontend Architecture Overview
 
-The Coaching & Test Series Management Module shall adopt the EduSuite Frontend Architecture.
+The Coaching & Test Series Management Module shall adopt the WisWits Frontend Architecture.
 
 The frontend shall provide:
 
@@ -1445,7 +1445,7 @@ The frontend shall provide:
 - Consistent user experience
 - Accessibility compliance
 
-The frontend shall be implemented using **Next.js App Router** and the EduSuite Design System.
+The frontend shall be implemented using **Next.js App Router** and the WisWits Design System.
 
 ---
 
@@ -1470,7 +1470,7 @@ No alternative frontend framework shall be used.
 
 # 46. Frontend Project Structure
 
-The module shall follow the standard EduSuite frontend architecture.
+The module shall follow the standard WisWits frontend architecture.
 
 ```text
 modules/
@@ -1566,7 +1566,7 @@ React Router shall not be used.
 
 # 48. Layout Architecture
 
-The module shall use the shared EduSuite Dashboard Layout.
+The module shall use the shared WisWits Dashboard Layout.
 
 Standard layout:
 
@@ -1618,7 +1618,7 @@ Core components include:
 - Empty State
 - Loading Skeleton
 
-All components shall follow the EduSuite Design System.
+All components shall follow the WisWits Design System.
 
 ---
 
@@ -1705,7 +1705,7 @@ Dashboard widgets shall be reusable.
 
 # 54. Design System
 
-The module shall adopt the EduSuite Design System.
+The module shall adopt the WisWits Design System.
 
 Standard UI elements include:
 
@@ -1789,7 +1789,7 @@ Errors shall never expose internal implementation details.
 
 # 59. Frontend Security
 
-Frontend security shall follow EduSuite platform standards.
+Frontend security shall follow WisWits platform standards.
 
 Requirements include:
 
@@ -1807,7 +1807,7 @@ Sensitive business logic shall never be implemented on the client.
 
 # 60. Frontend Engineering Standards
 
-The frontend shall comply with EduSuite engineering standards.
+The frontend shall comply with WisWits engineering standards.
 
 ### Architecture
 
@@ -1845,7 +1845,7 @@ The frontend shall comply with EduSuite engineering standards.
 
 # 61. Security Architecture
 
-The Coaching & Test Series Management Module shall comply with the EduSuite Platform Security Architecture.
+The Coaching & Test Series Management Module shall comply with the WisWits Platform Security Architecture.
 
 Security shall be implemented through shared platform services rather than module-specific implementations.
 
@@ -1853,7 +1853,7 @@ Security shall be implemented through shared platform services rather than modul
 
 ## Authentication
 
-Authentication shall be provided exclusively through the EduSuite Authentication Service.
+Authentication shall be provided exclusively through the WisWits Authentication Service.
 
 Approved Standard
 
@@ -1883,7 +1883,7 @@ req.user.role
 
 ## Authorization
 
-Authorization shall follow the EduSuite Role-Based Access Control (RBAC) framework.
+Authorization shall follow the WisWits Role-Based Access Control (RBAC) framework.
 
 Approved Standard
 
@@ -2001,7 +2001,7 @@ Assessment attempts, evaluation results, analytics, and OMR processing shall alw
 
 # 64. Logging & Monitoring
 
-The module shall integrate with the EduSuite monitoring framework.
+The module shall integrate with the WisWits monitoring framework.
 
 Application logs shall include:
 
@@ -2023,7 +2023,7 @@ Monitoring shall support:
 
 # 65. Testing Strategy
 
-Testing shall comply with EduSuite Engineering Quality Standards.
+Testing shall comply with WisWits Engineering Quality Standards.
 
 ## Unit Testing
 
@@ -2079,7 +2079,7 @@ Validate complete workflows including:
 
 # 66. Code Quality Standards
 
-Every implementation shall comply with EduSuite Engineering Standards.
+Every implementation shall comply with WisWits Engineering Standards.
 
 ## Architecture
 
@@ -2139,7 +2139,7 @@ Every implementation shall comply with EduSuite Engineering Standards.
 
 # 67. DevOps & Deployment Strategy
 
-Deployment shall follow the EduSuite Platform deployment workflow.
+Deployment shall follow the WisWits Platform deployment workflow.
 
 ```text
 Developer
@@ -2278,7 +2278,7 @@ Migration principles:
 
 - Existing source code shall **not** be copied directly.
 - Existing implementation shall only be analyzed to understand business requirements.
-- Development shall begin from a clean codebase following EduSuite engineering standards.
+- Development shall begin from a clean codebase following WisWits engineering standards.
 - Shared platform services shall replace all module-specific implementations wherever applicable.
 
 ---
@@ -2353,14 +2353,14 @@ No feature shall bypass the established engineering governance process.
 
 The current Coaching & Test Series implementation provides a comprehensive business foundation.
 
-However, it shall **not** be merged directly into the EduSuite SaaS Platform.
+However, it shall **not** be merged directly into the WisWits SaaS Platform.
 
 Instead, it shall serve as a **business reference** for a fresh implementation built according to:
 
-- EduSuite Product Requirements Document (PRD)
-- EduSuite CTO Technical Specification
-- EduSuite Engineering Execution Plan
-- EduSuite Platform Standards
+- WisWits Product Requirements Document (PRD)
+- WisWits CTO Technical Specification
+- WisWits Engineering Execution Plan
+- WisWits Platform Standards
 
-This approach ensures architectural consistency, maintainability, scalability, security, and long-term compatibility with the EduSuite SaaS ecosystem.
+This approach ensures architectural consistency, maintainability, scalability, security, and long-term compatibility with the WisWits SaaS ecosystem.
 

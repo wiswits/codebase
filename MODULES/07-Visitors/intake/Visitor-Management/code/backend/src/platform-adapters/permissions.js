@@ -2,7 +2,7 @@
  * LOCAL INTEGRATION ADAPTER
  *
  * Production:
- * Replace with EduSuite's shared requirePermission(permission).
+ * Replace with WisWits's shared requirePermission(permission).
  *
  * We deliberately DO NOT maintain a local permission catalog here.
  *

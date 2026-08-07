@@ -1,6 +1,6 @@
 /**
  * ============================================================
- * EduSuite SaaS Platform
+ * WisWits SaaS Platform
  * HPC Report Card Module
  * Environment Configuration
  * ------------------------------------------------------------
@@ -34,7 +34,7 @@ for (const variable of requiredVariables) {
 const env = Object.freeze({
 
     app: {
-        name: process.env.APP_NAME || "EduSuite HPC Report Card",
+        name: process.env.APP_NAME || "WisWits HPC Report Card",
         version: process.env.APP_VERSION || "1.0.0",
         environment: process.env.NODE_ENV,
         port: Number(process.env.PORT)

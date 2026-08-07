@@ -8,7 +8,7 @@ testConnection();
 
 const server = app.listen(PORT, () => {
     console.log("==========================================");
-    console.log("🚀 EduSuite HR-PMS Backend Started");
+    console.log("🚀 the HR-PMS intern build Backend Started");
     console.log(`🌐 Server : http://localhost:${PORT}`);
     console.log(`📦 Environment : ${process.env.NODE_ENV || "development"}`);
     console.log("==========================================");

@@ -1,7 +1,7 @@
 {
-  "name": "edusuite-hr-pms-backend",
+  "name": "wiswits-hr-pms-backend",
   "version": "1.0.0",
-  "description": "EduSuite HR Performance Management System Backend",
+  "description": "WisWits HR Performance Management System Backend",
   "main": "server.js",
   "type": "commonjs",
   "scripts": {
@@ -10,7 +10,7 @@
     "test": "echo \"No tests specified\""
   },
   "keywords": [
-    "EduSuite",
+    "WisWits",
     "HR",
     "PMS",
     "Performance",

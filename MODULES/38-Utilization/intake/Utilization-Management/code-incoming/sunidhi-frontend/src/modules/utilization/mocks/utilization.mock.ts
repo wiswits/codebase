@@ -26,7 +26,7 @@ export const MOCK_DEPARTMENTS: DepartmentSummary[] = [
 // Minimal project references only — full Project Management is
 // outside Sunidhi's scope.
 export const MOCK_PROJECTS: ProjectSummary[] = [
-  { id: 1, name: "EduSuite Core Platform", client: "Internal", departmentId: 1 },
+  { id: 1, name: "WisWits Core Platform", client: "Internal", departmentId: 1 },
   { id: 2, name: "LMS Integration", client: "Greenfield School", departmentId: 1 },
   { id: 3, name: "Curriculum Digitization", client: "Internal", departmentId: 2 },
   { id: 4, name: "Campus Onboarding Drive", client: "Internal", departmentId: 3 },
@@ -145,7 +145,7 @@ export const MOCK_ALLOCATIONS: Allocation[] = [
     employeeName: "Riya Kapoor",
     employeeCode: "EMP-1001",
     projectId: 1,
-    projectName: "EduSuite Core Platform",
+    projectName: "WisWits Core Platform",
     allocationPercent: 60,
     workingHours: 24,
     startDate: "2026-06-01",
@@ -179,7 +179,7 @@ export const MOCK_ALLOCATIONS: Allocation[] = [
     employeeName: "Arjun Mehta",
     employeeCode: "EMP-1002",
     projectId: 1,
-    projectName: "EduSuite Core Platform",
+    projectName: "WisWits Core Platform",
     allocationPercent: 32,
     workingHours: 13,
     startDate: "2026-06-15",
@@ -213,7 +213,7 @@ export const MOCK_ALLOCATIONS: Allocation[] = [
     employeeName: "Pooja Desai",
     employeeCode: "EMP-1005",
     projectId: 1,
-    projectName: "EduSuite Core Platform",
+    projectName: "WisWits Core Platform",
     allocationPercent: 50,
     workingHours: 20,
     startDate: "2026-06-01",

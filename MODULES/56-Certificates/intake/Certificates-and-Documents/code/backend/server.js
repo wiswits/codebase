@@ -14,7 +14,7 @@ const app = express();
 app.use(helmet());
 app.use(cors({
   origin: process.env.NODE_ENV === 'production' 
-    ? ['https://edusuite.com'] 
+    ? ['https://wiswits.com'] 
     : ['http://localhost:5173'],
   credentials: true
 }));
@@ -47,6 +47,6 @@ app.use(errorHandler);
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
-  logger.info(`🚀 EduSuite Document Engine running on port ${PORT}`);
+  logger.info(`🚀 WisWits Document Engine running on port ${PORT}`);
   logger.info(`📚 Environment: ${process.env.NODE_ENV}`);
 });

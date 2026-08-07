@@ -26,7 +26,7 @@ import {
  *
  * This module simulates realistic API behavior — network latency and
  * error-shaped responses — so that components, hooks and services are
- * written exactly the way they will behave against the real EduSuite
+ * written exactly the way they will behave against the real WisWits
  * backend. Swapping this out for `http-client.ts` in each service file is
  * the only change required to go live.
  */

@@ -1,4 +1,4 @@
-// Standard EduSuite API response shape: { status, message, data }
+// Standard WisWits API response shape: { status, message, data }
 
 function ok(res, message, data = null, code = 200) {
   return res.status(code).json({ status: "success", message, data });

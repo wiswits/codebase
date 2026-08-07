@@ -43,7 +43,7 @@ export default function Settings() {
             <h2>Appearance</h2>
 
             <p>
-              Choose how the EduSuite workspace
+              Choose how the WisWits workspace
               appears on this device.
             </p>
 
@@ -133,7 +133,7 @@ export default function Settings() {
 
             <p>
               The frontend is configured to
-              communicate with the EduSuite
+              communicate with the WisWits
               Event Management API.
             </p>
 

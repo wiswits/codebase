@@ -1,5 +1,5 @@
 -- ============================================================
--- EduSuite - Student Observations
+-- WisWits - Student Observations
 -- Database Verification Queries
 -- Developer: Khushboo
 -- ============================================================

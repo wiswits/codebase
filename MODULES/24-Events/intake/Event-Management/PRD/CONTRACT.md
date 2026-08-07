@@ -1,4 +1,4 @@
-# EduSuite — Event Management Engineering Contract
+# Intake — Event Management Engineering Contract
 
 **Module Name:** Event Management  
 **Module Code:** OPS-EVT  
@@ -23,7 +23,7 @@ The approved product requirements are:
 - Integration with existing event/gallery functionality
 
 This implementation is being developed as a demo implementation under the
-common EduSuite engineering architecture.
+common WisWits engineering architecture.
 
 After completion, it may be compared and reconciled with the existing Event /
 Calendar / Gallery implementation before final product integration.
@@ -32,7 +32,7 @@ Calendar / Gallery implementation before final product integration.
 
 # 2. Architecture
 
-All development must follow the approved EduSuite architecture.
+All development must follow the approved WisWits architecture.
 
 Frontend:
 
@@ -384,7 +384,7 @@ Display suitable summary information such as:
 - Quick Create Event
 
 Developers may improve dashboard presentation while preserving the common
-EduSuite design language.
+WisWits design language.
 
 ---
 

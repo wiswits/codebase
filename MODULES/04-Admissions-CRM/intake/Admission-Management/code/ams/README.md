@@ -1,4 +1,4 @@
-# EduSuite — Admission Management System (AMS)
+# Intake — Admission Management System (AMS)
 
 A full-stack MERN implementation of the Admission Management System module described in the
 PRD: **Enquiry → Application → Test → Interview → Offer → Admission**.
@@ -32,7 +32,7 @@ functional v1 to build on, review, and pen-test before going live with real appl
 The PRD explicitly invites reasonable assumptions where things are marked "to confirm." Here's what
 was assumed, and where to change it if the real answer differs:
 
-1. **DnD library**: No existing Kanban DnD library was specified elsewhere in EduSuite, so `@dnd-kit`
+1. **DnD library**: No existing Kanban DnD library was specified elsewhere in WisWits, so `@dnd-kit`
    was used (lighter and more actively maintained than `react-dnd`). Swap in `client/src/components/kanban/`.
 2. **Notification service**: Assumed *not* already built. Implemented a real Nodemailer/SMS service
    (`server/services/notificationService.js`) that **falls back to console logging** when
@@ -49,7 +49,7 @@ was assumed, and where to change it if the real answer differs:
    a school code (`APP/<FY>/<seq>`). If multi-tenant is confirmed, add a tenant prefix in
    `server/services/numberingService.js`.
 7. **Tech stack**: Built exactly as specified in PRD Section 11 (MERN), even though this diverges from
-   a SQL-based EduSuite core, per the PRD's own note that this is "to confirm" but should default to
+   a SQL-based WisWits core, per the PRD's own note that this is "to confirm" but should default to
    the stack given in the doc.
 8. **Interview recommendation heuristic**: A simple score-based heuristic (≥7 Selected, 5–7 Waitlisted,
    <5 Rejected) was added on top of FR20's aggregation, since the PRD doesn't specify one. This is a
@@ -112,10 +112,10 @@ npm run dev      # starts on http://localhost:5173
 ### Demo logins (seeded, password for all: `Password@123`)
 | Role | Email |
 |---|---|
-| Admin | admin@edusuite.test |
-| Admission Officer | officer@edusuite.test |
-| Counselor | counselor@edusuite.test |
-| Interview Panelist | panelist1@edusuite.test / panelist2@edusuite.test |
+| Admin | admin@wiswits.test |
+| Admission Officer | officer@wiswits.test |
+| Counselor | counselor@wiswits.test |
+| Interview Panelist | panelist1@wiswits.test / panelist2@wiswits.test |
 
 ### Public (no-login) routes to try
 - `http://localhost:5173/apply` — start a new application (auto-generates a resumable draft link)

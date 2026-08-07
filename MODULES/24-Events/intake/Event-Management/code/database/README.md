@@ -1,8 +1,8 @@
-# EduSuite Database
+# WisWits Database
 
 ## Event Management Module
 
-This directory contains the database migrations and development seed data for the EduSuite Event Management module.
+This directory contains the database migrations and development seed data for the WisWits Event Management module.
 
 ## Database Technology
 
@@ -10,7 +10,7 @@ This directory contains the database migrations and development seed data for th
 - Engine: InnoDB
 - Character Set: utf8mb4
 - Collation: utf8mb4_unicode_ci
-- Local Database Name: `edusuite_dev`
+- Local Database Name: `wiswits_dev`
 
 ---
 
@@ -89,8 +89,8 @@ Example:
 
 DB_HOST=localhost
 DB_PORT=3307
-DB_NAME=edusuite_dev
-DB_USER=edusuite_app
+DB_NAME=wiswits_dev
+DB_USER=wiswits_app
 DB_PASSWORD=your_local_database_password
 
 Do not hardcode database credentials in application source code.
@@ -105,7 +105,7 @@ Other developers must configure `DB_PORT` according to their local MariaDB insta
 
 Example:
 
-CREATE DATABASE edusuite_dev
+CREATE DATABASE wiswits_dev
 CHARACTER SET utf8mb4
 COLLATE utf8mb4_unicode_ci;
 
@@ -115,7 +115,7 @@ COLLATE utf8mb4_unicode_ci;
 
 Select the development database:
 
-USE edusuite_dev;
+USE wiswits_dev;
 
 Then execute:
 
@@ -176,4 +176,4 @@ Event Management database foundation:
 
 The schema currently represents the standalone Event Management demo implementation.
 
-Existing EduSuite production schemas must be reviewed and reconciled during final module integration.
+Existing WisWits production schemas must be reviewed and reconciled during final module integration.

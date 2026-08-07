@@ -40,7 +40,7 @@ const Login = () => {
             <div className="w-20 h-20 rounded-2xl bg-primary flex items-center justify-center text-white mx-auto shadow-lg">
               <GraduationCap className="w-10 h-10" />
             </div>
-            <h1 className="text-3xl font-bold text-primary mt-4">EduSuite</h1>
+            <h1 className="text-3xl font-bold text-primary mt-4">WisWits</h1>
             <p className="text-gray-500 text-sm">Enterprise Document Engine</p>
           </div>
 
@@ -124,7 +124,7 @@ const Login = () => {
 
           <div className="mt-8 pt-6 border-t border-gray-200 text-center">
             <p className="text-xs text-gray-400">
-              © 2026 EduSuite. All rights reserved.
+              © 2026 WisWits. All rights reserved.
             </p>
             <div className="flex justify-center gap-6 mt-2">
               <button className="text-xs text-gray-400 hover:text-primary transition-colors">

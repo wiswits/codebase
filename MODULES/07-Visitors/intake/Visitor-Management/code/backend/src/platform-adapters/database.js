@@ -6,7 +6,7 @@ dotenv.config();
 /**
  * LOCAL INTEGRATION ADAPTER
  *
- * Used only because EduSuite's production shared DB utilities are not
+ * Used only because WisWits's production shared DB utilities are not
  * available inside this standalone integration workspace.
  *
  * Visitor module code must use only:
@@ -14,7 +14,7 @@ dotenv.config();
  *   withTransaction(...)
  *
  * During production integration this adapter should be replaced by
- * EduSuite's shared { query, withTransaction } implementation.
+ * WisWits's shared { query, withTransaction } implementation.
  */
 
 const pool = mysql.createPool({

@@ -1,10 +1,10 @@
 -- ============================================================
--- EduSuite - Registration Management
+-- WisWits - Registration Management
 -- Development / Integration Seed Data
 -- File: 001_registration_demo_data.sql
 -- ============================================================
 
-USE edusuite_registration;
+USE wiswits_registration;
 
 
 -- ============================================================

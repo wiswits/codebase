@@ -19,6 +19,6 @@
 - Definition of Done: `CLAUDE.md` §20, all eleven points.
 
 ## Status vs spec
-Current status: **GAP — EduSuite build ready to port** — see `../STATUS.md`. Gaps between this PRD and the live
+Current status: **GAP — intern build ready to port** — see `../STATUS.md`. Gaps between this PRD and the live
 build are tracked in `FINAL_LAUNCH_PLAN.md` / `MODULES/INTAKE_ROADMAP.md`; enrich this PRD
 when the module gets its dedicated cycle.

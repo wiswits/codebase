@@ -59,7 +59,7 @@ app.get("/", (req, res) => {
 
         success: true,
 
-        application: "EduSuite HR-PMS Backend",
+        application: "the HR-PMS intern build Backend",
 
         version: "1.0.0"
 

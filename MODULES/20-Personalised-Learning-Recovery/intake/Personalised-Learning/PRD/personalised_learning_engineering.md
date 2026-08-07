@@ -7,7 +7,7 @@
 
 | Field | Value |
 |-------|-------|
-| Product | EduSuite SaaS Platform |
+| Product | WisWits SaaS Platform |
 | Module | Personalised Learning |
 | Module Code | PLM |
 | Document Type | Engineering Execution Plan |
@@ -18,7 +18,7 @@
 
 This document defines the engineering execution strategy for developing the Personalised Learning module based on the approved Product Requirements Document (PRD) and CTO Technical Specification.
 
-The module shall be developed from scratch following EduSuite platform standards. The legacy implementation shall be used only as a business and algorithm reference and shall not be copied into the new platform.
+The module shall be developed from scratch following WisWits platform standards. The legacy implementation shall be used only as a business and algorithm reference and shall not be copied into the new platform.
 
 ---
 
@@ -30,7 +30,7 @@ The development team shall:
 - Follow the CTO Technical Specification.
 - Reuse shared platform services.
 - Develop scalable recommendation and analytics engines.
-- Maintain EduSuite coding standards.
+- Maintain WisWits coding standards.
 - Ensure security, scalability, maintainability, and AI readiness.
 - Complete platform integration successfully.
 - Deliver production-ready software.
@@ -80,7 +80,7 @@ Production Ready
 
 # 5. Development Standards
 
-The engineering team shall follow EduSuite Engineering Standards.
+The engineering team shall follow WisWits Engineering Standards.
 
 ## Frontend
 
@@ -89,7 +89,7 @@ The engineering team shall follow EduSuite Engineering Standards.
 - Tailwind CSS
 - Shared Layout
 - Shared Components
-- EduSuite Design System
+- WisWits Design System
 
 ---
 
@@ -243,7 +243,7 @@ Recommendation quality and analytics accuracy shall be validated using approved 
 
 # 9. Git Workflow
 
-Development shall follow the EduSuite Git workflow.
+Development shall follow the WisWits Git workflow.
 
 ```text
 main
@@ -284,7 +284,7 @@ The Personalised Learning module shall be considered complete when:
 - Testing is completed successfully.
 - Code review is approved.
 - Documentation is complete.
-- Module is ready for EduSuite platform integration.
+- Module is ready for WisWits platform integration.
 
 ---
 
@@ -341,4 +341,4 @@ The module shall be approved for release only after:
 
 This Engineering Execution Plan provides the implementation roadmap for the Personalised Learning module.
 
-By following the approved Product Requirements Document, CTO Technical Specification, and EduSuite Engineering Standards, the development team shall deliver a secure, scalable, maintainable, AI-ready, and platform-integrated adaptive learning solution capable of supporting personalized recommendations, intelligent interventions, learning analytics, academic insights, and future AI-driven educational innovations within the EduSuite SaaS Platform.
+By following the approved Product Requirements Document, CTO Technical Specification, and WisWits Engineering Standards, the development team shall deliver a secure, scalable, maintainable, AI-ready, and platform-integrated adaptive learning solution capable of supporting personalized recommendations, intelligent interventions, learning analytics, academic insights, and future AI-driven educational innovations within the WisWits SaaS Platform.

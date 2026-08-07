@@ -7,7 +7,7 @@
 
 | Field | Value |
 |-------|-------|
-| Product | EduSuite SaaS Platform |
+| Product | WisWits SaaS Platform |
 | Module Name | Employee Productivity System (EMPS) |
 | Module Code | EMPS |
 | Document Type | Product Requirements Document |
@@ -22,7 +22,7 @@ The Employee Productivity System (EMPS) provides organizations with a centralize
 
 The module digitizes daily workplace operations, enabling real-time collaboration, performance monitoring, and data-driven management decisions while improving operational efficiency and employee engagement.
 
-This Product Requirements Document defines the business, functional, operational, and user experience requirements for implementing the Employee Productivity System as part of the EduSuite SaaS Platform.
+This Product Requirements Document defines the business, functional, operational, and user experience requirements for implementing the Employee Productivity System as part of the WisWits SaaS Platform.
 
 ---
 
@@ -77,7 +77,7 @@ The analysis of the existing implementation identified the following business ca
 - Department Management
 - Role-Based Access Control
 
-These capabilities provide a strong functional foundation for migration into the EduSuite platform.
+These capabilities provide a strong functional foundation for migration into the WisWits platform.
 
 ---
 
@@ -169,7 +169,7 @@ The module shall include:
 
 # 9. Out of Scope
 
-The following capabilities belong to other EduSuite modules:
+The following capabilities belong to other intern builds:
 
 - HRMS & Payroll
 - Recruitment
@@ -854,7 +854,7 @@ Dashboard
 └── Settings
 ```
 
-Navigation shall remain consistent with the EduSuite Design System.
+Navigation shall remain consistent with the WisWits Design System.
 
 ---
 
@@ -1072,7 +1072,7 @@ The interface shall support:
 
 # 33. User Experience Guidelines
 
-The Employee Productivity System shall comply with the EduSuite Design System.
+The Employee Productivity System shall comply with the WisWits Design System.
 
 ### Consistency
 
@@ -1119,7 +1119,7 @@ Primary pages shall load efficiently and remain responsive while handling large 
 
 ### Design Consistency
 
-The module shall use the approved EduSuite color palette, typography, spacing, reusable components, layouts, and iconography to maintain a unified experience across the EduSuite SaaS Platform.
+The module shall use the approved WisWits color palette, typography, spacing, reusable components, layouts, and iconography to maintain a unified experience across the WisWits SaaS Platform.
 # 34. Reports Catalogue
 
 The Employee Productivity System (EMPS) shall provide operational and analytical reports to support workforce management, employee performance evaluation, attendance monitoring, and organizational decision-making.
@@ -1183,7 +1183,7 @@ Notifications shall:
 
 - Be configurable
 - Be role-based
-- Use the shared EduSuite Notification Service
+- Use the shared WisWits Notification Service
 - Support audit logging
 - Prevent duplicate notifications
 
@@ -1191,7 +1191,7 @@ Notifications shall:
 
 # 36. Permission Matrix
 
-Access shall follow the EduSuite Role-Based Access Control (RBAC) framework.
+Access shall follow the WisWits Role-Based Access Control (RBAC) framework.
 
 | Feature | Admin | HR | Manager | Employee | Executive |
 |----------|:----:|:--:|:-------:|:--------:|:---------:|
@@ -1212,7 +1212,7 @@ Access shall follow the EduSuite Role-Based Access Control (RBAC) framework.
 
 # 37. Integration Matrix
 
-The module shall integrate with the following EduSuite modules.
+The module shall integrate with the following intern builds.
 
 | Module | Purpose | Data Flow |
 |----------|---------|-----------|
@@ -1237,7 +1237,7 @@ All integrations shall:
 - Maintain data consistency
 - Respect organization isolation
 - Prevent duplicate records
-- Follow EduSuite API contracts
+- Follow WisWits API contracts
 
 ---
 
@@ -1409,7 +1409,7 @@ The system shall provide meaningful error messages while preserving data integri
 
 # 44. Security Requirements
 
-The Employee Productivity System (EMPS) shall comply with the EduSuite Platform Security Standards.
+The Employee Productivity System (EMPS) shall comply with the WisWits Platform Security Standards.
 
 Security shall be implemented using shared platform services instead of module-specific implementations.
 
@@ -1417,7 +1417,7 @@ Security shall be implemented using shared platform services instead of module-s
 
 ## Authentication
 
-The module shall use the EduSuite Authentication Service.
+The module shall use the WisWits Authentication Service.
 
 Authentication shall support:
 
@@ -1433,7 +1433,7 @@ Authentication shall never be implemented independently inside the module.
 
 ## Authorization
 
-Access to EMPS resources shall follow the EduSuite Role-Based Access Control (RBAC) framework.
+Access to EMPS resources shall follow the WisWits Role-Based Access Control (RBAC) framework.
 
 Permissions shall be assigned according to user roles including:
 
@@ -1558,7 +1558,7 @@ Organizations should be able to configure:
 
 # 47. User Experience Principles
 
-The Employee Productivity System shall follow the EduSuite Design System.
+The Employee Productivity System shall follow the WisWits Design System.
 
 Core principles include:
 
@@ -1742,7 +1742,7 @@ The module shall be evaluated using:
 - Voice-assisted workplace operations
 - Enterprise automation workflows
 
-Future enhancements shall follow the EduSuite Product Governance process.
+Future enhancements shall follow the WisWits Product Governance process.
 
 ---
 
@@ -1766,10 +1766,10 @@ Future enhancements shall follow the EduSuite Product Governance process.
 This Product Requirements Document has been prepared with reference to:
 
 - Employee Productivity System Module Analysis Report
-- EduSuite Product Vision
-- EduSuite Documentation Standards
-- EduSuite Design System
-- EduSuite Engineering Standards
+- WisWits Product Vision
+- WisWits Documentation Standards
+- WisWits Design System
+- WisWits Engineering Standards
 
 Technical implementation details are documented separately within the CTO Technical Specification.
 
@@ -1777,7 +1777,7 @@ Technical implementation details are documented separately within the CTO Techni
 
 # 59. Conclusion
 
-The Employee Productivity System (EMPS) establishes a comprehensive platform for managing workforce productivity, collaboration, attendance, task execution, and organizational performance within the EduSuite SaaS Platform.
+The Employee Productivity System (EMPS) establishes a comprehensive platform for managing workforce productivity, collaboration, attendance, task execution, and organizational performance within the WisWits SaaS Platform.
 
 This Product Requirements Document defines the business vision, functional capabilities, operational workflows, governance standards, and quality expectations required to deliver a scalable, secure, and intelligent employee productivity solution.
 

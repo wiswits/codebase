@@ -1,5 +1,5 @@
 -- ============================================================
--- EduSuite - Student Observations
+-- WisWits - Student Observations
 -- DEVELOPMENT / DEMO SEED
 --
 -- DO NOT RUN AGAINST PRODUCTION DATA.

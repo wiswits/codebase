@@ -92,4 +92,4 @@ FINALIZED
 
 ## Author
 
-EduSuite Engineering Team
+WisWits Engineering Team

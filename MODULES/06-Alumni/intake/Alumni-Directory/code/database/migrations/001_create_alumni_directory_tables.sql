@@ -1,5 +1,5 @@
 -- ============================================================
--- EduSuite Alumni Directory
+-- WisWits Alumni Directory
 -- Migration: 001_create_alumni_directory_tables.sql
 -- Module: STL-ALU
 -- Database: MariaDB

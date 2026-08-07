@@ -1,9 +1,9 @@
-# EduSuite Registration Management — Database
+# WisWits Registration Management — Database
 
 ## Overview
 
 This directory contains the MariaDB persistence implementation for the
-final integrated EduSuite Registration Management module.
+final integrated WisWits Registration Management module.
 
 The database was created directly under:
 
@@ -125,7 +125,7 @@ numbers under concurrent requests.
 The migration automatically creates:
 
 ```text
-edusuite_registration
+wiswits_registration
 ```
 
 if it does not already exist.
@@ -217,7 +217,7 @@ with placeholder configuration.
 
 ## Host Integration
 
-The standalone database does not create duplicate EduSuite organization,
+The standalone database does not create duplicate WisWits organization,
 user, student or academic-session master tables.
 
 During final SaaS integration, the schema should be mapped to the

@@ -3,7 +3,7 @@ let idCounter = 1;
 
 const seed = () => {
   projects = [
-    { id: idCounter++, orgId: 1, name: 'EduSuite Platform', client: 'WisWits', department: 'Engineering', projectManager: 'Amit', status: 'active', startDate: '2026-01-01', endDate: '2026-12-31' },
+    { id: idCounter++, orgId: 1, name: 'WisWits Platform', client: 'WisWits', department: 'Engineering', projectManager: 'Amit', status: 'active', startDate: '2026-01-01', endDate: '2026-12-31' },
     { id: idCounter++, orgId: 1, name: 'Mobile App Development', client: 'EduTech', department: 'Engineering', projectManager: 'Priya', status: 'active', startDate: '2026-03-01', endDate: '2026-09-30' },
     { id: idCounter++, orgId: 1, name: 'UI/UX Redesign', client: 'WisWits', department: 'Design', projectManager: 'Vikram', status: 'active', startDate: '2026-04-01', endDate: '2026-07-31' }
   ];

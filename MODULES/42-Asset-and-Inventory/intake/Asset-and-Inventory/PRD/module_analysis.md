@@ -7,7 +7,7 @@
 
 | Field | Value |
 |-------|-------|
-| Product | EduSuite SaaS Platform |
+| Product | WisWits SaaS Platform |
 | Module | Asset & Inventory Management |
 | Module Code | AST-INV |
 | Document Type | Module Analysis |
@@ -17,9 +17,9 @@
 
 # 1. Executive Summary
 
-This document presents the technical and functional analysis of the existing Asset & Inventory Management module prior to its migration into the EduSuite SaaS Platform.
+This document presents the technical and functional analysis of the existing Asset & Inventory Management module prior to its migration into the WisWits SaaS Platform.
 
-The objective of this analysis is to understand the existing implementation, identify implemented business capabilities, evaluate technical architecture, identify platform gaps, and define the improvements required to align the module with EduSuite engineering standards.
+The objective of this analysis is to understand the existing implementation, identify implemented business capabilities, evaluate technical architecture, identify platform gaps, and define the improvements required to align the module with WisWits engineering standards.
 
 This report serves as the primary reference for preparing the Product Requirements Document (PRD), CTO Technical Specification, and Engineering Execution Plan.
 
@@ -192,7 +192,7 @@ The module currently supports:
 
 # 10. Platform Gap Analysis
 
-| Area | Current Implementation | EduSuite Standard | Recommendation |
+| Area | Current Implementation | WisWits Standard | Recommendation |
 |------|------------------------|-------------------|----------------|
 | Frontend | React + Vite | Next.js App Router | Rebuild |
 | Routing | React | Next.js App Router | Replace |
@@ -202,7 +202,7 @@ The module currently supports:
 | Transactions | Local | withTransaction() | Integrate |
 | Audit Logging | Not centralized | Shared Audit Service | Integrate |
 | Notifications | Local | Shared Notification Service | Integrate |
-| UI | Local Components | EduSuite Design System | Adopt |
+| UI | Local Components | WisWits Design System | Adopt |
 
 ---
 
@@ -222,7 +222,7 @@ The backend exposes REST endpoints for:
 - Notifications
 - Users
 
-These APIs provide a solid foundation for migration into the EduSuite platform.
+These APIs provide a solid foundation for migration into the WisWits platform.
 
 ---
 
@@ -296,21 +296,21 @@ Reports & Analytics
 The analysis identified the following limitations:
 
 - Uses Vite instead of Next.js.
-- Does not follow the EduSuite shared layout.
+- Does not follow the WisWits shared layout.
 - Uses local authentication.
 - No centralized RBAC integration.
 - No shared audit service.
 - No shared notification service.
-- Requires migration to EduSuite platform architecture.
+- Requires migration to WisWits platform architecture.
 
 ---
 
 # 16. SaaS Standardization Recommendations
 
-To align the module with the EduSuite SaaS Platform, the following improvements are recommended:
+To align the module with the WisWits SaaS Platform, the following improvements are recommended:
 
 - Rebuild the frontend using Next.js App Router.
-- Adopt the EduSuite Design System.
+- Adopt the WisWits Design System.
 - Integrate shared authentication middleware.
 - Implement platform RBAC.
 - Use shared database utilities.
@@ -335,7 +335,7 @@ The module provides a mature inventory and asset management workflow suitable fo
 
 ★★★★☆
 
-The backend is well structured and uses MySQL, making it relatively close to the EduSuite platform standards. The primary effort will involve frontend modernization and adoption of shared platform services.
+The backend is well structured and uses MySQL, making it relatively close to the WisWits platform standards. The primary effort will involve frontend modernization and adoption of shared platform services.
 
 ---
 
@@ -343,7 +343,7 @@ The backend is well structured and uses MySQL, making it relatively close to the
 
 ★★★★☆
 
-Business workflows are highly reusable. The existing implementation should be treated as a business reference, while the EduSuite version should be rebuilt from scratch following the approved PRD, CTO Technical Specification, and Engineering Execution Plan.
+Business workflows are highly reusable. The existing implementation should be treated as a business reference, while the WisWits version should be rebuilt from scratch following the approved PRD, CTO Technical Specification, and Engineering Execution Plan.
 
 ---
 
@@ -353,9 +353,9 @@ The existing Asset & Inventory Management Module should be used as a functional 
 
 The new implementation shall be developed according to:
 
-- EduSuite Product Requirements Document (PRD)
-- EduSuite CTO Technical Specification
-- EduSuite Engineering Execution Plan
+- WisWits Product Requirements Document (PRD)
+- WisWits CTO Technical Specification
+- WisWits Engineering Execution Plan
 
 Legacy code shall be referenced only for business understanding and shall not be directly reused.
 
@@ -365,4 +365,4 @@ Legacy code shall be referenced only for business understanding and shall not be
 
 The Asset & Inventory Management Module provides a comprehensive operational foundation for inventory management within educational institutions.
 
-After alignment with EduSuite platform architecture, shared services, and engineering standards, the module can become a scalable, secure, and fully integrated SaaS component within the EduSuite ecosystem.
+After alignment with WisWits platform architecture, shared services, and engineering standards, the module can become a scalable, secure, and fully integrated SaaS component within the WisWits ecosystem.

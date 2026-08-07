@@ -7,7 +7,7 @@
 
 | Field | Value |
 |-------|-------|
-| Product | EduSuite SaaS Platform |
+| Product | WisWits SaaS Platform |
 | Module | Admission Management |
 | Module Code | ADM-MGMT |
 | Document Type | Engineering Execution Plan |
@@ -19,7 +19,7 @@
 
 This document defines the engineering execution strategy for developing the Admission Management Module based on the approved Product Requirements Document (PRD) and CTO Technical Specification.
 
-The module shall be developed from scratch following EduSuite platform standards. The legacy implementation shall be used only as a business reference and shall not be copied into the new platform.
+The module shall be developed from scratch following WisWits platform standards. The legacy implementation shall be used only as a business reference and shall not be copied into the new platform.
 
 ---
 
@@ -86,7 +86,7 @@ The team shall follow these engineering standards:
 - Shared Database Utilities
 - Shared Audit Service
 - Shared Notification Service
-- EduSuite Design System
+- WisWits Design System
 - Parameterized Queries
 - Multi-Tenant Architecture
 
@@ -157,7 +157,7 @@ All identified issues shall be resolved before release.
 
 # 9. Git Workflow
 
-Development shall follow the EduSuite Git workflow:
+Development shall follow the WisWits Git workflow:
 
 ```text
 main
@@ -235,4 +235,4 @@ The module shall be approved for release only after:
 
 This Engineering Execution Plan provides the implementation roadmap for the Admission Management Module.
 
-By following the approved Product Requirements Document, CTO Technical Specification, and EduSuite Engineering Standards, the development team shall deliver a secure, scalable, maintainable, and platform-ready Admission Management Module suitable for integration into the EduSuite SaaS Platform.
+By following the approved Product Requirements Document, CTO Technical Specification, and WisWits Engineering Standards, the development team shall deliver a secure, scalable, maintainable, and platform-ready Admission Management Module suitable for integration into the WisWits SaaS Platform.

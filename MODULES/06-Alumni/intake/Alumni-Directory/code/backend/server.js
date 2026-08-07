@@ -18,7 +18,7 @@ async function startServer() {
       "========================================"
     );
     console.log(
-      "EduSuite Alumni Directory Backend"
+      "WisWits Alumni Directory Backend"
     );
     console.log(
       "========================================"

@@ -7,7 +7,7 @@
 
 | Field | Value |
 |-------|-------|
-| Product | EduSuite SaaS Platform |
+| Product | WisWits SaaS Platform |
 | Module Name | Personalised Learning |
 | Module Code | PLM |
 | Document Type | Product Requirements Document |
@@ -23,13 +23,13 @@ The Personalised Learning module delivers an AI-assisted adaptive learning exper
 
 The module enables students, teachers, parents, and institution leadership to make data-driven learning decisions while improving academic outcomes through personalized interventions and continuous feedback.
 
-This Product Requirements Document defines the business, functional, operational, and user experience requirements for implementing the Personalised Learning module as part of the EduSuite SaaS Platform.
+This Product Requirements Document defines the business, functional, operational, and user experience requirements for implementing the Personalised Learning module as part of the WisWits SaaS Platform.
 
 ---
 
 # 2. Product Vision
 
-To provide every learner with a personalized educational journey by combining learning analytics, adaptive recommendations, intelligent assessments, and continuous performance monitoring within a unified EduSuite ecosystem.
+To provide every learner with a personalized educational journey by combining learning analytics, adaptive recommendations, intelligent assessments, and continuous performance monitoring within a unified WisWits ecosystem.
 
 ---
 
@@ -66,7 +66,7 @@ The existing implementation provides:
 - Parent Insights
 - Principal Dashboard
 
-These capabilities provide a strong business foundation for migration into the EduSuite platform.
+These capabilities provide a strong business foundation for migration into the WisWits platform.
 
 ---
 
@@ -164,7 +164,7 @@ The module shall include:
 
 # 9. Out of Scope
 
-The following capabilities belong to other EduSuite modules:
+The following capabilities belong to other intern builds:
 
 - Student Admission
 - HRMS & Payroll
@@ -781,7 +781,7 @@ So that I can improve academic performance across departments.
 | BR-PL-005 | Teachers may review and modify AI-generated recommendations before assigning them. |
 | BR-PL-006 | Parents shall only access learning information for authorized students. |
 | BR-PL-007 | Every recommendation, intervention, and learning plan update shall generate an audit record. |
-| BR-PL-008 | Notifications shall be delivered through the shared EduSuite Notification Service. |
+| BR-PL-008 | Notifications shall be delivered through the shared WisWits Notification Service. |
 | BR-PL-009 | Learning analytics shall be generated using approved institutional data sources. |
 | BR-PL-010 | All adaptive learning records shall remain isolated by organization (`org_id`) within the multi-tenant platform. |
 
@@ -844,7 +844,7 @@ Dashboard
 └── Settings
 ```
 
-Navigation shall remain consistent with the EduSuite Design System.
+Navigation shall remain consistent with the WisWits Design System.
 
 ---
 
@@ -1072,7 +1072,7 @@ The interface shall support:
 
 # 33. User Experience Guidelines
 
-The Personalised Learning module shall comply with the EduSuite Design System.
+The Personalised Learning module shall comply with the WisWits Design System.
 
 ### Consistency
 
@@ -1119,7 +1119,7 @@ Pages shall remain responsive while handling large datasets, learning analytics,
 
 ### Design Consistency
 
-The module shall use the approved EduSuite color palette, typography, spacing, reusable components, layouts, charts, and iconography to maintain a unified user experience across the EduSuite SaaS Platform.
+The module shall use the approved WisWits color palette, typography, spacing, reusable components, layouts, charts, and iconography to maintain a unified user experience across the WisWits SaaS Platform.
 # 34. Reports Catalogue
 
 The Personalised Learning module shall provide operational, academic, analytical, and executive reports to support adaptive learning, intervention planning, and institutional decision-making.
@@ -1185,7 +1185,7 @@ Notifications shall:
 
 - Be role-based
 - Be configurable
-- Use the EduSuite Notification Service
+- Use the WisWits Notification Service
 - Prevent duplicate delivery
 - Support audit logging
 
@@ -1193,7 +1193,7 @@ Notifications shall:
 
 # 36. Permission Matrix
 
-Access shall follow EduSuite Role-Based Access Control (RBAC).
+Access shall follow WisWits Role-Based Access Control (RBAC).
 
 | Feature | Admin | Teacher | Student | Parent | Principal | Coordinator |
 |----------|:----:|:-------:|:-------:|:-------:|:---------:|:-----------:|
@@ -1212,7 +1212,7 @@ Access shall follow EduSuite Role-Based Access Control (RBAC).
 
 # 37. Integration Matrix
 
-The Personalised Learning module shall integrate with the following EduSuite modules.
+The Personalised Learning module shall integrate with the following intern builds.
 
 | Module | Purpose | Data Flow |
 |----------|---------|-----------|
@@ -1235,7 +1235,7 @@ All integrations shall:
 - Use approved REST APIs
 - Respect organization isolation
 - Maintain transactional consistency
-- Follow EduSuite API contracts
+- Follow WisWits API contracts
 - Avoid duplicate business logic
 
 ---
@@ -1403,7 +1403,7 @@ Examples include:
 The platform shall display clear, actionable error messages while preserving data integrity and ensuring uninterrupted adaptive learning workflows.
 # 44. Security Requirements
 
-The Personalised Learning module shall comply with the EduSuite Platform Security Standards.
+The Personalised Learning module shall comply with the WisWits Platform Security Standards.
 
 Security shall be implemented using shared platform services rather than module-specific implementations.
 
@@ -1411,7 +1411,7 @@ Security shall be implemented using shared platform services rather than module-
 
 ## Authentication
 
-The module shall use the EduSuite Authentication Service.
+The module shall use the WisWits Authentication Service.
 
 Authentication shall support:
 
@@ -1427,7 +1427,7 @@ Authentication shall never be implemented independently inside the module.
 
 ## Authorization
 
-Access to personalized learning information shall follow the EduSuite Role-Based Access Control (RBAC) framework.
+Access to personalized learning information shall follow the WisWits Role-Based Access Control (RBAC) framework.
 
 Permissions shall be assigned according to user roles including:
 
@@ -1558,7 +1558,7 @@ Institutions should be able to configure:
 
 # 47. User Experience Principles
 
-The Personalised Learning module shall follow the EduSuite Design System.
+The Personalised Learning module shall follow the WisWits Design System.
 
 Core principles include:
 
@@ -1745,7 +1745,7 @@ The module shall be evaluated using:
 - Predictive dropout risk analysis
 - Enterprise academic intelligence platform
 
-Future enhancements shall follow the EduSuite Product Governance process.
+Future enhancements shall follow the WisWits Product Governance process.
 
 ---
 
@@ -1769,10 +1769,10 @@ Future enhancements shall follow the EduSuite Product Governance process.
 This Product Requirements Document has been prepared with reference to:
 
 - Personalised Learning Module Analysis Report
-- EduSuite Product Vision
-- EduSuite Documentation Standards
-- EduSuite Design System
-- EduSuite Engineering Standards
+- WisWits Product Vision
+- WisWits Documentation Standards
+- WisWits Design System
+- WisWits Engineering Standards
 
 Technical implementation details are documented separately within the CTO Technical Specification.
 
@@ -1780,7 +1780,7 @@ Technical implementation details are documented separately within the CTO Techni
 
 # 59. Conclusion
 
-The Personalised Learning module establishes an intelligent adaptive learning platform for personalized education, continuous academic improvement, intervention planning, and institutional learning analytics within the EduSuite SaaS Platform.
+The Personalised Learning module establishes an intelligent adaptive learning platform for personalized education, continuous academic improvement, intervention planning, and institutional learning analytics within the WisWits SaaS Platform.
 
 This Product Requirements Document defines the business vision, adaptive learning workflows, governance standards, and quality expectations required to deliver a secure, scalable, AI-assisted, and data-driven learning solution.
 

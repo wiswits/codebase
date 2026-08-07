@@ -7,7 +7,7 @@
 
 | Field | Value |
 |-------|-------|
-| Product | EduSuite SaaS Platform |
+| Product | WisWits SaaS Platform |
 | Module Name | Admission Management |
 | Module Code | ADM-MGMT |
 | Document Type | Product Requirements Document |
@@ -18,9 +18,9 @@
 
 # 1. Executive Summary
 
-The Admission Management Module is a core component of the EduSuite SaaS Platform responsible for managing the complete admission lifecycle of prospective students. The module provides a centralized workflow that enables educational institutions to capture admission enquiries, process applications, verify supporting documents, conduct assessments and interviews, issue admission offers, and complete student enrollment.
+The Admission Management Module is a core component of the WisWits SaaS Platform responsible for managing the complete admission lifecycle of prospective students. The module provides a centralized workflow that enables educational institutions to capture admission enquiries, process applications, verify supporting documents, conduct assessments and interviews, issue admission offers, and complete student enrollment.
 
-This Product Requirements Document establishes the business requirements for the standardized Admission Management Module after evaluating the legacy implementation and aligning it with the EduSuite SaaS platform vision.
+This Product Requirements Document establishes the business requirements for the standardized Admission Management Module after evaluating the legacy implementation and aligning it with the WisWits SaaS platform vision.
 
 The PRD intentionally focuses on business capabilities, operational workflows, and user expectations while leaving technical implementation decisions to the corresponding CTO Technical Specification.
 
@@ -28,7 +28,7 @@ The PRD intentionally focuses on business capabilities, operational workflows, a
 
 # 2. Product Vision
 
-To deliver a secure, scalable, configurable, and workflow-driven Admission Management solution that enables educational institutions to manage the complete applicant journey with transparency, efficiency, and seamless integration across the EduSuite ecosystem.
+To deliver a secure, scalable, configurable, and workflow-driven Admission Management solution that enables educational institutions to manage the complete applicant journey with transparency, efficiency, and seamless integration across the WisWits ecosystem.
 
 The module should become the single source of truth for all admission-related activities while supporting institutions of varying sizes and admission policies.
 
@@ -40,7 +40,7 @@ Educational institutions often rely on fragmented admission processes involving 
 
 The existing Admission Management implementation already demonstrates a mature business workflow. However, architectural differences, technology variations, and inconsistent platform integration limit its suitability for long-term SaaS deployment.
 
-This PRD defines a standardized product specification that preserves the proven business capabilities of the existing implementation while aligning the module with the EduSuite SaaS platform.
+This PRD defines a standardized product specification that preserves the proven business capabilities of the existing implementation while aligning the module with the WisWits SaaS platform.
 
 ---
 
@@ -62,7 +62,7 @@ The analysis of the existing module identified the following primary business ca
 - Reports
 - Notifications
 
-The analysis also confirmed that the current implementation successfully models the complete admission lifecycle, making it a strong functional baseline for the standardized EduSuite module.
+The analysis also confirmed that the current implementation successfully models the complete admission lifecycle, making it a strong functional baseline for the standardized intern build.
 
 ---
 
@@ -165,7 +165,7 @@ The following capabilities are not part of this module:
 - Finance & Accounting
 - Inventory Management
 
-These capabilities shall be handled by their respective EduSuite modules.
+These capabilities shall be handled by their respective intern builds.
 
 ---
 
@@ -1105,7 +1105,7 @@ The user interface should support:
 
 # 33. User Experience Guidelines
 
-The Admission Management Module shall follow the EduSuite Design System.
+The Admission Management Module shall follow the WisWits Design System.
 
 ### Consistency
 
@@ -1133,7 +1133,7 @@ Primary screens should provide a fast and responsive experience.
 
 ### Design Consistency
 
-The module shall align with the EduSuite platform's approved typography, spacing, color tokens, icons, and reusable component library.
+The module shall align with the WisWits platform's approved typography, spacing, color tokens, icons, and reusable component library.
 
 # 34. Reports Catalogue
 
@@ -1227,7 +1227,7 @@ Role-based access shall govern all admission operations.
 
 # 37. Integration Matrix
 
-The Admission Management Module shall integrate with approved EduSuite platform modules.
+The Admission Management Module shall integrate with approved WisWits platform modules.
 
 | Module | Integration Purpose | Data Flow |
 |----------|--------------------|-----------|
@@ -1441,7 +1441,7 @@ The Admission Management Module shall protect applicant information and institut
 
 The module shall only be accessible to authenticated platform users.
 
-Authentication shall be managed using the EduSuite platform authentication service.
+Authentication shall be managed using the WisWits platform authentication service.
 
 ---
 
@@ -1644,7 +1644,7 @@ The following assumptions apply to this Product Requirements Document.
 - Courses and programs are available within the platform.
 - Applicants provide accurate information.
 - Platform authentication services are operational.
-- Supporting EduSuite services are available.
+- Supporting WisWits services are available.
 
 ---
 
@@ -1756,7 +1756,7 @@ Future enhancements may include:
 - Cross-campus admissions
 - External education platform integrations
 
-Future roadmap items shall be prioritized through the EduSuite product governance process.
+Future roadmap items shall be prioritized through the WisWits product governance process.
 
 ---
 
@@ -1772,7 +1772,7 @@ Future roadmap items shall be prioritized through the EduSuite product governanc
 | Admission Offer | Official admission proposal |
 | Admission Confirmation | Final admission approval |
 | Dashboard | Operational overview |
-| Organization | Institution using EduSuite |
+| Organization | Institution using WisWits |
 | Academic Session | Institutional admission period |
 
 ---
@@ -1782,9 +1782,9 @@ Future roadmap items shall be prioritized through the EduSuite product governanc
 This Product Requirements Document has been prepared with reference to:
 
 - Module Analysis Report
-- EduSuite Product Vision
-- EduSuite Documentation Standards
-- EduSuite Design System
+- WisWits Product Vision
+- WisWits Documentation Standards
+- WisWits Design System
 - Platform Engineering Standards
 - Business Process Analysis
 
@@ -1794,9 +1794,9 @@ Technical implementation details are intentionally documented separately within 
 
 # 59. Conclusion
 
-The Admission Management Module serves as a foundational component of the EduSuite SaaS Platform by supporting the complete student admission lifecycle, from the initial enquiry through successful enrollment.
+The Admission Management Module serves as a foundational component of the WisWits SaaS Platform by supporting the complete student admission lifecycle, from the initial enquiry through successful enrollment.
 
-This Product Requirements Document establishes the functional, operational, security, usability, and quality expectations required to standardize the module across the EduSuite ecosystem.
+This Product Requirements Document establishes the functional, operational, security, usability, and quality expectations required to standardize the module across the WisWits ecosystem.
 
 The document intentionally defines **what the product shall achieve** while leaving **how the solution will be engineered** to the associated CTO Technical Specification and Engineering Execution Plan.
 

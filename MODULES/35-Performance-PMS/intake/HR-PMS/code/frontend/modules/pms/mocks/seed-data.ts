@@ -9,13 +9,13 @@ import type {
  * MOCK DEVELOPMENT DATA ONLY.
  *
  * This file exists so Jatin's frontend can be built and demoed before the
- * real EduSuite backend/database exists. Nothing here is an authoritative
+ * real WisWits backend/database exists. Nothing here is an authoritative
  * business rule — statuses, sample names and dates are illustrative only.
  * Respects a single mock tenant (org) throughout, per tenant-isolation
  * standards (data is never cross-org even in mock form).
  */
 
-const ORG_ID = "org_edusuite_demo";
+const ORG_ID = "org_wiswits_demo";
 
 export const MOCK_CURRENT_USERS: Record<string, PmsCurrentUser> = {
   employee: {

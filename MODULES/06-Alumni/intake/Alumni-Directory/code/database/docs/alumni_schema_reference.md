@@ -1,4 +1,4 @@
-# EduSuite Alumni Directory — Database Schema Reference
+# WisWits Alumni Directory — Database Schema Reference
 
 **Module:** Alumni Directory  
 **Module Code:** STL-ALU  
@@ -12,7 +12,7 @@
 ## 1. Purpose
 
 This document defines the database structure used by the scratch
-EduSuite Alumni Directory implementation.
+WisWits Alumni Directory implementation.
 
 The database supports:
 

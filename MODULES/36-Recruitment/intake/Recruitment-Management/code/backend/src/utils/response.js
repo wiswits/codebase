@@ -1,6 +1,6 @@
 /**
  * Standard API Response Utilities
- * Follows EduSuite API response format
+ * Follows WisWits API response format
  */
 
 export const successResponse = (res, data, message = 'Success', statusCode = 200) => {

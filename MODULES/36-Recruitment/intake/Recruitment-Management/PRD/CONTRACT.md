@@ -1,4 +1,4 @@
-# EduSuite — HR Recruitment Module Engineering Contract
+# Intake — HR Recruitment Module Engineering Contract
 
 ## Module Information
 
@@ -14,7 +14,7 @@
 
 # 1. Purpose
 
-The HR Recruitment Management module provides a complete digital workflow for managing recruitment activities inside EduSuite.
+The HR Recruitment Management module provides a complete digital workflow for managing recruitment activities inside WisWits.
 
 The module will allow authorized HR users to:
 
@@ -674,7 +674,7 @@ They must NOT independently create conflicting versions of the same component.
 
 # 17. UI/UX Requirements
 
-The module must follow the shared EduSuite visual language.
+The module must follow the shared WisWits visual language.
 
 Use:
 
@@ -1602,7 +1602,7 @@ while remaining:
 - Maintainable
 - Testable
 - Integration-ready
-- Consistent with EduSuite engineering standards
+- Consistent with WisWits engineering standards
 
 ---
 

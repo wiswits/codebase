@@ -1,4 +1,4 @@
-# EduSuite Registration Management
+# WisWits Registration Management
 ## Database Schema Reference
 
 **Module:** Registration Management  
@@ -17,7 +17,7 @@ responsibilities:
 2. Registration/admission register persistence
 3. Registration document-checklist persistence
 
-The database is designed for later integration with the main EduSuite
+The database is designed for later integration with the main WisWits
 multi-tenant SaaS database.
 
 ---
@@ -45,7 +45,7 @@ client_registration_documents
 These are implementation-level integration names and must not be
 represented as CTO-mandated production names.
 
-They may be mapped to the final EduSuite schema during SaaS integration.
+They may be mapped to the final WisWits schema during SaaS integration.
 
 ---
 
@@ -282,7 +282,7 @@ academic_sessions
 
 master tables.
 
-During final EduSuite SaaS integration, applicable identifiers should
+During final WisWits SaaS integration, applicable identifiers should
 be aligned with existing host tables.
 
 Only then should additional production foreign keys be added.
@@ -305,7 +305,7 @@ cancelled
 These values are implementation-level lifecycle values for the
 integrated module.
 
-If the final EduSuite contract defines a different lifecycle, the
+If the final WisWits contract defines a different lifecycle, the
 schema and backend must be aligned together.
 
 ---

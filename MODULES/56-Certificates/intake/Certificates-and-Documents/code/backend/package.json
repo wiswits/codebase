@@ -1,7 +1,7 @@
 {
-  "name": "edusuite-document-engine",
+  "name": "wiswits-document-engine",
   "version": "1.0.0",
-  "description": "Enterprise Document Engine for EduSuite",
+  "description": "Enterprise Document Engine for WisWits",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",

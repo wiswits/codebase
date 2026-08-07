@@ -1,7 +1,7 @@
-# EduSuite Registration Management — Final Backend
+# WisWits Registration Management — Final Backend
 
 This directory contains the integrated backend implementation for the
-EduSuite Registration Management module.
+WisWits Registration Management module.
 
 ## Stack
 
@@ -108,7 +108,7 @@ from local environment configuration.
 
 This is temporary.
 
-During final EduSuite SaaS integration, organization context must come
+During final WisWits SaaS integration, organization context must come
 from the authenticated platform identity/tenant context.
 
 The backend must not trust a browser-supplied organization ID.
@@ -149,7 +149,7 @@ have already been executed.
 Default development database:
 
 ```text
-edusuite_registration
+wiswits_registration
 ```
 
 ## Security

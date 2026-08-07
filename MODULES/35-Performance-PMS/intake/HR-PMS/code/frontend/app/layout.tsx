@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "EduSuite HR-PMS",
+  title: "the HR-PMS intern build",
   description: "Performance Management & Appraisal module — Jatin's frontend contribution",
 };
 

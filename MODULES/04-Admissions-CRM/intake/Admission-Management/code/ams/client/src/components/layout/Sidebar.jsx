@@ -69,7 +69,7 @@ const Sidebar = ({ open, onClose }) => {
         </nav>
 
         <div className="px-4 py-4 border-t border-white/10 text-[11px] text-slate-500">
-          EduSuite AMS v1.0 &middot; Admission Session {import.meta.env.VITE_CURRENT_FY || '2026-27'}
+          WisWits AMS v1.0 &middot; Admission Session {import.meta.env.VITE_CURRENT_FY || '2026-27'}
         </div>
       </aside>
     </>

@@ -6,7 +6,7 @@
 > **This file is the living context.** Every session: read this first, work, then UPDATE
 > the checklists + session log at the bottom before ending. No session ends without
 > updating this file. Companions: `PRODUCT_PRD.md` (what the product is),
-> `EduSuite/ROADMAP.md` (intake sequencing), `CLAUDE.md` (constitution — always wins).
+> `intake/ROADMAP.md` (intake sequencing), `CLAUDE.md` (constitution — always wins).
 
 ---
 
@@ -15,9 +15,9 @@
 1. **Manual billing at launch.** Sales = bargain → onboard → invoice → live. The billing
    door 409-ing cleanly is CORRECT behaviour, not a blocker. Automated Razorpay
    subscriptions = post-launch. Billing must never block a launch.
-2. **Flow:** EduSuite repo → `EduSuite/` staging folder here → port into `apps/` →
+2. **Flow:** intern team's upstream workspace → `intake/` staging folder here → port into `apps/` →
    staging → AK flow-test → gated prod. One module per cycle, never batched.
-3. **INTERNS WORK retired** — all content lives in `EduSuite/<Module>/` now.
+3. **INTERNS WORK retired** — all content lives in `intake/<Module>/` now.
 4. **Module-oriented approach** — uniformity per `PRODUCT_PRD.md` §2 module anatomy.
 
 ## 1. Current truth (full 3-way audit, 2026-08-06)
@@ -61,7 +61,7 @@
 - **`feat/org-lifecycle-archive`** — only substantive unmerged feature (org archive/suspend UI+API+migration). Rebase onto main; **renumber migration 063→067** (collision); reconcile `schema_inventory` EXPECT; tenants-page conflicts expected.
 - **`feature/cie-foundation`** — 4 small self-contained fixes, no schema. Easy merge.
 - **Delete (verified superseded):** `fix/certificate-simplify`, `fix/certificate-followup`, `feat/comms-meetings-sweep` (merging would *delete* newer main work), `feat/org-control-plane`.
-- **`chore/edusuite-intake-staging`** — carries `EduSuite/` (26 modules, code+PRD+STATUS) + `PRODUCT_PRD.md` + this file. **AK decision needed:** merge to main (adds 21MB inert reference to the prod checkout) or keep as the standing intake branch.
+- **`chore/edusuite-intake-staging`** *(branch name predates the rename)* — carries `intake/` (26 modules, code+PRD+STATUS) + `PRODUCT_PRD.md` + this file. **AK decision needed:** merge to main (adds 21MB inert reference to the prod checkout) or keep as the standing intake branch.
 - Local `main` behind 1 — pull.
 
 ---
@@ -69,8 +69,8 @@
 ## 2. The 3-day plan
 
 > Honest scope: 3 days makes the EXISTING platform launch-ready — hardened, deployed,
-> promoted, consistent. The 26-module EduSuite conveyor continues at one/cycle AFTER
-> launch (Phase 2+ of `EduSuite/ROADMAP.md`); it is intake work, not launch work.
+> promoted, consistent. The 26-module intake conveyor continues at one/cycle AFTER
+> launch (Phase 2+ of `intake/ROADMAP.md`); it is intake work, not launch work.
 
 ### Day 1 — Harden & assemble (repo work, no prod touch)
 - [ ] P0-1 salary-masking patch + test (detail + list routes)
@@ -80,7 +80,7 @@
 - [ ] Delete 4 superseded branches (after `git cherry` re-verify)
 - [ ] Wire nav entries: Branding settings + Institutes (canonical pages + navConfig, `soon:true`)
 - [ ] Build deploy manifest: ordered list of 062–067 SQL + 2 hand-run JS scripts, each with its verify query
-- [ ] AK decision: EduSuite staging branch → main, or standing branch
+- [ ] AK decision: intake staging branch → main, or standing branch
 
 ### Day 2 — Stage, verify, deploy
 - [ ] Deploy main → staging; apply staging migrations
@@ -98,7 +98,7 @@
 - [ ] Legacy-org gating decision documented (JDPS untouched)
 - [ ] Full green-signal checklist (below) — every box or a written reason
 - [ ] Update this file: session log, flip Phase status, set next-session pointer
-- [ ] START the conveyor: `EduSuite/Wellbeing-and-Happiness` cycle 1 begins (post-launch cadence)
+- [ ] START the conveyor: `intake/Wellbeing-and-Happiness` cycle 1 begins (post-launch cadence)
 
 ## 3. Green-signal criteria (launch = ALL boxes)
 
@@ -113,7 +113,7 @@
 - [ ] Zero `alert()`/`confirm()` on any shipped page; six loading states spot-checked on promoted pages
 - [ ] My green signal, in writing, in the session log below
 
-## 4. After launch — the standing conveyor (summary; detail in EduSuite/ROADMAP.md)
+## 4. After launch — the standing conveyor (summary; detail in intake/ROADMAP.md)
 
 Week-by-week, one module per cycle, PRD-diffed, same gate every time:
 Wellbeing → Personalised Learning (as recovery-v2) → Hostel → Asset & Inventory → HPC
@@ -133,10 +133,10 @@ Biometric, Communication-Admin, Medical Room §16, SQAAF).
 
 ## Session log
 
-**S1 — 2026-08-06 (this session).** Full portfolio mapped: EduSuite repo (14 concepts) +
+**S1 — 2026-08-06 (this session).** Full portfolio mapped: intern team's upstream workspace (14 concepts) +
 independent repos (12 modules, incl. 2 local-only Anil builds found in INTERNS WORK) +
-Khushboo's 12 PRD sets. `Modules_Repo` consolidated upstream (EduSuite repo main).
-`EduSuite/` staging folder created here — 26 modules × code+PRD+STATUS.md. INTERNS WORK
+Khushboo's 12 PRD sets. `Modules_Repo` consolidated upstream (intern team's upstream workspace main).
+`intake/` staging folder created here — 26 modules × code+PRD+STATUS.md. INTERNS WORK
 verified-parity and retired. `PRODUCT_PRD.md` written (60-module catalog, module anatomy,
 manual-billing lock). 3-way deep audit run (blockers / reachability / branches) — results
 folded into §1. **Next session: Day 1 checklist, top to bottom. Start with P0-1 salary

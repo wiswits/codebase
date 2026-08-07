@@ -1,4 +1,4 @@
-# EduSuite — Library Management Module
+# Intake — Library Management Module
 
 Full-stack implementation of the Library Management module described in the PRD (v1.0), built with:
 
@@ -20,15 +20,15 @@ Full-stack implementation of the Library Management module described in the PRD 
 
 - Real authentication — there's a **dev-only role switcher** in the header that lets you pick a demo user
   (admin / teacher / student / parent) and simulates their session via an `x-user-id` header. Swap this for
-  real EduSuite login before production.
+  real WisWits login before production.
 - Fine payment collection (the system calculates the fine; collecting payment happens elsewhere, same as other
-  EduSuite fee flows)
+  WisWits fee flows)
 - Barcode scanner hardware, reservations/holds, e-book lending, multi-branch support
 
 ## Project structure
 
 ```
-edusuite-library/
+wiswits-library/
 ├── backend/         Express API + MongoDB models
 │   ├── src/
 │   │   ├── config/       DB connection
@@ -95,7 +95,7 @@ Vite is already configured to proxy `/api` requests to `http://localhost:5000`, 
 | Variable | Default | Purpose |
 |---|---|---|
 | `PORT` | 5000 | API port |
-| `MONGO_URI` | `mongodb://127.0.0.1:27017/edusuite_library` | MongoDB connection string |
+| `MONGO_URI` | `mongodb://127.0.0.1:27017/wiswits_library` | MongoDB connection string |
 | `FINE_PER_DAY` | 2 | Overdue fine rate in ₹/day (PRD open question — currently fixed, not per-school) |
 | `DEFAULT_LOAN_DAYS` | 14 | Default loan period when issuing a book |
 
@@ -126,8 +126,8 @@ All responses follow `{ status, message, data }`.
 
 ## Next steps toward production (PRD section 14)
 
-1. Replace the dev role switcher with real EduSuite authentication (JWT/session), keeping the same
+1. Replace the dev role switcher with real WisWits authentication (JWT/session), keeping the same
    `req.currentUser` shape so controllers don't need to change.
-2. Add the fine payment collection flow (outside this module, same as other EduSuite fee flows).
+2. Add the fine payment collection flow (outside this module, same as other WisWits fee flows).
 3. Decide whether `FINE_PER_DAY` should be configurable per school (open question in PRD section 13).
 4. Pilot with one school's library, gather feedback, and plan v2 (reservations, barcode scanner, reminders).

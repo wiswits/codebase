@@ -1,4 +1,4 @@
-# EduSuite Visitor Management Engineering Contract
+# WisWits Visitor Management Engineering Contract
 
 **Module Name:** Visitor Management  
 **Module Code:** OPS-VIS  
@@ -68,7 +68,7 @@ Visitor Management shall provide authorized users with a structured way to:
 - Trigger the approved host-notification action
 - Search and filter visitor records
 
-The module must follow the EduSuite Master Architecture and Engineering Standards.
+The module must follow the WisWits Master Architecture and Engineering Standards.
 
 ---
 
@@ -78,7 +78,7 @@ The module is based on:
 
 - WisWits SaaS Platform PRD
 - CTO Technical Specification
-- EduSuite Master Engineering Architecture
+- WisWits Master Engineering Architecture
 - Engineering Standards
 - Engineering Execution & Module Integration Plan
 - Module Contract Template
@@ -1063,7 +1063,7 @@ until explicit authorization is received.
 # 36. Core Engineering Rule
 
 Build Visitor Management from scratch according to this module contract while
-remaining inside the shared EduSuite Master Architecture.
+remaining inside the shared WisWits Master Architecture.
 
 Do not redesign the platform while implementing the module.
 

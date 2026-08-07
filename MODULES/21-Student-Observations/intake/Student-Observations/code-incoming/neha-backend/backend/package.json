@@ -1,7 +1,7 @@
 {
   "name": "student-observations-backend",
   "version": "1.0.0",
-  "description": "EduSuite Student Observations Backend",
+  "description": "WisWits Student Observations Backend",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",

@@ -305,7 +305,7 @@ export async function findPassByVisitorId(orgId, visitorId) {
  * Create a visitor and pass atomically when needed.
  *
  * This demonstrates the same transaction boundary expected from
- * EduSuite's shared withTransaction() helper.
+ * WisWits's shared withTransaction() helper.
  */
 export async function createPass(orgId, visitorId, passCode, expiresAt = null) {
   return withTransaction(async (tx) => {

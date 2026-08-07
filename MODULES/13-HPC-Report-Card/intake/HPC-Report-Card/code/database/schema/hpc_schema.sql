@@ -1,5 +1,5 @@
-CREATE DATABASE IF NOT EXISTS edusuite_hpc;
-USE edusuite_hpc;
+CREATE DATABASE IF NOT EXISTS wiswits_hpc;
+USE wiswits_hpc;
 
 -- ============================================================
 -- HPC COMPETENCIES

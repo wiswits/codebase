@@ -7,7 +7,7 @@
 
 | Field | Value |
 |-------|-------|
-| Product | EduSuite SaaS Platform |
+| Product | WisWits SaaS Platform |
 | Module | Coaching & Test Series Management |
 | Module Code | CTS |
 | Document Type | Module Analysis |
@@ -17,9 +17,9 @@
 
 # 1. Executive Summary
 
-This document presents the technical and functional analysis of the existing Coaching & Test Series Management module before its migration into the EduSuite SaaS Platform.
+This document presents the technical and functional analysis of the existing Coaching & Test Series Management module before its migration into the WisWits SaaS Platform.
 
-The objective of this analysis is to understand the current implementation, identify business capabilities, review the technical architecture, evaluate SaaS readiness, identify architectural gaps, and recommend improvements required for alignment with EduSuite engineering standards.
+The objective of this analysis is to understand the current implementation, identify business capabilities, review the technical architecture, evaluate SaaS readiness, identify architectural gaps, and recommend improvements required for alignment with WisWits engineering standards.
 
 This report serves as the foundation for preparing the Product Requirements Document (PRD), CTO Technical Specification, and Engineering Execution Plan.
 
@@ -196,10 +196,10 @@ The module currently supports:
 
 # 10. Platform Gap Analysis
 
-| Area | Current Implementation | EduSuite Standard | Recommendation |
+| Area | Current Implementation | WisWits Standard | Recommendation |
 |------|------------------------|-------------------|----------------|
 | Frontend | HTML + JavaScript | Next.js App Router | Rebuild |
-| Styling | Custom CSS | EduSuite Design System | Replace |
+| Styling | Custom CSS | WisWits Design System | Replace |
 | Routing | Static Pages | Next.js Routing | Replace |
 | Authentication | Local JWT | Shared Authentication | Integrate |
 | Authorization | Local Roles | Platform RBAC | Integrate |
@@ -225,7 +225,7 @@ The backend exposes REST endpoints for:
 - Doubts
 - Error Book
 
-These APIs provide a strong functional foundation for migration into the EduSuite platform.
+These APIs provide a strong functional foundation for migration into the WisWits platform.
 
 ---
 
@@ -238,7 +238,7 @@ The current implementation appears to support:
 - Student
 - Coaching Staff
 
-Additional EduSuite platform roles may be introduced during standardization.
+Additional WisWits platform roles may be introduced during standardization.
 
 ---
 
@@ -301,20 +301,20 @@ Doubt Resolution
 The analysis identified the following limitations:
 
 - Uses HTML and JavaScript instead of React/Next.js.
-- No EduSuite Design System.
+- No WisWits Design System.
 - Uses local JWT authentication.
 - No centralized RBAC.
 - No shared notification service.
-- Requires migration to EduSuite platform architecture.
+- Requires migration to WisWits platform architecture.
 
 ---
 
 # 16. SaaS Standardization Recommendations
 
-To align the module with the EduSuite SaaS Platform, the following improvements are recommended:
+To align the module with the WisWits SaaS Platform, the following improvements are recommended:
 
 - Rebuild the frontend using Next.js App Router.
-- Adopt the EduSuite Design System.
+- Adopt the WisWits Design System.
 - Integrate shared authentication middleware.
 - Implement platform RBAC.
 - Use shared database utilities.
@@ -339,7 +339,7 @@ The module provides a comprehensive solution for coaching institutes and academi
 
 ★★★★☆
 
-The backend is mature and modular. The major migration effort involves replacing the legacy frontend and integrating shared EduSuite platform services.
+The backend is mature and modular. The major migration effort involves replacing the legacy frontend and integrating shared WisWits platform services.
 
 ---
 
@@ -347,7 +347,7 @@ The backend is mature and modular. The major migration effort involves replacing
 
 ★★★★★
 
-Business workflows including student enrollment, batch management, test creation, OMR evaluation, analytics, DPP generation, doubt management, and error tracking are highly reusable. The existing implementation should be treated as a business reference, while the EduSuite version should be rebuilt from scratch following the approved PRD, CTO Technical Specification, and Engineering Execution Plan.
+Business workflows including student enrollment, batch management, test creation, OMR evaluation, analytics, DPP generation, doubt management, and error tracking are highly reusable. The existing implementation should be treated as a business reference, while the WisWits version should be rebuilt from scratch following the approved PRD, CTO Technical Specification, and Engineering Execution Plan.
 
 ---
 
@@ -357,9 +357,9 @@ The existing Coaching & Test Series Management Module should be used as a busine
 
 The new implementation shall be developed according to:
 
-- EduSuite Product Requirements Document (PRD)
-- EduSuite CTO Technical Specification
-- EduSuite Engineering Execution Plan
+- WisWits Product Requirements Document (PRD)
+- WisWits CTO Technical Specification
+- WisWits Engineering Execution Plan
 
 Legacy code shall be analyzed for business understanding and shall not be directly reused.
 
@@ -369,4 +369,4 @@ Legacy code shall be analyzed for business understanding and shall not be direct
 
 The Coaching & Test Series Management Module provides a strong operational foundation for coaching institutes and academic assessment.
 
-After alignment with EduSuite platform architecture, shared services, and engineering standards, the module can become a scalable, secure, and fully integrated SaaS component within the EduSuite ecosystem.
+After alignment with WisWits platform architecture, shared services, and engineering standards, the module can become a scalable, secure, and fully integrated SaaS component within the WisWits ecosystem.

@@ -3,7 +3,7 @@
 **Domain:** People
 **Status:** SOON-GATED (one-flag flip; verify prod migration first)
 
-**What it is:** Former-student directory. THREE builds exist (native, EduSuite port, Neha's Network+Mentorship) — one reconciliation pending; mentorship features not yet built.
+**What it is:** Former-student directory. THREE builds exist (native, intern port, Neha's Network+Mentorship) — one reconciliation pending; mentorship features not yet built.
 
 ## Features
 - Directory + profile pages
@@ -14,7 +14,7 @@ See `CODE_MAP.md` for where the LIVE code is, `PRD/PRD.md` for the spec.
 
 ---
 
-## Intake — the intern/EduSuite build for this module
+## Intake — the intern build for this module
 
 | Build (in `intake/`) | Files | State | What is in the way |
 |---|---|---|---|

@@ -5,9 +5,9 @@ import "./globals.css";
 import { AppShell } from "@/components/layout/AppShell";
 
 export const metadata: Metadata = {
-  title: "Registration Management | EduSuite",
+  title: "Registration Management | WisWits",
   description:
-    "Student Registration Management module for EduSuite.",
+    "Student Registration Management module for WisWits.",
 };
 
 export default function RootLayout({

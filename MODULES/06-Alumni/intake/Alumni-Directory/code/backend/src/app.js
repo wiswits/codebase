@@ -39,7 +39,7 @@ app.use((req, res, next) => {
 app.get("/health", (req, res) => {
   return res.status(200).json({
     success: true,
-    service: "EduSuite Alumni Directory Backend",
+    service: "WisWits Alumni Directory Backend",
     module: "alumni",
     status: "healthy"
   });

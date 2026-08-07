@@ -1,5 +1,5 @@
 -- ============================================================
--- EduSuite - Registration Management
+-- WisWits - Registration Management
 -- Database Migration
 -- File: 001_create_registration_management.sql
 --
@@ -14,11 +14,11 @@
 -- production table names.
 -- ============================================================
 
-CREATE DATABASE IF NOT EXISTS edusuite_registration
+CREATE DATABASE IF NOT EXISTS wiswits_registration
     CHARACTER SET utf8mb4
     COLLATE utf8mb4_unicode_ci;
 
-USE edusuite_registration;
+USE wiswits_registration;
 
 
 -- ============================================================

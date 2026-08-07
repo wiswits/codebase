@@ -43,7 +43,7 @@ document.addEventListener('click', function(e) {
     }
 });
 
-console.log('%c✦ EduSuite Premium Dashboard ✦', 'font-size:24px; font-weight:bold; color:#C8A04E;');
+console.log('%c✦ WisWits Premium Dashboard ✦', 'font-size:24px; font-weight:bold; color:#C8A04E;');
 console.log('%cDesigned with ♥ for excellence', 'font-size:14px; color:#0F2147;');
 console.log('%c🚀 Ready to generate certificates!', 'font-size:14px; color:#C8A04E;');
 

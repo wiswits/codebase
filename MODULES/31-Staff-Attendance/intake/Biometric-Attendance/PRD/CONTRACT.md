@@ -1,5 +1,5 @@
 # ============================================================
-# EduSuite ERP
+# WisWits ERP
 # Biometric Attendance Module Engineering Contract
 # ============================================================
 Module Name      : Biometric Attendance
@@ -16,7 +16,7 @@ Category
 People & HR
 
 Purpose
-The Biometric Attendance Module serves as the centralized attendance management system of EduSuite ERP.
+The Biometric Attendance Module serves as the centralized attendance management system of WisWits ERP.
 The module is responsible for recording, synchronizing, monitoring, validating, and managing employee attendance through biometric devices while maintaining complete audit history and organization-level isolation.
 
 The module provides real-time attendance visibility for administrators, HR managers, department heads, and employees.
@@ -78,7 +78,7 @@ Dashboard
 # MODULE VISION
 Develop a professional, Enterprise-grade,Secure,Scalable,API-driven,Multi-tenant
 
-Biometric Attendance Module that integrates seamlessly into the EduSuite ERP platform.
+Biometric Attendance Module that integrates seamlessly into the WisWits ERP platform.
 
 The module should support
 Thousands of employees
@@ -188,7 +188,7 @@ ConfirmDialog
 ------------------------------------------------------------
 DESIGN SYSTEM
 ------------------------------------------------------------
-Official EduSuite Theme
+Official WisWits Theme
 
 Primary
 #0F2147
@@ -199,7 +199,7 @@ Ivory
 Fonts
 Playfair Display
 Source Sans Pro
-Every page must follow the official EduSuite design language.
+Every page must follow the official WisWits design language.
 
 ============================================================
 # TECHNOLOGY STACK
@@ -1505,7 +1505,7 @@ Integration
 ============================================================
 #  FINAL OBJECTIVE
 
-The Biometric Attendance Module shall provide a centralized, secure, scalable, and enterprise-ready attendance management platform capable of handling biometric attendance, shift management, attendance approvals, overtime tracking, reporting, analytics, and complete audit history while integrating seamlessly with the EduSuite ERP ecosystem.
+The Biometric Attendance Module shall provide a centralized, secure, scalable, and enterprise-ready attendance management platform capable of handling biometric attendance, shift management, attendance approvals, overtime tracking, reporting, analytics, and complete audit history while integrating seamlessly with the WisWits ERP ecosystem.
 
 ============================================================
 

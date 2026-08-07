@@ -1,7 +1,7 @@
 {
-  "name": "edusuite-library-backend",
+  "name": "wiswits-library-backend",
   "version": "1.0.0",
-  "description": "Library Management module backend for EduSuite (Node.js + Express + MongoDB)",
+  "description": "Library Management module backend for WisWits (Node.js + Express + MongoDB)",
   "main": "server.js",
   "type": "commonjs",
   "scripts": {

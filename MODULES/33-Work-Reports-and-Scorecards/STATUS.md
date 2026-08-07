@@ -3,7 +3,7 @@
 **Domain:** Staff & HR
 **Status:** LIVE
 
-**What it is:** Lightweight performance visibility — the school-sized seed that EduSuite HR-PMS features may extend (scoped, §16-aware).
+**What it is:** Lightweight performance visibility — the school-sized seed that the HR-PMS intern build features may extend (scoped, §16-aware).
 
 ## Features
 - Work reports with auto_metrics

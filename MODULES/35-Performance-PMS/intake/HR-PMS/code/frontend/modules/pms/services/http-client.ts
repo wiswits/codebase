@@ -8,7 +8,7 @@
    * independent development, see mocks/mock-api.ts).
    *
    * This wrapper intentionally does not choose an HTTP library on the team's
-   * behalf: it uses the native fetch API, which every EduSuite frontend
+   * behalf: it uses the native fetch API, which every WisWits frontend
    * environment already has. If the existing repository standardizes a
    * different HTTP library (e.g. axios), swap the implementation here only —
    * no calling code needs to change.

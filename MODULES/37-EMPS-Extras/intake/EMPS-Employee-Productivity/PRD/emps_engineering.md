@@ -7,7 +7,7 @@
 
 | Field | Value |
 |-------|-------|
-| Product | EduSuite SaaS Platform |
+| Product | WisWits SaaS Platform |
 | Module | Employee Productivity System (EMPS) |
 | Module Code | EMPS |
 | Document Type | Engineering Execution Plan |
@@ -19,7 +19,7 @@
 
 This document defines the engineering execution strategy for developing the Employee Productivity System (EMPS) based on the approved Product Requirements Document (PRD) and CTO Technical Specification.
 
-The module shall be developed from scratch following EduSuite platform standards. The legacy implementation shall be used only as a business reference and shall not be copied into the new platform.
+The module shall be developed from scratch following WisWits platform standards. The legacy implementation shall be used only as a business reference and shall not be copied into the new platform.
 
 ---
 
@@ -30,7 +30,7 @@ The development team shall:
 - Build the module according to the approved PRD.
 - Follow the CTO Technical Specification.
 - Reuse shared platform services.
-- Maintain EduSuite coding standards.
+- Maintain WisWits coding standards.
 - Ensure security, scalability, and maintainability.
 - Complete platform integration successfully.
 - Deliver production-ready software.
@@ -75,7 +75,7 @@ Production Ready
 
 # 5. Development Standards
 
-The engineering team shall follow EduSuite Engineering Standards.
+The engineering team shall follow WisWits Engineering Standards.
 
 ## Frontend
 
@@ -84,7 +84,7 @@ The engineering team shall follow EduSuite Engineering Standards.
 - Tailwind CSS
 - Shared Layout
 - Shared Components
-- EduSuite Design System
+- WisWits Design System
 
 ---
 
@@ -194,7 +194,7 @@ All identified issues shall be resolved before release.
 
 # 9. Git Workflow
 
-Development shall follow the EduSuite Git workflow.
+Development shall follow the WisWits Git workflow.
 
 ```text
 main
@@ -232,7 +232,7 @@ The Employee Productivity System shall be considered complete when:
 - Testing is completed successfully.
 - Code review is approved.
 - Documentation is complete.
-- Module is ready for EduSuite platform integration.
+- Module is ready for WisWits platform integration.
 
 ---
 
@@ -286,4 +286,4 @@ The module shall be approved for release only after:
 
 This Engineering Execution Plan provides the implementation roadmap for the Employee Productivity System (EMPS).
 
-By following the approved Product Requirements Document, CTO Technical Specification, and EduSuite Engineering Standards, the development team shall deliver a secure, scalable, maintainable, and platform-ready Employee Productivity System suitable for seamless integration into the EduSuite SaaS Platform.
+By following the approved Product Requirements Document, CTO Technical Specification, and WisWits Engineering Standards, the development team shall deliver a secure, scalable, maintainable, and platform-ready Employee Productivity System suitable for seamless integration into the WisWits SaaS Platform.

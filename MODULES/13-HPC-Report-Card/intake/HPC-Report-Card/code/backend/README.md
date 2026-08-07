@@ -1,8 +1,8 @@
-# EduSuite HPC Report Card Backend
+# WisWits HPC Report Card Backend
 
 ## Overview
 
-This project is the backend service for the EduSuite HPC Report Card module.
+This project is the backend service for the WisWits HPC Report Card module.
 
 It follows a layered architecture:
 
@@ -84,7 +84,7 @@ npm start
 Database Name
 
 ```
-edusuite_hpc_report_card
+wiswits_hpc_report_card
 ```
 
 ---
@@ -130,6 +130,6 @@ MariaDB
 
 ## Module
 
-EduSuite HPC Report Card
+WisWits HPC Report Card
 
 Version 1.0.0

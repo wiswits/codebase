@@ -4,7 +4,7 @@ import { QueryProvider } from '@/providers/query-provider';
 import { ToastProvider } from '@/providers/toast-provider';
 
 export const metadata: Metadata = {
-  title: 'Recruitment Management - EduSuite',
+  title: 'Recruitment Management - WisWits',
   description: 'HR Recruitment Management Module',
 };
 

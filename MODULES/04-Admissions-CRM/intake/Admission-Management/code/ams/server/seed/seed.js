@@ -50,11 +50,11 @@ async function run() {
 
   console.log('[Seed] Creating users (password for all: Password@123)...');
   const users = await User.create([
-    { name: 'Admin Administrator', email: 'admin@edusuite.test', password: 'Password@123', role: ROLES.ADMIN },
-    { name: 'Priya Sharma', email: 'officer@edusuite.test', password: 'Password@123', role: ROLES.ADMISSION_OFFICER },
-    { name: 'Rahul Verma', email: 'counselor@edusuite.test', password: 'Password@123', role: ROLES.COUNSELOR },
-    { name: 'Dr. Anjali Nair', email: 'panelist1@edusuite.test', password: 'Password@123', role: ROLES.PANELIST },
-    { name: 'S. Verma', email: 'panelist2@edusuite.test', password: 'Password@123', role: ROLES.PANELIST },
+    { name: 'Admin Administrator', email: 'admin@wiswits.test', password: 'Password@123', role: ROLES.ADMIN },
+    { name: 'Priya Sharma', email: 'officer@wiswits.test', password: 'Password@123', role: ROLES.ADMISSION_OFFICER },
+    { name: 'Rahul Verma', email: 'counselor@wiswits.test', password: 'Password@123', role: ROLES.COUNSELOR },
+    { name: 'Dr. Anjali Nair', email: 'panelist1@wiswits.test', password: 'Password@123', role: ROLES.PANELIST },
+    { name: 'S. Verma', email: 'panelist2@wiswits.test', password: 'Password@123', role: ROLES.PANELIST },
   ]);
   const [admin, officer, counselor, panelist1, panelist2] = users;
 
@@ -216,10 +216,10 @@ async function run() {
   );
 
   console.log('\n[Seed] Done! Demo logins (password: Password@123):');
-  console.log('  Admin:              admin@edusuite.test');
-  console.log('  Admission Officer:  officer@edusuite.test');
-  console.log('  Counselor:          counselor@edusuite.test');
-  console.log('  Panelist:           panelist1@edusuite.test / panelist2@edusuite.test');
+  console.log('  Admin:              admin@wiswits.test');
+  console.log('  Admission Officer:  officer@wiswits.test');
+  console.log('  Counselor:          counselor@wiswits.test');
+  console.log('  Panelist:           panelist1@wiswits.test / panelist2@wiswits.test');
 
   await mongoose.connection.close();
   process.exit(0);

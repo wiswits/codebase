@@ -7,7 +7,7 @@
 
 | Field | Value |
 |-------|-------|
-| Product | EduSuite SaaS Platform |
+| Product | WisWits SaaS Platform |
 | Module Name | Library Management |
 | Module Code | LMS |
 | Document Type | Product Requirements Document |
@@ -22,7 +22,7 @@ The Library Management module provides a centralized digital platform for managi
 
 The module enables educational institutions to streamline library operations by improving catalog management, automating borrowing workflows, tracking inventory, and providing self-service access to students and staff.
 
-This Product Requirements Document defines the business, functional, operational, and user experience requirements for implementing the Library Management module as part of the EduSuite SaaS Platform.
+This Product Requirements Document defines the business, functional, operational, and user experience requirements for implementing the Library Management module as part of the WisWits SaaS Platform.
 
 ---
 
@@ -72,7 +72,7 @@ The analysis of the existing implementation identified the following business ca
 - Inventory Tracking
 - Statistics Dashboard
 
-These capabilities provide a strong functional foundation for migration into the EduSuite platform.
+These capabilities provide a strong functional foundation for migration into the WisWits platform.
 
 ---
 
@@ -170,7 +170,7 @@ The module shall include:
 
 # 9. Out of Scope
 
-The following capabilities belong to other EduSuite modules:
+The following capabilities belong to other intern builds:
 
 - Student Management
 - Admission Management
@@ -852,7 +852,7 @@ So that future resource planning is data-driven.
 | BR-LIB-005 | Fine calculation shall follow configured institutional rules. |
 | BR-LIB-006 | Reservations shall follow a first-come, first-served queue unless overridden by policy. |
 | BR-LIB-007 | Every issue and return transaction shall generate an audit record. |
-| BR-LIB-008 | Notifications shall use the shared EduSuite Notification Service. |
+| BR-LIB-008 | Notifications shall use the shared WisWits Notification Service. |
 | BR-LIB-009 | Inventory shall update immediately after issue, return, loss, or damage. |
 | BR-LIB-010 | All library records shall remain isolated by organization (`org_id`) within the multi-tenant platform. |
 
@@ -924,7 +924,7 @@ Dashboard
 └── Settings
 ```
 
-Navigation shall remain consistent with the EduSuite Design System.
+Navigation shall remain consistent with the WisWits Design System.
 
 ---
 
@@ -1168,7 +1168,7 @@ The interface shall support:
 
 # 33. User Experience Guidelines
 
-The Library Management module shall comply with the EduSuite Design System.
+The Library Management module shall comply with the WisWits Design System.
 
 ### Consistency
 
@@ -1214,7 +1214,7 @@ Pages shall remain responsive while handling large catalogs, inventory records, 
 
 ### Design Consistency
 
-The module shall use the approved EduSuite color palette, typography, spacing, reusable components, layouts, and iconography to maintain a unified user experience across the EduSuite SaaS Platform.
+The module shall use the approved WisWits color palette, typography, spacing, reusable components, layouts, and iconography to maintain a unified user experience across the WisWits SaaS Platform.
 # 34. Reports Catalogue
 
 The Library Management module shall provide operational, inventory, circulation, financial, and analytical reports to support library administration and institutional decision-making.
@@ -1280,7 +1280,7 @@ Notifications shall:
 
 - Be role-based
 - Be configurable
-- Use the EduSuite Notification Service
+- Use the WisWits Notification Service
 - Prevent duplicate delivery
 - Support audit logging
 
@@ -1288,7 +1288,7 @@ Notifications shall:
 
 # 36. Permission Matrix
 
-Access shall follow EduSuite Role-Based Access Control (RBAC).
+Access shall follow WisWits Role-Based Access Control (RBAC).
 
 | Feature | Admin | Librarian | Assistant | Student | Faculty | Management |
 |----------|:----:|:---------:|:---------:|:-------:|:-------:|:----------:|
@@ -1309,7 +1309,7 @@ Access shall follow EduSuite Role-Based Access Control (RBAC).
 
 # 37. Integration Matrix
 
-The Library Management module shall integrate with the following EduSuite modules.
+The Library Management module shall integrate with the following intern builds.
 
 | Module | Purpose | Data Flow |
 |----------|---------|-----------|
@@ -1333,7 +1333,7 @@ All integrations shall:
 - Use approved REST APIs
 - Respect organization isolation
 - Maintain transactional consistency
-- Follow EduSuite API contracts
+- Follow WisWits API contracts
 - Avoid duplicate business logic
 
 ---
@@ -1509,7 +1509,7 @@ Examples include:
 The platform shall display clear, actionable error messages while preserving data integrity and ensuring uninterrupted library operations.
 # 44. Security Requirements
 
-The Library Management module shall comply with the EduSuite Platform Security Standards.
+The Library Management module shall comply with the WisWits Platform Security Standards.
 
 Security shall be implemented using shared platform services rather than module-specific implementations.
 
@@ -1517,7 +1517,7 @@ Security shall be implemented using shared platform services rather than module-
 
 ## Authentication
 
-The module shall use the EduSuite Authentication Service.
+The module shall use the WisWits Authentication Service.
 
 Authentication shall support:
 
@@ -1533,7 +1533,7 @@ Authentication shall never be implemented independently inside the module.
 
 ## Authorization
 
-Access to library resources shall follow the EduSuite Role-Based Access Control (RBAC) framework.
+Access to library resources shall follow the WisWits Role-Based Access Control (RBAC) framework.
 
 Permissions shall be assigned according to user roles including:
 
@@ -1664,7 +1664,7 @@ Institutions should be able to configure:
 
 # 47. User Experience Principles
 
-The Library Management module shall follow the EduSuite Design System.
+The Library Management module shall follow the WisWits Design System.
 
 Core principles include:
 
@@ -1851,7 +1851,7 @@ The module shall be evaluated using:
 - Intelligent circulation optimization
 - Enterprise digital knowledge platform
 
-Future enhancements shall follow the EduSuite Product Governance process.
+Future enhancements shall follow the WisWits Product Governance process.
 
 ---
 
@@ -1875,10 +1875,10 @@ Future enhancements shall follow the EduSuite Product Governance process.
 This Product Requirements Document has been prepared with reference to:
 
 - Library Management Module Analysis Report
-- EduSuite Product Vision
-- EduSuite Documentation Standards
-- EduSuite Design System
-- EduSuite Engineering Standards
+- WisWits Product Vision
+- WisWits Documentation Standards
+- WisWits Design System
+- WisWits Engineering Standards
 
 Technical implementation details are documented separately within the CTO Technical Specification.
 
@@ -1886,7 +1886,7 @@ Technical implementation details are documented separately within the CTO Techni
 
 # 59. Conclusion
 
-The Library Management module establishes a comprehensive platform for managing library cataloging, circulation, inventory, reservations, fines, digital resources, and reporting within the EduSuite SaaS Platform.
+The Library Management module establishes a comprehensive platform for managing library cataloging, circulation, inventory, reservations, fines, digital resources, and reporting within the WisWits SaaS Platform.
 
 This Product Requirements Document defines the business vision, operational workflows, governance standards, and quality expectations required to deliver a secure, scalable, and intelligent Library Management solution.
 

@@ -1,6 +1,6 @@
 # PRD — Alumni
 
-**Purpose.** Former-student directory. THREE builds exist (native, EduSuite port, Neha's Network+Mentorship) — one reconciliation pending; mentorship features not yet built.
+**Purpose.** Former-student directory. THREE builds exist (native, intern port, Neha's Network+Mentorship) — one reconciliation pending; mentorship features not yet built.
 
 **Primary roles.** admin, principal
 

@@ -53,7 +53,7 @@ export default function HomePage() {
 
             <div>
               <span className="home-brand-name">
-                EduSuite
+                WisWits
               </span>
 
               <span className="home-brand-product">
@@ -142,7 +142,7 @@ export default function HomePage() {
               </div>
 
               <div className="home-panel-footer">
-                <span>EduSuite Visitor System</span>
+                <span>WisWits Visitor System</span>
                 <strong>Operational</strong>
               </div>
             </div>
@@ -219,7 +219,7 @@ export default function HomePage() {
             </h2>
 
             <p>
-              EduSuite keeps the complete visitor journey
+              WisWits keeps the complete visitor journey
               organized and accessible through one
               integrated workflow.
             </p>

@@ -1,6 +1,6 @@
 # PRD — Work Reports and Scorecards
 
-**Purpose.** Lightweight performance visibility — the school-sized seed that EduSuite HR-PMS features may extend (scoped, §16-aware).
+**Purpose.** Lightweight performance visibility — the school-sized seed that the HR-PMS intern build features may extend (scoped, §16-aware).
 
 **Primary roles.** staff self; principal/hr review
 

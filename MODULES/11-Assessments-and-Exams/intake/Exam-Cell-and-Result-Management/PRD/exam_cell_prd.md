@@ -7,7 +7,7 @@
 
 | Field | Value |
 |-------|-------|
-| Product | EduSuite SaaS Platform |
+| Product | WisWits SaaS Platform |
 | Module Name | Exam Cell & Result Management |
 | Module Code | EXAM |
 | Document Type | Product Requirements Document |
@@ -22,7 +22,7 @@ The Exam Cell & Result Management module provides a centralized platform for man
 
 The module streamlines examination operations by digitizing examination workflows, improving accuracy, reducing manual effort, ensuring transparency, and providing timely academic insights for students, faculty, examination authorities, and institutional management.
 
-This Product Requirements Document defines the business, functional, operational, and user experience requirements for implementing the Exam Cell & Result Management module as part of the EduSuite SaaS Platform.
+This Product Requirements Document defines the business, functional, operational, and user experience requirements for implementing the Exam Cell & Result Management module as part of the WisWits SaaS Platform.
 
 ---
 
@@ -72,7 +72,7 @@ The analysis of the existing implementation identified the following business ca
 - Audit Logging
 - Settings Management
 
-These capabilities provide a strong functional foundation for migration into the EduSuite platform.
+These capabilities provide a strong functional foundation for migration into the WisWits platform.
 
 ---
 
@@ -165,7 +165,7 @@ The module shall include:
 
 # 9. Out of Scope
 
-The following capabilities belong to other EduSuite modules:
+The following capabilities belong to other intern builds:
 
 - Student Admission Management
 - Learning Management System (LMS)
@@ -776,7 +776,7 @@ So that institutional performance can be evaluated effectively.
 | BR-EXAM-006 | Results shall be published only after successful verification and approval. |
 | BR-EXAM-007 | Reports shall include only organization-specific examination data. |
 | BR-EXAM-008 | Every business operation shall generate an audit record. |
-| BR-EXAM-009 | Examination notifications shall use the shared EduSuite Notification Service. |
+| BR-EXAM-009 | Examination notifications shall use the shared WisWits Notification Service. |
 | BR-EXAM-010 | All examination records shall remain isolated by organization (`org_id`) within the multi-tenant platform. |
 
 # 20. Screen Inventory
@@ -841,7 +841,7 @@ Dashboard
 └── Settings
 ```
 
-Navigation shall remain consistent with the EduSuite Design System.
+Navigation shall remain consistent with the WisWits Design System.
 
 ---
 
@@ -1061,7 +1061,7 @@ The interface shall support:
 
 # 33. User Experience Guidelines
 
-The Exam Cell & Result Management module shall comply with the EduSuite Design System.
+The Exam Cell & Result Management module shall comply with the WisWits Design System.
 
 ### Consistency
 
@@ -1107,7 +1107,7 @@ Primary pages shall load efficiently and remain responsive while handling large 
 
 ### Design Consistency
 
-The module shall use the approved EduSuite color palette, typography, spacing, reusable components, layouts, and iconography to maintain a unified experience across the EduSuite SaaS Platform.
+The module shall use the approved WisWits color palette, typography, spacing, reusable components, layouts, and iconography to maintain a unified experience across the WisWits SaaS Platform.
 
 # 34. Reports Catalogue
 
@@ -1171,7 +1171,7 @@ Notifications shall:
 
 - Be configurable
 - Be role-based
-- Use the shared EduSuite Notification Service
+- Use the shared WisWits Notification Service
 - Support audit logging
 - Prevent duplicate notifications
 
@@ -1179,7 +1179,7 @@ Notifications shall:
 
 # 36. Permission Matrix
 
-Access shall follow the EduSuite Role-Based Access Control (RBAC) framework.
+Access shall follow the WisWits Role-Based Access Control (RBAC) framework.
 
 | Feature | Admin | Exam Controller | Faculty | Invigilator | Student | Management |
 |----------|:----:|:---------------:|:-------:|:-----------:|:-------:|:----------:|
@@ -1202,7 +1202,7 @@ Access shall follow the EduSuite Role-Based Access Control (RBAC) framework.
 
 # 37. Integration Matrix
 
-The module shall integrate with the following EduSuite modules.
+The module shall integrate with the following intern builds.
 
 | Module | Purpose | Data Flow |
 |----------|---------|-----------|
@@ -1227,7 +1227,7 @@ All integrations shall:
 - Maintain data consistency
 - Respect organization isolation
 - Prevent duplicate records
-- Follow EduSuite API contracts
+- Follow WisWits API contracts
 
 ---
 
@@ -1399,7 +1399,7 @@ Examples include:
 The system shall provide meaningful error messages while preserving data integrity and ensuring examination records remain accurate and consistent.
 # 44. Security Requirements
 
-The Exam Cell & Result Management module shall comply with the EduSuite Platform Security Standards.
+The Exam Cell & Result Management module shall comply with the WisWits Platform Security Standards.
 
 Security shall be implemented using shared platform services instead of module-specific implementations.
 
@@ -1407,7 +1407,7 @@ Security shall be implemented using shared platform services instead of module-s
 
 ## Authentication
 
-The module shall use the EduSuite Authentication Service.
+The module shall use the WisWits Authentication Service.
 
 Authentication shall support:
 
@@ -1423,7 +1423,7 @@ Authentication shall never be implemented independently inside the module.
 
 ## Authorization
 
-Access to examination resources shall follow the EduSuite Role-Based Access Control (RBAC) framework.
+Access to examination resources shall follow the WisWits Role-Based Access Control (RBAC) framework.
 
 Permissions shall be assigned according to user roles including:
 
@@ -1549,7 +1549,7 @@ Institutions should be able to configure:
 
 # 47. User Experience Principles
 
-The Exam Cell & Result Management module shall follow the EduSuite Design System.
+The Exam Cell & Result Management module shall follow the WisWits Design System.
 
 Core principles include:
 
@@ -1734,7 +1734,7 @@ The module shall be evaluated using:
 - AI-powered invigilation support
 - Enterprise academic intelligence
 
-Future enhancements shall follow the EduSuite Product Governance process.
+Future enhancements shall follow the WisWits Product Governance process.
 
 ---
 
@@ -1758,10 +1758,10 @@ Future enhancements shall follow the EduSuite Product Governance process.
 This Product Requirements Document has been prepared with reference to:
 
 - Exam Cell & Result Management Module Analysis Report
-- EduSuite Product Vision
-- EduSuite Documentation Standards
-- EduSuite Design System
-- EduSuite Engineering Standards
+- WisWits Product Vision
+- WisWits Documentation Standards
+- WisWits Design System
+- WisWits Engineering Standards
 
 Technical implementation details are documented separately within the CTO Technical Specification.
 
@@ -1769,7 +1769,7 @@ Technical implementation details are documented separately within the CTO Techni
 
 # 59. Conclusion
 
-The Exam Cell & Result Management module establishes a comprehensive platform for planning, conducting, evaluating, and reporting academic examinations within the EduSuite SaaS Platform.
+The Exam Cell & Result Management module establishes a comprehensive platform for planning, conducting, evaluating, and reporting academic examinations within the WisWits SaaS Platform.
 
 This Product Requirements Document defines the business vision, functional capabilities, operational workflows, governance standards, and quality expectations required to deliver a scalable, secure, and intelligent examination management solution.
 

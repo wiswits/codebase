@@ -95,7 +95,7 @@ export default function Sidebar({
 
         {!collapsed && (
           <div className="brand-copy">
-            <strong>EduSuite</strong>
+            <strong>WisWits</strong>
             <span>
               Event Management
             </span>

@@ -1,5 +1,5 @@
 # ============================================================
-# EduSuite ERP
+# WisWits ERP
 # SQAAF (School Quality Assessment and Assurance Framework)
 # Engineering Contract
 # ============================================================
@@ -184,7 +184,7 @@ Development Tools
 ============================================================
 
 # DESIGN SYSTEM
-Official EduSuite Theme
+Official WisWits Theme
 Primary
 #0F2147
 
@@ -208,7 +208,7 @@ Charts
 
 Recharts
 
-Every screen must follow the EduSuite Design System.
+Every screen must follow the WisWits Design System.
 
 ============================================================
 
@@ -1380,5 +1380,5 @@ The SQAAF Module shall be accepted only when
 
 #  FINAL OBJECTIVE
 
-The SQAAF Module shall provide a centralized, secure, scalable, and enterprise-ready platform for managing school quality self-assessments, evidence records, reporting, and score monitoring while remaining fully compatible with the EduSuite ERP architecture and integration standards.
+The SQAAF Module shall provide a centralized, secure, scalable, and enterprise-ready platform for managing school quality self-assessments, evidence records, reporting, and score monitoring while remaining fully compatible with the WisWits ERP architecture and integration standards.
 

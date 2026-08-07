@@ -2,9 +2,9 @@
  * LOCAL INTEGRATION ADAPTER
  *
  * Production:
- * Replace this adapter with EduSuite's shared authenticate middleware.
+ * Replace this adapter with WisWits's shared authenticate middleware.
  *
- * EduSuite production authentication owns:
+ * WisWits production authentication owns:
  * - access_token cookie
  * - token verification
  * - user resolution

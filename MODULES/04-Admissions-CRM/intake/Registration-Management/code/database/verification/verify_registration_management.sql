@@ -1,10 +1,10 @@
 -- ============================================================
--- EduSuite - Registration Management
+-- WisWits - Registration Management
 -- Database Verification
 -- File: verify_registration_management.sql
 -- ============================================================
 
-USE edusuite_registration;
+USE wiswits_registration;
 
 
 -- ============================================================

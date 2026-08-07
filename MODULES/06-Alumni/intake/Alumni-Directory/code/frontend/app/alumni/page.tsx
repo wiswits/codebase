@@ -15,7 +15,7 @@ export default function AlumniDashboardPage() {
         <p className="page-description">
           View alumni statistics, batch
           distribution and recent alumni
-          records from the connected EduSuite
+          records from the connected WisWits
           database.
         </p>
       </header>

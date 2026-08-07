@@ -82,7 +82,7 @@ export function Sidebar({
 
             <div>
               <h1 className="font-semibold text-lg">
-                EduSuite
+                WisWits
               </h1>
 
               <p className="text-xs text-white/60">

@@ -2,7 +2,7 @@
  * LOCAL INTEGRATION ADAPTER
  *
  * Production:
- * Replace with EduSuite's shared audit implementation.
+ * Replace with WisWits's shared audit implementation.
  *
  * The Visitor module already calls audit() at mutation points,
  * so the business code will not need to be redesigned later.

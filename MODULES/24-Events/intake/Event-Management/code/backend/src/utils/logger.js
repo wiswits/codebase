@@ -13,7 +13,7 @@ const logger = winston.createLogger({
     winston.format.errors({ stack: true }),
     winston.format.json()
   ),
-  defaultMeta: { service: 'edusuite-backend' },
+  defaultMeta: { service: 'wiswits-backend' },
   transports: [new winston.transports.Console()],
 });
 

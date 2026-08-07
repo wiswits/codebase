@@ -1,9 +1,9 @@
-# EduSuite — Registration Management
+# Intake — Registration Management
 
 ## 1. Document Purpose
 
 This document defines the complete engineering execution plan for
-building the EduSuite Registration Management module from scratch.
+building the WisWits Registration Management module from scratch.
 
 At the beginning of this implementation, we assume that the working
 module contains:
@@ -67,7 +67,7 @@ Development Type:
 From-Scratch Module Development
 
 Target Platform:
-EduSuite Unified SaaS
+WisWits Unified SaaS
 
 ---
 
@@ -186,7 +186,7 @@ Defines HOW development happens:
 # 5. What Are We Building?
 
 Registration Management provides the administrative workflow required
-to formally register a student inside EduSuite.
+to formally register a student inside WisWits.
 
 The module revolves around three capabilities:
 
@@ -439,7 +439,7 @@ Registration Management
 │
 └── Document Checklist
 
-The final routing structure must follow the existing EduSuite
+The final routing structure must follow the existing WisWits
 frontend conventions.
 
 ---
@@ -563,7 +563,7 @@ frontend/
         ├── types/
         └── utils/
 
-The actual path must follow the current EduSuite repository.
+The actual path must follow the current intern team's upstream workspacesitory.
 
 Do not create a separate standalone frontend architecture.
 
@@ -649,7 +649,7 @@ Because this implementation starts without Registration data, the
 team needs a persistent registration record for development.
 
 Its exact production mapping must be aligned with the approved
-EduSuite admissions architecture before final SaaS integration.
+WisWits admissions architecture before final SaaS integration.
 
 Conceptually the module needs to represent:
 
@@ -714,7 +714,7 @@ GET registration document checklist
 
 UPDATE approved document state
 
-Exact endpoint names must follow existing EduSuite API conventions.
+Exact endpoint names must follow existing WisWits API conventions.
 
 ---
 
@@ -743,7 +743,7 @@ Conceptual list response:
   }
 }
 
-Exact common response conventions should follow the EduSuite
+Exact common response conventions should follow the WisWits
 platform standard.
 
 ---
@@ -775,7 +775,7 @@ Backend enforcement is mandatory.
 
 # 28. Tenant Isolation
 
-EduSuite is multi-tenant.
+WisWits is multi-tenant.
 
 Every database/API operation must respect organization boundaries.
 
@@ -862,7 +862,7 @@ registration/
     ├── RegistrationPagination
     └── RegistrationStatusBadge
 
-Sunidhi must reuse the common EduSuite design system.
+Sunidhi must reuse the common WisWits design system.
 
 Do not create a separate visual system for Registration.
 
@@ -1292,7 +1292,7 @@ The frontend must display controlled states instead of crashing.
 
 Both frontend developers must provide:
 
-- Professional EduSuite design
+- Professional WisWits design
 - Consistent typography
 - Consistent spacing
 - Responsive layout
@@ -1469,14 +1469,14 @@ READY FOR INTEGRATION
 - [ ] Build passed
 - [ ] Critical bugs resolved
 - [ ] Final review completed
-- [ ] Ready for EduSuite integration
+- [ ] Ready for WisWits integration
 
 ---
 # Technology Stack & Engineering Standards
 
 All team members MUST use the following approved technology stack.
 
-The Registration Management module is part of the EduSuite SaaS
+The Registration Management module is part of the WisWits SaaS
 platform and must not introduce a separate or incompatible stack.
 
 ---
@@ -1522,7 +1522,7 @@ Frontend responsibilities include:
 - Do not hardcode production data.
 - Mock data may be used during parallel development.
 - Mock data MUST follow the approved API contract.
-- Use the common EduSuite design system.
+- Use the common WisWits design system.
 - Maintain responsive behavior.
 - Use subtle and professional animations only.
 - Do not introduce another UI framework without approval.
@@ -1612,7 +1612,7 @@ Frontend developers must NOT directly access MariaDB.
 
 # Authentication & Authorization
 
-The module must integrate with the EduSuite authentication and
+The module must integrate with the WisWits authentication and
 authorization architecture.
 
 Approved Registration permissions:
@@ -1622,7 +1622,7 @@ admissions.registration.view
 admissions.registration.manage
 
 JWT/authentication context must be handled according to the common
-EduSuite platform architecture.
+WisWits platform architecture.
 
 Do NOT build a separate Registration login system.
 
@@ -1646,7 +1646,7 @@ Recommended development environment:
 # Git & Version Control
 
 Repository:
-EduSuite
+WisWits
 
 Development model:
 
@@ -1701,7 +1701,7 @@ Required structure:
 | Backend | Node.js + Express.js + TypeScript |
 | API Architecture | REST |
 | Database | MariaDB |
-| Authentication | EduSuite JWT/Auth Integration |
+| Authentication | WisWits JWT/Auth Integration |
 | Authorization | RBAC / Permission-Based |
 | Version Control | Git + GitHub |
 | API Testing | Postman / Equivalent |
@@ -1712,7 +1712,7 @@ Required structure:
 # Stack Enforcement Rule
 
 All Registration Management development must remain compatible with
-the approved EduSuite technology stack.
+the approved WisWits technology stack.
 
 Team members must NOT independently introduce:
 
@@ -1730,5 +1730,5 @@ Team members must NOT independently introduce:
 unless explicitly approved by the Team Lead / technical leadership.
 
 The purpose of this restriction is to ensure that all individual work
-can be integrated into one EduSuite SaaS product without unnecessary
+can be integrated into one WisWits SaaS product without unnecessary
 technology conflicts.

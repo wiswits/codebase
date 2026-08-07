@@ -1,7 +1,7 @@
 {
-  "name": "edusuite-alumni-backend",
+  "name": "wiswits-alumni-backend",
   "version": "1.0.0",
-  "description": "EduSuite Alumni Directory standalone integration backend",
+  "description": "WisWits Alumni Directory standalone integration backend",
   "main": "server.js",
   "type": "module",
   "scripts": {

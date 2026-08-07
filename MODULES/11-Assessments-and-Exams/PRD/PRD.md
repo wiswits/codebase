@@ -1,6 +1,6 @@
 # PRD — Assessments and Exams
 
-**Purpose.** Exam definition through marks to published results. EduSuite Exam-Cell build = candidate exam-OPS layer (hall tickets, seating, invigilation) on top — never a replacement.
+**Purpose.** Exam definition through marks to published results. the Exam-Cell intern build = candidate exam-OPS layer (hall tickets, seating, invigilation) on top — never a replacement.
 
 **Primary roles.** admin, principal, coordinator, teacher
 

@@ -1,5 +1,5 @@
 -- ============================================================
--- EduSuite - Student Observations
+-- WisWits - Student Observations
 -- Database Schema Reference
 -- Developer: Khushboo
 -- ============================================================
@@ -28,7 +28,7 @@
 --   BIGINT UNSIGNED AUTO_INCREMENT.
 --
 -- org_id
---   Owning EduSuite organization / tenant.
+--   Owning WisWits organization / tenant.
 --   Must be supplied by trusted backend/platform context.
 --
 -- student_id
@@ -66,7 +66,7 @@
 --      -> Parent platform authenticated user/staff entity
 --
 -- Exact foreign-key targets are intentionally NOT declared here.
--- They must be mapped against the authoritative EduSuite schema
+-- They must be mapped against the authoritative WisWits schema
 -- during platform integration.
 
 
@@ -121,5 +121,5 @@
 
 -- Audit data is NOT duplicated into this table.
 --
--- Create/update operations must invoke the parent EduSuite
+-- Create/update operations must invoke the parent WisWits
 -- shared audit infrastructure from the backend/module layer.

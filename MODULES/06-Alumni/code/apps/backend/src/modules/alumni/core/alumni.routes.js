@@ -7,7 +7,7 @@ const { alumniIdParams, listQuery, updateAlumniSchema } = require('./alumni.vali
 
 const router = Router();
 
-// The EduSuite build had no auth, no permission check and no audit anywhere —
+// The intern build had no auth, no permission check and no audit anywhere —
 // its own README deferred all three to the host platform. These are them.
 router.get('/', requirePermission('alumni.view'), validate(listQuery, 'query'), controller.getAllAlumni);
 

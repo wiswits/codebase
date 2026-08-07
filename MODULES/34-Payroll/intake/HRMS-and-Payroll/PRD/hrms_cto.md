@@ -7,33 +7,33 @@
 
 | Field | Value |
 |-------|-------|
-| Product | EduSuite SaaS Platform |
+| Product | WisWits SaaS Platform |
 | Module | HRMS & Payroll |
 | Module Code | HRMS |
 | Document Type | CTO Technical Specification |
 | Version | 1.0 |
 | Status | Draft |
-| Architecture Version | EduSuite Engineering Standard v1 |
+| Architecture Version | WisWits Engineering Standard v1 |
 
 # 1. Engineering Objectives
 
 The implementation of the HRMS & Payroll module shall:
 
-- Align with EduSuite platform architecture.
+- Align with WisWits platform architecture.
 - Reuse shared platform services.
 - Support multi-tenant deployment.
 - Deliver secure HR operations.
 - Automate workforce management.
 - Enable scalable payroll processing.
 - Maintain long-term maintainability.
-- Follow EduSuite engineering standards.
+- Follow WisWits engineering standards.
 - Minimize technical debt.
 
 ---
 
 # 2. Existing Technical Analysis
 
-The existing HRMS & Payroll module provides a comprehensive Human Resource Management solution but differs from EduSuite platform standards in several architectural areas.
+The existing HRMS & Payroll module provides a comprehensive Human Resource Management solution but differs from WisWits platform standards in several architectural areas.
 
 ---
 
@@ -59,7 +59,7 @@ Current implementation uses:
 
 - Uses JavaScript instead of TypeScript.
 - Uses Vite instead of Next.js.
-- No EduSuite Design System.
+- No WisWits Design System.
 - No shared platform layouts.
 - Limited reusable component library.
 
@@ -117,13 +117,13 @@ Current implementation provides:
 
 - No shared database abstraction.
 - Multi-tenant implementation requires standardization.
-- Requires migration to EduSuite database conventions.
+- Requires migration to WisWits database conventions.
 
 ---
 
 # 3. Platform Gap Assessment
 
-| Engineering Area | Existing Module | EduSuite Standard | Required Action |
+| Engineering Area | Existing Module | WisWits Standard | Required Action |
 |------------------|----------------|-------------------|-----------------|
 | Frontend Framework | React + Vite | Next.js App Router | Rebuild |
 | Language | JavaScript | TypeScript | Migrate |
@@ -133,16 +133,16 @@ Current implementation provides:
 | Audit Logging | Local | Shared Audit Service | Integrate |
 | Notifications | Local | Shared Notification Service | Integrate |
 | Database Access | Direct MySQL | Shared query() / withTransaction() | Replace |
-| Layout | Local Layout | Shared EduSuite Layout | Replace |
+| Layout | Local Layout | Shared WisWits Layout | Replace |
 
 ---
 
 # 4. Target Platform Architecture
 
-The HRMS & Payroll module shall be implemented as a native EduSuite platform module.
+The HRMS & Payroll module shall be implemented as a native WisWits platform module.
 
 ```text
-EduSuite Platform
+WisWits Platform
 
 │
 
@@ -341,7 +341,7 @@ apps/
 
 # 9. Coding Standards
 
-The HRMS & Payroll module shall comply with EduSuite Engineering Standards.
+The HRMS & Payroll module shall comply with WisWits Engineering Standards.
 
 Mandatory requirements include:
 
@@ -354,14 +354,14 @@ Mandatory requirements include:
 - Audit logging for every business mutation
 - Shared notification service
 - Shared database utilities
-- EduSuite Design System
+- WisWits Design System
 - Comprehensive validation
 - Reusable services and components
 
 No module shall duplicate shared platform functionality where an approved platform service already exists.
 # 10. Backend Architecture Overview
 
-The HRMS & Payroll module shall follow the EduSuite Backend Engineering Standard based on a layered architecture.
+The HRMS & Payroll module shall follow the WisWits Backend Engineering Standard based on a layered architecture.
 
 The backend shall support secure HR operations, recruitment, employee lifecycle management, attendance, leave, payroll, performance, learning, expenses, rewards, exit management, reporting, and platform integrations while ensuring scalability, maintainability, and security.
 
@@ -483,7 +483,7 @@ notification.routes.ts
 
 Authentication shall **NOT** be implemented inside the HRMS & Payroll module.
 
-The module shall exclusively use the shared EduSuite authentication middleware.
+The module shall exclusively use the shared WisWits authentication middleware.
 
 Approved Standard
 
@@ -524,7 +524,7 @@ Authentication remains a platform responsibility.
 
 # 14. Authorization Standard
 
-Authorization shall follow the EduSuite Role-Based Access Control (RBAC) model.
+Authorization shall follow the WisWits Role-Based Access Control (RBAC) model.
 
 The module shall use:
 
@@ -677,7 +677,7 @@ Benefits include:
 
 # 19. API Standards
 
-All APIs shall follow EduSuite REST conventions.
+All APIs shall follow WisWits REST conventions.
 
 General Principles
 
@@ -887,7 +887,7 @@ Binary storage shall remain outside the business module.
 
 # 26. Backend Engineering Standards
 
-All backend implementations shall comply with EduSuite Engineering Standards.
+All backend implementations shall comply with WisWits Engineering Standards.
 
 ### Security
 
@@ -923,7 +923,7 @@ All backend implementations shall comply with EduSuite Engineering Standards.
 - Shared Database Layer
 # 27. Database Architecture Overview
 
-The HRMS & Payroll module shall adopt the EduSuite Platform Database Architecture.
+The HRMS & Payroll module shall adopt the WisWits Platform Database Architecture.
 
 The database layer shall provide:
 
@@ -940,7 +940,7 @@ MariaDB shall be the approved relational database management system.
 
 # 28. Database Design Principles
 
-The database shall follow EduSuite engineering standards.
+The database shall follow WisWits engineering standards.
 
 ## Normalization
 
@@ -1074,7 +1074,7 @@ Relationships shall enforce referential integrity while supporting efficient que
 
 # 31. Table Standards
 
-Every business table shall follow the EduSuite database standard.
+Every business table shall follow the WisWits database standard.
 
 Required Columns
 
@@ -1110,7 +1110,7 @@ Business tables shall use consistent naming conventions.
 
 # 32. Naming Conventions
 
-Database objects shall follow EduSuite naming standards.
+Database objects shall follow WisWits naming standards.
 
 ## Tables
 
@@ -1349,7 +1349,7 @@ The platform migration runner determines the active database.
 
 # 36. SQL Standards
 
-All SQL shall comply with EduSuite database standards.
+All SQL shall comply with WisWits database standards.
 
 Required
 
@@ -1445,7 +1445,7 @@ The database architecture shall support:
 - Backup verification
 - Secure backup storage
 
-Backup policies shall be managed by the EduSuite platform administration.
+Backup policies shall be managed by the WisWits platform administration.
 
 ---
 
@@ -1506,7 +1506,7 @@ The database layer shall comply with the following standards.
 Sensitive employee records, payroll data, appraisal records, attendance logs, and financial information shall only be accessible through authorized business services.
 # 44. Frontend Architecture Overview
 
-The HRMS & Payroll module shall adopt the EduSuite Frontend Architecture.
+The HRMS & Payroll module shall adopt the WisWits Frontend Architecture.
 
 The frontend shall provide:
 
@@ -1518,7 +1518,7 @@ The frontend shall provide:
 - Consistent user experience
 - Accessibility compliance
 
-The frontend shall be implemented using **Next.js App Router** and the EduSuite Design System.
+The frontend shall be implemented using **Next.js App Router** and the WisWits Design System.
 
 ---
 
@@ -1543,7 +1543,7 @@ No alternative frontend framework shall be used.
 
 # 46. Frontend Project Structure
 
-The module shall follow the standard EduSuite frontend architecture.
+The module shall follow the standard WisWits frontend architecture.
 
 ```text
 modules/
@@ -1663,7 +1663,7 @@ React Router shall not be used.
 
 # 48. Layout Architecture
 
-The module shall use the shared EduSuite Dashboard Layout.
+The module shall use the shared WisWits Dashboard Layout.
 
 Standard layout:
 
@@ -1720,7 +1720,7 @@ Core components include:
 - Empty State
 - Loading Skeleton
 
-All components shall follow the EduSuite Design System.
+All components shall follow the WisWits Design System.
 
 ---
 
@@ -1777,7 +1777,7 @@ Report API
 Notification API
 ```
 
-REST endpoints shall follow EduSuite API conventions.
+REST endpoints shall follow WisWits API conventions.
 
 ---
 
@@ -1820,7 +1820,7 @@ Dashboard widgets shall be reusable.
 
 # 54. Design System
 
-The module shall adopt the EduSuite Design System.
+The module shall adopt the WisWits Design System.
 
 Standard UI elements include:
 
@@ -1904,7 +1904,7 @@ Errors shall never expose internal implementation details.
 
 # 59. Frontend Security
 
-Frontend security shall follow EduSuite platform standards.
+Frontend security shall follow WisWits platform standards.
 
 Requirements include:
 
@@ -1922,7 +1922,7 @@ Sensitive HR business logic shall never be implemented on the client.
 
 # 60. Frontend Engineering Standards
 
-The frontend shall comply with EduSuite engineering standards.
+The frontend shall comply with WisWits engineering standards.
 
 ### Architecture
 
@@ -1959,7 +1959,7 @@ The frontend shall comply with EduSuite engineering standards.
 - Shared Layout Components
 # 61. Security Architecture
 
-The HRMS & Payroll module shall comply with the EduSuite Platform Security Architecture.
+The HRMS & Payroll module shall comply with the WisWits Platform Security Architecture.
 
 Security shall be implemented through shared platform services rather than module-specific implementations.
 
@@ -1967,7 +1967,7 @@ Security shall be implemented through shared platform services rather than modul
 
 ## Authentication
 
-Authentication shall be provided exclusively through the EduSuite Authentication Service.
+Authentication shall be provided exclusively through the WisWits Authentication Service.
 
 Approved Standard
 
@@ -1997,7 +1997,7 @@ req.user.role
 
 ## Authorization
 
-Authorization shall follow the EduSuite Role-Based Access Control (RBAC) framework.
+Authorization shall follow the WisWits Role-Based Access Control (RBAC) framework.
 
 Approved Standard
 
@@ -2123,7 +2123,7 @@ Attendance, payroll, leave approvals, performance reviews, expense approvals, an
 
 # 64. Logging & Monitoring
 
-The module shall integrate with the EduSuite monitoring framework.
+The module shall integrate with the WisWits monitoring framework.
 
 Application logs shall include:
 
@@ -2145,7 +2145,7 @@ Monitoring shall support:
 
 # 65. Testing Strategy
 
-Testing shall comply with EduSuite Engineering Quality Standards.
+Testing shall comply with WisWits Engineering Quality Standards.
 
 ## Unit Testing
 
@@ -2202,7 +2202,7 @@ Validate complete workflows including:
 
 # 66. Code Quality Standards
 
-Every implementation shall comply with EduSuite Engineering Standards.
+Every implementation shall comply with WisWits Engineering Standards.
 
 ## Architecture
 
@@ -2262,7 +2262,7 @@ Every implementation shall comply with EduSuite Engineering Standards.
 
 # 67. DevOps & Deployment Strategy
 
-Deployment shall follow the EduSuite Platform deployment workflow.
+Deployment shall follow the WisWits Platform deployment workflow.
 
 ```text
 Developer
@@ -2402,7 +2402,7 @@ Migration principles:
 
 - Existing source code shall **not** be copied directly.
 - Existing implementation shall only be analyzed to understand business requirements.
-- Development shall begin from a clean codebase following EduSuite engineering standards.
+- Development shall begin from a clean codebase following WisWits engineering standards.
 - Shared platform services shall replace all module-specific implementations wherever applicable.
 
 ---
@@ -2477,13 +2477,13 @@ No feature shall bypass the established engineering governance process.
 
 The current HRMS & Payroll implementation provides a comprehensive business foundation covering recruitment, workforce management, payroll, learning, appraisal, and employee lifecycle management.
 
-However, it shall **not** be merged directly into the EduSuite SaaS Platform.
+However, it shall **not** be merged directly into the WisWits SaaS Platform.
 
 Instead, it shall serve as a **business reference** for a fresh implementation built according to:
 
-- EduSuite Product Requirements Document (PRD)
-- EduSuite CTO Technical Specification
-- EduSuite Engineering Execution Plan
-- EduSuite Platform Standards
+- WisWits Product Requirements Document (PRD)
+- WisWits CTO Technical Specification
+- WisWits Engineering Execution Plan
+- WisWits Platform Standards
 
-This approach ensures architectural consistency, maintainability, scalability, security, and long-term compatibility with the EduSuite SaaS ecosystem.
+This approach ensures architectural consistency, maintainability, scalability, security, and long-term compatibility with the WisWits SaaS ecosystem.

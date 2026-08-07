@@ -34,7 +34,7 @@ export default function Sidebar() {
 
         <div>
           <p className="font-display text-xl font-bold text-white">
-            EduSuite
+            WisWits
           </p>
 
           <p className="text-xs text-white/60">

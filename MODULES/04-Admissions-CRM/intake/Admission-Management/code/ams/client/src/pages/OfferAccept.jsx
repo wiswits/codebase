@@ -48,7 +48,7 @@ const OfferAccept = () => {
         <div className="h-8 w-8 rounded-lg bg-blue-600 flex items-center justify-center">
           <ShieldCheck size={18} className="text-white" />
         </div>
-        <p className="text-white font-semibold text-sm">EduSuite Admissions — Offer Letter</p>
+        <p className="text-white font-semibold text-sm">WisWits Admissions — Offer Letter</p>
       </header>
 
       <div className="max-w-lg mx-auto p-4 lg:p-6">

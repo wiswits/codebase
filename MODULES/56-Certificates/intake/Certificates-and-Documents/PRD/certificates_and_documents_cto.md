@@ -7,32 +7,32 @@
 
 | Field | Value |
 |-------|-------|
-| Product | EduSuite SaaS Platform |
+| Product | WisWits SaaS Platform |
 | Module | Certificates & Documents Management |
 | Module Code | CERT-DOC |
 | Document Type | CTO Technical Specification |
 | Version | 1.0 |
 | Status | Draft |
-| Architecture Version | EduSuite Engineering Standard v1 |
+| Architecture Version | WisWits Engineering Standard v1 |
 
 # Purpose
 
 This document defines the technical architecture, engineering standards, migration strategy, and implementation guidelines for the Certificates & Documents Management Module.
 
-It complements the Product Requirements Document (PRD) by defining **how the module shall be engineered**, ensuring alignment with the EduSuite SaaS Platform architecture and engineering standards.
+It complements the Product Requirements Document (PRD) by defining **how the module shall be engineered**, ensuring alignment with the WisWits SaaS Platform architecture and engineering standards.
 
 
 # 1. Engineering Objectives
 
 The implementation of the Certificates & Documents Management Module shall:
 
-- Align with EduSuite platform architecture.
+- Align with WisWits platform architecture.
 - Reuse shared platform services.
 - Support multi-tenant deployment.
 - Ensure secure document management.
 - Provide scalable APIs.
 - Support long-term maintainability.
-- Enable seamless integration with other EduSuite modules.
+- Enable seamless integration with other intern builds.
 - Follow platform coding standards.
 - Minimize technical debt.
 
@@ -40,7 +40,7 @@ The implementation of the Certificates & Documents Management Module shall:
 
 # 2. Existing Technical Analysis
 
-The current Certificates & Documents implementation provides comprehensive document lifecycle management functionality but differs from EduSuite platform standards in several architectural areas.
+The current Certificates & Documents implementation provides comprehensive document lifecycle management functionality but differs from WisWits platform standards in several architectural areas.
 
 ---
 
@@ -66,7 +66,7 @@ Current implementation uses:
 
 - Uses Vite instead of Next.js.
 - Uses React Router instead of App Router.
-- Does not use EduSuite shared layout.
+- Does not use WisWits shared layout.
 - Uses module-specific UI components.
 
 ---
@@ -119,17 +119,17 @@ Current implementation uses:
 
 - Direct database access.
 - Multi-tenant (`org_id`) implementation requires verification.
-- Migration standards require alignment with EduSuite.
+- Migration standards require alignment with WisWits.
 
 ---
 
 # 3. Platform Gap Assessment
 
-| Engineering Area | Existing Module | EduSuite Standard | Required Action |
+| Engineering Area | Existing Module | WisWits Standard | Required Action |
 |------------------|----------------|-------------------|-----------------|
 | Frontend Framework | React + Vite | Next.js App Router | Rebuild |
 | Routing | React Router | App Router | Replace |
-| UI Components | Local Components | EduSuite Design System | Adopt |
+| UI Components | Local Components | WisWits Design System | Adopt |
 | Authentication | Local JWT | Shared authenticate() | Replace |
 | Authorization | Local Middleware | Platform RBAC | Replace |
 | Audit Logging | Local Audit | Shared Audit Service | Integrate |
@@ -140,10 +140,10 @@ Current implementation uses:
 
 # 4. Target Platform Architecture
 
-The Certificates & Documents Management Module shall be implemented as a native EduSuite platform module.
+The Certificates & Documents Management Module shall be implemented as a native WisWits platform module.
 
 ```text
-EduSuite Platform
+WisWits Platform
 
 │
 
@@ -344,7 +344,7 @@ apps/
 
 # 9. Coding Standards
 
-The Certificates & Documents Management Module shall comply with EduSuite Engineering Standards.
+The Certificates & Documents Management Module shall comply with WisWits Engineering Standards.
 
 Mandatory requirements include:
 
@@ -357,7 +357,7 @@ Mandatory requirements include:
 - Audit logging for every business mutation
 - Shared notification service
 - Shared database utilities
-- EduSuite Design System
+- WisWits Design System
 - Comprehensive validation
 - Reusable services and components
 
@@ -365,7 +365,7 @@ No module shall duplicate shared platform functionality where an approved servic
 
 # 10. Backend Architecture Overview
 
-The Certificates & Documents Management Module shall follow the EduSuite Backend Engineering Standard based on a layered architecture.
+The Certificates & Documents Management Module shall follow the WisWits Backend Engineering Standard based on a layered architecture.
 
 The backend shall support secure certificate generation, document lifecycle management, approval workflows, verification, audit logging, and platform integrations while ensuring scalability, maintainability, and security.
 
@@ -475,7 +475,7 @@ reports.routes.ts
 
 Authentication shall NOT be implemented inside the Certificates & Documents module.
 
-The module shall exclusively use the shared EduSuite authentication middleware.
+The module shall exclusively use the shared WisWits authentication middleware.
 
 Approved Standard
 
@@ -516,7 +516,7 @@ Authentication remains a platform responsibility.
 
 # 14. Authorization Standard
 
-Authorization shall follow the EduSuite Role-Based Access Control (RBAC) model.
+Authorization shall follow the WisWits Role-Based Access Control (RBAC) model.
 
 The module shall use:
 
@@ -649,7 +649,7 @@ Benefits include:
 
 # 19. API Standards
 
-All APIs shall follow EduSuite REST conventions.
+All APIs shall follow WisWits REST conventions.
 
 General Principles
 
@@ -838,7 +838,7 @@ Binary storage shall remain outside the business module.
 
 # 26. Backend Engineering Standards
 
-All backend implementations shall comply with EduSuite Engineering Standards.
+All backend implementations shall comply with WisWits Engineering Standards.
 
 ### Security
 
@@ -872,7 +872,7 @@ All backend implementations shall comply with EduSuite Engineering Standards.
 - Shared Permission Catalog
 - Shared Authentic# 27. Database Architecture Overview
 
-The Certificates & Documents Management Module shall adopt the EduSuite Platform Database Architecture.
+The Certificates & Documents Management Module shall adopt the WisWits Platform Database Architecture.
 
 The database layer shall provide:
 
@@ -889,7 +889,7 @@ MariaDB shall be the approved relational database management system.
 
 # 28. Database Design Principles
 
-The database shall follow EduSuite engineering standards.
+The database shall follow WisWits engineering standards.
 
 ## Normalization
 
@@ -1003,7 +1003,7 @@ Relationships shall enforce referential integrity while supporting efficient que
 
 # 31. Table Standards
 
-Every business table shall follow the EduSuite database standard.
+Every business table shall follow the WisWits database standard.
 
 Required Columns
 
@@ -1039,7 +1039,7 @@ Business tables shall use consistent naming conventions.
 
 # 32. Naming Conventions
 
-Database objects shall follow EduSuite naming standards.
+Database objects shall follow WisWits naming standards.
 
 ## Tables
 
@@ -1216,7 +1216,7 @@ The platform migration runner determines the active database.
 
 # 36. SQL Standards
 
-All SQL shall comply with EduSuite database standards.
+All SQL shall comply with WisWits database standards.
 
 Required
 
@@ -1301,7 +1301,7 @@ The database architecture shall support:
 - Backup verification
 - Secure backup storage
 
-Backup policies shall be managed by the EduSuite platform administration.
+Backup policies shall be managed by the WisWits platform administration.
 
 ---
 
@@ -1359,7 +1359,7 @@ Sensitive certificate and document information shall only be accessible through 
 
 # 27. Database Architecture Overview
 
-The Certificates & Documents Management Module shall adopt the EduSuite Platform Database Architecture.
+The Certificates & Documents Management Module shall adopt the WisWits Platform Database Architecture.
 
 The database layer shall provide:
 
@@ -1376,7 +1376,7 @@ MariaDB shall be the approved relational database management system.
 
 # 28. Database Design Principles
 
-The database shall follow EduSuite engineering standards.
+The database shall follow WisWits engineering standards.
 
 ## Normalization
 
@@ -1490,7 +1490,7 @@ Relationships shall enforce referential integrity while supporting efficient que
 
 # 31. Table Standards
 
-Every business table shall follow the EduSuite database standard.
+Every business table shall follow the WisWits database standard.
 
 Required Columns
 
@@ -1526,7 +1526,7 @@ Business tables shall use consistent naming conventions.
 
 # 32. Naming Conventions
 
-Database objects shall follow EduSuite naming standards.
+Database objects shall follow WisWits naming standards.
 
 ## Tables
 
@@ -1703,7 +1703,7 @@ The platform migration runner determines the active database.
 
 # 36. SQL Standards
 
-All SQL shall comply with EduSuite database standards.
+All SQL shall comply with WisWits database standards.
 
 Required
 
@@ -1788,7 +1788,7 @@ The database architecture shall support:
 - Backup verification
 - Secure backup storage
 
-Backup policies shall be managed by the EduSuite platform administration.
+Backup policies shall be managed by the WisWits platform administration.
 
 ---
 
@@ -1845,7 +1845,7 @@ Sensitive certificate and document information shall only be accessible through 
 
 # 61. Security Architecture
 
-The Certificates & Documents Management Module shall comply with the EduSuite Platform Security Architecture.
+The Certificates & Documents Management Module shall comply with the WisWits Platform Security Architecture.
 
 Security shall be implemented through shared platform services rather than module-specific implementations.
 
@@ -1853,7 +1853,7 @@ Security shall be implemented through shared platform services rather than modul
 
 ## Authentication
 
-Authentication shall be provided exclusively through the EduSuite Authentication Service.
+Authentication shall be provided exclusively through the WisWits Authentication Service.
 
 Approved Standard
 
@@ -1883,7 +1883,7 @@ req.user.role
 
 ## Authorization
 
-Authorization shall follow the EduSuite Role-Based Access Control (RBAC) framework.
+Authorization shall follow the WisWits Role-Based Access Control (RBAC) framework.
 
 Approved Standard
 
@@ -1999,7 +1999,7 @@ Certificate records, approval status, and verification requests shall always be 
 
 # 64. Logging & Monitoring
 
-The module shall integrate with the EduSuite monitoring framework.
+The module shall integrate with the WisWits monitoring framework.
 
 Application logs shall include:
 
@@ -2021,7 +2021,7 @@ Monitoring shall support:
 
 # 65. Testing Strategy
 
-Testing shall comply with EduSuite Engineering Quality Standards.
+Testing shall comply with WisWits Engineering Quality Standards.
 
 ## Unit Testing
 
@@ -2074,7 +2074,7 @@ Validate complete workflows including:
 
 # 66. Code Quality Standards
 
-Every implementation shall comply with EduSuite Engineering Standards.
+Every implementation shall comply with WisWits Engineering Standards.
 
 ## Architecture
 
@@ -2134,7 +2134,7 @@ Every implementation shall comply with EduSuite Engineering Standards.
 
 # 67. DevOps & Deployment Strategy
 
-Deployment shall follow the EduSuite Platform deployment workflow.
+Deployment shall follow the WisWits Platform deployment workflow.
 
 ```text
 Developer
@@ -2273,7 +2273,7 @@ Migration principles:
 
 - Existing source code shall **not** be copied directly.
 - Existing implementation shall only be analyzed to understand business requirements.
-- Development shall begin from a clean codebase following EduSuite engineering standards.
+- Development shall begin from a clean codebase following WisWits engineering standards.
 - Shared platform services shall replace all module-specific implementations wherever applicable.
 
 ---
@@ -2348,13 +2348,13 @@ No feature shall bypass the established engineering governance process.
 
 The current Certificates & Documents implementation provides a comprehensive business foundation.
 
-However, it shall **not** be merged directly into the EduSuite SaaS Platform.
+However, it shall **not** be merged directly into the WisWits SaaS Platform.
 
 Instead, it shall serve as a **business reference** for a fresh implementation built according to:
 
-- EduSuite Product Requirements Document (PRD)
-- EduSuite CTO Technical Specification
-- EduSuite Engineering Execution Plan
-- EduSuite Platform Standards
+- WisWits Product Requirements Document (PRD)
+- WisWits CTO Technical Specification
+- WisWits Engineering Execution Plan
+- WisWits Platform Standards
 
-This approach ensures architectural consistency, maintainability, scalability, security, and long-term compatibility with the EduSuite SaaS ecosystem.
+This approach ensures architectural consistency, maintainability, scalability, security, and long-term compatibility with the WisWits SaaS ecosystem.

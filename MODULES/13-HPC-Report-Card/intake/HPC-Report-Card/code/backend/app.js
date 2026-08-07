@@ -44,7 +44,7 @@ app.use(
 app.get("/", (req, res) => {
   res.status(200).json({
     success: true,
-    application: "EduSuite HPC Report Card API",
+    application: "WisWits HPC Report Card API",
     version: "1.0.0",
     status: "Running",
     documentation: "http://localhost:5000/api/docs",
@@ -59,7 +59,7 @@ app.get("/health", (req, res) => {
   res.status(200).json({
     success: true,
     status: "UP",
-    service: "EduSuite HPC Report Card API",
+    service: "WisWits HPC Report Card API",
     timestamp: new Date().toISOString(),
   });
 });

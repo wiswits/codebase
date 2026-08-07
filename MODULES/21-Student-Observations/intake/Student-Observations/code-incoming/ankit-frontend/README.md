@@ -1,10 +1,10 @@
-# EduSuite — Student Observations Frontend
+# Intake — Student Observations Frontend
 
 ## Contributor
 
 **Frontend Contribution:** Ankit  
 **Module:** Student Observations  
-**Platform:** EduSuite  
+**Platform:** WisWits  
 **Contribution Type:** Frontend Implementation  
 **Current Status:** Development Complete / Ready for Integration Review
 
@@ -12,7 +12,7 @@
 
 # 1. Overview
 
-The **Student Observations Frontend** is a modular frontend contribution developed for the EduSuite platform.
+The **Student Observations Frontend** is a modular frontend contribution developed for the WisWits platform.
 
 The purpose of this module is to provide the user interface required for managing student observations recorded by authorized academic or institutional users.
 
@@ -30,13 +30,13 @@ This contribution has been developed as an **independent frontend module**.
 
 It has not been manually integrated with the other Student Observations team contributions in this submission.
 
-The contribution is being provided separately so that it can be reviewed and subsequently integrated into the main EduSuite SaaS architecture.
+The contribution is being provided separately so that it can be reviewed and subsequently integrated into the main WisWits SaaS architecture.
 
 ---
 
 # 2. Technology Stack
 
-The frontend uses the current EduSuite frontend technology stack.
+The frontend uses the current WisWits frontend technology stack.
 
 | Technology | Version / Purpose |
 |---|---|
@@ -175,7 +175,7 @@ ankit-frontend/
 
 # 6. Architecture Principles
 
-The frontend follows a modular structure intended to simplify future EduSuite integration.
+The frontend follows a modular structure intended to simplify future WisWits integration.
 
 ## Route Layer
 
@@ -249,7 +249,7 @@ src/modules/observations/services/
 
 The service layer is intended to contain communication logic between the frontend and Student Observations backend APIs.
 
-During final EduSuite integration, API endpoints can be connected through this layer without restructuring the presentation components.
+During final WisWits integration, API endpoints can be connected through this layer without restructuring the presentation components.
 
 ---
 
@@ -311,7 +311,7 @@ Mock data can be used during standalone frontend development when the final back
 
 Mock data should not be treated as production database data.
 
-During EduSuite integration, backend API responses should replace applicable mock data.
+During WisWits integration, backend API responses should replace applicable mock data.
 
 ---
 
@@ -351,7 +351,7 @@ Tailwind CSS 4 is loaded through:
 
 The global stylesheet also provides common styling and design tokens used by the standalone frontend implementation.
 
-Final platform-level design tokens may be supplied by the EduSuite shell during integration.
+Final platform-level design tokens may be supplied by the WisWits shell during integration.
 
 ---
 
@@ -441,7 +441,7 @@ The following routes were successfully detected during build validation:
 
 # 19. Environment and Integration
 
-This frontend contribution is intentionally structured so that it can be integrated with the larger EduSuite SaaS application.
+This frontend contribution is intentionally structured so that it can be integrated with the larger WisWits SaaS application.
 
 The standalone application configuration exists primarily for:
 
@@ -451,7 +451,7 @@ The standalone application configuration exists primarily for:
 - UI testing
 - Integration preparation
 
-During final platform integration, the EduSuite host application may provide shared:
+During final platform integration, the WisWits host application may provide shared:
 
 - Authentication
 - Authorization
@@ -516,7 +516,7 @@ Database communication must occur through backend APIs.
 
 # 22. Security Considerations
 
-During EduSuite integration:
+During WisWits integration:
 
 - Authentication must be handled through the platform authentication system.
 - Authorization must be enforced by the backend.
@@ -563,7 +563,7 @@ incoming/
 
 This allows each contribution to remain independently reviewable.
 
-The EduSuite integration process can then determine how these contributions should be incorporated into the base SaaS product.
+The WisWits integration process can then determine how these contributions should be incorporated into the base SaaS product.
 
 ---
 
@@ -581,23 +581,23 @@ The EduSuite integration process can then determine how these contributions shou
 | Observation routes detected | PASS |
 | Standalone development server | PASS |
 | Backend integration | Pending platform integration |
-| Final EduSuite SaaS integration | Pending |
+| Final WisWits SaaS integration | Pending |
 
 ---
 
 # 26. Integration Notes
 
-This contribution should be treated as a **module implementation**, not as a replacement for the complete EduSuite frontend application.
+This contribution should be treated as a **module implementation**, not as a replacement for the complete WisWits frontend application.
 
 When integrating it into the main SaaS product:
 
-1. Review the existing EduSuite application architecture.
+1. Review the existing WisWits application architecture.
 2. Reuse the existing global layout and navigation where appropriate.
 3. Reuse the platform authentication and authorization mechanisms.
 4. Map observation routes into the platform routing strategy.
 5. Connect frontend services to approved backend endpoints.
 6. Remove development-only mock dependencies where applicable.
-7. Apply shared EduSuite design-system components.
+7. Apply shared WisWits design-system components.
 8. Validate role permissions.
 9. Run TypeScript validation.
 10. Run the production build.
@@ -611,11 +611,11 @@ The **Student Observations Frontend contribution is prepared for integration rev
 
 The frontend architecture, TypeScript environment, Next.js routes, Tailwind CSS 4 configuration, and production build have been validated independently.
 
-Final functionality involving persistent data, authentication, authorization, and cross-module communication depends on integration with the corresponding EduSuite backend and platform services.
+Final functionality involving persistent data, authentication, authorization, and cross-module communication depends on integration with the corresponding WisWits backend and platform services.
 
 ---
 
-**Project:** EduSuite  
+**Project:** WisWits  
 **Module:** Student Observations  
 **Contribution:** Frontend  
 **Framework:** Next.js 16 + React 19  

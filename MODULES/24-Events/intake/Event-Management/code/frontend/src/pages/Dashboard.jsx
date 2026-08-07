@@ -208,7 +208,7 @@ export default function Dashboard() {
             <p>
               Manage schedules, event details,
               publishing, RSVP responses and resource
-              bookings from your EduSuite workspace.
+              bookings from your WisWits workspace.
             </p>
 
             <Link

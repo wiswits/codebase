@@ -1,8 +1,8 @@
-# EduSuite — Student Observation Module
+# Intake — Student Observation Module
 
 ## Module Assembly & Integration Submission
 
-**Platform:** EduSuite  
+**Platform:** WisWits  
 **Module:** Student Observation  
 **Submission Type:** Multi-Contributor Module Assembly  
 **Architecture:** Modular SaaS Contribution  
@@ -12,11 +12,11 @@
 
 # 1. Module Overview
 
-The **Student Observation Module** is an EduSuite module designed to support structured recording, management, retrieval, and review of observations related to students.
+The **Student Observation Module** is an intern build designed to support structured recording, management, retrieval, and review of observations related to students.
 
 The module provides the foundation for authorized institutional users to maintain observation records in a structured digital format instead of relying on disconnected notes or manual records.
 
-Student observations may be used to record academic, behavioral, participation, progress, engagement, or other institution-defined observations depending on the final EduSuite business rules and role permissions.
+Student observations may be used to record academic, behavioral, participation, progress, engagement, or other institution-defined observations depending on the final WisWits business rules and role permissions.
 
 This implementation has been developed using a **modular contribution strategy**.
 
@@ -24,7 +24,7 @@ Different members of the development team worked on frontend, backend, and datab
 
 For the current integration experiment, these contributions are being submitted **without manually combining them into one application first**.
 
-This allows the EduSuite base SaaS product to evaluate and integrate the individual module contributions directly.
+This allows the WisWits base SaaS product to evaluate and integrate the individual module contributions directly.
 
 ---
 
@@ -52,7 +52,7 @@ These folders have **not been manually merged into one final application** for t
 
 This structure is intentional.
 
-The purpose is to evaluate whether the individual module contributions can be incorporated directly into the existing EduSuite SaaS base architecture.
+The purpose is to evaluate whether the individual module contributions can be incorporated directly into the existing WisWits SaaS base architecture.
 
 ---
 
@@ -83,15 +83,15 @@ The Student Observation module is intended to provide a structured foundation fo
 - Providing backend APIs and business logic
 - Persisting observation information in MariaDB
 - Supporting future role-based access
-- Supporting future EduSuite SaaS integration
+- Supporting future WisWits SaaS integration
 
-The final behavior of the integrated module remains dependent on the approved EduSuite platform contracts and integration process.
+The final behavior of the integrated module remains dependent on the approved WisWits platform contracts and integration process.
 
 ---
 
 # 5. Approved Technology Stack
 
-The module uses the current EduSuite technology direction rather than legacy project configurations.
+The module uses the current WisWits technology direction rather than legacy project configurations.
 
 ## Frontend
 
@@ -119,7 +119,7 @@ Legacy Tailwind CSS 3 configuration is not required.
 
 ## Backend
 
-The backend contributions follow the Node.js server-side architecture prepared for the EduSuite module.
+The backend contributions follow the Node.js server-side architecture prepared for the intern build.
 
 Backend responsibilities include:
 
@@ -164,7 +164,7 @@ The intended integrated architecture is:
 
 ```text
 ┌──────────────────────────────────────┐
-│            EduSuite SaaS             │
+│            WisWits SaaS             │
 │                                      │
 │ Authentication / Authorization       │
 │ Navigation / Shared UI / Context     │
@@ -363,7 +363,7 @@ Hook
       ↓
 Frontend Service
       ↓
-EduSuite API
+WisWits API
 ```
 
 This allows backend endpoints to be connected without restructuring the complete UI.
@@ -469,7 +469,7 @@ The backend is intended to handle:
 - Future authorization enforcement
 - API response formatting
 
-Final API contracts must be aligned with the EduSuite host platform during integration.
+Final API contracts must be aligned with the WisWits host platform during integration.
 
 ---
 
@@ -638,7 +638,7 @@ For the standalone frontend:
 apps/web/app/layout.tsx
 ```
 
-This requirement must be preserved unless the module is integrated into an existing EduSuite root layout.
+This requirement must be preserved unless the module is integrated into an existing WisWits root layout.
 
 ---
 
@@ -670,7 +670,7 @@ Ankit Frontend ──────┐
 Sunidhi Frontend ────┤
                      │
 Jatin Backend ───────┤
-                     ├──► EduSuite Integration Review
+                     ├──► WisWits Integration Review
 Neha Backend ────────┤
                      │
 Khushboo Database ───┘
@@ -678,7 +678,7 @@ Khushboo Database ───┘
 
 This preserves each contribution independently.
 
-The base EduSuite SaaS application can evaluate:
+The base WisWits SaaS application can evaluate:
 
 - Which frontend contribution/components should be adopted
 - Which backend services should be adopted
@@ -699,7 +699,7 @@ The final platform should have a coherent architecture after integration.
 For example:
 
 ```text
-EduSuite
+WisWits
 │
 ├── Shared Platform
 │
@@ -712,9 +712,9 @@ Duplicate functionality should be resolved during integration rather than blindl
 
 ---
 
-# 28. EduSuite Platform Integration
+# 28. WisWits Platform Integration
 
-The final integrated module should reuse existing EduSuite platform capabilities wherever available.
+The final integrated module should reuse existing WisWits platform capabilities wherever available.
 
 Examples include:
 
@@ -738,7 +738,7 @@ The Student Observation contribution should not recreate platform-level capabili
 
 # 29. Authentication and Authorization
 
-Authentication and authorization must ultimately be provided according to the EduSuite platform architecture.
+Authentication and authorization must ultimately be provided according to the WisWits platform architecture.
 
 Frontend visibility alone must never be considered authorization.
 
@@ -890,8 +890,8 @@ Before final integration, the following checks should be performed as applicable
 | Secrets | Not committed |
 | Frontend ↔ Backend | Validate during integration |
 | Backend ↔ Database | Validate during integration |
-| Authentication | Validate with EduSuite |
-| Authorization | Validate with EduSuite |
+| Authentication | Validate with WisWits |
+| Authorization | Validate with WisWits |
 | Full SaaS integration | Pending integration review |
 
 ---
@@ -925,20 +925,20 @@ The complete five-contributor assembly should not be described as fully integrat
 
 # 36. Integration Review Checklist
 
-When integrating this module into the base EduSuite SaaS product:
+When integrating this module into the base WisWits SaaS product:
 
 1. Review all contributor folders.
 2. Identify overlapping frontend implementations.
 3. Identify overlapping backend implementations.
 4. Compare implementations against the approved module contract.
 5. Select/reconcile required components.
-6. Align routes with EduSuite routing conventions.
+6. Align routes with WisWits routing conventions.
 7. Align frontend types with backend response contracts.
 8. Connect frontend services to approved APIs.
 9. Integrate backend services with the approved database schema.
 10. Apply authentication.
 11. Apply authorization.
-12. Reuse EduSuite shared layout and navigation.
+12. Reuse WisWits shared layout and navigation.
 13. Reuse shared design-system components.
 14. Remove obsolete mocks.
 15. Remove duplicate implementation.
@@ -981,7 +981,7 @@ Student_Observation_Assembly/
 
 # 38. Submission Notes
 
-This assembly represents the Student Observation module development work prepared for **EduSuite integration evaluation**.
+This assembly represents the Student Observation module development work prepared for **WisWits integration evaluation**.
 
 The individual contributions are intentionally preserved instead of being manually integrated before submission.
 
@@ -1000,21 +1000,21 @@ The presence of multiple frontend/backend contributions should therefore be inte
 **Database Contribution:** Prepared  
 **Independent Frontend Build Validation:** Completed  
 **Manual Five-Contributor Integration:** Not performed intentionally  
-**EduSuite Base SaaS Integration:** Pending review  
+**WisWits Base SaaS Integration:** Pending review  
 
 The Student Observation assembly is therefore:
 
-> **Prepared for EduSuite integration review.**
+> **Prepared for WisWits integration review.**
 
 ---
 
 ## Project Information
 
-**Product:** EduSuite  
+**Product:** WisWits  
 **Module:** Student Observation  
 **Architecture:** Modular SaaS  
 **Frontend:** Next.js 16 + React 19 + TypeScript 5.9 + Tailwind CSS 4  
 **Database:** MariaDB  
 **Submission Model:** Independent Contributor Assembly  
-**Integration Target:** EduSuite Base SaaS Product  
+**Integration Target:** WisWits Base SaaS Product  
 **Status:** Ready for Integration Review

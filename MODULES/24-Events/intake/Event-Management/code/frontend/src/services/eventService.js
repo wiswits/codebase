@@ -86,7 +86,7 @@ export async function updateEventStatus(
 
 /* =========================================================
    RESOURCE API
-   Matches existing EduSuite backend routes
+   Matches existing WisWits backend routes
    ========================================================= */
 
 /**

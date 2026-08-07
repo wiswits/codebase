@@ -1,7 +1,7 @@
 {
   "name": "utilization-backend",
   "version": "1.0.0",
-  "description": "EduSuite Utilization Management Backend",
+  "description": "WisWits Utilization Management Backend",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",

@@ -7,7 +7,7 @@
  * NOTE ON SOURCE OF TRUTH:
  * These types represent the FRONTEND's understanding of the domain model,
  * derived from the supplied HR-PMS Module Engineering Contract and the
- * EduSuite Engineering Standards. The backend (Neha) and database (Khushboo)
+ * WisWits Engineering Standards. The backend (Neha) and database (Khushboo)
  * are the ultimate authority. Where the contract did not fully specify a
  * shape, the safest, most API-ready representation was chosen and is called
  * out in README.md under "Contract Assumptions".
@@ -50,7 +50,7 @@ export type PmsPermission = "hr.pms.view" | "hr.pms.review" | "hr.pms.manage";
 
 /**
  * Frontend-only representation of the authenticated user, scoped to what the
- * PMS module needs. The real shape will come from the existing EduSuite
+ * PMS module needs. The real shape will come from the existing WisWits
  * auth/RBAC mechanism — this is intentionally minimal and API-ready.
  *
  * IMPORTANT: This is a UX convenience only. It is never treated as the

@@ -7,7 +7,7 @@ import type { APIResult } from '../types';
  *
  * No existing convention was provided in Sunidhi's assigned scope, so this
  * is a minimal fetch-based client local to the Payroll Runs / Adjustments /
- * Payslips services. If EduSuite already standardizes an HTTP client
+ * Payslips services. If WisWits already standardizes an HTTP client
  * elsewhere in the app, this file should be deleted and the services below
  * should import that shared client instead — that swap is outside Sunidhi's
  * scope to decide unilaterally (§37).

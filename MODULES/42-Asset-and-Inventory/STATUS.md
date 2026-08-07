@@ -14,7 +14,7 @@ See `CODE_MAP.md` for where the LIVE code is, `PRD/PRD.md` for the spec.
 
 ---
 
-## Intake — the intern/EduSuite build for this module
+## Intake — the intern build for this module
 
 | Build (in `intake/`) | Files | State | What is in the way |
 |---|---|---|---|

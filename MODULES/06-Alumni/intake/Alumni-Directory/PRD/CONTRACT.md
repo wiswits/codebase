@@ -1,4 +1,4 @@
-# EduSuite Alumni Directory Engineering Contract
+# WisWits Alumni Directory Engineering Contract
 
 **Module Name:** Alumni Directory  
 **Module Code:** STL-ALU  
@@ -16,7 +16,7 @@
 
 # 1. Purpose of This Contract
 
-This document is the implementation contract for the EduSuite Alumni Directory module.
+This document is the implementation contract for the WisWits Alumni Directory module.
 
 The purpose of this contract is to ensure that frontend, backend, database and
 integration work are developed as parts of one module rather than as independent
@@ -131,7 +131,7 @@ institution users to:
 - view an individual alumni profile;
 - access approved alumni information through one consistent interface.
 
-The module must remain part of the unified EduSuite platform.
+The module must remain part of the unified WisWits platform.
 
 It must not become an independent application.
 
@@ -297,7 +297,7 @@ Alumni Profile Displayed
 
 # 10. Page Contract
 
-Every applicable Alumni page must follow the shared EduSuite page standard.
+Every applicable Alumni page must follow the shared WisWits page standard.
 
 Where applicable, pages should contain:
 
@@ -327,7 +327,7 @@ A rendered page without these required states is not considered complete.
 
 # 11. Design Contract
 
-Alumni Directory must follow the approved EduSuite/WisWits product language.
+Alumni Directory must follow the approved intake/WisWits product language.
 
 Approved design tokens include:
 

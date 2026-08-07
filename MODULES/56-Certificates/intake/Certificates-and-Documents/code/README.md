@@ -1,4 +1,4 @@
-# EduSuite Document Engine
+# WisWits Document Engine
 
 ## Project Status
 

@@ -1,11 +1,11 @@
 -- ============================================================
--- EduSuite - Student Observations
+-- WisWits - Student Observations
 -- Developer: Khushboo
 -- Database: MariaDB
 -- Purpose: Create the Student Observations persistence model
 --
 -- IMPORTANT:
--- In the final EduSuite repository, rename this migration to
+-- In the final intern team's upstream workspacesitory, rename this migration to
 -- the next valid migration sequence number.
 --
 -- Do NOT add USE <database>;

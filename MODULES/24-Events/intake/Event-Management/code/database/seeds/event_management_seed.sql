@@ -1,5 +1,5 @@
 -- ============================================================
--- EduSuite Event Management
+-- WisWits Event Management
 -- Development Seed Data
 -- ============================================================
 

@@ -1,10 +1,10 @@
-# EduSuite Dashboard
+# WisWits Dashboard
 
 A modern frontend dashboard prototype for a School Certificate & ID Card Management System.
 
 ## 📌 Project Overview
 
-EduSuite is a UI concept for a web-based platform designed to simplify the creation, management, and issuance of certificates and ID cards for educational institutions.
+WisWits is a UI concept for a web-based platform designed to simplify the creation, management, and issuance of certificates and ID cards for educational institutions.
 
 This repository currently contains **only the frontend dashboard design**. It serves as the initial foundation for the project and showcases the intended user interface and user experience.
 
@@ -39,7 +39,7 @@ This repository currently contains **only the frontend dashboard design**. It se
 **Database**
 - Not connected
 
-This repository represents the **initial dashboard interface** for the EduSuite platform. 
+This repository represents the **initial dashboard interface** for the WisWits platform. 
 
 At this stage:
 

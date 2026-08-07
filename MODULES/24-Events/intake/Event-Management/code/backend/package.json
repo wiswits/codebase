@@ -1,8 +1,8 @@
 {
-  "name": "edusuite-backend",
+  "name": "wiswits-backend",
   "version": "0.1.0",
   "private": true,
-  "description": "EduSuite backend - Event Management module (Backend Developer 2 scope: RSVP + Resource Booking)",
+  "description": "WisWits backend - Event Management module (Backend Developer 2 scope: RSVP + Resource Booking)",
   "main": "src/server.js",
   "engines": {
     "node": ">=20.0.0"

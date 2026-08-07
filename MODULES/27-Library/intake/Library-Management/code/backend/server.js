@@ -15,7 +15,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-app.get("/api/health", (req, res) => res.json({ status: "success", message: "EduSuite Library API is running", data: null }));
+app.get("/api/health", (req, res) => res.json({ status: "success", message: "WisWits Library API is running", data: null }));
 
 app.use("/api/books", booksRouter);
 app.use("/api/copies", copiesRouter);
@@ -38,5 +38,5 @@ app.use((err, req, res, next) => {
 const PORT = process.env.PORT || 5000;
 
 connectDB().then(() => {
-  app.listen(PORT, () => console.log(`EduSuite Library API listening on port ${PORT}`));
+  app.listen(PORT, () => console.log(`WisWits Library API listening on port ${PORT}`));
 });

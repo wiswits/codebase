@@ -15,14 +15,14 @@ export function AuthProvider({ children }) {
       const users = res.data.data || [];
       setDemoUsers(users);
 
-      const savedId = localStorage.getItem("edusuite_demo_user_id");
+      const savedId = localStorage.getItem("wiswits_demo_user_id");
       const found = users.find((u) => u._id === savedId);
       if (found) {
         setCurrentUser(found);
       } else if (users.length) {
         // default to first admin found
         const admin = users.find((u) => u.role === "admin") || users[0];
-        localStorage.setItem("edusuite_demo_user_id", admin._id);
+        localStorage.setItem("wiswits_demo_user_id", admin._id);
         setCurrentUser(admin);
       }
     } catch (err) {
@@ -37,7 +37,7 @@ export function AuthProvider({ children }) {
   }, [loadDemoUsers]);
 
   const switchUser = (userId) => {
-    localStorage.setItem("edusuite_demo_user_id", userId);
+    localStorage.setItem("wiswits_demo_user_id", userId);
     const found = demoUsers.find((u) => u._id === userId);
     setCurrentUser(found || null);
   };

@@ -7,7 +7,7 @@
 
 | Field | Value |
 |-------|-------|
-| Product | EduSuite SaaS Platform |
+| Product | WisWits SaaS Platform |
 | Module | Employee Productivity System (EMPS) |
 | Module Code | EMPS |
 | Document Type | Module Analysis |
@@ -17,9 +17,9 @@
 
 # 1. Executive Summary
 
-This document presents the technical and functional analysis of the existing Employee Productivity System (EMPS) before its migration into the EduSuite SaaS Platform.
+This document presents the technical and functional analysis of the existing Employee Productivity System (EMPS) before its migration into the WisWits SaaS Platform.
 
-The objective of this analysis is to understand the current implementation, identify business capabilities, review the technical architecture, evaluate SaaS readiness, identify architectural gaps, and recommend improvements required for alignment with EduSuite engineering standards.
+The objective of this analysis is to understand the current implementation, identify business capabilities, review the technical architecture, evaluate SaaS readiness, identify architectural gaps, and recommend improvements required for alignment with WisWits engineering standards.
 
 This report serves as the foundation for preparing the Product Requirements Document (PRD), CTO Technical Specification, and Engineering Execution Plan.
 
@@ -218,7 +218,7 @@ The module currently supports:
 
 # 10. Platform Gap Analysis
 
-| Area | Current Implementation | EduSuite Standard | Recommendation |
+| Area | Current Implementation | WisWits Standard | Recommendation |
 |------|------------------------|-------------------|----------------|
 | Frontend | React + Vite | Next.js App Router | Rebuild |
 | Language | JavaScript | TypeScript | Migrate |
@@ -228,7 +228,7 @@ The module currently supports:
 | Database Access | Local Database Layer | Shared query() | Replace |
 | Notifications | Local Notification Service | Shared Notification Service | Integrate |
 | Audit Logging | Local | Shared Audit Service | Integrate |
-| Layout | Module Layouts | EduSuite Shared Layout | Replace |
+| Layout | Module Layouts | WisWits Shared Layout | Replace |
 
 ---
 
@@ -252,7 +252,7 @@ The backend exposes REST endpoints for:
 - Settings
 - Profile
 
-These APIs provide a comprehensive foundation for migration into the EduSuite platform.
+These APIs provide a comprehensive foundation for migration into the WisWits platform.
 
 ---
 
@@ -265,7 +265,7 @@ The current implementation supports:
 - Manager
 - Employee
 
-Additional EduSuite platform roles may be introduced during standardization.
+Additional WisWits platform roles may be introduced during standardization.
 
 ---
 
@@ -335,19 +335,19 @@ The analysis identified the following limitations:
 - Uses React + Vite instead of Next.js.
 - Uses JavaScript instead of TypeScript.
 - Uses React Router.
-- No EduSuite Design System.
+- No WisWits Design System.
 - Uses local JWT authentication.
 - No centralized platform services.
-- Requires migration to EduSuite platform architecture.
+- Requires migration to WisWits platform architecture.
 
 ---
 
 # 16. SaaS Standardization Recommendations
 
-To align the module with the EduSuite SaaS Platform, the following improvements are recommended:
+To align the module with the WisWits SaaS Platform, the following improvements are recommended:
 
 - Rebuild the frontend using Next.js App Router.
-- Adopt the EduSuite Design System.
+- Adopt the WisWits Design System.
 - Migrate to TypeScript.
 - Integrate shared authentication middleware.
 - Implement platform RBAC.
@@ -373,7 +373,7 @@ The module provides a complete employee productivity solution including attendan
 
 ★★★★★
 
-The backend is mature and modular with support for Socket.IO, Redis, Cloudinary, and API documentation. The frontend already follows a component-based architecture. Primary migration efforts involve adopting Next.js, TypeScript, the EduSuite Design System, and shared platform services.
+The backend is mature and modular with support for Socket.IO, Redis, Cloudinary, and API documentation. The frontend already follows a component-based architecture. Primary migration efforts involve adopting Next.js, TypeScript, the WisWits Design System, and shared platform services.
 
 ---
 
@@ -383,7 +383,7 @@ The backend is mature and modular with support for Socket.IO, Redis, Cloudinary,
 
 Business workflows—including employee management, attendance, task tracking, meetings, leave management, collaboration, notifications, reporting, and analytics—are highly reusable.
 
-The existing implementation shall be treated solely as a business reference. The EduSuite implementation shall be rebuilt from scratch following the approved PRD, CTO Technical Specification, and Engineering Execution Plan.
+The existing implementation shall be treated solely as a business reference. The WisWits implementation shall be rebuilt from scratch following the approved PRD, CTO Technical Specification, and Engineering Execution Plan.
 
 ---
 
@@ -393,9 +393,9 @@ The existing Employee Productivity System (EMPS) should be used as a business re
 
 The new implementation shall be developed according to:
 
-- EduSuite Product Requirements Document (PRD)
-- EduSuite CTO Technical Specification
-- EduSuite Engineering Execution Plan
+- WisWits Product Requirements Document (PRD)
+- WisWits CTO Technical Specification
+- WisWits Engineering Execution Plan
 
 Legacy code shall be analyzed for business understanding and shall not be directly reused.
 
@@ -405,4 +405,4 @@ Legacy code shall be analyzed for business understanding and shall not be direct
 
 The Employee Productivity System (EMPS) provides a strong operational foundation for managing employee productivity and workplace collaboration.
 
-After alignment with EduSuite platform architecture, shared services, and engineering standards, the module can become a scalable, secure, and fully integrated SaaS component within the EduSuite ecosystem.
+After alignment with WisWits platform architecture, shared services, and engineering standards, the module can become a scalable, secure, and fully integrated SaaS component within the WisWits ecosystem.

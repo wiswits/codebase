@@ -1,7 +1,7 @@
 {
-  "name": "edusuite-hpc-report-card-backend",
+  "name": "wiswits-hpc-report-card-backend",
   "version": "1.0.0",
-  "description": "EduSuite HPC Report Card Backend",
+  "description": "WisWits HPC Report Card Backend",
   "type": "module",
   "main": "server.js",
   "scripts": {
@@ -10,14 +10,14 @@
     "lint": "echo \"No lint configured\""
   },
   "keywords": [
-    "edusuite",
+    "wiswits",
     "hpc",
     "report-card",
     "node",
     "express",
     "mariadb"
   ],
-  "author": "EduSuite Engineering Team",
+  "author": "WisWits Engineering Team",
   "license": "MIT",
   "dependencies": {
     "cors": "^2.8.5",

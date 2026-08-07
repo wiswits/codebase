@@ -123,7 +123,7 @@ export default function HelpSupport() {
             <h3>Technical Support</h3>
 
             <p>
-              Contact your EduSuite
+              Contact your WisWits
               administrator for account or
               infrastructure assistance.
             </p>

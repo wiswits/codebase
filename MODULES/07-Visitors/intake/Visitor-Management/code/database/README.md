@@ -122,7 +122,7 @@ Visitor Management routes currently declare permission requirements such as:
 - visitor:checkout
 - visitor:pass:create
 
-Permission catalog persistence is owned by the shared EduSuite platform.
+Permission catalog persistence is owned by the shared WisWits platform.
 
 No local permission-table migration is included because the shared
 platform permission schema is not present in this standalone assembly.

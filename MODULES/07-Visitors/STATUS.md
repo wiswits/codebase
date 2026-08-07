@@ -3,7 +3,7 @@
 **Domain:** People
 **Status:** SOON-GATED (DONE — flow-test + flag flip only)
 
-**What it is:** Who is in the building, signed in by the front desk. Ported from EduSuite via the intake pipeline — the reference port.
+**What it is:** Who is in the building, signed in by the front desk. Ported from the intern build via the intake pipeline — the reference port.
 
 ## Features
 - Front-desk check-in register
@@ -15,7 +15,7 @@ See `CODE_MAP.md` for where the LIVE code is, `PRD/PRD.md` for the spec.
 
 ---
 
-## Intake — the intern/EduSuite build for this module
+## Intake — the intern build for this module
 
 | Build (in `intake/`) | Files | State | What is in the way |
 |---|---|---|---|

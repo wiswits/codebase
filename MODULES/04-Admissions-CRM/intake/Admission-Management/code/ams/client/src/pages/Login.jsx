@@ -5,17 +5,17 @@ import toast from 'react-hot-toast';
 import { useAuth } from '../context/AuthContext';
 
 const DEMO_LOGINS = [
-  { role: 'Admin', email: 'admin@edusuite.test' },
-  { role: 'Admission Officer', email: 'officer@edusuite.test' },
-  { role: 'Counselor', email: 'counselor@edusuite.test' },
-  { role: 'Panelist', email: 'panelist1@edusuite.test' },
+  { role: 'Admin', email: 'admin@wiswits.test' },
+  { role: 'Admission Officer', email: 'officer@wiswits.test' },
+  { role: 'Counselor', email: 'counselor@wiswits.test' },
+  { role: 'Panelist', email: 'panelist1@wiswits.test' },
 ];
 
 const Login = () => {
   const { login } = useAuth();
   const navigate = useNavigate();
   const location = useLocation();
-  const [email, setEmail] = useState('admin@edusuite.test');
+  const [email, setEmail] = useState('admin@wiswits.test');
   const [password, setPassword] = useState('Password@123');
   const [loading, setLoading] = useState(false);
 
@@ -40,7 +40,7 @@ const Login = () => {
           <div className="h-12 w-12 rounded-xl bg-blue-600 flex items-center justify-center mb-3">
             <ShieldCheck size={24} className="text-white" />
           </div>
-          <h1 className="text-xl font-bold text-gray-800">EduSuite AMS</h1>
+          <h1 className="text-xl font-bold text-gray-800">WisWits AMS</h1>
           <p className="text-sm text-gray-500">Admission Management System</p>
         </div>
 

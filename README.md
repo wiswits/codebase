@@ -34,8 +34,8 @@ MODULES/
     CODE_MAP.md    where the LIVE code lives in wiswits-code
     PRD/PRD.md     the spec — purpose, roles, workflow, scope
     code/          frozen snapshot from prod commit 31210d4e (or NOTE.md for gaps)
-    intake/        the intern/EduSuite build for THIS module — only where one exists
-      <EduSuite-Module-Name>/   STATUS.md + PRD/ + code/
+    intake/        the intern build for THIS module — only where one exists
+      <Build-Name>/   STATUS.md + PRD/ + code/
   README.md            the index — all 61, with each one's intake state
   INTAKE_ROADMAP.md    sequencing plan for porting the pending intern builds
   INTAKE_SOURCES.md    where each intern build came from
@@ -43,7 +43,7 @@ _shared/           registry, navConfig, apiClient, moduleRegistry + constitution
                    PRODUCT_PRD, FINAL_LAUNCH_PLAN — the cross-module contract files
 ```
 
-**The 26 intern/EduSuite builds are not a separate shelf any more.** Each one now sits
+**The 26 intern builds are not a separate shelf any more.** Each one now sits
 inside the module it belongs to, as `intake/`. Alumni used to be three folders; Payroll
 two; Events, Visitors, Wellbeing and Personalised Learning each had a second folder for
 something already inside the product. That duplication is gone — 5 builds are **MERGED**
@@ -68,6 +68,5 @@ Refresh policy: re-snapshot after each prod deploy that changes module code
 ## Library index (sister collections, own repos)
 
 - `wiswits/wiswits-code` — THE runnable platform (live product; all real deploys)
-- `wiswits/EduSuite` — intern team's upstream workspace (assemblies + Modules_Repo + PRDs)
 - `wiswits/activities` — 499 activities · 65 tools · 20 labs (layout-is-the-schema)
 - `wiswits/academics` — all teaching content (chapter.md front-matter state)

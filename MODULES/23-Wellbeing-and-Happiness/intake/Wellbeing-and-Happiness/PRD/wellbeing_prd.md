@@ -5,7 +5,7 @@
 
 | Field | Value |
 |-------|-------|
-| Product | EduSuite SaaS Platform |
+| Product | WisWits SaaS Platform |
 | Module Name | Wellbeing & Happiness |
 | Module Code | WHM |
 | Document Type | Product Requirements Document |
@@ -22,7 +22,7 @@ The Wellbeing & Happiness module provides a secure, privacy-first digital wellbe
 
 The platform empowers students to seek support proactively while enabling counsellors, teachers, parents, and institutional leadership to provide timely, ethical, and appropriate interventions.
 
-This Product Requirements Document defines the business, functional, operational, and user experience requirements for implementing the Wellbeing & Happiness module as part of the EduSuite SaaS Platform.
+This Product Requirements Document defines the business, functional, operational, and user experience requirements for implementing the Wellbeing & Happiness module as part of the WisWits SaaS Platform.
 
 ---
 
@@ -64,7 +64,7 @@ The existing implementation provides:
 - Wellbeing Analytics
 - Institutional Dashboards
 
-These capabilities provide a strong business foundation for migration into the EduSuite platform.
+These capabilities provide a strong business foundation for migration into the WisWits platform.
 
 ---
 
@@ -161,7 +161,7 @@ The module shall include:
 
 # 9. Out of Scope
 
-The following capabilities belong to other EduSuite modules:
+The following capabilities belong to other intern builds:
 
 - Student Admission
 - HRMS & Payroll
@@ -830,7 +830,7 @@ So that I can improve wellbeing initiatives and allocate resources effectively.
 | BR-WH-004 | Crisis alerts shall always require qualified human review before institutional action is taken. |
 | BR-WH-005 | Parents shall only access wellbeing information permitted by institutional policy and applicable consent requirements. |
 | BR-WH-006 | Every referral, counselling update, and crisis workflow shall generate an audit record. |
-| BR-WH-007 | Notifications shall be delivered through the shared EduSuite Notification Service. |
+| BR-WH-007 | Notifications shall be delivered through the shared WisWits Notification Service. |
 | BR-WH-008 | Institutional wellbeing analytics shall use aggregated or appropriately authorized data to protect individual privacy. |
 | BR-WH-009 | Anonymous reports shall preserve reporter anonymity unless disclosure is required under applicable institutional policies or legal obligations. |
 | BR-WH-010 | All wellbeing records shall remain isolated by organization (`org_id`) within the multi-tenant platform. |
@@ -890,7 +890,7 @@ Dashboard
 └── Settings
 ```
 
-Navigation shall remain consistent with the EduSuite Design System.
+Navigation shall remain consistent with the WisWits Design System.
 
 ---
 
@@ -1110,7 +1110,7 @@ The interface shall support:
 
 # 33. User Experience Guidelines
 
-The Wellbeing & Happiness module shall comply with the EduSuite Design System.
+The Wellbeing & Happiness module shall comply with the WisWits Design System.
 
 ### Privacy by Design
 
@@ -1229,7 +1229,7 @@ Notifications shall:
 - Be role-based
 - Respect privacy policies
 - Be configurable
-- Use the EduSuite Notification Service
+- Use the WisWits Notification Service
 - Prevent duplicate delivery
 - Support audit logging
 
@@ -1237,7 +1237,7 @@ Notifications shall:
 
 # 36. Permission Matrix
 
-Access shall follow EduSuite Role-Based Access Control (RBAC).
+Access shall follow WisWits Role-Based Access Control (RBAC).
 
 | Feature | Admin | Student | Teacher | Counsellor | Parent | Principal |
 |----------|:----:|:-------:|:-------:|:-----------:|:------:|:---------:|
@@ -1260,7 +1260,7 @@ Access shall follow EduSuite Role-Based Access Control (RBAC).
 
 # 37. Integration Matrix
 
-The Wellbeing & Happiness module shall integrate with the following EduSuite modules.
+The Wellbeing & Happiness module shall integrate with the following intern builds.
 
 | Module | Purpose | Data Flow |
 |----------|---------|-----------|
@@ -1283,7 +1283,7 @@ All integrations shall:
 - Use approved REST APIs.
 - Respect organization isolation.
 - Preserve confidentiality.
-- Follow EduSuite API contracts.
+- Follow WisWits API contracts.
 - Avoid duplicate business logic.
 
 ---
@@ -1453,7 +1453,7 @@ Examples include:
 The platform shall display clear, actionable error messages while preserving confidentiality, maintaining data integrity, and ensuring that no automated failure prevents appropriate human review where required.
 # 44. Security Requirements
 
-The Wellbeing & Happiness module shall comply with the EduSuite Platform Security Standards.
+The Wellbeing & Happiness module shall comply with the WisWits Platform Security Standards.
 
 Given the confidential nature of wellbeing information, the module shall apply enhanced privacy controls while reusing shared platform security services.
 
@@ -1463,7 +1463,7 @@ Security shall be implemented through shared platform services rather than modul
 
 ## Authentication
 
-The module shall use the EduSuite Authentication Service.
+The module shall use the WisWits Authentication Service.
 
 Authentication shall support:
 
@@ -1479,7 +1479,7 @@ Authentication shall never be implemented independently inside the module.
 
 ## Authorization
 
-Access shall follow the EduSuite Role-Based Access Control (RBAC) framework.
+Access shall follow the WisWits Role-Based Access Control (RBAC) framework.
 
 Permissions shall be assigned according to user roles including:
 
@@ -1611,7 +1611,7 @@ Institutions should be able to configure:
 
 # 47. User Experience Principles
 
-The Wellbeing & Happiness module shall follow the EduSuite Design System.
+The Wellbeing & Happiness module shall follow the WisWits Design System.
 
 Core principles include:
 
@@ -1705,7 +1705,7 @@ The module shall operate within the following constraints:
 - Crisis workflows depend on institutional escalation policies.
 - Parent visibility depends on consent requirements and institutional policy.
 - Confidential wellbeing information shall not be exposed outside authorized workflows.
-- External integrations depend on approved EduSuite platform services.
+- External integrations depend on approved WisWits platform services.
 
 ---
 
@@ -1826,10 +1826,10 @@ Future enhancements shall remain aligned with ethical guidelines, institutional 
 This Product Requirements Document has been prepared with reference to:
 
 - Wellbeing & Happiness Module Analysis Report
-- EduSuite Product Vision
-- EduSuite Documentation Standards
-- EduSuite Design System
-- EduSuite Engineering Standards
+- WisWits Product Vision
+- WisWits Documentation Standards
+- WisWits Design System
+- WisWits Engineering Standards
 
 Technical implementation details are documented separately within the CTO Technical Specification.
 
@@ -1837,7 +1837,7 @@ Technical implementation details are documented separately within the CTO Techni
 
 # 59. Conclusion
 
-The Wellbeing & Happiness module establishes a secure, ethical, and privacy-first platform for supporting student wellbeing, structured counselling workflows, wellbeing analytics, and institutional wellbeing initiatives within the EduSuite SaaS Platform.
+The Wellbeing & Happiness module establishes a secure, ethical, and privacy-first platform for supporting student wellbeing, structured counselling workflows, wellbeing analytics, and institutional wellbeing initiatives within the WisWits SaaS Platform.
 
 This Product Requirements Document defines the business vision, functional requirements, governance standards, and quality expectations required to deliver a scalable, secure, human-centered, and institution-ready wellbeing solution.
 

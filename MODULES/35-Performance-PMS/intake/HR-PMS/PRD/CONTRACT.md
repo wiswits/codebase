@@ -1,4 +1,4 @@
-# EduSuite HR-PMS
+# the HR-PMS intern build
 # PMS & Appraisal Module Engineering Contract
 
 **Module ID:** HR-PMS  
@@ -7,26 +7,26 @@
 **Priority:** P4  
 **Development Mode:** BUILD FROM ZERO  
 **Implementation Type:** Fresh Module  
-**Target Product:** EduSuite SaaS  
+**Target Product:** WisWits SaaS  
 
 ---
 
 # 1. CONTRACT PURPOSE
 
 This document defines the engineering contract for building the
-EduSuite PMS & Appraisal module.
+WisWits PMS & Appraisal module.
 
 The module must be developed FROM ZERO.
 
 Existing or previously created PMS/Appraisal implementations must not
 be treated as the implementation base for this assignment.
 
-The approved EduSuite Platform PRD and CTO/Engineering specifications
+The approved WisWits Platform PRD and CTO/Engineering specifications
 are the authoritative sources for the module requirements.
 
 The implementation must satisfy the contracts defined in this document
 while remaining compatible with later integration into the main
-EduSuite SaaS product.
+WisWits SaaS product.
 
 ---
 
@@ -347,7 +347,7 @@ The schema must account for:
 - useful indexes;
 - referential integrity where compatible with the host schema.
 
-Exact foreign-key targets must be aligned with the existing EduSuite
+Exact foreign-key targets must be aligned with the existing WisWits
 HR/user schema during integration.
 
 Do not invent duplicate employee/user master tables.
@@ -403,7 +403,7 @@ plain JavaScript
 Tailwind CSS 3
 ```
 
-The module must remain compatible with the EduSuite frontend
+The module must remain compatible with the WisWits frontend
 architecture.
 
 ---
@@ -647,7 +647,7 @@ jatin-frontend/
 
 This is an engineering scaffold.
 
-The exact host route location may be adjusted during EduSuite
+The exact host route location may be adjusted during WisWits
 integration.
 
 ---
@@ -681,7 +681,7 @@ Hook / State Layer
  ↓
 PMS Service
  ↓
-Real EduSuite API
+Real WisWits API
 ```
 
 This allows integration without rewriting the complete frontend.
@@ -690,7 +690,7 @@ This allows integration without rewriting the complete frontend.
 
 # 26. BACKEND TECHNOLOGY PRINCIPLE
 
-Neha must use the current EduSuite backend conventions and existing
+Neha must use the current WisWits backend conventions and existing
 backend runtime rather than creating an unrelated server architecture.
 
 The backend contribution must be modular and integration-ready.
@@ -813,7 +813,7 @@ Example:
 ```
 
 The exact host-wide response wrapper should replace this proposal if
-EduSuite already has a canonical response format.
+WisWits already has a canonical response format.
 
 ---
 
@@ -926,7 +926,7 @@ neha-backend/
                 └── pms.validator.js
 ```
 
-Adapt file extensions/naming to the actual EduSuite backend conventions.
+Adapt file extensions/naming to the actual WisWits backend conventions.
 
 ---
 
@@ -987,7 +987,7 @@ Therefore Khushboo must not claim an invented field list as
 CTO-defined.
 
 A physical schema may be designed for implementation, but it must be
-documented as the MODULE CONTRACT and checked against existing EduSuite
+documented as the MODULE CONTRACT and checked against existing WisWits
 user/HR identifiers before final migration.
 
 This is especially important for:
@@ -1417,4 +1417,4 @@ integration expectations.
 
 Where the approved PRD/CTO specification does not define a business
 rule, the team must not present an invented rule as an authoritative
-EduSuite requirement.
+WisWits requirement.

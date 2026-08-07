@@ -18,6 +18,6 @@
 - Definition of Done: `CLAUDE.md` §20, all eleven points.
 
 ## Status vs spec
-Current status: **GAP — blocked upstream (EduSuite not assembled)** — see `../STATUS.md`. Gaps between this PRD and the live
+Current status: **GAP — blocked upstream (the intern team never assembled it)** — see `../STATUS.md`. Gaps between this PRD and the live
 build are tracked in `FINAL_LAUNCH_PLAN.md` / `MODULES/INTAKE_ROADMAP.md`; enrich this PRD
 when the module gets its dedicated cycle.

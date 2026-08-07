@@ -1,4 +1,4 @@
-# EduSuite — HR Payroll Management Module Engineering Contract
+# Intake — HR Payroll Management Module Engineering Contract
 
 ## Module Information
 
@@ -1613,7 +1613,7 @@ while remaining:
 - Maintainable
 - Testable
 - Integration-ready
-- Consistent with EduSuite
+- Consistent with WisWits
 
 ---
 

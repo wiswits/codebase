@@ -1,7 +1,7 @@
 {
   "name": "ams-server",
   "version": "1.0.0",
-  "description": "EduSuite Admission Management System - Backend API",
+  "description": "WisWits Admission Management System - Backend API",
   "main": "server.js",
   "type": "commonjs",
   "scripts": {

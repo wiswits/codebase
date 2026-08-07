@@ -4,7 +4,7 @@ import "./globals.css";
 import VisitorProvider from "@/providers/VisitorProvider";
 
 export const metadata: Metadata = {
-  title: "EduSuite Visitor Management",
+  title: "WisWits Visitor Management",
   description: "Enterprise Visitor Management Module",
 };
 

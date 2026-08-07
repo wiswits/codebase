@@ -16,7 +16,7 @@ const generateOfferLetterPdf = async ({ application, offer }) => {
   const stream = fs.createWriteStream(filePath);
   doc.pipe(stream);
 
-  doc.fontSize(18).fillColor('#1e40af').text(process.env.SCHOOL_NAME || 'EduSuite School', { align: 'center' });
+  doc.fontSize(18).fillColor('#1e40af').text(process.env.SCHOOL_NAME || 'WisWits School', { align: 'center' });
   doc.moveDown(0.2);
   doc.fontSize(12).fillColor('#374151').text('Offer of Admission', { align: 'center' });
   doc.moveDown(1);

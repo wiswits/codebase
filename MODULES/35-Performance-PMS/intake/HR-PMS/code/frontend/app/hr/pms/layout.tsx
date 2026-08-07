@@ -3,7 +3,7 @@ import { PmsUserProvider } from "@/modules/pms/context/pms-user-context";
 import { PmsShell } from "@/modules/pms/components/shared/PmsShell";
 
 export const metadata: Metadata = {
-  title: "PMS · EduSuite",
+  title: "PMS · WisWits",
   description: "Performance Management & Appraisal module",
 };
 

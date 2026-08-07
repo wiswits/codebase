@@ -5,7 +5,7 @@
 
 | Field | Value |
 |-------|-------|
-| Product | EduSuite SaaS Platform |
+| Product | WisWits SaaS Platform |
 | Module | Wellbeing & Happiness |
 | Module Code | WHM |
 | Document Type | Engineering Execution Plan |
@@ -16,7 +16,7 @@
 
 This document defines the engineering execution strategy for developing the Wellbeing & Happiness module based on the approved Product Requirements Document (PRD) and CTO Technical Specification.
 
-The module shall be developed from scratch following EduSuite platform standards. The legacy implementation shall be used only as a business and workflow reference and shall not be copied into the new platform.
+The module shall be developed from scratch following WisWits platform standards. The legacy implementation shall be used only as a business and workflow reference and shall not be copied into the new platform.
 ---
 # 2. Engineering Objectives
 
@@ -27,7 +27,7 @@ The development team shall:
 - Reuse shared platform services.
 - Develop scalable wellbeing and counselling workflows.
 - Implement secure crisis management processes.
-- Maintain EduSuite coding standards.
+- Maintain WisWits coding standards.
 - Ensure privacy, security, scalability, and maintainability.
 - Complete platform integration successfully.
 - Deliver production-ready software.
@@ -77,7 +77,7 @@ Production Ready
 
 # 5. Development Standards
 
-The engineering team shall follow EduSuite Engineering Standards.
+The engineering team shall follow WisWits Engineering Standards.
 
 ## Frontend
 
@@ -86,7 +86,7 @@ The engineering team shall follow EduSuite Engineering Standards.
 - Tailwind CSS
 - Shared Layout
 - Shared Components
-- EduSuite Design System
+- WisWits Design System
 
 ---
 
@@ -235,7 +235,7 @@ Crisis response workflows and counselling processes shall be validated using app
 
 # 9. Git Workflow
 
-Development shall follow the EduSuite Git workflow.
+Development shall follow the WisWits Git workflow.
 main
 
 
@@ -258,7 +258,7 @@ The Wellbeing & Happiness module shall be considered complete when:
 - Testing is completed successfully.
 - Code review is approved.
 - Documentation is complete.
-- Module is ready for EduSuite platform integration.
+- Module is ready for WisWits platform integration.
 
 ---
 
@@ -316,4 +316,4 @@ The module shall be approved for release only after:
 
 This Engineering Execution Plan provides the implementation roadmap for the Wellbeing & Happiness module.
 
-By following the approved Product Requirements Document, CTO Technical Specification, and EduSuite Engineering Standards, the development team shall deliver a secure, scalable, privacy-first, human-centered wellbeing platform capable of supporting confidential student wellbeing management, structured counselling workflows, ethical crisis response, institutional wellbeing analytics, and future platform enhancements while maintaining full integration with the EduSuite SaaS ecosystem.
+By following the approved Product Requirements Document, CTO Technical Specification, and WisWits Engineering Standards, the development team shall deliver a secure, scalable, privacy-first, human-centered wellbeing platform capable of supporting confidential student wellbeing management, structured counselling workflows, ethical crisis response, institutional wellbeing analytics, and future platform enhancements while maintaining full integration with the WisWits SaaS ecosystem.

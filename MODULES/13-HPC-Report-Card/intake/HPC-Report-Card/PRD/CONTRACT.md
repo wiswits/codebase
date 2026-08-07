@@ -1,4 +1,4 @@
-# WISWITS EDUSUITE
+# WISWITS WISWITS
 # HPC REPORT CARD — MODULE ENGINEERING CONTRACT
 
 **Module Name:** HPC Report Card — NEP 2020  
@@ -8,8 +8,8 @@
 **Priority:** P4  
 **Document Type:** Module Engineering Contract  
 **Implementation Model:** Fresh Implementation From Scratch  
-**Product:** WisWits EduSuite SaaS Platform  
-**Prepared For:** EduSuite Module Engineering Team  
+**Product:** WisWits WisWits SaaS Platform  
+**Prepared For:** WisWits Module Engineering Team  
 **Team Lead:** Khushboo  
 **Status:** Development Contract  
 
@@ -17,7 +17,7 @@
 
 # 1. PURPOSE OF THIS DOCUMENT
 
-This document is the implementation contract for the EduSuite HPC Report Card module.
+This document is the implementation contract for the WisWits HPC Report Card module.
 
 It defines the common engineering agreement that must be followed by:
 
@@ -95,7 +95,7 @@ academics_hpc
 
 Publishing/finalization is an auditable operation.
 
-The parent EduSuite platform provides the architectural boundary for final PDF generation.
+The parent WisWits platform provides the architectural boundary for final PDF generation.
 
 ---
 
@@ -105,7 +105,7 @@ HPC in this module refers to the Holistic Progress Card / HPC Report Card concep
 
 "HPC Report Card — NEP 2020."
 
-Within EduSuite, the HPC module is not intended to behave as only a conventional marks table.
+Within WisWits, the HPC module is not intended to behave as only a conventional marks table.
 
 Its product purpose is to allow approved academic users to record competency/descriptor information for a student, organize that information into domain-level summaries, review the resulting holistic card and ultimately produce the approved report-card output.
 
@@ -202,7 +202,7 @@ DO NOT:
 
 "From scratch" means fresh business implementation.
 
-It does NOT mean ignoring the approved EduSuite engineering architecture.
+It does NOT mean ignoring the approved WisWits engineering architecture.
 
 ---
 
@@ -231,7 +231,7 @@ DO NOT USE:
 - native confirm()
 - native prompt()
 
-Frontend must remain compatible with the current EduSuite Next.js architecture.
+Frontend must remain compatible with the current WisWits Next.js architecture.
 
 ---
 
@@ -585,7 +585,7 @@ During standalone/mock development:
 
 DO NOT build a competing platform-wide PDF architecture.
 
-Final parent-platform PDF integration remains an EduSuite integration responsibility.
+Final parent-platform PDF integration remains an WisWits integration responsibility.
 
 ---
 
@@ -636,7 +636,7 @@ IMPORTANT:
 
 The standalone module must NOT implement its own JWT or hardcoded platform authorization engine.
 
-The final EduSuite platform will enforce permissions through shared infrastructure.
+The final WisWits platform will enforce permissions through shared infrastructure.
 
 During independent development, mock role/permission states may be used only to demonstrate UI behavior.
 
@@ -952,7 +952,7 @@ Return a finalized HPC card snapshot.
 Purpose:
 Represent the integration endpoint/action for report-card PDF output.
 
-Final PDF implementation must align with the parent EduSuite report-card PDF service.
+Final PDF implementation must align with the parent intern team's upstream workspacert-card PDF service.
 
 ---
 
@@ -1088,7 +1088,7 @@ Responsive strategies may include:
 
 # 31. UI / DESIGN STANDARD
 
-Follow the current EduSuite design direction.
+Follow the current WisWits design direction.
 
 Core visual tokens:
 
@@ -1424,7 +1424,7 @@ Module developers must NOT create:
 - database credentials in source files;
 - hardcoded admin bypasses.
 
-Final platform authentication is provided through shared EduSuite infrastructure.
+Final platform authentication is provided through shared WisWits infrastructure.
 
 All SQL values must use parameterized queries.
 
@@ -1663,7 +1663,7 @@ The following decisions are LOCKED for this team build:
 
 13. Publishing is permission-controlled and auditable at platform integration.
 
-14. PDF behavior must remain compatible with the shared EduSuite report-card PDF architecture.
+14. PDF behavior must remain compatible with the shared intern team's upstream workspacert-card PDF architecture.
 
 15. Frontend and backend must implement one shared contract.
 
@@ -1707,7 +1707,7 @@ A developer's assigned portion is considered ready for submission only when:
 - source is understandable;
 - assigned work can be reviewed independently.
 
-The overall module becomes platform-ready only after the appropriate integration, tenant, permission, audit, functional and technical validation defined by EduSuite governance.
+The overall module becomes platform-ready only after the appropriate integration, tenant, permission, audit, functional and technical validation defined by WisWits governance.
 
 ---
 
@@ -1748,9 +1748,9 @@ Finalize / Publish
 Immutable HPC Card Snapshot
         |
         v
-EduSuite Report Card / PDF
+WisWits Report Card / PDF
 
-The module must feel like one part of EduSuite, not a separate application.
+The module must feel like one part of WisWits, not a separate application.
 
 ---
 
@@ -1780,7 +1780,7 @@ One Module.
 One Contract.
 One Data Model.
 One API Agreement.
-One EduSuite Platform.
+One WisWits Platform.
 
 ---
 

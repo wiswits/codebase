@@ -1,5 +1,5 @@
 # ============================================================
-# EduSuite ERP
+# WisWits ERP
 # Medical Room Module Engineering Contract
 # ============================================================
 
@@ -23,7 +23,7 @@ Core Administration
 
 Purpose
 
-The Medical Room Module serves as the centralized healthcare and first-aid management system of the EduSuite ERP platform.
+The Medical Room Module serves as the centralized healthcare and first-aid management system of the WisWits ERP platform.
 The module is responsible for maintaining student, employee, and visitor medical records, recording medical visits, managing treatments, prescriptions, medicine inventory, emergency cases, and healthcare reports while maintaining complete audit history and organization-level isolation.
 
 The system enables institutions to efficiently manage day-to-day healthcare activities inside the campus through a secure and centralized platform.
@@ -97,7 +97,7 @@ Secure,
 Scalable,
 API-driven,
 Multi-tenant
-Medical Room Management Module that integrates seamlessly into the EduSuite ERP platform.
+Medical Room Management Module that integrates seamlessly into the WisWits ERP platform.
 
 The module should support
 Students
@@ -217,7 +217,7 @@ ConfirmDialog
 DESIGN SYSTEM
 ------------------------------------------------------------
 
-Official EduSuite Theme
+Official WisWits Theme
 Primary
 #0F2147
 Gold
@@ -228,7 +228,7 @@ Fonts
 
 Playfair Display
 Source Sans Pro
-Every page must follow the official EduSuite design language.
+Every page must follow the official WisWits design language.
 ============================================================
 
 # TECHNOLOGY STACK
@@ -1626,5 +1626,5 @@ Integration
 
 ============================================================
 # FINAL OBJECTIVE
-The Medical Room Module shall provide a centralized, secure, scalable, and enterprise-ready healthcare management platform capable of managing patient records, medical visits, prescriptions, medicine inventory, emergency cases, follow-up treatments, reporting, analytics, and complete audit history while integrating seamlessly with the EduSuite ERP ecosystem.
+The Medical Room Module shall provide a centralized, secure, scalable, and enterprise-ready healthcare management platform capable of managing patient records, medical visits, prescriptions, medicine inventory, emergency cases, follow-up treatments, reporting, analytics, and complete audit history while integrating seamlessly with the WisWits ERP ecosystem.
 =====================================================

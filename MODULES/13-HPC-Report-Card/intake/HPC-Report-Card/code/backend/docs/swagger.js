@@ -4,7 +4,7 @@ const options = {
     definition: {
         openapi: "3.0.3",
         info: {
-            title: "EduSuite HPC API",
+            title: "WisWits HPC API",
             version: "1.0.0",
             description: "HPC Report Card Module APIs"
         },

@@ -22,11 +22,11 @@ const sourceSans = Source_Sans_3({
 
 export const metadata: Metadata = {
   title: {
-    default: "Alumni Directory | EduSuite",
-    template: "%s | EduSuite"
+    default: "Alumni Directory | WisWits",
+    template: "%s | WisWits"
   },
   description:
-    "EduSuite Alumni Directory module"
+    "WisWits Alumni Directory module"
 };
 
 export default function RootLayout({

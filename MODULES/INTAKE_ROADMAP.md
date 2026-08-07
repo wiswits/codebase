@@ -18,7 +18,7 @@ the order to run that pipeline in, not a replacement for it.
   nobody can reach them — a bug per §21: *"a working page with no navConfig entry for its
   intended roles is a hidden feature"*), or are intentionally internal (owner console,
   platform playbooks — not customer-facing by design, don't count these toward 60).
-- **26 intern/EduSuite module concepts** exist on top of that, at every stage from
+- **26 intern build concepts** exist on top of that, at every stage from
   "just a contract, zero code" to "fully built, sitting in `Modules_Repo` with a PRD."
 
 Two different kinds of work close the gap to 60:
@@ -32,9 +32,9 @@ Two different kinds of work close the gap to 60:
 ## Phase 0 — Housekeeping (mostly done)
 
 - [x] Consolidate every intern module into one place with code + PRD + status
-      (mirrored from `Modules_Repo`/`Modules_Repo_PRD` in the EduSuite repo).
+      (mirrored from `Modules_Repo`/`Modules_Repo_PRD` in the team's shared workspace).
 - [x] Fold each one **inside the module it belongs to** — `MODULES/NN-<Module>/intake/` —
-      so no module is ever two folders. The old `EduSuite/` shelf is gone; see
+      so no module is ever two folders. The old separate intern shelf is gone; see
       `MODULES/README.md` for the 26 → 61-slot map.
 - [x] Cross-reference all 26 concepts against native wiswits-code — done, see each
       module's `STATUS.md`.
@@ -62,8 +62,8 @@ Event Management did originally.
 3. [ ] **Hostel Management** (Ankit) — most mature build overall (RLS, cross-tenant tests).
        Fills a real Phase-1 slot (§8) that's currently empty.
 4. [ ] **Asset & Inventory** (Jatin & Sunidhi) — same: fills an empty Phase-1 slot.
-5. [ ] **HPC Report Card** (EduSuite) — genuinely distinct from our report card (NEP
-       holistic format). Already the agreed first pick from EduSuite's own assemblies.
+5. [ ] **HPC Report Card** — genuinely distinct from our report card (NEP holistic
+       format). Already the agreed first pick from the team's own assemblies.
 
 ## Phase 3 — Overlap modules, upgrade native rather than duplicate (P1)
 
@@ -95,8 +95,8 @@ These need a decision and possibly a merge, not a port.
       nothing in the intern build is worth cherry-picking, then close it out.
 - [ ] **Library Management** — feature-by-feature diff against `erp/library`; port only
       confirmed gaps.
-- [ ] **Alumni — Directory & Network** — three builds now exist (native table, EduSuite's
-      Alumni-Directory already ported, Neha's Alumni Network & Mentorship). One
+- [ ] **Alumni — Directory & Network** — three builds now exist (native table, the
+      Alumni-Directory build already ported, Neha's Alumni Network & Mentorship). One
       reconciliation session, one decision, not another port.
 - [ ] **Admission Management** + **Registration Management** — reject both. Confirm there's
       nothing salvageable beyond the two ideas already flagged (a real number-series
@@ -105,11 +105,11 @@ These need a decision and possibly a merge, not a port.
 
 ## Phase 5 — Blocked upstream (not wiswits-code's move yet)
 
-- [ ] **Student Observations**, **Utilization Management** — EduSuite's own team hasn't
-      assembled these past `incoming/` yet. Nothing to port until Khushboo merges a
+- [ ] **Student Observations**, **Utilization Management** — the intern team never
+      assembled these past `incoming/`. Nothing to port until Khushboo merges a
       `final/` build. Check back each cycle; don't start early on a moving target.
 - [ ] **Biometric Attendance**, **Communication Administration**, **HR Payroll**
-      (EduSuite's contract) — zero code exists anywhere for these three. Same as above:
+      (contract only) — zero code exists anywhere for these three. Same as above:
       nothing to do until a build exists. Communication Administration especially — likely
       redundant against native comms even once built, confirm before anyone spends a cycle
       writing it.

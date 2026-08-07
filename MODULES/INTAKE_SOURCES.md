@@ -38,8 +38,14 @@ MODULES/NN-<Module-Name>/
 - **2 modules** have a contract but were never assembled — Student Observations and
   Utilization Management are still sitting as unmerged per-developer folders
   (`code-incoming/`), not a working build.
-- **5 modules** are contract-only, zero code anywhere — Biometric Attendance, Communication
-  Administration, HR Payroll, Medical Room, SQAAF.
+- **~~5~~ 3 modules** are contract-only, zero code anywhere — Biometric Attendance,
+  HR Payroll, Medical Room. *(Corrected 2026-08-07: Communication Administration and SQAAF
+  both got real builds upstream that day — 233 and 272 files — and are not imported here yet.)*
+
+**Upstream lives in a different org than this repo's README used to imply.** The real workspace
+is **`wiswits-edutech-pvt-ltd/EduSuite`** — 60+ feature branches, actively pushed. The
+same-named repo in the `wiswits` org is an **empty shell** (0 KB, no branches, no commit ever).
+Check the former when asking "did anything land upstream?"
 
 `INTERNS WORK/` in wiswits-code is NOT duplicated a second time here — its content is
 already inside `23-Wellbeing-and-Happiness/intake/…/code/`,

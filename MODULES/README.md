@@ -33,6 +33,15 @@ until it is reconciled.
 - ✅ **5 MERGED** — their logic is inside the product today (~10,000 lines running or ready to run).
 - ⏳ **21 PENDING** — each row in a module's STATUS.md says exactly what is in the way.
 
+> **Moving target, 2026-08-07.** Two builds landed upstream *after* this catalogue was written
+> — **Communication Administration** (233 files · +39,803 lines) and **SQAAF** (272 files ·
+> +22,541 lines), both by Khushboo, both the same day. Neither is in this repo yet; their
+> `intake/` folders still hold only the old contract. **"Contract only, zero code" is now true
+> of two modules, not four** — Biometric Attendance and Medical Room. Read
+> `44-Announcements-and-Messages/STATUS.md` and `61-SQAAF/STATUS.md` before acting on either:
+> one carries two live-table collisions, the other turned out not to be the module its acronym
+> suggested.
+
 **MERGED means ported, not copied.** Most of these cannot be cut-pasted: some are MongoDB
 apps against our MariaDB, some carry no `org_id` at all (every school would see every other
 school's records), one collides with JD Public School's live staff leave register. The port
@@ -103,7 +112,7 @@ proof — 2,942 lines of intern work in the product, consent ladder and crisis s
 | **58-School-Branch-Management** | Platform | BE BUILT, THIN SURFACE — wiring item | 7 | — |
 | **59-Onboarding** | Platform | LIVE | 4 | — |
 | **60-Module-Management** | Platform | BUILT, DARK — Features page unbuilt (BE mounted) | 6 | — |
-| **61-SQAAF** | Platform | GAP — no code anywhere, written contract only | — (placeholder) | ⏳ SQAAF |
+| **61-SQAAF** | Communication | DEDUP REVIEW — a bundle overlapping 44/46/47/48; build landed upstream 07-Aug | — (placeholder) | ⏳ SQAAF |
 
 ## Known state — what is still duplicated, and why it stays
 

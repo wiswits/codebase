@@ -17,9 +17,10 @@ sold individually. The most solid, most beautiful structure wins.
 
 ## What's inside
 
-**Module-by-module snapshot of app.wiswits.com** — all 60 customer-visible modules of
-wiswits-code, one folder each, with the code **exactly as prod runs it today**
-(prod commit `31210d4e`, snapshot 2026-08-06).
+**One folder per module — `MODULES/`. Nothing appears twice.** All 60 customer-visible
+modules of app.wiswits.com with the code **exactly as prod runs it today** (prod commit
+`31210d4e`, snapshot 2026-08-06), plus a 61st slot for SQAAF, which has no native
+counterpart.
 
 > **This repo is a SAFE COPY, never the workplace.** The live code is in
 > `wiswits/wiswits-code` → `apps/`. All fixes and features happen THERE, through its
@@ -27,21 +28,30 @@ wiswits-code, one folder each, with the code **exactly as prod runs it today**
 > today's working platform is preserved, browsable, and restorable module by module.
 
 ```
-WisWits-Modules/
+MODULES/
   NN-<Module-Name>/
-    STATUS.md      what it is, domain, status, features
+    STATUS.md      what it is, domain, status, features + the Intake table
     CODE_MAP.md    where the LIVE code lives in wiswits-code
     PRD/PRD.md     the spec — purpose, roles, workflow, scope
     code/          frozen snapshot from prod commit 31210d4e (or NOTE.md for gaps)
+    intake/        the intern/EduSuite build for THIS module — only where one exists
+      <EduSuite-Module-Name>/   STATUS.md + PRD/ + code/
+  README.md            the index — all 61, with each one's intake state
+  INTAKE_ROADMAP.md    sequencing plan for porting the pending intern builds
+  INTAKE_SOURCES.md    where each intern build came from
 _shared/           registry, navConfig, apiClient, moduleRegistry + constitution,
                    PRODUCT_PRD, FINAL_LAUNCH_PLAN — the cross-module contract files
-EduSuite/          ALL 26 intern/EduSuite modules — each with code/ + PRD/ + STATUS.md
-                   (the intake shelf: builds waiting to be ported into wiswits-code)
 ```
 
-So this ONE repo now holds the complete picture: the 60 native modules as prod runs
-them, AND the 26 intern builds waiting in line — every module in the company, one
-beautiful structure.
+**The 26 intern/EduSuite builds are not a separate shelf any more.** Each one now sits
+inside the module it belongs to, as `intake/`. Alumni used to be three folders; Payroll
+two; Events, Visitors, Wellbeing and Personalised Learning each had a second folder for
+something already inside the product. That duplication is gone — 5 builds are **MERGED**
+(their logic is running or ready to run) and 21 are **PENDING**, each with its blocker
+written down in its module's `STATUS.md`.
+
+So this ONE repo holds the complete picture in ONE list: every module in the company,
+what prod runs, and what is still waiting in line behind it.
 
 **Working vs backup, clearly:** everything here is a SAFE COPY — browsable, diffable,
 restorable, but not runnable from this repo (no monorepo wiring). The runnable platform

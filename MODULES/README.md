@@ -105,6 +105,27 @@ proof — 2,942 lines of intern work in the product, consent ladder and crisis s
 | **60-Module-Management** | Platform | BUILT, DARK — Features page unbuilt (BE mounted) | 6 | — |
 | **61-SQAAF** | Platform | GAP — no code anywhere, written contract only | — (placeholder) | ⏳ SQAAF |
 
+## Known state — what is still duplicated, and why it stays
+
+Audited 2026-08-07. Two things repeat on purpose; one repeated by accident and is fixed.
+
+- **28 snapshot files live in more than one slot.** One live source file often serves
+  several modules — `hr/shared.js` sits in 31/33/35/37, `blueprint.service.js` in 57/58,
+  the report-cards page in 11/12. **Left as-is deliberately:** each `code/` folder is a
+  self-contained, restorable snapshot of that module; deduping would break the one job
+  this repo has. `CODE_MAP.md` is always the authority on where the real file is.
+- **Boilerplate repeats inside `intake/`** — identical `tsconfig.json`, `.env.example`
+  across independent intern projects. Not duplication of *work*; leave it.
+- **`_shared/CLAUDE.md` was a dead symlink** pointing at `docs/CLAUDE.md`, a path that
+  only exists in wiswits-code. The constitution — the most important shared file here —
+  resolved to nothing. Now a real 446-line file.
+
+**56 zero-byte files, all inside `intake/`** (25 Recruitment · 21 EMPS · 10 across five
+others). Not corruption and not ours to clean: that is the interns' actual delivery state
+— including 19 of Recruitment's 21 frontend components. Nothing imports them, so no gate
+ever noticed. **The prod snapshot has zero empty files.** A file count here means "how
+much there is to look at", never "how much work exists".
+
 ## Companions
 
 - `MODULES/INTAKE_ROADMAP.md` — the sequencing plan for porting the 21 pending builds

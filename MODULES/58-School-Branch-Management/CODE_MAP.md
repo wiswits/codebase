@@ -15,3 +15,13 @@
 - Nav: `apps/web/src/config/navConfig.ts`
 - API client: `apps/web/src/lib/apiClient.ts`
 - Migrations: `apps/backend/migrations/` (verify with `scripts/schema_inventory.js`)
+
+## Shared code & contracts (this repo — de-dup 2026-08-12)
+
+Canonical copy lives once at:
+
+- **Code:** `_shared/domains/blueprints/apps/backend/src/modules/blueprints/`
+- **This module's surface:** `blueprints.institution` (`/api/institution`) — schools/branches setup
+- **Full ownership + coupling map:** `_shared/domains/blueprints/CONTRACTS.md`
+
+**Cross-module contracts:** shares blueprint spine with 57; touches classes/sections/subjects setup seeds.

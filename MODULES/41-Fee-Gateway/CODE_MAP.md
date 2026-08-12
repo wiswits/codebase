@@ -14,3 +14,13 @@
 - Nav: `apps/web/src/config/navConfig.ts`
 - API client: `apps/web/src/lib/apiClient.ts`
 - Migrations: `apps/backend/migrations/` (verify with `scripts/schema_inventory.js`)
+
+## Shared code & contracts (this repo — de-dup 2026-08-12)
+
+Canonical copy lives once at:
+
+- **Code:** `_shared/domains/payments/apps/backend/src/modules/payments/`
+- **This module's surface:** `payments.payments` + `payments.config` (`/api/payments`, `/api/payment-config`)
+- **Full ownership + coupling map:** `_shared/domains/payments/CONTRACTS.md`
+
+**Cross-module contracts:** reconciles Fees (`client_fee_payments/assignments` → 39/40); People identity; Razorpay via Core services.

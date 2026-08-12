@@ -17,3 +17,13 @@
 - Nav: `apps/web/src/config/navConfig.ts`
 - API client: `apps/web/src/lib/apiClient.ts`
 - Migrations: `apps/backend/migrations/` (verify with `scripts/schema_inventory.js`)
+
+## Shared code & contracts (this repo — de-dup 2026-08-12)
+
+Canonical copy lives once at:
+
+- **Code:** `_shared/domains/payments/apps/backend/src/modules/payments/`
+- **This module's surface:** `payments.billing` (`/api/billing`) — WisWits charging institutions
+- **Full ownership + coupling map:** `_shared/domains/payments/CONTRACTS.md`
+
+**Cross-module contracts:** subscription/pricing Core services; distinct money flow from school fees.

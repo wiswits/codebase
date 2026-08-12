@@ -14,3 +14,13 @@
 - Nav: `apps/web/src/config/navConfig.ts`
 - API client: `apps/web/src/lib/apiClient.ts`
 - Migrations: `apps/backend/migrations/` (verify with `scripts/schema_inventory.js`)
+
+## Shared code & contracts (this repo — de-dup 2026-08-12)
+
+Canonical copy lives once at:
+
+- **Code:** `_shared/domains/fees/apps/backend/src/modules/erp/fees.routes.js`
+- **This module's surface:** fee heads/components/structures/installments (`/api/fees`)
+- **Full ownership + coupling map:** `_shared/domains/fees/CONTRACTS.md`
+
+**Cross-module contracts:** downstream of People/Enrolment (students/classes/sections); boundary with Payments via `client_fee_*`.

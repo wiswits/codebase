@@ -15,3 +15,13 @@
 - Nav: `apps/web/src/config/navConfig.ts`
 - API client: `apps/web/src/lib/apiClient.ts`
 - Migrations: `apps/backend/migrations/` (verify with `scripts/schema_inventory.js`)
+
+## Shared spine & contracts (this repo — refine 2026-08-12)
+
+- **Own code (frozen prod snapshot):** `code/apps/…` — staff.module.js staff.routes.js 
+- **Own/feature tables:** `client_departments`, `client_student_change_requests`, `client_teachers`, `client_user_schools`
+- **Spine tables read (Core — cannot be cut):** `client_parents`, `client_roles`, `client_students`, `client_user_roles`, `client_users`
+- **Cross-module code imports:** ../custom-fields/customFields.service 
+- **Coupling read:** hard `require` into another domain → **coupled**, not cleanly separable.
+
+See `_shared/CORE.md` for the spine; `_shared/domains/*/CONTRACTS.md` for shared domains.

@@ -14,3 +14,13 @@
 - Nav: `apps/web/src/config/navConfig.ts`
 - API client: `apps/web/src/lib/apiClient.ts`
 - Migrations: `apps/backend/migrations/` (verify with `scripts/schema_inventory.js`)
+
+## Shared spine & contracts (this repo — refine 2026-08-12)
+
+- **Prod code snapshot:** none — this module has **no native live code** yet
+  (`code/NOTE.md` marks the gap).
+- **Intake build(s):** Medical-Room
+- **Coupling:** no runtime coupling exists until it ships; when built it will
+  stand on the CORE identity/enrolment spine (`_shared/CORE.md`) like every module.
+- **To make final:** port its intake build (see `../INTAKE_ROADMAP.md`), then
+  it gets the same tables/contracts pass as the live modules.

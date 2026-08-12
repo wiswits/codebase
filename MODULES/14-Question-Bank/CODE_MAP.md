@@ -14,3 +14,13 @@
 - Nav: `apps/web/src/config/navConfig.ts`
 - API client: `apps/web/src/lib/apiClient.ts`
 - Migrations: `apps/backend/migrations/` (verify with `scripts/schema_inventory.js`)
+
+## Shared spine & contracts (this repo — refine 2026-08-12)
+
+- **Own code (frozen prod snapshot):** `code/apps/…` — qbank.module.js qbank.routes.js 
+- **Own/feature tables:** `client_feature_flags`, `client_qb_chapters`, `client_qb_question_history`, `client_qb_questions`, `client_qb_subjects`, `client_qb_tags`, `client_qb_topics`
+- **Spine tables read (Core — cannot be cut):** `client_users`
+- **Cross-module code imports:** none
+- **Coupling read:** self-contained except the shared identity spine → **relatively separable** (standalone-ready).
+
+See `_shared/CORE.md` for the spine; `_shared/domains/*/CONTRACTS.md` for shared domains.

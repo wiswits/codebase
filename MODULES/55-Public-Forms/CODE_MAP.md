@@ -14,3 +14,13 @@
 - Nav: `apps/web/src/config/navConfig.ts`
 - API client: `apps/web/src/lib/apiClient.ts`
 - Migrations: `apps/backend/migrations/` (verify with `scripts/schema_inventory.js`)
+
+## Shared spine & contracts (this repo — refine 2026-08-12)
+
+- **Own code (frozen prod snapshot):** `code/apps/…` — publicForms.admin.routes.js publicForms.module.js publicForms.public.routes.js 
+- **Own/feature tables:** `client_lead_stages`, `client_leads`
+- **Spine tables read (Core — cannot be cut):** `client_organizations`
+- **Cross-module code imports:** ../custom-fields/customFields.service 
+- **Coupling read:** hard `require` into another domain → **coupled**, not cleanly separable.
+
+See `_shared/CORE.md` for the spine; `_shared/domains/*/CONTRACTS.md` for shared domains.
